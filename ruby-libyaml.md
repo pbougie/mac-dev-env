@@ -31,8 +31,8 @@ Configure, compile and install into `/usr/local/yaml-VERSION`.
 
 	./configure	--prefix=/usr/local/libyaml-VERSION
 	make
-	sudo make install
+	make install
 
 Create a symbolic link that points `/usr/local/libyaml` to `/usr/local/libyaml-VERSION`.
 
-	sudo ln -s libyaml-VERSION /usr/local/libyaml
+	ln -s libyaml-VERSION /usr/local/libyaml

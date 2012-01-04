@@ -23,29 +23,25 @@ Switch to `/usr/local/src` and download the pre-compiled binaries.
 
 Unpack the binaries into `/usr/local`.
 
-	sudo tar -zxvf mongodb-osx-x86_64-VERSION.tgz -C ..
-
-Update the permissions.
-
-	sudo chown -R root:wheel /usr/local/mongodb-osx-x86_64-VERSION
+	tar -zxvf mongodb-osx-x86_64-VERSION.tgz -C ..
 
 Create a symbolic link to `/usr/local/mongodb`.
 
-	sudo ln -s mongodb-osx-x86_64-VERSION /usr/local/mongodb
+	ln -s mongodb-osx-x86_64-VERSION /usr/local/mongodb
 
 
 ### Databases
 
 Create a folder that will contain your databases. My databases are located in `/usr/local/var/mongodb`. You can place your databases wherever you'd like but make sure you update the path when mentioned in this article.
 
-	sudo mkdir -p /usr/local/var/mongodb
+	mkdir -p /usr/local/var/mongodb
 
 
 ### Configuration File
 
 Create a configuration file so you can make changes to your database configuration without messing around with command line arguments.
 
-	sudo nano /usr/local/mongodb/mongod.conf
+	nano /usr/local/mongodb/mongod.conf
 
 Copy and paste the following text into the aforementioned file.
 

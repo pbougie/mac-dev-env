@@ -37,18 +37,18 @@ Configure, compile and install into `/usr/local/apache-VERSION`.
 		--enable-so \
 		--enable-ssl
 	make
-	sudo make install
+	make install
 
 Create a symbolic link that points `/usr/local/apache` to `/usr/local/apache-VERSION`.
 
-	sudo ln -s apache-VERSION /usr/local/apache
+	ln -s apache-VERSION /usr/local/apache
 
 
 ### Configuration File
 
 Edit Apache's configuration file.
 
-	sudo nano /usr/local/apache/conf/httpd.conf
+	nano /usr/local/apache/conf/httpd.conf
 
 Copy and paste the following text at the end of the aforementioned file. Make sure you replace the `<username>` string (3 times) with your Mac OS X short username. This configuration only allows access from your local computer; all outside access is blocked.
 
@@ -67,6 +67,13 @@ Copy and paste the following text at the end of the aforementioned file. Make su
 		Allow from localhost
 		Allow from 127.0.0.1
 	</Directory>
+
+
+### Web Root
+
+Create a folder that will contain your web sites and applications. My projects are located in `~/Sites` – the standard location for web files on Mac OS X. You can place your projects wherever you'd like but make sure you update the path when mentioned in this article.
+
+	mkdir -p ~/Sites
 
 
 ### Shell

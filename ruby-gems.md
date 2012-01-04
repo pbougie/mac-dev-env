@@ -15,7 +15,7 @@ title: RubyGems
 
 To upgrade RubyGems.
 
-	sudo gem update --system
+	gem update --system
 
 
 ### Documentation
@@ -33,7 +33,7 @@ Create a configuration file for [Launchd](http://en.wikipedia.org/wiki/Launchd).
 
 	sudo nano /Library/LaunchDaemons/org.rubygems.gem.plist
 
-Copy and paste the following text into the aforementioned file.
+Copy and paste the following text into the aforementioned file. The path to the `gem` executable cannot use the `rbenv` shim binary because the environment in your startup script never gets set up. Pick your primary version of Ruby and use an absolute path to the `gem` executable. Make sure you update the path in the configuration below.
 
 	<?xml version="1.0" encoding="UTF-8"?>
 	<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -43,7 +43,7 @@ Copy and paste the following text into the aforementioned file.
 		<string>org.rubygems.gem</string>
 		<key>ProgramArguments</key>
 		<array>
-			<string>/usr/local/rbenv/shims/gem</string>
+			<string>/usr/local/rbenv/versions/1.9.3-p0/bin/gem</string>
 			<string>server</string>
 			<string>--daemon</string>
 		</array>
@@ -58,7 +58,7 @@ And finally, execute the following command to register the configuration file wi
 
 	sudo launchctl load -w /Library/LaunchDaemons/org.rubygems.gem.plist
 
-If you ever want to stop your MongoDB server from automatically starting at boot, issue the following command.
+If you ever want to stop your documentation server from automatically starting at boot, issue the following command.
 
 	sudo launchctl unload -w /Library/LaunchDaemons/org.rubygems.gem.plist
 

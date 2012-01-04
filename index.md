@@ -12,7 +12,7 @@ Start with the **Getting Started** section, then proceed with installing your de
 
 ### Getting Started
 
-- [XCode Developer Tools](started-xcode.html)
+- [Xcode Developer Tools](started-xcode.html)
 - [Create the Folder Structure](started-folders.html)
 
 ### Source Code Management

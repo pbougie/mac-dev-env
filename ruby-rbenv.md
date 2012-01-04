@@ -16,13 +16,7 @@ Switch to the `/usr/local` folder.
 
 Check out rbenv into `/usr/local/rbenv`.
 
-	sudo git clone git://github.com/sstephenson/rbenv.git rbenv
-
-rbenv can't be run as root, therefore change the permissions.
-
-	sudo chown -R <owner> /usr/local/rbenv
-
-Where `<owner>` is your Mac OS X short username.
+	git clone git://github.com/sstephenson/rbenv.git rbenv
 
 
 ### Shell

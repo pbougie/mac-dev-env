@@ -14,7 +14,7 @@ Install Ruby on Rails using [RubyGems](http://rubygems.org/).
 
 	gem install rails
 
-Rebuild the rbenv shim binaries.
+Rebuild the `rbenv` shim binaries.
 
 	rbenv rehash
 

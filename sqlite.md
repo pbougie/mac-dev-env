@@ -31,11 +31,11 @@ Configure, compile and install into `/usr/local/sqlite-VERSION`.
 
 	./configure --prefix=/usr/local/sqlite-VERSION
 	make
-	sudo make install
+	make install
 
 Create a symbolic link that points `/usr/local/sqlite` to `/usr/local/sqlite-VERSION`.
 
-	sudo ln -s sqlite-VERSION /usr/local/sqlite
+	ln -s sqlite-VERSION /usr/local/sqlite
 
 
 ### Shell

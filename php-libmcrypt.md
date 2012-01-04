@@ -31,8 +31,8 @@ Configure, compile and install into `/usr/local/libmcrypt-VERSION`.
 
 	./configure --prefix=/usr/local/libmcrypt-VERSION
 	make
-	sudo make install
+	make install
 
 Create a symbolic link that points `/usr/local/libmcrypt` to `/usr/local/libmcrypt-VERSION`.
 
-	sudo ln -s libmcrypt-VERSION /usr/local/libmcrypt
+	ln -s libmcrypt-VERSION /usr/local/libmcrypt

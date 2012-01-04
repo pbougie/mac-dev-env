@@ -9,7 +9,7 @@ title: LibPNG
 
 > **Links:** [Homepage](http://www.libpng.org/pub/png/libpng.html)  
 > **Dependencies:** None  
-> **Version:** <span id="version">1.5.6</span>
+> **Version:** <span id="version">1.5.7</span>
 
 
 ### Get the Code
@@ -31,8 +31,8 @@ Configure, compile and install into `/usr/local/libpng-VERSION`.
 
 	./configure --prefix=/usr/local/libpng-VERSION
 	make
-	sudo make install
+	make install
 
 Create a symbolic link that points `/usr/local/libpng` to `/usr/local/libpng-VERSION`.
 
-	sudo ln -s libpng-VERSION /usr/local/libpng
+	ln -s libpng-VERSION /usr/local/libpng

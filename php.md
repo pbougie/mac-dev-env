@@ -53,27 +53,40 @@ Configure, compile and install into `/usr/local/php-VERSION`.
 		--with-xsl \
 		--with-zlib
 	make
-	sudo make install
+	make install
 
 Create a symbolic link that points `/usr/local/php` to `/usr/local/php-VERSION`.
 
-	sudo ln -s php-VERSION /usr/local/php
+	ln -s php-VERSION /usr/local/php
 
 
 ### Bug
 
 For some reason, the PHP CLI (command line interpreter/interface) is incorrectly named during installation. Create a symbolic link to temporarily fix the problem. Check first to see if this is happening to you, otherwise skip this step.
 
-	sudo ln -s /usr/local/php/bin/php.dSYM php
+	ln -s /usr/local/php/bin/php.dSYM php
 
 
-### Configuration
+### PHP Configuration
 
 Copy a PHP configuration template to the target folder.
 
-	sudo cp php.ini-development /usr/local/php/php.ini
+	cp php.ini-development /usr/local/php/php.ini
 
 You can configure any of the [php.ini directives](http://www.php.net/manual/en/ini.list.php) by editing this file.
+
+
+### Apache Configuration
+
+Edit Apache's configuration file.
+
+	nano /usr/local/apache/conf/httpd.conf
+
+Copy and paste the following text at the end of the aforementioned file.
+
+	<IfModule mime_module>
+		AddType application/x-httpd-php .php
+	</IfModule>
 
 
 ### Shell

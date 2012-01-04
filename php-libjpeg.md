@@ -31,8 +31,8 @@ Configure, compile and install into `/usr/local/libjpeg-VERSION`.
 
 	./configure	--prefix=/usr/local/libjpeg-VERSION
 	make
-	sudo make install
+	make install
 
 Create a symbolic link that points `/usr/local/libjpeg` to `/usr/local/libjpeg-VERSION`.
 
-	sudo ln -s libjpeg-VERSION /usr/local/libjpeg
+	ln -s libjpeg-VERSION /usr/local/libjpeg

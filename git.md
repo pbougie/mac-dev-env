@@ -5,7 +5,7 @@ title: Git
 
 > **Links:** [Homepage](http://git-scm.com/) | [Downloads](http://git-scm.com/download)  
 > **Dependencies:** None  
-> **Version:** <span id="version">1.7.8</span>
+> **Version:** <span id="version">1.7.8.2</span>
 
 
 **Git** is a distributed version control system that was initially designed and developed by Linus Torvalds for Linux kernel development. Every Git working directory is a complete repository with history and revision tracking capabilities.
@@ -31,11 +31,11 @@ Configure, compile and install into `/usr/local/git-VERSION`.
 	make configure
 	./configure --prefix=/usr/local/git-VERSION
 	make all
-	sudo make install
+	make install
 
 Create a symbolic link that points `/usr/local/git` to `/usr/local/git-VERSION`.
 
-	sudo ln -s git-VERSION /usr/local/git
+	ln -s git-VERSION /usr/local/git
 
 
 ### Documentation
@@ -49,8 +49,8 @@ Switch to `/usr/local/src` and download the documentation.
 
 Extract the documentation to `/usr/local/git/man`.
 
-	sudo mkdir -p /usr/local/git/man
-	sudo tar -xzvof git-manpages-VERSION.tar.gz -C /usr/local/git/man
+	mkdir -p /usr/local/git/man
+	tar -xzvof git-manpages-VERSION.tar.gz -C /usr/local/git/man
 
 
 ### Shell

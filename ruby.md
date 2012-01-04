@@ -4,7 +4,7 @@ title: Ruby
 ---
 
 
-> **Links:** [Homepage](http://www.ruby-lang.org/) | [Downloads](http://git-scm.com/download)  
+> **Links:** [Homepage](http://www.ruby-lang.org/) | [Downloads](http://www.ruby-lang.org/en/downloads/)  
 > **Dependencies:** [rbenv](ruby-rbenv.html) | [LibYAML](ruby-libyaml.html) (for Ruby 1.9.3 only)  
 > **Version:** <span id="version">1.9.3-p0</span>
 
@@ -14,7 +14,7 @@ title: Ruby
 Switch to `/usr/local/src` and download the source package.
 
 	cd /usr/local/src
-	curl --remote-name http://ftp.ruby-lang.org/pub/ruby/stable/ruby-VERSION.tar.gz
+	curl --remote-name http://ftp.ruby-lang.org/pub/ruby/ruby-VERSION.tar.gz
 	
 Extract the archive and move into the folder.
 
@@ -29,11 +29,11 @@ Configure, compile and install into `/usr/local/rbenv/versions/VERSION`. Check t
 	./configure \
 		--prefix=/usr/local/rbenv/versions/VERSION \
 		--with-opt-dir=/usr/local/libyaml \
-		--with-gcc=gcc-4.2
+		--with-gcc=clang
 	make
 	make install
 
-Rebuild the shim binaries. This needs to be done when you install new versions of Ruby or gems that provide a binary.
+Rebuild the `rbenv` shim binaries. This needs to be done when you install new versions of Ruby or gems that provide a binary.
 
 	rbenv rehash
 
@@ -56,5 +56,4 @@ To verify that you have correctly installed this version of Ruby.
 
 ### Adding Other Versions
 
-Change the version number in the textbox at the top of this page and follow the instructions. You may have to modify the path when downloading the source for certain versions.
-
+Change the version number in the textbox at the top and follow the instructions again. You may have to modify the path when downloading the source for certain versions. Also the `./configure` command may need to be adjusted for each version – check the installation documentation before proceeding.
