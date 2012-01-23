@@ -19,6 +19,8 @@ Rebuild the `rbenv` shim binaries.
 	rbenv rehash
 
 
-### Bugs
+### Verify the Installation
 
-The `rails` command reports as missing in some cases after installation. Opening a new **Terminal** window resolves this.
+To verify that you have correctly installed Ruby on Rails, execute the following command. It should display the version number.
+
+	rails -v

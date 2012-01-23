@@ -5,7 +5,7 @@ title: MySQL
 
 > **Links:** [Homepage](http://www.mysql.com/) | [Downloads](http://www.mysql.com/downloads/mysql/) | [Reference Manual](http://dev.mysql.com/doc/refman/5.5/en/index.html)  
 > **Dependencies:** [CMake](mysql-cmake.html)  
-> **Version:** <span id="version">5.5.19</span>
+> **Version:** <span id="version">5.5.20</span>
 
 
 **MySQL** is an open-source relational database management server (RDBMS). If you've never heard of it, you probably don't need these instructions.

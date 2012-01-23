@@ -9,7 +9,7 @@ Free library for JPEG image compression. Dependency for compiling [PHP](php.html
 
 > **Links:** [Homepage](http://www.ijg.org/)  
 > **Dependencies:** None  
-> **Version:** <span id="version">8c</span>
+> **Version:** <span id="version">8d</span>
 
 
 ### Get the Code

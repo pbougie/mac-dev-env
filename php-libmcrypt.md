@@ -7,7 +7,7 @@ title: LibMCrypt
 **LibMCrypt** is a standardized library to [MCrypt](http://mcrypt.sourceforge.net/) — which replaced the old Unix crypt() package. Dependency for compiling [PHP](php.html).
 
 
-> **Links:** [Homepage](http://mcrypt.sourceforge.net/)  
+> **Links:** [Homepage](http://mcrypt.sourceforge.net/) | [Downloads](http://sourceforge.net/projects/mcrypt/files/Libmcrypt/)  
 > **Dependencies:** None  
 > **Version:** <span id="version">2.5.8</span>
 
