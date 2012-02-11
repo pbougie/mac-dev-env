@@ -1,4 +1,4 @@
 ---
 title: Compiling a Web Development Environment on Mac OS X
 markdown: rdiscount
-exclude: [README.md, TEST.md, styles.scss]
+exclude: [Gemfile, Gemfile.lock, README.md, TEST.md]

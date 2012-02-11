@@ -5,3 +5,6 @@ gem "jekyll"
 
 # https://github.com/rtomayko/rdiscount
 gem "rdiscount"
+
+# http://sass-lang.com/
+gem "sass"

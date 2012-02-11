@@ -20,6 +20,7 @@ GEM
       syntax (>= 1.0.0)
     posix-spawn (0.3.6)
     rdiscount (1.6.8)
+    sass (3.1.15)
     syntax (1.0.0)
 
 PLATFORMS
@@ -28,3 +29,4 @@ PLATFORMS
 DEPENDENCIES
   jekyll
   rdiscount
+  sass
