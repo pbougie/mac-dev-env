@@ -38,6 +38,7 @@ Start with the **Getting Started** section, then proceed with installing your de
 	- [rbenv](ruby-rbenv.html)
 	- [Ruby](ruby.html)
 	- [RubyGems](ruby-gems.html)
+	- [Bundler](ruby-bundler.html)
 	- [Ruby on Rails](ruby-rails.html)
 	- [MySQL Driver for Ruby](ruby-mysql.html)
 	- [MongoDB Driver for Ruby](ruby-mongodb.html)
