@@ -52,5 +52,9 @@ Start with the **Getting Started** section, then proceed with installing your de
 	- [MongoDB Driver for PHP](php-mongodb.html)
 	- [SQLite Driver for PHP](php-sqlite.html)
 
+### Libraries
+
+- [ImageMagick](imagemagick.html)
+
 ---
 **Note:** Remember these instructions are for creating a development server and therefore security is not considered. For a production system, please refer to each product's respective documentation on how to properly secure each service.
