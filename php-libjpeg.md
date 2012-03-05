@@ -4,12 +4,12 @@ title: LibJPEG
 ---
 
 
-Free library for JPEG image compression. Dependency for compiling [PHP](php.html).
-
-
 > **Links:** [Homepage](http://www.ijg.org/)  
 > **Dependencies:** None  
 > **Version:** <span id="version">8d</span>
+
+
+Free library for JPEG image compression. Dependency for compiling [PHP](php.html).
 
 
 ### Get the Code

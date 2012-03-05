@@ -4,11 +4,11 @@ title: Xdebug
 ---
 
 
-The Xdebug extension helps you debug your PHP scripts. It installs as a PHP extension.
-
-
 > **Links:** [Homepage](http://xdebug.org/)  
 > **Dependencies:** [PHP](php.html)
+
+
+The Xdebug extension helps you debug your PHP scripts. It installs as a PHP extension.
 
 
 ### Install

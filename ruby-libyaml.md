@@ -4,12 +4,12 @@ title: LibYAML
 ---
 
 
-YAML parser and emitter. Dependency for compiling [Ruby 1.9.3](ruby.html).
-
-
 > **Links:** [Homepage](http://pyyaml.org/wiki/LibYAML)  
 > **Dependencies:** None  
 > **Version:** <span id="version">0.1.4</span>
+
+
+YAML parser and emitter. Dependency for compiling [Ruby 1.9.3](ruby.html).
 
 
 ### Get the Code
