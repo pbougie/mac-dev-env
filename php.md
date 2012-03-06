@@ -6,7 +6,7 @@ title: PHP
 
 > **Links:** [Homepage](http://www.php.net/) | [Downloads](http://www.php.net/downloads.php)  
 > **Dependencies:** [Apache](apache.html) | [LibJPEG](php-libjpeg.html) | [LibPNG](php-libpng.html) | [LibMCrypt](php-libmcrypt.html)  
-> **Version:** <span id="version">5.3.9</span>
+> **Version:** <span id="version">5.4.0</span>
 
 
 **PHP** is a general-purpose server-side scripting language that is especially suited to web development.
@@ -58,13 +58,6 @@ Configure, compile and install into `/usr/local/php-VERSION`.
 Create a symbolic link that points `/usr/local/php` to `/usr/local/php-VERSION`.
 
 	ln -s php-VERSION /usr/local/php
-
-
-### Bug
-
-For some reason, the PHP CLI (command line interpreter/interface) is incorrectly named during installation. Create a symbolic link to temporarily fix the problem. Check first to see if this is happening to you, otherwise skip this step.
-
-	ln -s /usr/local/php/bin/php.dSYM /usr/local/php/bin/php
 
 
 ### PHP Configuration
