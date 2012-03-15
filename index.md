@@ -48,7 +48,7 @@ Start with the **Getting Started** section, then proceed with installing your de
 	- [LibPNG](php-libpng.html)
 	- [LibMCrypt](php-libmcrypt.html)
 	- [PHP](php.html)
-	- [Xdebug](php-xdebug.html)
+	- [Xdebug](php-xdebug.html) (not supported by PHP 5.4.0)
 	- [MySQL Driver for PHP](php-mysql.html)
 	- [MongoDB Driver for PHP](php-mongodb.html)
 	- [SQLite Driver for PHP](php-sqlite.html)
