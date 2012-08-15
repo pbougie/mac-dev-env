@@ -9,7 +9,7 @@ title: LibMCrypt
 > **Version:** <span id="version">2.5.8</span>
 
 
-**LibMCrypt** is a standardized library to [MCrypt](http://mcrypt.sourceforge.net/) — which replaced the old Unix crypt() package. Dependency for compiling [PHP](php.html).
+**LibMCrypt** is a standardized library to [MCrypt](http://mcrypt.sourceforge.net/) — which replaced the old Unix crypt() package.
 
 
 ### Get the Code

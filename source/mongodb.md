@@ -5,7 +5,7 @@ title: MongoDB
 
 > **Links:** [Homepage](http://mongodb.org/) | [Downloads](http://www.mongodb.org/downloads)  
 > **Dependencies:** None  
-> **Version:** <span id="version">2.0.2</span>
+> **Version:** <span id="version">2.0.7</span>
 
 
 **MongoDB** is a scalable, high-performance, open source, schema-free, document-oriented database. MongoDB was created by [10gen](10gen.com) and they have been kind enough to provide pre-compiled binaries for various platforms including Mac OS X.
@@ -32,7 +32,7 @@ Create a symbolic link to `/usr/local/mongodb`.
 
 ### Databases
 
-Create a folder that will contain your databases. My databases are located in `/usr/local/var/mongodb`. You can place your databases wherever you'd like but make sure you update the path when mentioned in this article.
+Create a folder that will contain your databases. My databases are located in `/usr/local/var/mongodb`. You can place your databases wherever you'd like but make sure you update the path when mentioned throughout these instructions.
 
 	mkdir -p /usr/local/var/mongodb
 

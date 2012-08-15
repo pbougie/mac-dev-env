@@ -5,8 +5,8 @@ title: Ruby
 
 
 > **Links:** [Homepage](http://www.ruby-lang.org/) | [Downloads](http://www.ruby-lang.org/en/downloads/)  
-> **Dependencies:** [rbenv](ruby-rbenv.html) | [LibYAML](ruby-libyaml.html) (for Ruby 1.9.3 only)  
-> **Version:** <span id="version">1.9.3-p125</span>
+> **Dependencies:** [rbenv](ruby-rbenv.html) | [LibYAML](lib-yaml.html)  
+> **Version:** <span id="version">1.9.3-p194</span>
 
 
 ### Get the Code
@@ -15,7 +15,7 @@ Switch to `/usr/local/src` and download the source package.
 
 	cd /usr/local/src
 	curl --remote-name http://ftp.ruby-lang.org/pub/ruby/ruby-VERSION.tar.gz
-	
+
 Extract the archive and move into the folder.
 
 	tar -xzvf ruby-VERSION.tar.gz
@@ -24,12 +24,11 @@ Extract the archive and move into the folder.
 
 ### Compile and Install
 
-Configure, compile and install into `/usr/local/rbenv/versions/VERSION`. Check the configure options for other versions.
+Configure, compile and install into `/usr/local/rbenv/versions/VERSION`.
 
 	./configure \
 		--prefix=/usr/local/rbenv/versions/VERSION \
-		--with-opt-dir=/usr/local/libyaml \
-		--with-gcc=clang
+		--with-opt-dir=/usr/local/libyaml
 	make
 	make install
 

@@ -8,11 +8,9 @@ This method also allows us to install any required version for a given project. 
 
 Start with the **Getting Started** section, then proceed with installing your desired packages. Some packages need to be installed in a certain order to satisfy dependencies. Each package lists its dependencies at the beginning of the instructions.
 
-*Good luck and happy coding!*
-
 ### Getting Started
 
-- [Xcode Developer Tools](started-xcode.html)
+- [Command Line Tools](started-cli.html)
 - [Create the Folder Structure](started-folders.html)
 
 ### Source Code Management
@@ -22,19 +20,21 @@ Start with the **Getting Started** section, then proceed with installing your de
 ### Databases
 
 - MySQL
-	- [CMake](mysql-cmake.html)
+	- [CMake](cmake.html)
 	- [MySQL](mysql.html)
 - [MongoDB](mongodb.html)
 - [SQLite](sqlite.html)
 
 ### Web Servers
 
-- [Apache](apache.html)
+- Apache
+	- [PCRE](pcre.html)
+	- [Apache](apache.html)
 
 ### Languages
 
 - Ruby
-	- [LibYAML](ruby-libyaml.html)
+	- [LibYAML](lib-yaml.html)
 	- [rbenv](ruby-rbenv.html)
 	- [Ruby](ruby.html)
 	- [RubyGems](ruby-gems.html)
@@ -44,18 +44,22 @@ Start with the **Getting Started** section, then proceed with installing your de
 	- [MongoDB Driver for Ruby](ruby-mongodb.html)
 	- [SQLite Driver for Ruby](ruby-sqlite.html)
 - PHP: Hypertext Preprocessor
-	- [LibJPEG](php-libjpeg.html)
-	- [LibPNG](php-libpng.html)
-	- [LibMCrypt](php-libmcrypt.html)
+	- [LibJPEG](lib-jpeg.html)
+	- [LibPNG](lib-png.html)
+	- [LibMCrypt](lib-mcrypt.html)
 	- [PHP](php.html)
-	- [Xdebug](php-xdebug.html) (not supported by PHP 5.4.0)
+	- [Autoconf](autoconf.html)
+	- [Xdebug](php-xdebug.html)
 	- [MySQL Driver for PHP](php-mysql.html)
 	- [MongoDB Driver for PHP](php-mongodb.html)
 	- [SQLite Driver for PHP](php-sqlite.html)
 
 ### Libraries
 
-- [ImageMagick](imagemagick.html)
+- GraphicsMagick
+	- [LibJPEG](lib-jpeg.html)
+	- [LibPNG](lib-png.html)
+	- [GraphicsMagick](graphicsmagick.html)
 
 ---
-**Note:** Remember these instructions are for creating a development server and therefore security is not considered. For a production system, please refer to each product's respective documentation on how to properly secure each service.
+**Note:** Remember that these instructions are for creating a development environment and therefore security is not considered. For a production system, please refer to each product's respective documentation on how to properly secure each service.

@@ -20,7 +20,7 @@ To upgrade RubyGems.
 
 ### Documentation
 
-All gems have documentation that is generated when installing a gem. To start the documentation web server.
+All gems have documentation that is generated when a gem is installed. To start the documentation web server.
 
 	gem server
 
@@ -43,7 +43,7 @@ Copy and paste the following text into the aforementioned file. The path to the 
 		<string>org.rubygems.gem</string>
 		<key>ProgramArguments</key>
 		<array>
-			<string>/usr/local/rbenv/versions/1.9.3-p125/bin/gem</string>
+			<string>/usr/local/rbenv/versions/1.9.3-p194/bin/gem</string>
 			<string>server</string>
 			<string>--daemon</string>
 		</array>

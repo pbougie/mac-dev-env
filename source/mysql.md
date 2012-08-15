@@ -4,11 +4,11 @@ title: MySQL
 ---
 
 > **Links:** [Homepage](http://www.mysql.com/) | [Downloads](http://www.mysql.com/downloads/mysql/) | [Reference Manual](http://dev.mysql.com/doc/refman/5.5/en/index.html)  
-> **Dependencies:** [CMake](mysql-cmake.html)  
-> **Version:** <span id="version">5.5.20</span>
+> **Dependencies:** [CMake](cmake.html)  
+> **Version:** <span id="version">5.5.27</span>
 
 
-**MySQL** is an open-source relational database management server (RDBMS). If you've never heard of it, you probably don't need these instructions.
+**MySQL** is an open-source relational database management server (RDBMS).
 
 
 ### Get the Code
@@ -26,7 +26,7 @@ Extract the archive and move into the folder.
 
 ### Databases
 
-Create a folder that will contain your databases. My databases are located in `/usr/local/var/mysql`. You can place your databases wherever you'd like but make sure you update the path when mentioned in this article.
+Create a folder that will contain your databases. My databases are located in `/usr/local/var/mysql`. You can place your databases wherever you'd like but make sure you update the path when mentioned throughout these instructions.
 
 	mkdir -p /usr/local/var/mysql
 

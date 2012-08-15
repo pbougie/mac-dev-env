@@ -1,0 +1,62 @@
+---
+layout: default
+title: GraphicsMagick
+---
+
+> **Links:** [Homepage](http://www.graphicsmagick.org/) | [Downloads](http://www.graphicsmagick.org/download.html)  
+> **Dependencies:** [LibJPEG](lib-jpeg.html) | [LibPNG](lib-png.html)  
+> **Version:** <span id="version">1.3.16</span>
+
+
+**GraphicsMagick** provides a comprehensive collection of utilities, programming interfaces, and GUIs, to support file format conversion, image processing, and 2D vector rendering.
+
+
+### Get the Code
+
+Switch to `/usr/local/src` and download the source package.
+
+	cd /usr/local/src
+	curl --location --output GraphicsMagick-VERSION.tar.gz http://download.sourceforge.net/graphicsmagick/GraphicsMagick-VERSION.tar.gz
+
+Extract the archive and move into the folder.
+
+	tar -xzvf GraphicsMagick-VERSION.tar.gz
+	cd GraphicsMagick-VERSION
+
+
+### Compile and Install
+
+Configure, compile and install into `/usr/local/graphicsmagick-VERSION`.
+
+	./configure CC=clang \
+		LDFLAGS="-L/usr/local/libjpeg/lib -L/usr/local/libpng/lib" \
+		CPPFLAGS="-I/usr/local/libjpeg/include -I/usr/local/libpng/include" \
+		--prefix=/usr/local/graphicsmagick-VERSION
+	make
+	make install
+
+Create a symbolic link that points `/usr/local/graphicsmagick` to `/usr/local/graphicsmagick-VERSION`.
+
+	ln -s graphicsmagick-VERSION /usr/local/graphicsmagick
+
+
+### Shell
+
+Add the following lines to your [Bash](http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) startup script to put GraphicsMagick into your path.
+
+	echo 'export PATH=/usr/local/graphicsmagick/bin:$PATH' >> ~/.bash_profile
+
+Load the new shell configurations.
+
+	source ~/.bash_profile
+
+
+### Verify the Installation
+
+To verify that you have correctly installed GraphicsMagick, execute the following command.
+
+	gm version
+
+To see the list of supported image formats.
+
+	gm convert -list formats

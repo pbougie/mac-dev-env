@@ -4,9 +4,9 @@ title: Apache
 ---
 
 
-> **Links:** [Homepage](http://httpd.apache.org/) | [Downloads](http://httpd.apache.org/download.cgi) | [Documentation](http://httpd.apache.org/docs/2.2/)  
-> **Dependencies:** None  
-> **Version:** <span id="version">2.2.21</span>
+> **Links:** [Homepage](http://httpd.apache.org/) | [Downloads](http://httpd.apache.org/download.cgi) | [Documentation](http://httpd.apache.org/docs/2.4/)  
+> **Dependencies:** [PCRE](pcre.html)  
+> **Version:** <span id="version">2.4.2</span>
 
 
 The **Apache HTTP Server** is an open-source web server that was released in 1995. It has been the most popular web server on the Internet since April 1996. It is estimated to serve over 60% of all websites.
@@ -27,15 +27,14 @@ Extract the archive and move into the folder.
 
 ### Compile and Install
 
+There are some broken references when attempting to compile using the Command Line Tools. This symbolic link temporarily fixes the problem. You can delete it once you are done.
+
+	mkdir -p /Applications/Xcode.app/Contents/Developer/Toolchains/OSX10.8.xctoolchain/usr/bin
+	ln -s /usr/bin/cc /Applications/Xcode.app/Contents/Developer/Toolchains/OSX10.8.xctoolchain/usr/bin/cc
+
 Configure, compile and install into `/usr/local/apache-VERSION`.
 
-	./configure \
-		--prefix=/usr/local/apache-VERSION \
-		--enable-dav \
-		--enable-info \
-		--enable-rewrite \
-		--enable-so \
-		--enable-ssl
+	./configure --prefix=/usr/local/apache-2.4.2
 	make
 	make install
 
@@ -55,17 +54,15 @@ Copy and paste the following text at the end of the aforementioned file. Make su
 	ServerName dev.local
 	User <username>
 	Group staff
-	
+
 	DocumentRoot "/Users/<username>/Sites"
 	<Directory "/Users/<username>/Sites">
 		Options All
 		AllowOverride All
 		IndexOptions NameWidth=*
-		
-		Order deny,allow
-		Deny from all
-		Allow from localhost
-		Allow from 127.0.0.1
+
+		Require host localhost
+		Require host 127.0.0.1
 	</Directory>
 
 
@@ -86,8 +83,8 @@ Add the following lines to your [Bash](http://en.wikipedia.org/wiki/Bash_%28Unix
 You can also create the following shortcuts if you'd like.
 
 	echo 'alias apache-start="sudo /usr/local/apache/bin/apachectl -k start"' >> ~/.bash_profile
-	echo 'alias apache-stop="sudo /usr/local/apache/bin/apachectl -k stop"' >> ~/.bash_profile
-	echo 'alias apache-restart="sudo /usr/local/apache/bin/apachectl -k restart"' >> ~/.bash_profile
+	echo 'alias apache-stop="sudo /usr/local/apache/bin/apachectl -k graceful-stop"' >> ~/.bash_profile
+	echo 'alias apache-restart="sudo /usr/local/apache/bin/apachectl -k graceful"' >> ~/.bash_profile
 
 Load the new shell configurations.
 

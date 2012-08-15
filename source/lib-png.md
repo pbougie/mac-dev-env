@@ -6,7 +6,7 @@ title: LibPNG
 
 > **Links:** [Homepage](http://www.libpng.org/pub/png/libpng.html)  
 > **Dependencies:** None  
-> **Version:** <span id="version">1.5.9</span>
+> **Version:** <span id="version">1.5.12</span>
 
 
 **LibPNG** is the official PNG reference library.

@@ -9,7 +9,7 @@ title: LibYAML
 > **Version:** <span id="version">0.1.4</span>
 
 
-YAML parser and emitter. Dependency for compiling [Ruby 1.9.3](ruby.html).
+YAML parser and emitter.
 
 
 ### Get the Code

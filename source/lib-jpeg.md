@@ -9,7 +9,7 @@ title: LibJPEG
 > **Version:** <span id="version">8d</span>
 
 
-Free library for JPEG image compression. Dependency for compiling [PHP](php.html).
+Free library for JPEG image compression.
 
 
 ### Get the Code
