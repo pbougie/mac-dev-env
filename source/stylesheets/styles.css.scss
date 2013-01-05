@@ -129,19 +129,10 @@ header[role="banner"] {
 		}
 	}
 }
-.ie7 header[role="banner"] li a,
 .ie8 header[role="banner"] li a {
 	width: auto;
 	padding-left: 38px;
 	text-indent: 0;
-}
-.ie7 header[role="banner"] {
-	height: 70px;
-
-	li {
-		display: inline;
-		line-height: 70px;
-	}
 }
 
 
