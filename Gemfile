@@ -1,10 +1,3 @@
-source "http://rubygems.org"
+source :rubygems
 
-# https://github.com/mojombo/jekyll
-gem "jekyll"
-
-# https://github.com/rtomayko/rdiscount
-gem "rdiscount"
-
-# http://sass-lang.com/
-gem "sass"
+gem "middleman"

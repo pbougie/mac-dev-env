@@ -1,0 +1,64 @@
+<!doctype html>
+<!--[if IE 7]><html class="ie7 lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if IE 8]><html class="ie8 lt-ie9" lang="en"><![endif]-->
+<!--[if IE 9]><html class="ie9" lang="en"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
+<head>
+
+  <meta charset="utf-8">
+  <title>
+    <%= "#{data.page.title} – " if data.page.title %>
+    Compiling a Web Development Environment on Mac OS X
+  </title>
+
+  <meta name="author" content="Patrick Bougie">
+  <meta name="description" content="Instructions for compiling a Web Development Environment on Mac OS X.">
+  <meta name="apple-mobile-web-app-title" content="Mac Dev Env">
+  <meta name="viewport" content="initial-scale=1.0">
+
+  <link rel="shortcut icon" href="images/favicon.png">
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-57x57.png">
+
+  <!--[if gte IE 7]><!-->
+  <%= stylesheet_link_tag "normalize", "styles", media: nil, type: nil %>
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:regular,bold">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Serif">
+  <!--<![endif]-->
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <%= javascript_include_tag "ios-fix", "dynamic-versioning", type: nil %>
+
+</head>
+<body id="<%= current_page.path.split('.').first %>">
+
+  <%= partial "layouts/header" %>
+
+  <section role="main">
+    <header>
+      <hgroup>
+        <h1>Compiling a Web Development Environment on Mac OS X</h1>
+        <%= "<h2>#{data.page.title}</h2>" if data.page.title %>
+      </hgroup>
+    </header>
+    <article>
+      <%= yield %>
+    </article>
+    <% if data.page.title %>
+      <footer>
+        <p>
+          <a href="index.html">« Return to the Table of Contents</a>
+        </p>
+      </footer>
+    <% end %>
+  </section>
+
+  <%= partial "layouts/footer" %>
+
+</body>
+</html>

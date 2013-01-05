@@ -1,5 +1,0 @@
----
-title: Compiling a Web Development Environment on Mac OS X
-source: ./source
-markdown: rdiscount
-exclude: [Gemfile, Gemfile.lock, README.md, TEST.md]
