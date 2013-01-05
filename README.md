@@ -12,5 +12,5 @@ Guide for compiling your own web development environment in Mac OS X; primary pa
 
 
 ---
-© 2012 [Patrick Bougie](http://patrickbougie.com/). All Rights Reserved.
+© 2013 [Patrick Bougie](http://patrickbougie.com/). All Rights Reserved.
 Please do not reproduce without written consent.
