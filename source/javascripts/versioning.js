@@ -1,4 +1,5 @@
 var original;
+
 function version_form() {
   var version = $("#version").text();
   $("#version").empty();
@@ -6,6 +7,7 @@ function version_form() {
   var regex = new RegExp(version, 'g');
   original = $("section[role='main']>article").html().replace(regex, 'VERSION');
 }
+
 function update_version() {
   var version = $("#version input[type=text]").val();
   var article = $("section[role='main']>article");
@@ -14,6 +16,7 @@ function update_version() {
     update_version();
   });
 }
+
 $(document).ready(function() {
   if ($("#version").length) {
     version_form();
