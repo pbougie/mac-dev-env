@@ -10,7 +10,7 @@ Start with the **Getting Started** section, then proceed with installing your de
 - [Command Line Tools](started-cli.html)
 - [Create the Folder Structure](started-folders.html)
 
-### Source Code Management
+### Version Control System
 
 - [Git](git.html)
 
@@ -22,7 +22,7 @@ Start with the **Getting Started** section, then proceed with installing your de
 - [MongoDB](mongodb.html)
 - [SQLite](sqlite.html)
 
-### Web Servers
+### Web Server
 
 - Apache
 	- [PCRE](pcre.html)
@@ -51,7 +51,7 @@ Start with the **Getting Started** section, then proceed with installing your de
 	- [MongoDB Driver for PHP](php-mongodb.html)
 	- [SQLite Driver for PHP](php-sqlite.html)
 
-### Libraries
+### Image Processing
 
 - GraphicsMagick
 	- [LibJPEG](lib-jpeg.html)
