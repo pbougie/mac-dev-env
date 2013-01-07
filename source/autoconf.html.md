@@ -39,7 +39,7 @@ Create a symbolic link that points `/usr/local/autoconf` to `/usr/local/autoconf
 
 ### Shell
 
-Add the following lines to your [Bash](http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) startup script to put Autoconf into your path.
+Add the following line to your [Bash](http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) startup script to put Autoconf into your path.
 
 	echo 'export PATH=/usr/local/autoconf/bin:$PATH' >> ~/.bash_profile
 

@@ -40,7 +40,7 @@ Start with the **Getting Started** section, then proceed with installing your de
 	- [MySQL Driver for Ruby](ruby-mysql.html)
 	- [MongoDB Driver for Ruby](ruby-mongodb.html)
 	- [SQLite Driver for Ruby](ruby-sqlite.html)
-- PHP: Hypertext Preprocessor
+- PHP
 	- [LibJPEG](lib-jpeg.html)
 	- [LibPNG](lib-png.html)
 	- [LibMCrypt](lib-mcrypt.html)

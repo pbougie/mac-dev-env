@@ -5,7 +5,7 @@ title: PCRE - Perl Compatible Regular Expressions
 
 > **Links:** [Homepage](http://pcre.org/)  
 > **Dependencies:** None  
-> **Version:** <span id="version">8.31</span>
+> **Version:** <span id="version">8.32</span>
 
 
 The **PCRE** library is a set of functions that implement regular expression pattern matching using the same syntax and semantics as Perl 5.
@@ -39,7 +39,7 @@ Create a symbolic link that points `/usr/local/pcre` to `/usr/local/pcre-VERSION
 
 ### Shell
 
-Add the following lines to your [Bash](http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) startup script to put PCRE into your path.
+Add the following line to your [Bash](http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) startup script to put PCRE into your path.
 
 	echo 'export PATH=/usr/local/pcre/bin:$PATH' >> ~/.bash_profile
 

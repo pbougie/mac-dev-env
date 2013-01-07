@@ -5,7 +5,7 @@ title: Apache
 
 > **Links:** [Homepage](http://httpd.apache.org/) | [Downloads](http://httpd.apache.org/download.cgi) | [Documentation](http://httpd.apache.org/docs/2.4/)  
 > **Dependencies:** [PCRE](pcre.html)  
-> **Version:** <span id="version">2.4.2</span>
+> **Version:** <span id="version">2.4.3</span>
 
 
 The **Apache HTTP Server** is an open-source web server that was released in 1995. It has been the most popular web server on the Internet since April 1996. It is estimated to serve over 60% of all websites.
@@ -26,14 +26,14 @@ Extract the archive and move into the folder.
 
 ### Compile and Install
 
-There are some broken references when attempting to compile using the Command Line Tools. This symbolic link temporarily fixes the problem. You can delete it once you are done.
+There are some broken references when attempting to compile using the Command Line Tools. This symbolic link temporarily fixes the problem. You can delete `/Applications/Xcode` once you are done.
 
 	mkdir -p /Applications/Xcode.app/Contents/Developer/Toolchains/OSX10.8.xctoolchain/usr/bin
 	ln -s /usr/bin/cc /Applications/Xcode.app/Contents/Developer/Toolchains/OSX10.8.xctoolchain/usr/bin/cc
 
 Configure, compile and install into `/usr/local/apache-VERSION`.
 
-	./configure --prefix=/usr/local/apache-2.4.2
+	./configure --prefix=/usr/local/apache-VERSION
 	make
 	make install
 
@@ -48,7 +48,7 @@ Edit Apache's configuration file.
 
 	nano /usr/local/apache/conf/httpd.conf
 
-Copy and paste the following text at the end of the aforementioned file. Make sure you replace the `<username>` string (3 times) with your Mac OS X short username. This configuration only allows access from your local computer; all outside access is blocked.
+Copy and paste the following text at the end of the aforementioned file. Make sure you replace the `<username>` string (3 times) with your OS X short username. This configuration only allows access from your local computer; all outside access is blocked.
 
 	ServerName dev.local
 	User <username>
@@ -67,7 +67,7 @@ Copy and paste the following text at the end of the aforementioned file. Make su
 
 ### Web Root
 
-Create a folder that will contain your web sites and applications. My projects are located in `~/Sites` – the standard location for web files on Mac OS X. You can place your projects wherever you'd like but make sure you update the path when mentioned in this article.
+Create a folder that will contain your web sites and applications; such as `~/Sites` You can place your projects wherever you'd like but make sure you update the path when mentioned in this article.
 
 	mkdir -p ~/Sites
 
@@ -96,7 +96,7 @@ Create a configuration file for [Launchd](http://en.wikipedia.org/wiki/Launchd).
 
 	sudo nano /Library/LaunchDaemons/org.apache.apache2.plist
 
-Do not name the file *org.apache.httpd.plist* as it collides with a similarly named file for loading the Mac OS X web server.
+Do not name the file *org.apache.httpd.plist* as it collides with a similarly named file for loading the OS X web server.
 
 Copy and paste the following text into the aforementioned file.
 

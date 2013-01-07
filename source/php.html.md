@@ -5,7 +5,7 @@ title: PHP
 
 > **Links:** [Homepage](http://www.php.net/) | [Downloads](http://www.php.net/downloads.php)  
 > **Dependencies:** [Apache](apache.html) | [LibJPEG](lib-jpeg.html) | [LibPNG](lib-png.html) | [LibMCrypt](lib-mcrypt.html)  
-> **Version:** <span id="version">5.4.5</span>
+> **Version:** <span id="version">5.4.10</span>
 
 
 **PHP** is a general-purpose server-side scripting language that is especially suited to web development.

@@ -42,7 +42,7 @@ Copy and paste the following text into the aforementioned file. The path to the 
 		<string>org.rubygems.gem</string>
 		<key>ProgramArguments</key>
 		<array>
-			<string>/usr/local/rbenv/versions/1.9.3-p194/bin/gem</string>
+			<string>/usr/local/rbenv/versions/1.9.3-p362/bin/gem</string>
 			<string>server</string>
 			<string>--daemon</string>
 		</array>

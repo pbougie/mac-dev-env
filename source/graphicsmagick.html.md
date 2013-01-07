@@ -4,7 +4,7 @@ title: GraphicsMagick
 
 > **Links:** [Homepage](http://www.graphicsmagick.org/) | [Downloads](http://www.graphicsmagick.org/download.html)  
 > **Dependencies:** [LibJPEG](lib-jpeg.html) | [LibPNG](lib-png.html)  
-> **Version:** <span id="version">1.3.16</span>
+> **Version:** <span id="version">1.3.17</span>
 
 
 **GraphicsMagick** provides a comprehensive collection of utilities, programming interfaces, and GUIs, to support file format conversion, image processing, and 2D vector rendering.
@@ -41,7 +41,7 @@ Create a symbolic link that points `/usr/local/graphicsmagick` to `/usr/local/gr
 
 ### Shell
 
-Add the following lines to your [Bash](http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) startup script to put GraphicsMagick into your path.
+Add the following line to your [Bash](http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) startup script to put GraphicsMagick into your path.
 
 	echo 'export PATH=/usr/local/graphicsmagick/bin:$PATH' >> ~/.bash_profile
 
