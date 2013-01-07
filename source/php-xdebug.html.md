@@ -4,7 +4,7 @@ title: Xdebug
 
 
 > **Links:** [Homepage](http://xdebug.org/)  
-> **Dependencies:** [PHP](php.html)
+> **Dependencies:** [PHP](/php)
 
 
 The Xdebug extension helps you debug your PHP scripts. It installs as a PHP extension.

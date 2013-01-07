@@ -4,7 +4,7 @@ title: SQLite Driver for Ruby
 
 
 > **Links:** [Homepage](http://rubygems.org/gems/sqlite3)  
-> **Dependencies:** [Ruby](ruby.html)
+> **Dependencies:** [Ruby](/ruby)
 
 
 ### Install

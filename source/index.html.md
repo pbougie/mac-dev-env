@@ -4,56 +4,56 @@ Start with the **Getting Started** section, then proceed with installing your de
 
 ### Getting Started
 
-- [Command Line Tools](started-cli.html)
-- [Create the Folder Structure](started-folders.html)
+- [Command Line Tools](/started-cli)
+- [Create the Folder Structure](/started-folders)
 
 ### Version Control System
 
-- [Git](git.html)
+- [Git](/git)
 
 ### Databases
 
 - MySQL
-	- [CMake](cmake.html)
-	- [MySQL](mysql.html)
-- [MongoDB](mongodb.html)
-- [SQLite](sqlite.html)
+	- [CMake](/cmake)
+	- [MySQL](/mysql)
+- [MongoDB](/mongodb)
+- [SQLite](/sqlite)
 
 ### Web Server
 
 - Apache
-	- [PCRE](pcre.html)
-	- [Apache](apache.html)
+	- [PCRE](/pcre)
+	- [Apache](/apache)
 
 ### Languages
 
 - Ruby
-	- [LibYAML](lib-yaml.html)
-	- [rbenv](ruby-rbenv.html)
-	- [Ruby](ruby.html)
-	- [RubyGems](ruby-gems.html)
-	- [Bundler](ruby-bundler.html)
-	- [Ruby on Rails](ruby-rails.html)
-	- [MySQL Driver for Ruby](ruby-mysql.html)
-	- [MongoDB Driver for Ruby](ruby-mongodb.html)
-	- [SQLite Driver for Ruby](ruby-sqlite.html)
+	- [LibYAML](/lib-yaml)
+	- [rbenv](/ruby-rbenv)
+	- [Ruby](/ruby)
+	- [RubyGems](/ruby-gems)
+	- [Bundler](/ruby-bundler)
+	- [Ruby on Rails](/ruby-rails)
+	- [MySQL Driver for Ruby](/ruby-mysql)
+	- [MongoDB Driver for Ruby](/ruby-mongodb)
+	- [SQLite Driver for Ruby](/ruby-sqlite)
 - PHP
-	- [LibJPEG](lib-jpeg.html)
-	- [LibPNG](lib-png.html)
-	- [LibMCrypt](lib-mcrypt.html)
-	- [PHP](php.html)
-	- [Autoconf](autoconf.html)
-	- [Xdebug](php-xdebug.html)
-	- [MySQL Driver for PHP](php-mysql.html)
-	- [MongoDB Driver for PHP](php-mongodb.html)
-	- [SQLite Driver for PHP](php-sqlite.html)
+	- [LibJPEG](/lib-jpeg)
+	- [LibPNG](/lib-png)
+	- [LibMCrypt](/lib-mcrypt)
+	- [PHP](/php)
+	- [Autoconf](/autoconf)
+	- [Xdebug](/php-xdebug)
+	- [MySQL Driver for PHP](/php-mysql)
+	- [MongoDB Driver for PHP](/php-mongodb)
+	- [SQLite Driver for PHP](/php-sqlite)
 
 ### Image Processing
 
 - GraphicsMagick
-	- [LibJPEG](lib-jpeg.html)
-	- [LibPNG](lib-png.html)
-	- [GraphicsMagick](graphicsmagick.html)
+	- [LibJPEG](/lib-jpeg)
+	- [LibPNG](/lib-png)
+	- [GraphicsMagick](/graphicsmagick)
 
 ---
 **Warning:** Remember that these instructions are for creating a development environment and therefore security is not considered. For a production system, please refer to each product's respective documentation on how to properly secure each service.

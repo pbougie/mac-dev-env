@@ -4,7 +4,7 @@ title: Ruby on Rails
 
 
 > **Links:** [Homepage](http://rubyonrails.org/)  
-> **Dependencies:** [Ruby](ruby.html)
+> **Dependencies:** [Ruby](/ruby)
 
 
 ### Install

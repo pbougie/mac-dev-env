@@ -4,7 +4,7 @@ title: MongoDB Driver for Ruby
 
 
 > **Links:** [Homepage](http://rubygems.org/gems/mongo)  
-> **Dependencies:** [Ruby](ruby.html)
+> **Dependencies:** [Ruby](/ruby)
 
 
 ### Install

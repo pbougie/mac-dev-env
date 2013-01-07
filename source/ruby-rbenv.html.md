@@ -42,7 +42,7 @@ Load the new shell configurations.
 
 ### Install Ruby Versions
 
-To install Ruby versions, check the section on installing [Ruby](ruby.html).
+To install Ruby versions, check the section on installing [Ruby](/ruby).
 
 
 ### Upgrading

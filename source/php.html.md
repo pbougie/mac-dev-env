@@ -4,7 +4,7 @@ title: PHP
 
 
 > **Links:** [Homepage](http://www.php.net/) | [Downloads](http://www.php.net/downloads.php)  
-> **Dependencies:** [Apache](apache.html) | [LibJPEG](lib-jpeg.html) | [LibPNG](lib-png.html) | [LibMCrypt](lib-mcrypt.html)  
+> **Dependencies:** [Apache](/apache) | [LibJPEG](/lib-jpeg) | [LibPNG](/lib-png) | [LibMCrypt](/lib-mcrypt)  
 > **Version:** <span id="version">5.4.10</span>
 
 
