@@ -14,3 +14,6 @@ gem "rack-google_analytics"
 
 # https://github.com/thunderboltlabs/rack-gauges
 gem "rack-gauges"
+
+# http://builder.rubyforge.org/
+gem "builder"
