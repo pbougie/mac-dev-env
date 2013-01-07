@@ -4,7 +4,7 @@ title: MongoDB Driver for PHP
 
 
 > **Links:** [Homepage](http://www.mongodb.org/display/DOCS/PHP+Language+Center)  
-> **Dependencies:** [PHP](/php)
+> **Dependencies:** [PHP](/php) | [Autoconf](/autoconf) | [MongoDB](/mongodb)
 
 
 ### Install
