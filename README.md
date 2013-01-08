@@ -26,7 +26,7 @@ Environment variables required to build and deploy the site:
 
 ## Build/Deploy
 
-Make sure the environment variables are available before proceeding.
+This guide is built with [Middleman](http://middlemanapp.com/). Make sure the aforementioned environment variables are available before generating the web site.
 
 - To build the static site: `bundle exec middleman build --clean`
 - To deploy via [rsync](http://rsync.samba.org/): `bundle exec middleman deploy`
