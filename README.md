@@ -33,5 +33,5 @@ Make sure the environment variables are available before proceeding.
 
 
 ---
-© 2013 [Patrick Bougie](http://patrickbougie.com/). All Rights Reserved.
+© 2011–2013 [Patrick Bougie](http://patrickbougie.com/). All Rights Reserved.
 Please do not reproduce without written consent.
