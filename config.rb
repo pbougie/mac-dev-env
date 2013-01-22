@@ -6,6 +6,8 @@ set :images_dir, 'images'
 
 activate :directory_indexes
 
+ignore "/stylesheets/normalize.css"
+
 configure :build do
   activate :minify_css
   activate :minify_javascript
