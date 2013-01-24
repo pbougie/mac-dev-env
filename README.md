@@ -2,7 +2,7 @@
 
 ## Overview
 
-Insctuctions for compiling your own web development environment in OS X; primary packages include:
+Instructions for compiling your own web development environment in OS X; primary packages include:
 
 - Apache
 - Git
@@ -12,10 +12,12 @@ Insctuctions for compiling your own web development environment in OS X; primary
 - Ruby
 - SQLite
 
+This website is built with [Middleman](http://middlemanapp.com/).
+
 
 ## Environment Variables
 
-Environment variables required to build and deploy the site:
+Environment variables required to build and deploy the website:
 
 - **GAUGES**: Tracking code for [Gauges](http://get.gaug.es/).
 - **GOOGLE_ANALYTICS**: Tracking code for [Google Analytics](http://www.google.com/analytics/).
@@ -24,12 +26,14 @@ Environment variables required to build and deploy the site:
 - **RSYNC_PATH**: Pathname for deployment via [rsync](http://rsync.samba.org/).
 
 
-## Build/Deploy
+## Rake
 
-This guide is built with [Middleman](http://middlemanapp.com/). Make sure the aforementioned environment variables are available before generating the web site.
+Make sure the aforementioned environment variables are available before generating the website.
 
-- To build the static site: `bundle exec middleman build --clean`
-- To deploy via [rsync](http://rsync.samba.org/): `bundle exec middleman deploy`
+- Launch the preview server: `rake preview`
+- Build the website: `rake build`
+- Deploy the website: `rake deploy`
+- Build and Deploy the website: `rake release`
 
 
 ---
