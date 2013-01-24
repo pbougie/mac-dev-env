@@ -6,6 +6,9 @@ gem "middleman"
 # http://tvaughan.github.com/middleman-deploy/
 gem "middleman-deploy"
 
+# https://github.com/jimweirich/rake
+gem "rake"
+
 # https://github.com/bkeepers/dotenv
 gem "dotenv"
 
