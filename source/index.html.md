@@ -32,9 +32,13 @@ Start with the **Getting Started** section, then proceed with installing your de
 ### Languages
 
 - Ruby
-	- [LibYAML](/lib-yaml)
 	- [rbenv](/ruby-rbenv)
-	- [Ruby](/ruby)
+	- Ruby 1.9.3
+		- [LibYAML](/lib-yaml)
+		- [Ruby](/ruby-193)
+	- Ruby 2.0.0
+		- [OpenSSL](/openssl)
+		- [Ruby](/ruby-2)
 	- [RubyGems](/ruby-gems)
 	- [Bundler](/ruby-bundler)
 	- [Ruby on Rails](/ruby-rails)
