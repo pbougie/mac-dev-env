@@ -36,7 +36,7 @@ Start with the **Getting Started** section, then proceed with installing your de
 	- Ruby 1.9.3
 		- [LibYAML](/lib-yaml)
 		- [Ruby](/ruby-193)
-	- Ruby 2.0.0
+	- Ruby 2
 		- [OpenSSL](/openssl)
 		- [Ruby](/ruby-2)
 	- [RubyGems](/ruby-gems)
