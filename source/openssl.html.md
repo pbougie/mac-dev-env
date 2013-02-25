@@ -35,3 +35,23 @@ Configure, compile and install into `/usr/local/openssl-VERSION`.
 Create a symbolic link that points `/usr/local/openssl` to `/usr/local/openssl-VERSION`.
 
 	ln -s openssl-VERSION /usr/local/openssl
+
+
+### Shell
+
+Add the following lines to your [Bash](http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) startup script to put OpenSSL into your path.
+
+	echo 'export PATH=/usr/local/openssl/bin:$PATH' >> ~/.bash_profile
+	echo 'export MANPATH=/usr/local/openssl/ssl/man:$MANPATH' >> ~/.bash_profile
+
+Load the new shell configurations.
+
+	source ~/.bash_profile
+
+
+### Certificates
+
+Execute the following lines to install the certificates.
+
+	security find-certificate -a -p /Library/Keychains/System.keychain > /usr/local/openssl/ssl/cert.pem
+	security find-certificate -a -p /System/Library/Keychains/SystemRootCertificates.keychain >> /usr/local/openssl/ssl/cert.pem
