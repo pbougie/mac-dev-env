@@ -2,12 +2,12 @@
 title: MongoDB
 ---
 
-> **Links:** [Homepage](http://mongodb.org/) | [Downloads](http://www.mongodb.org/downloads)  
+> **Links:** [Homepage](http://www.mongodb.org/) | [Downloads](http://www.mongodb.org/downloads)  
 > **Dependencies:** None  
 > **Version:** <span id="version">2.2.2</span>
 
 
-**MongoDB** is a scalable, high-performance, open source, schema-free, document-oriented database. MongoDB was created by [10gen](10gen.com) and they have been kind enough to provide pre-compiled binaries for various platforms including OS X.
+**MongoDB** is a scalable, high-performance, open source, schema-free, document-oriented database. MongoDB was created by [10gen](http://www.10gen.com/) and they have been kind enough to provide pre-compiled binaries for various platforms including OS X.
 
 
 ### Get the Code
