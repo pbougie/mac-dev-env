@@ -22,15 +22,25 @@ Start with the **Getting Started** section, then proceed with installing your de
 	- [MySQL](/mysql)
 - [MongoDB](/mongodb)
 - [SQLite](/sqlite)
-
-### Web Server
-
+	
+### PHP server by Apache
 - Apache
 	- [PCRE](/pcre)
 	- [Apache](/apache)
+- PHP
+	- [LibJPEG](/lib-jpeg)
+	- [LibPNG](/lib-png)
+	- [LibMCrypt](/lib-mcrypt)
+	- [PHP](/php)
+	- [Autoconf](/autoconf)
+	- [Xdebug](/php-xdebug)
+	- [MySQL Driver for PHP](/php-mysql)
+	- [MongoDB Driver for PHP](/php-mongodb)
+	- [SQLite Driver for PHP](/php-sqlite)
 
-### Languages
+### Ruby served by Pow (through Apache)
 
+- [Pow](/pow)
 - Ruby
 	- [rbenv](/ruby-rbenv)
 		- [rbenv-gem-rehash](/ruby-rbenv-gem-rehash)
@@ -46,16 +56,6 @@ Start with the **Getting Started** section, then proceed with installing your de
 	- [MySQL Driver for Ruby](/ruby-mysql)
 	- [MongoDB Driver for Ruby](/ruby-mongodb)
 	- [SQLite Driver for Ruby](/ruby-sqlite)
-- PHP
-	- [LibJPEG](/lib-jpeg)
-	- [LibPNG](/lib-png)
-	- [LibMCrypt](/lib-mcrypt)
-	- [PHP](/php)
-	- [Autoconf](/autoconf)
-	- [Xdebug](/php-xdebug)
-	- [MySQL Driver for PHP](/php-mysql)
-	- [MongoDB Driver for PHP](/php-mongodb)
-	- [SQLite Driver for PHP](/php-sqlite)
 
 ### Image Processing
 
