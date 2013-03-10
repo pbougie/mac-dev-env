@@ -33,6 +33,7 @@ Start with the **Getting Started** section, then proceed with installing your de
 
 - Ruby
 	- [rbenv](/ruby-rbenv)
+		- [rbenv-gem-rehash](/ruby-rbenv-gem-rehash)
 	- Ruby 1.9.3
 		- [LibYAML](/lib-yaml)
 		- [Ruby](/ruby-193)

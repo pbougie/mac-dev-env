@@ -12,7 +12,3 @@ title: MongoDB Driver for Ruby
 Install the MongoDB Driver for Ruby using [RubyGems](http://rubygems.org/).
 
 	gem install mongo
-
-Rebuild the rbenv shim binaries.
-
-	rbenv rehash

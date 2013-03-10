@@ -31,10 +31,6 @@ Configure, compile and install into `/usr/local/rbenv/versions/VERSION`.
 	make
 	make install
 
-Rebuild the `rbenv` shim binaries. This needs to be done when you install new versions of Ruby or gems that provide a binary.
-
-	rbenv rehash
-
 
 ### Set Version
 
