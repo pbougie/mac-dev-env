@@ -38,7 +38,7 @@ Start with the **Getting Started** section, then proceed with installing your de
 	- [MongoDB Driver for PHP](/php-mongodb)
 	- [SQLite Driver for PHP](/php-sqlite)
 
-### Ruby served by Pow (through Apache)
+### Ruby served by Pow
 
 - [Pow](/pow)
 - Ruby
