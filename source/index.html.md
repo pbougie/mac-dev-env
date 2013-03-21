@@ -11,7 +11,7 @@ Start with the **Getting Started** section, then proceed with installing your de
 - [Command Line Tools](/started-cli)
 - [Create the Folder Structure](/started-folders)
 
-### Version Control System
+### Source Code Management
 
 - [Git](/git)
 
@@ -23,7 +23,7 @@ Start with the **Getting Started** section, then proceed with installing your de
 - [MongoDB](/mongodb)
 - [SQLite](/sqlite)
 	
-### PHP server by Apache
+### PHP served by Apache
 - Apache
 	- [PCRE](/pcre)
 	- [Apache](/apache)
