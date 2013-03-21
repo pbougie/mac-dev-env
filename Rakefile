@@ -8,14 +8,14 @@ end
 desc "Build website for deployment"
 task :build do
   puts "## Building website for deployment"
-  exec("bundle exec middleman build --clean")
+  system("bundle exec middleman build --clean")
 end
 
 desc "Deploy website via rsync to production server"
 task :deploy do
   puts "## Deploying website via rsync to production server"
-  exec("chmod -R +r build/*")
-  exec("bundle exec middleman deploy")
+  system("chmod -R +r build/*")
+  system("bundle exec middleman deploy")
 end
 
 desc "Build and Deploy website to production server"
