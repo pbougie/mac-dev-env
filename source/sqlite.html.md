@@ -5,7 +5,7 @@ title: SQLite
 
 > **Links:** [Homepage](http://www.sqlite.org/) | [Downloads](http://www.sqlite.org/download.html)  
 > **Dependencies:** None  
-> **Version:** <span id="version">3071501</span>
+> **Version:** <span id="version">3071600</span>
 
 
 **SQLite** is a self-contained, serverless, zero-configuration, transactional SQL database engine.
@@ -16,7 +16,7 @@ title: SQLite
 Switch to `/usr/local/src` and download the source package.
 
 	cd /usr/local/src
-	curl --remote-name http://www.sqlite.org/sqlite-autoconf-VERSION.tar.gz
+	curl --remote-name http://www.sqlite.org/2013/sqlite-autoconf-VERSION.tar.gz
 
 Extract the archive and move into the folder.
 

@@ -5,7 +5,7 @@ title: LibJPEG
 
 > **Links:** [Homepage](http://www.ijg.org/)  
 > **Dependencies:** None  
-> **Version:** <span id="version">8d</span>
+> **Version:** <span id="version">9</span>
 
 
 Free library for JPEG image compression.
