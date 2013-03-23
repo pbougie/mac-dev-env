@@ -37,12 +37,11 @@
   <%= partial "layouts/header" %>
 
   <section role="main">
-    <header>
-      <hgroup>
-        <h1>Compiling a Web Development Environment on Mac OS X</h1>
-        <%= "<h2>#{data.page.title}</h2>" if data.page.title %>
-      </hgroup>
-    </header>
+    <% if data.page.title %>
+      <header>
+        <h2><%= data.page.title %></h2>
+      </header>
+    <% end %>
     <article>
       <%= yield %>
     </article>
