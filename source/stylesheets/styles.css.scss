@@ -113,6 +113,14 @@ header[role="banner"] {
     }
   }
 }
+.ie8 {
+  header[role="banner"] {
+    .title a {
+      padding-top: 135px;
+      background-image: url(images/avatar.png);
+    }
+  }
+}
 
 
 /* CONTENT

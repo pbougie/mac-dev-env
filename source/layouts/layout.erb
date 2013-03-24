@@ -25,11 +25,12 @@
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Serif">
   <!--<![endif]-->
 
-  <!--[if lt IE 9]>
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <%= javascript_include_tag "versioning", type: nil %>
+  <!--[if IE 8]>
+  <%= javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js' %>
+  <%= javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js' %>
+  <![endif]-->
 
 </head>
 <body id="<%= current_page.path.split('.').first %>">
