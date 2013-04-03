@@ -62,6 +62,7 @@ Start with the **Getting Started** section, then proceed with installing your de
 - GraphicsMagick
 	- [LibJPEG](/lib-jpeg)
 	- [LibPNG](/lib-png)
+	- [LibTIFF](/lib-tiff)
 	- [GraphicsMagick](/graphicsmagick)
 
 ---

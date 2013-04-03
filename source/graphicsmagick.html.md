@@ -3,7 +3,7 @@ title: GraphicsMagick
 ---
 
 > **Links:** [Homepage](http://www.graphicsmagick.org/) | [Downloads](http://www.graphicsmagick.org/download.html)  
-> **Dependencies:** [LibJPEG](/lib-jpeg) | [LibPNG](/lib-png)  
+> **Dependencies:** [LibJPEG](/lib-jpeg) | [LibPNG](/lib-png) | [LibTIFF](/lib-tiff)  
 > **Version:** <span id="version">1.3.18</span>
 
 
@@ -28,8 +28,8 @@ Extract the archive and move into the folder.
 Configure, compile and install into `/usr/local/graphicsmagick-VERSION`.
 
 	./configure CC=clang \
-		LDFLAGS="-L/usr/local/libjpeg/lib -L/usr/local/libpng/lib" \
-		CPPFLAGS="-I/usr/local/libjpeg/include -I/usr/local/libpng/include" \
+		LDFLAGS="-L/usr/local/libjpeg/lib -L/usr/local/libpng/lib -L/usr/local/libtiff/lib" \
+		CPPFLAGS="-I/usr/local/libjpeg/include -I/usr/local/libpng/include -I/usr/local/libtiff/include" \
 		--prefix=/usr/local/graphicsmagick-VERSION
 	make
 	make install
