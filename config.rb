@@ -7,6 +7,7 @@ set :images_dir, 'images'
 set :markdown_engine, :rdiscount
 
 activate :directory_indexes
+activate :livereload
 
 ignore "/stylesheets/normalize.css"
 

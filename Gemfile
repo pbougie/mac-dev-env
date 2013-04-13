@@ -4,6 +4,9 @@ ruby "2.0.0"
 # http://middlemanapp.com/
 gem "middleman"
 
+# https://github.com/middleman/middleman-livereload
+gem "middleman-livereload"
+
 # http://tvaughan.github.com/middleman-deploy/
 gem "middleman-deploy"
 
