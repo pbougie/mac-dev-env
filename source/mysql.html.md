@@ -23,17 +23,6 @@ Extract the archive and move into the folder.
 	cd mysql-VERSION
 
 
-### Databases
-
-Create a folder that will contain your databases. My databases are located in `/usr/local/var/mysql`. You can place your databases wherever you'd like but make sure you update the path when mentioned throughout this article.
-
-	mkdir -p /usr/local/var/mysql
-
-Set the permissions on the folder.
-
-	sudo chown -R mysql /usr/local/var/mysql
-
-
 ### Compile and Install
 
 Configure, compile and install into `/usr/local/mysql-VERSION`.
@@ -61,6 +50,17 @@ Add the following lines to your [Bash](http://en.wikipedia.org/wiki/Bash_%28Unix
 Load the new shell configurations.
 
 	source ~/.bash_profile
+
+
+### Databases
+
+Create a folder that will contain your databases. My databases are located in `/usr/local/var/mysql`. You can place your databases wherever you'd like but make sure you update the path when mentioned throughout this article.
+
+	mkdir -p /usr/local/var/mysql
+
+Set the permissions on the folder.
+
+	sudo chown -R mysql /usr/local/var/mysql
 
 
 ### Post-Installation
