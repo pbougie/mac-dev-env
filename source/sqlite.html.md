@@ -5,7 +5,7 @@ title: SQLite
 
 > **Links:** [Homepage](http://www.sqlite.org/) | [Downloads](http://www.sqlite.org/download.html)  
 > **Dependencies:** None  
-> **Version:** <span id="version">3071600</span>
+> **Version:** <span id="version">3071602</span>
 
 
 **SQLite** is a self-contained, serverless, zero-configuration, transactional SQL database engine.
