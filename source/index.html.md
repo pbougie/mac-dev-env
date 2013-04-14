@@ -20,6 +20,7 @@ Start with the **Getting Started** section, then proceed with installing your de
 - MySQL
 	- [CMake](/cmake)
 	- [MySQL](/mysql)
+- [PostgreSQL](/postgresql)
 - [MongoDB](/mongodb)
 - [SQLite](/sqlite)
 	
