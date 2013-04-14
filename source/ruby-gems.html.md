@@ -26,7 +26,7 @@ All gems have documentation that is generated when a gem is installed. To start 
 To view the documentation, point your web browser to [`http://localhost:8808/`](http://localhost:8808/).
 
 
-### Automatically Starting the Documentation Server at Boot
+### Automatically Start the Documentation Server at Boot
 
 Create a configuration file for [Launchd](http://en.wikipedia.org/wiki/Launchd).
 
@@ -53,11 +53,11 @@ Copy and paste the following text into the aforementioned file. The path to the 
 	</dict>
 	</plist>
 
-And finally, execute the following command to register the configuration file with Launchd.
+Register the configuration file with Launchd and start the server.
 
 	sudo launchctl load -w /Library/LaunchDaemons/org.rubygems.gem.plist
 
-If you ever want to stop your documentation server from automatically starting at boot, issue the following command.
+Stop the server and deregister with Launchd. This action stops the server immediately and at boot.
 
 	sudo launchctl unload -w /Library/LaunchDaemons/org.rubygems.gem.plist
 

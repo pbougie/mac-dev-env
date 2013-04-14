@@ -90,13 +90,13 @@ Load the new shell configurations.
 	source ~/.bash_profile
 
 
-### Automatically Starting the Server at Boot
+### Automatically Start the Server at Boot
 
 Create a configuration file for [Launchd](http://en.wikipedia.org/wiki/Launchd).
 
 	sudo nano /Library/LaunchDaemons/org.apache.apache2.plist
 
-Do not name the file *org.apache.httpd.plist* as it collides with a similarly named file for loading the OS X web server.
+<small>Do not name the file *org.apache.httpd.plist* as it collides with a similarly named file for loading the OS X web server.</small>
 
 Copy and paste the following text into the aforementioned file.
 
@@ -121,12 +121,11 @@ Copy and paste the following text into the aforementioned file.
 	</dict>
 	</plist>
 
-
-And finally, execute the following command to register the configuration file with Launchd.
+Register the configuration file with Launchd and start the server.
 
 	sudo launchctl load -w /Library/LaunchDaemons/org.apache.apache2.plist
 
-If you ever want to stop your Apache server from automatically starting at boot, issue the following command.
+Stop the server and deregister with Launchd. This action stops the server immediately and at boot.
 
 	sudo launchctl unload -w /Library/LaunchDaemons/org.apache.apache2.plist
 

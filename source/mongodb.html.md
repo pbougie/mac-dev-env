@@ -70,7 +70,7 @@ Load the new shell configurations.
 	source ~/.bash_profile
 
 
-### Manually Starting and Stopping the Server
+### Manual Start/Stop
 
 Start the server to test your installation.
 
@@ -79,7 +79,7 @@ Start the server to test your installation.
 To shut down the MongoDB server, press `CTRL-C`.
 
 
-### Automatically Starting the Server at Boot
+### Automatically Start the Server at Boot
 
 Create a configuration file for [Launchd](http://en.wikipedia.org/wiki/Launchd).
 
@@ -105,11 +105,11 @@ Copy and paste the following text into the aforementioned file.
 	</dict>
 	</plist>
 
-And finally, execute the following command to register the configuration file with Launchd.
+Register the configuration file with Launchd and start the server.
 
 	sudo launchctl load -w /Library/LaunchDaemons/org.mongodb.mongod.plist
 
-If you ever want to stop your MongoDB server from automatically starting at boot, issue the following command.
+Stop the server and deregister with Launchd. This action stops the server immediately and at boot.
 
 	sudo launchctl unload -w /Library/LaunchDaemons/org.mongodb.mongod.plist
 

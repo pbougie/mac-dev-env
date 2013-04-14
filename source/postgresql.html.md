@@ -73,7 +73,7 @@ To stop the PostgreSQL server.
 	pg_ctl -D /usr/local/var/pgsql stop
 
 
-### Automatically Starting the Server at Boot
+### Automatically Start the Server at Boot
 
 Create a configuration file for [Launchd](http://en.wikipedia.org/wiki/Launchd).
 

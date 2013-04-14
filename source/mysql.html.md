@@ -70,7 +70,7 @@ If you are copying the data from a former MySQL installation, you can skip this 
 	sudo /usr/local/mysql/scripts/mysql_install_db --user=mysql --basedir=/usr/local/mysql --datadir=/usr/local/var/mysql
 
 
-### Manually Starting and Stopping the Server
+### Manual Start/Stop
 
 To start the MySQL server.
 
@@ -88,7 +88,7 @@ The server needs to be running to perform this step which will set a root passwo
 	sudo /usr/local/mysql/bin/mysql_secure_installation
 
 
-### Automatically Starting the Server at Boot
+### Automatically Start the Server at Boot
 
 Create a configuration file for [Launchd](http://en.wikipedia.org/wiki/Launchd).
 
@@ -115,12 +115,11 @@ Copy and paste the following text into the aforementioned file.
 	</dict>
 	</plist>
 
-
-And finally, execute the following command to register the configuration file with Launchd.
+Register the configuration file with Launchd and start the server.
 
 	sudo launchctl load -w /Library/LaunchDaemons/com.mysql.mysqld.plist
 
-If you ever want to stop your MySQL server from automatically starting at boot, issue the following command.
+Stop the server and deregister with Launchd. This action stops the server immediately and at boot.
 
 	sudo launchctl unload -w /Library/LaunchDaemons/com.mysql.mysqld.plist
 
