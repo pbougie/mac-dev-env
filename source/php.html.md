@@ -5,7 +5,7 @@ title: PHP
 
 > **Links:** [Homepage](http://www.php.net/) | [Downloads](http://www.php.net/downloads.php)  
 > **Dependencies:** [Apache](/apache) | [LibJPEG](/lib-jpeg) | [LibPNG](/lib-png) | [LibMCrypt](/lib-mcrypt)  
-> **Version:** <span id="version">5.4.13</span>
+> **Version:** <span id="version">5.4.14</span>
 
 
 **PHP** is a general-purpose server-side scripting language that is especially suited to web development.
@@ -46,6 +46,7 @@ Configure, compile and install into `/usr/local/php-VERSION`.
 		--with-mysqli=mysqlnd \
 		--with-pear \
 		--with-pdo-mysql=mysqlnd \
+		--with-pgsql \
 		--with-png-dir=/usr/local/libpng \
 		--with-openssl \
 		--with-xmlrpc \
