@@ -58,6 +58,10 @@ Start with the **Getting Started** section, then proceed with installing your de
 	- [MongoDB Driver for Ruby](/ruby-mongodb)
 	- [SQLite Driver for Ruby](/ruby-sqlite)
 
+### Node.js
+
+- [Node.js](/node)
+
 ### Image Processing
 
 - GraphicsMagick
