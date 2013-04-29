@@ -38,6 +38,7 @@ Start with the **Getting Started** section, then proceed with installing your de
 		- [MySQL Driver for PHP](/php-mysql)
 		- [MongoDB Driver for PHP](/php-mongodb)
 		- [SQLite Driver for PHP](/php-sqlite)
+		- [PostgreSQL for PHP](/php-postgresql)
 
 ### Ruby served by Pow
 
@@ -58,6 +59,7 @@ Start with the **Getting Started** section, then proceed with installing your de
 		- [MySQL Driver for Ruby](/ruby-mysql)
 		- [MongoDB Driver for Ruby](/ruby-mongodb)
 		- [SQLite Driver for Ruby](/ruby-sqlite)
+		- [PostgreSQL for Ruby](/ruby-postgresql)
 
 ### Node.js
 
