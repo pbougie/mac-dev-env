@@ -33,11 +33,11 @@ Start with the **Getting Started** section, then proceed with installing your de
 	- [LibPNG](/lib-png)
 	- [LibMCrypt](/lib-mcrypt)
 	- [PHP](/php)
-	- [Autoconf](/autoconf)
-	- [Xdebug](/php-xdebug)
-	- [MySQL Driver for PHP](/php-mysql)
-	- [MongoDB Driver for PHP](/php-mongodb)
-	- [SQLite Driver for PHP](/php-sqlite)
+		- [Autoconf](/autoconf)
+		- [Xdebug](/php-xdebug)
+		- [MySQL Driver for PHP](/php-mysql)
+		- [MongoDB Driver for PHP](/php-mongodb)
+		- [SQLite Driver for PHP](/php-sqlite)
 
 ### Ruby served by Pow
 
@@ -51,12 +51,13 @@ Start with the **Getting Started** section, then proceed with installing your de
 	- Ruby 2
 		- [OpenSSL](/openssl)
 		- [Ruby](/ruby-2)
-	- [RubyGems](/ruby-gems)
-	- [Bundler](/ruby-bundler)
-	- [Ruby on Rails](/ruby-rails)
-	- [MySQL Driver for Ruby](/ruby-mysql)
-	- [MongoDB Driver for Ruby](/ruby-mongodb)
-	- [SQLite Driver for Ruby](/ruby-sqlite)
+	- Ruby (all versions)
+		- [RubyGems](/ruby-gems)
+		- [Bundler](/ruby-bundler)
+		- [Ruby on Rails](/ruby-rails)
+		- [MySQL Driver for Ruby](/ruby-mysql)
+		- [MongoDB Driver for Ruby](/ruby-mongodb)
+		- [SQLite Driver for Ruby](/ruby-sqlite)
 
 ### Node.js
 
