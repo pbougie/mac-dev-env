@@ -52,7 +52,7 @@ Start with the **Getting Started** section, then proceed with installing your de
 	- Ruby 2
 		- [OpenSSL](/openssl)
 		- [Ruby](/ruby-2)
-	- Ruby (all versions)
+	- [Ruby](/ruby) (all versions)
 		- [RubyGems](/ruby-gems)
 		- [Bundler](/ruby-bundler)
 		- [Ruby on Rails](/ruby-rails)
