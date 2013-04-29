@@ -1,5 +1,5 @@
 ---
-title: MySQL Driver for Ruby
+title: MySQL for Ruby
 ---
 
 
@@ -9,6 +9,6 @@ title: MySQL Driver for Ruby
 
 ### Install
 
-Install the MySQL Driver for Ruby using [RubyGems](http://rubygems.org/).
+Install the MySQL driver for Ruby using [RubyGems](http://rubygems.org/).
 
 	gem install mysql

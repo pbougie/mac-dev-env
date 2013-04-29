@@ -35,10 +35,10 @@ Start with the **Getting Started** section, then proceed with installing your de
 	- [PHP](/php)
 		- [Autoconf](/autoconf)
 		- [Xdebug](/php-xdebug)
-		- [MySQL Driver for PHP](/php-mysql)
-		- [MongoDB Driver for PHP](/php-mongodb)
-		- [SQLite Driver for PHP](/php-sqlite)
+		- [MySQL for PHP](/php-mysql)
 		- [PostgreSQL for PHP](/php-postgresql)
+		- [MongoDB for PHP](/php-mongodb)
+		- [SQLite for PHP](/php-sqlite)
 
 ### Ruby served by Pow
 
@@ -56,10 +56,10 @@ Start with the **Getting Started** section, then proceed with installing your de
 		- [RubyGems](/ruby-gems)
 		- [Bundler](/ruby-bundler)
 		- [Ruby on Rails](/ruby-rails)
-		- [MySQL Driver for Ruby](/ruby-mysql)
-		- [MongoDB Driver for Ruby](/ruby-mongodb)
-		- [SQLite Driver for Ruby](/ruby-sqlite)
+		- [MySQL for Ruby](/ruby-mysql)
 		- [PostgreSQL for Ruby](/ruby-postgresql)
+		- [MongoDB for Ruby](/ruby-mongodb)
+		- [SQLite for Ruby](/ruby-sqlite)
 
 ### Node.js
 

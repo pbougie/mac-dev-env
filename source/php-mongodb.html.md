@@ -1,5 +1,5 @@
 ---
-title: MongoDB Driver for PHP
+title: MongoDB for PHP
 ---
 
 
@@ -9,7 +9,7 @@ title: MongoDB Driver for PHP
 
 ### Install
 
-Install MongoDB Driver for PHP using [PECL](http://pecl.php.net/).
+Install MongoDB driver for PHP using [PECL](http://pecl.php.net/).
 
 	pecl install mongo
 

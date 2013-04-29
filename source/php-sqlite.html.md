@@ -1,6 +1,10 @@
 ---
-title: SQLite Driver for PHP
+title: SQLite for PHP
 ---
 
 
-The [SQLite Driver for PHP](http://us.php.net/manual/en/book.sqlite3.php) is part of the offical PHP distribution since verison 5.3.0.
+> **Links:** [Homepage](http://us.php.net/manual/en/book.sqlite3.php)  
+> **Dependencies:** [PHP](/php) | [SQLite](/sqlite)
+
+
+The SQLite driver for PHP is part of the official PHP distribution since version 5.3.0.

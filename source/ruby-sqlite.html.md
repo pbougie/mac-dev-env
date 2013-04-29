@@ -1,5 +1,5 @@
 ---
-title: SQLite Driver for Ruby
+title: SQLite for Ruby
 ---
 
 
@@ -9,6 +9,6 @@ title: SQLite Driver for Ruby
 
 ### Install
 
-Install the SQLite Driver for Ruby using [RubyGems](http://rubygems.org/).
+Install the SQLite driver for Ruby using [RubyGems](http://rubygems.org/).
 
 	gem install sqlite3

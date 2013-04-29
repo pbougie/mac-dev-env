@@ -1,6 +1,10 @@
 ---
-title: MySQL Driver for PHP
+title: MySQL for PHP
 ---
 
 
-The [MySQL Native Driver](http://us.php.net/manual/en/book.mysqlnd.php) is part of the offical PHP distribution since verison 5.3.0.
+> **Links:** [Homepage](http://us.php.net/manual/en/book.mysqlnd.php)  
+> **Dependencies:** [PHP](/php) | [MySQL](/mysql)
+
+
+The MySQL Native Driver is part of the official PHP distribution since version 5.3.0.
