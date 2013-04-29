@@ -2,13 +2,16 @@
 
 ## Overview
 
-Instructions for compiling your own web development environment in OS X; primary packages include:
+Instructions for compiling/installing your own web development environment in OS X; primary packages include:
 
 - Apache
 - Git
+- GraphicsMagick
 - MongoDB
 - MySQL
+- Node.js
 - PHP
+- PostgreSQL
 - Ruby
 - SQLite
 
