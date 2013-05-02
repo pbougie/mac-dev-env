@@ -60,6 +60,7 @@ Copy and paste the following text at the end of the aforementioned file. Make su
 		AllowOverride All
 		IndexOptions NameWidth=*
 
+		Require all denied
 		Require host localhost
 		Require host 127.0.0.1
 	</Directory>
