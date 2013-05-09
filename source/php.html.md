@@ -4,7 +4,7 @@ title: PHP
 
 
 > **Links:** [Homepage](http://www.php.net/) | [Downloads](http://www.php.net/downloads.php)  
-> **Dependencies:** [Apache](/apache) | [LibJPEG](/lib-jpeg) | [LibPNG](/lib-png) | [LibMCrypt](/lib-mcrypt)  
+> **Dependencies:** [Apache](/apache) | [LibJPEG](/lib-jpeg) | [LibPNG](/lib-png) | [LibMCrypt](/lib-mcrypt) | [FreeType](/lib-freetype)  
 > **Version:** <span id="version">5.4.15</span>
 
 
@@ -38,6 +38,7 @@ Configure, compile and install into `/usr/local/php-VERSION`.
 		--with-apxs2=/usr/local/apache/bin/apxs \
 		--with-bz2 \
 		--with-curl \
+		--with-freetype-dir=/usr/local/freetype \
 		--with-gd \
 		--with-imap-ssl \
 		--with-jpeg-dir=/usr/local/libjpeg \

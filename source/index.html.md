@@ -32,6 +32,7 @@ Start with the **Getting Started** section, then proceed with installing your de
 	- [LibJPEG](/lib-jpeg)
 	- [LibPNG](/lib-png)
 	- [LibMCrypt](/lib-mcrypt)
+	- [FreeType](/lib-freetype)
 	- [PHP](/php)
 		- [Autoconf](/autoconf)
 		- [Xdebug](/php-xdebug)
