@@ -30,7 +30,7 @@ Configure, compile and install into `/usr/local/php-VERSION`.
 
 	./configure \
 		--prefix=/usr/local/php-VERSION \
-		--with-config-file-path=/usr/local/php-VERSION \
+		--with-config-file-path=/usr/local/php-VERSION/etc \
 		--enable-bcmath \
 		--enable-mbstring \
 		--enable-sockets \
@@ -64,7 +64,7 @@ Create a symbolic link that points `/usr/local/php` to `/usr/local/php-VERSION`.
 
 Copy a PHP configuration template to the target folder.
 
-	cp php.ini-development /usr/local/php/php.ini
+	cp php.ini-development /usr/local/php/etc/php.ini
 
 You can configure any of the [php.ini directives](http://www.php.net/manual/en/ini.list.php) by editing this file.
 

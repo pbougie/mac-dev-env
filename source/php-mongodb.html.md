@@ -15,7 +15,7 @@ Install MongoDB driver for PHP using [PECL](http://pecl.php.net/).
 
 Add the following line to your PHP configuration file.
 	
-	echo 'extension=mongo.so' >> /usr/local/php/php.ini
+	echo 'extension=mongo.so' >> /usr/local/php/etc/php.ini
 
 
 ### Restart the Web Server
