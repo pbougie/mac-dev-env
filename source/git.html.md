@@ -4,7 +4,7 @@ title: Git
 
 > **Links:** [Homepage](http://git-scm.com/) | [Downloads](http://git-scm.com/download)  
 > **Dependencies:** None  
-> **Version:** <span id="version">1.8.2.1</span>
+> **Version:** <span id="version">1.8.2.2</span>
 
 
 **Git** is a distributed version control system that was initially designed and developed by Linus Torvalds for Linux kernel development.
