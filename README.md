@@ -40,5 +40,6 @@ Make sure the aforementioned environment variables are available before generati
 
 
 ---
-© 2011–2013 [Patrick Bougie](http://patrickbougie.com/). All Rights Reserved.
+© [Patrick Bougie](http://patrickbougie.com/).
+All Rights Reserved.
 Please do not reproduce without written consent.
