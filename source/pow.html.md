@@ -66,3 +66,10 @@ Load the application.
 Uninstall Pow.
 
 	curl get.pow.cx/uninstall.sh | sh
+
+
+### Useful
+
+![Anvil](/images/anvil.png)
+
+[Anvil](http://anvilformac.com/) is a menubar app for managing your local websites. Serve your Rack apps and static sites with a simple `.dev` URL. Anvil actually incorporates Pow so you can omit the above installation when using it.
