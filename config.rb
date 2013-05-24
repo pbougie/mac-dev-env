@@ -10,6 +10,7 @@ activate :directory_indexes
 activate :livereload
 
 ignore "/stylesheets/normalize.css"
+ignore "/stylesheets/icons.css"
 
 configure :build do
   activate :minify_css
