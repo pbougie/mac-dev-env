@@ -24,6 +24,9 @@
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:regular,bold">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Serif">
   <!--<![endif]-->
+  <!--[if IE]>
+  <%= stylesheet_link_tag "gh-fork-ribbon.ie", media: nil, type: nil %>
+  <![endif]-->
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <%= javascript_include_tag "versioning", type: nil %>
@@ -36,6 +39,12 @@
 <body id="<%= current_page.path.split('.').first %>">
 
   <%= partial "layouts/header" %>
+
+  <div class="github-fork-ribbon-wrapper right">
+      <div class="github-fork-ribbon">
+          <a href="https://github.com/pbougie/mac-dev-env">Fork me on GitHub</a>
+      </div>
+  </div>
 
   <section role="main">
     <% if data.page.title %>
