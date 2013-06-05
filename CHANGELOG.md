@@ -11,5 +11,6 @@ Submitted website to [Bing](http://www.bing.com/) search engine.
 
 
 ---
+
 © [Patrick Bougie](http://patrickbougie.com).
 All Rights Reserved.

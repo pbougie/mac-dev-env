@@ -1,5 +1,6 @@
 # [Compiling a Web Development Environment on Mac OS X](http://mac-dev-env.patrickbougie.com/)
 
+
 ## Overview
 
 Instructions for compiling/installing your own web development environment in OS X; primary packages include:
@@ -40,6 +41,7 @@ Make sure the aforementioned environment variables are available before generati
 
 
 ---
+
 © [Patrick Bougie](http://patrickbougie.com/).
 All Rights Reserved.
 Please do not reproduce without written consent.
