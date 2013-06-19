@@ -16,9 +16,6 @@ gem "rake"
 # https://github.com/bkeepers/dotenv
 gem "dotenv"
 
-# https://github.com/rtomayko/rdiscount
-gem "rdiscount"
-
 # https://github.com/leehambley/rack-google-analytics
 gem "rack-google-analytics"
 

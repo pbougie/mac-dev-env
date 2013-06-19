@@ -4,8 +4,6 @@ set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
 
-set :markdown_engine, :rdiscount
-
 activate :directory_indexes
 activate :livereload
 
