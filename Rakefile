@@ -8,7 +8,7 @@ end
 desc "Build website for deployment"
 task :build do
   puts "## Building website for deployment"
-  system("bundle exec middleman build --clean")
+  system("bundle exec middleman build")
 end
 
 desc "Deploy website via rsync to production server"
