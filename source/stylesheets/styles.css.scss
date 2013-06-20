@@ -6,6 +6,12 @@
 // http://simonwhitaker.github.io/github-fork-ribbon-css/
 @import "gh-fork-ribbon";
 
+@media print {
+  .github-fork-ribbon {
+    display: none;
+  }
+}
+
 // http://keyamoon.com/icomoon/app/
 @import "icons";
 
