@@ -65,9 +65,19 @@ Set the permissions on the folder.
 
 ### Post-Installation
 
-If you are copying the data from a former MySQL installation, you can skip this step. Initialize your database installation.
+If you are copying the data from a former MySQL installation, you can skip these steps.
+
+#### Initialize your Database
+
+Initialize your database before launching the server.
 
 	sudo /usr/local/mysql/scripts/mysql_install_db --user=mysql --basedir=/usr/local/mysql --datadir=/usr/local/var/mysql
+
+#### Secure the Server
+
+The server needs to be running to perform this step which will set a root password and generally secure the server.
+
+	sudo /usr/local/mysql/bin/mysql_secure_installation
 
 
 ### Manual Start/Stop
@@ -79,13 +89,6 @@ To start the MySQL server.
 To shut down the MySQL server.
 
 	sudo /usr/local/mysql/bin/mysqladmin --password shutdown
-
-
-### Secure the Server
-
-The server needs to be running to perform this step which will set a root password and generally secure the server.
-
-	sudo /usr/local/mysql/bin/mysql_secure_installation
 
 
 ### Automatically Start the Server at Boot
