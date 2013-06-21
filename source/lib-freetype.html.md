@@ -5,7 +5,7 @@ title: FreeType
 
 > **Links:** [Homepage](http://www.freetype.org/)  
 > **Dependencies:** None  
-> **Version:** <span id="version">2.4.12</span>
+> **Version:** <span id="version">2.5.0.1</span>
 
 
 **FreeType** is a freely available software library to render fonts.
@@ -28,7 +28,7 @@ Extract the archive and move into the folder.
 
 Configure, compile and install into `/usr/local/freetype-VERSION`.
 
-	./configure --prefix=/usr/local/freetype-VERSION
+	./configure --prefix=/usr/local/freetype-VERSION --without-png
 	make
 	make install
 
