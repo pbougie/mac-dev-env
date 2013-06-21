@@ -3,8 +3,8 @@ title: Pow
 ---
 
 
-> **Links:** [Homepage](http://pow.cx/)  
-> **Dependencies:** None  
+> **Links:** [Homepage](http://pow.cx/) | [Documentation](http://pow.cx/manual.html)  
+> **Dependencies:** [None.js](/node)  
 
 
 Pow is a zero-config Rack server for Mac OS X.
@@ -45,9 +45,9 @@ Restart Apache.
 	sudo apachectl restart
 
 
-### Install
+### Install or Upgrade
 
-Install Pow using the installation script.
+Install or upgrade Pow using the installation script.
 
 	curl get.pow.cx | sh
 
