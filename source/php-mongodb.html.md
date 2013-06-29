@@ -4,7 +4,7 @@ title: MongoDB for PHP
 
 
 > **Links:** [Homepage](http://www.mongodb.org/display/DOCS/PHP+Language+Center)  
-> **Dependencies:** [PHP](/php) | [Autoconf](/autoconf) | [MongoDB](/mongodb)
+> **Dependencies:** [PHP](/php/) | [Autoconf](/autoconf/) | [MongoDB](/mongodb/)
 
 
 ### Install

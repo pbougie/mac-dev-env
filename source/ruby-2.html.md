@@ -4,7 +4,7 @@ title: Ruby 2
 
 
 > **Links:** [Homepage](http://www.ruby-lang.org/) | [Downloads](http://www.ruby-lang.org/en/downloads/)  
-> **Dependencies:** [rbenv](/ruby-rbenv) | [OpenSSL](/openssl)  
+> **Dependencies:** [rbenv](/ruby-rbenv/) | [OpenSSL](/openssl/)  
 > **Version:** <span id="version">2.0.0-p247</span>
 
 

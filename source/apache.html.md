@@ -4,7 +4,7 @@ title: Apache
 
 
 > **Links:** [Homepage](http://httpd.apache.org/) | [Downloads](http://httpd.apache.org/download.cgi) | [Documentation](http://httpd.apache.org/docs/2.4/)  
-> **Dependencies:** [PCRE](/pcre)  
+> **Dependencies:** [PCRE](/pcre/)  
 > **Version:** <span id="version">2.4.4</span>
 
 

@@ -4,7 +4,7 @@ title: Grunt
 
 
 > **Links:** [Homepage](http://gruntjs.com/)  
-> **Dependencies:** [Node.js](/nodejs)
+> **Dependencies:** [Node.js](/nodejs/)
 
 
 **Grunt** is a task-based command line build tool for JavaScript projects.

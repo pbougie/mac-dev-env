@@ -4,7 +4,7 @@ title: Pow
 
 
 > **Links:** [Homepage](http://pow.cx/) | [Documentation](http://pow.cx/manual.html)  
-> **Dependencies:** [None.js](/nodejs)  
+> **Dependencies:** [None.js](/nodejs/)  
 
 
 Pow is a zero-config Rack server for Mac OS X.
