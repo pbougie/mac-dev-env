@@ -64,9 +64,9 @@ Start with the **Getting Started** section, then proceed with installing your de
 
 ### Node.js
 
-- [Node.js](/node)
-	- [Grunt](/node-grunt) 
-	- [Bower](/node-bower) 
+- [Node.js](/nodejs)
+	- [Grunt](/nodejs-grunt) 
+	- [Bower](/nodejs-bower) 
 
 ### Image Processing
 
