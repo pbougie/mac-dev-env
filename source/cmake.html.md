@@ -5,7 +5,7 @@ title: CMake
 
 > **Links:** [Homepage](http://www.cmake.org/) | [Downloads](http://www.cmake.org/cmake/resources/software.html)  
 > **Dependencies:** None  
-> **Version:** <span id="version">2.8.11.1</span>
+> **Version:** <span id="version">2.8.11.2</span>
 
 
 **CMake** is a cross-platform, open-source build system designed to build, test and package software. **CMake** is used to control the software compilation process using platform and compiler independent configuration files. **MySQL** replaced the *GNU autotools* with **CMake** on all platforms beginning with version 5.5.
