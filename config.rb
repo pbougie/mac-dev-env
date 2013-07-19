@@ -5,6 +5,7 @@ set :js_dir, 'javascripts'
 set :images_dir, 'images'
 
 activate :directory_indexes
+# Middleman-Livereload only works with "middleman server"; not with Pow
 activate :livereload
 
 ignore "/stylesheets/normalize.css"
