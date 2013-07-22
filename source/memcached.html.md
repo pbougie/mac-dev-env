@@ -50,16 +50,16 @@ Load the new shell configurations.
 
 ### Manual Start/Stop
 
-To start the Memcached daemon.
+To start the Memcached server.
 
 	memcached -d
 
-To stop your Memcached daemon.
+To stop the Memcached server.
 
 	killall memcached
 
 
-### Automatically Start the Daemon at Boot
+### Automatically Start the Server at Boot
 
 Create a configuration file for [Launchd](http://en.wikipedia.org/wiki/Launchd).
 
@@ -103,7 +103,7 @@ Display the **Memcached** version.
 
 ### Using the Memcached Telnet Interface
 
-You can connect to the Memcached daemon with [Telnet](http://en.wikipedia.org/wiki/Telnet).
+You can connect to the Memcached server with [Telnet](http://en.wikipedia.org/wiki/Telnet).
 
 	telnet localhost 11211
 
