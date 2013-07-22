@@ -26,6 +26,7 @@ Start with the **Getting Started** section, then proceed with installing your de
 - Memcached
 	- [Libevent](/libevent/)
 	- [Memcached](/memcached/)
+- [Redis](/redis/)
 	
 ### PHP served by Apache
 - Apache
