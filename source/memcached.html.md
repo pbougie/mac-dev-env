@@ -63,7 +63,7 @@ To stop your Memcached daemon.
 
 Create a configuration file for [Launchd](http://en.wikipedia.org/wiki/Launchd).
 
-	nano ~/Library/LaunchAgents/com.danga.memcached.plist
+	nano ~/Library/LaunchAgents/org.memcached.memcached.plist
 
 Copy and paste the following text into the aforementioned file.
 
@@ -72,7 +72,7 @@ Copy and paste the following text into the aforementioned file.
 	<plist version="1.0">
 	  <dict>
 	    <key>Label</key>
-	    <string>com.danga.memcached</string>
+	    <string>org.memcached.memcached</string>
 
 	    <key>ProgramArguments</key>
 	    <array>
@@ -89,11 +89,11 @@ Copy and paste the following text into the aforementioned file.
 
 Register the configuration file with Launchd and start the daemon.
 
-	launchctl load -w ~/Library/LaunchAgents/com.danga.memcached.plist
+	launchctl load -w ~/Library/LaunchAgents/org.memcached.memcached.plist
 
 Stop the daemon and deregister with Launchd. This action stops the daemon immediately and at boot.
 
-	launchctl unload -w ~/Library/LaunchAgents/com.danga.memcached.plist
+	launchctl unload -w ~/Library/LaunchAgents/org.memcached.memcached.plist
 
 
 ### Verify the Installation
