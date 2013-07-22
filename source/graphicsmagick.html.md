@@ -3,7 +3,7 @@ title: GraphicsMagick
 ---
 
 > **Links:** [Homepage](http://www.graphicsmagick.org/) | [Downloads](http://www.graphicsmagick.org/download.html)  
-> **Dependencies:** [LibJPEG](/lib-jpeg/) | [LibPNG](/lib-png/) | [LibTIFF](/lib-tiff/)  
+> **Dependencies:** [LibJPEG](/libjpeg/) | [LibPNG](/libpng/) | [LibTIFF](/libtiff/)  
 > **Version:** <span id="version">1.3.18</span>
 
 

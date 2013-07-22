@@ -32,10 +32,10 @@ Start with the **Getting Started** section, then proceed with installing your de
 	- [PCRE](/pcre/)
 	- [Apache](/apache/)
 - PHP
-	- [LibJPEG](/lib-jpeg/)
-	- [LibPNG](/lib-png/)
-	- [LibMCrypt](/lib-mcrypt/)
-	- [FreeType](/lib-freetype/)
+	- [LibJPEG](/libjpeg/)
+	- [LibPNG](/libpng/)
+	- [LibMCrypt](/libmcrypt/)
+	- [FreeType](/freetype/)
 	- [PHP](/php/)
 		- [Autoconf](/autoconf/)
 		- [Xdebug](/php-xdebug/)
@@ -51,7 +51,7 @@ Start with the **Getting Started** section, then proceed with installing your de
 	- [rbenv](/ruby-rbenv/)
 		- [rbenv-gem-rehash](/ruby-rbenv-gem-rehash/)
 	- Ruby 1.9.3
-		- [LibYAML](/lib-yaml/)
+		- [LibYAML](/libyaml/)
 		- [Ruby](/ruby-193/)
 	- Ruby 2
 		- [OpenSSL](/openssl/)
@@ -74,9 +74,9 @@ Start with the **Getting Started** section, then proceed with installing your de
 ### Image Processing
 
 - GraphicsMagick
-	- [LibJPEG](/lib-jpeg/)
-	- [LibPNG](/lib-png/)
-	- [LibTIFF](/lib-tiff/)
+	- [LibJPEG](/libjpeg/)
+	- [LibPNG](/libpng/)
+	- [LibTIFF](/libtiff/)
 	- [GraphicsMagick](/graphicsmagick/)
 
 ---
