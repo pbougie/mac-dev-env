@@ -85,7 +85,7 @@ Copy and paste the following text at the end of the aforementioned file.
 
 ### Shell
 
-Add the following lines to your [Bash](http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) startup script to put PHP and its Man Pages into your path.
+Execute the following lines to update your [Bash](http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) startup script.
 
 	echo 'export PATH=/usr/local/php/bin:$PATH' >> ~/.bash_profile
 	echo 'export MANPATH=/usr/local/php/man:$MANPATH' >> ~/.bash_profile

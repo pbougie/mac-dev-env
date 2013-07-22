@@ -39,7 +39,7 @@ Create a symbolic link that points `/usr/local/openssl` to `/usr/local/openssl-V
 
 ### Shell
 
-Add the following lines to your [Bash](http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) startup script to put OpenSSL into your path.
+Execute the following lines to update your [Bash](http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) startup script.
 
 	echo 'export PATH=/usr/local/openssl/bin:$PATH' >> ~/.bash_profile
 	echo 'export MANPATH=/usr/local/openssl/ssl/man:$MANPATH' >> ~/.bash_profile

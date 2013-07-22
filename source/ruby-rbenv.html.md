@@ -23,7 +23,7 @@ Check out rbenv into `/usr/local/rbenv`.
 
 ### Shell
 
-Add the following line to your [Bash](http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) startup script to put rbenv into your path.
+Execute the following lines to update your [Bash](http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) startup script.
 
 	echo 'export PATH=/usr/local/rbenv/bin:$PATH' >> ~/.bash_profile
 

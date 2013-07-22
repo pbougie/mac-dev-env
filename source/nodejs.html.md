@@ -31,7 +31,7 @@ Create a symbolic link to `/usr/local/node`.
 
 ### Shell
 
-Add the following line to your [Bash](http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) startup script to put Node.js into your path.
+Execute the following lines to update your [Bash](http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) startup script.
 
 	echo 'export PATH=/usr/local/node/bin:$PATH' >> ~/.bash_profile
 	echo 'export MANPATH=/usr/local/node/share/man:$MANPATH' >> ~/.bash_profile

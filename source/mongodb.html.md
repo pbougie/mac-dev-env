@@ -61,7 +61,7 @@ Copy and paste the following text into the aforementioned file.
 
 ### Shell
 
-Add the following line to your [Bash](http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) startup script to put MongoDB into your path.
+Execute the following lines to update your [Bash](http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) startup script.
 
 	echo 'export PATH=/usr/local/mongodb/bin:$PATH' >> ~/.bash_profile
 

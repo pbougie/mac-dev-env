@@ -38,7 +38,7 @@ Create a symbolic link that points `/usr/local/pgsql` to `/usr/local/pgsql-VERSI
 
 ### Shell
 
-Add the following lines to your [Bash](http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) startup script to put PostgreSQL and its Man Pages into your path.
+Execute the following lines to update your [Bash](http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) startup script.
 
 	echo 'export PATH=/usr/local/pgsql/bin:$PATH' >> ~/.bash_profile
 	echo 'export MANPATH=/usr/local/pgsql/share/man:$MANPATH' >> ~/.bash_profile

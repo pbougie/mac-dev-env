@@ -54,7 +54,7 @@ Extract the documentation to `/usr/local/git/man`.
 
 ### Shell
 
-Add the following lines to your [Bash](http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) startup script to put Git and its Man Pages into your path.
+Execute the following lines to update your [Bash](http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) startup script.
 
 	echo 'export PATH=/usr/local/git/bin:$PATH' >> ~/.bash_profile
 	echo 'export MANPATH=/usr/local/git/man:$MANPATH' >> ~/.bash_profile
