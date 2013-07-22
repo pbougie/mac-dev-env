@@ -15,7 +15,7 @@ Start with the **Getting Started** section, then proceed with installing your de
 
 - [Git](/git/)
 
-### Databases
+### Data Stores
 
 - MySQL
 	- [CMake](/cmake/)
@@ -23,6 +23,9 @@ Start with the **Getting Started** section, then proceed with installing your de
 - [PostgreSQL](/postgresql/)
 - [MongoDB](/mongodb/)
 - [SQLite](/sqlite/)
+- Memcached
+	- [Libevent](/libevent/)
+	- [Memcached](/memcached/)
 	
 ### PHP served by Apache
 - Apache
