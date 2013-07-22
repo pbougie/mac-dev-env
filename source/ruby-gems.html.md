@@ -53,11 +53,11 @@ Copy and paste the following text into the aforementioned file. The path to the 
 	</dict>
 	</plist>
 
-Register the configuration file with Launchd and start the server.
+Register with Launchd and start the server.
 
 	sudo launchctl load -w /Library/LaunchDaemons/org.rubygems.gem.plist
 
-Stop the server and deregister with Launchd. This action stops the server immediately and at boot.
+Deregister with Launchd.
 
 	sudo launchctl unload -w /Library/LaunchDaemons/org.rubygems.gem.plist
 

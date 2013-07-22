@@ -85,11 +85,11 @@ Copy and paste the following text into the aforementioned file.
 	  </dict>
 	</plist>
 
-Register the configuration file with Launchd and start the daemon.
+Register with Launchd and start the server.
 
 	launchctl load -w ~/Library/LaunchAgents/org.memcached.memcached.plist
 
-Stop the daemon and deregister with Launchd. This action stops the daemon immediately and at boot.
+Deregister with Launchd.
 
 	launchctl unload -w ~/Library/LaunchAgents/org.memcached.memcached.plist
 

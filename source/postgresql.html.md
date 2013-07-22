@@ -107,11 +107,11 @@ Copy and paste the following text into the aforementioned file.
 	  </dict>
 	</plist>
 
-Register the configuration file with Launchd and start the server.
+Register with Launchd and start the server.
 
 	launchctl load -w ~/Library/LaunchAgents/org.postgresql.pgsqld.plist
 
-Stop the server and deregister with Launchd. This action stops the server immediately and at boot.
+Deregister with Launchd.
 
 	launchctl unload -w ~/Library/LaunchAgents/org.postgresql.pgsqld.plist
 
