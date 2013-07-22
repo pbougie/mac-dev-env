@@ -8,11 +8,13 @@ Instructions for compiling/installing your own web development environment in OS
 - Apache
 - Git
 - GraphicsMagick
+- Memcached
 - MongoDB
 - MySQL
 - Node.js
 - PHP
 - PostgreSQL
+- Redis
 - Ruby
 - SQLite
 
