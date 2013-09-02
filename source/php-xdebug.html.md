@@ -16,7 +16,7 @@ Install Xdebug using [PECL](http://pecl.php.net/).
 
 	pecl install xdebug
 
-Add the following line to your PHP configuration file.
+Execute the following line to update your `php.ini` file.
 	
 	echo 'zend_extension=/usr/local/php/lib/php/extensions/no-debug-zts-20121212/xdebug.so' >> /usr/local/php/etc/php.ini
 

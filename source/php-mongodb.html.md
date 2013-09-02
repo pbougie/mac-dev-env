@@ -13,7 +13,7 @@ Install MongoDB driver for PHP using [PECL](http://pecl.php.net/).
 
 	pecl install mongo
 
-Add the following line to your PHP configuration file.
+Execute the following line to update your `php.ini` file.
 	
 	echo 'extension=mongo.so' >> /usr/local/php/etc/php.ini
 
