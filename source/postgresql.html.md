@@ -66,7 +66,7 @@ If you are copying the data from a former PostgreSQL installation, you can skip 
 
 To start the PostgreSQL server.
 
-	pg_ctl -D /usr/local/var/pgsql -l /usr/local/var/pgsql/postgresql.log start
+	pg_ctl -D /usr/local/var/pgsql -l /usr/local/var/log/pgsql.log start
 
 To stop the PostgreSQL server.
 
@@ -96,9 +96,9 @@ Copy and paste the following text into the aforementioned file.
 	    </array>
 	
 	    <key>StandardOutPath</key>
-	    <string>/usr/local/var/pgsql/postgresql.log</string>
+	    <string>/usr/local/var/log/pgsql.log</string>
 	    <key>StandardErrorPath</key>
-	    <string>/usr/local/var/pgsql/postgresql.log</string>
+	    <string>/usr/local/var/log/pgsql.log</string>
 	
 	    <key>RunAtLoad</key>
 	    <true/>

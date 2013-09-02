@@ -47,7 +47,7 @@ Copy and paste the following text into the aforementioned file.
 	# Location of MongoDB databases
 	dbpath = /usr/local/var/mongodb
 	# Location of log files
-	logpath = /var/log/mongod.log
+	logpath = /usr/local/var/log/mongodb.log
 	# Only accept local connections
 	bind_ip = localhost
 	# Enable journaling

@@ -55,6 +55,8 @@ Copy and paste the following text at the end of the aforementioned file. Make su
 	Group staff
 
 	DocumentRoot "/Users/<username>/Sites"
+	ErrorLog "/usr/local/var/log/apache-error.log"
+	CustomLog "/usr/local/var/log/apache-access.log" common
 	<Directory "/Users/<username>/Sites">
 		Options All
 		AllowOverride All
@@ -64,6 +66,8 @@ Copy and paste the following text at the end of the aforementioned file. Make su
 		Require host localhost
 		Require host 127.0.0.1
 	</Directory>
+
+You need to disable the `ErrorLog` and `CustomLog` directives in the Apache configuration file (leaving the above directives intact). Otherwise, Apache will log the same information to two separate locations.
 
 
 ### Web Root

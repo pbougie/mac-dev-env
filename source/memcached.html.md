@@ -78,7 +78,13 @@ Copy and paste the following text into the aforementioned file.
 	    <array>
 	      <string>/usr/local/memcached/bin/memcached</string>
 	      <string>-d</string>
+	      <string>-vv</string>
 	    </array>
+	
+	    <key>StandardOutPath</key>
+	    <string>/usr/local/var/log/memcached.log</string>
+	    <key>StandardErrorPath</key>
+	    <string>/usr/local/var/log/memcached.log</string>
 
 	    <key>RunAtLoad</key>
 	    <true/>
