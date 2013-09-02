@@ -4,7 +4,7 @@ title: Redis
 
 > **Links:** [Homepage](http://redis.io/) | [Downloads](http://redis.io/download) | [Documentation](http://redis.io/documentation)  
 > **Dependencies:** None  
-> **Version:** <span id="version">2.6.14</span>
+> **Version:** <span id="version">2.6.16</span>
 
 
 **Redis** is an open source, BSD licensed, advanced key-value store.
@@ -15,7 +15,7 @@ title: Redis
 Switch to `/usr/local/src` and download the source package.
 
 	cd /usr/local/src
-	curl --remote-name http://redis.googlecode.com/files/redis-VERSION.tar.gz
+	curl --remote-name http://download.redis.io/releases/redis-VERSION.tar.gz
 
 Extract the archive and move into the folder.
 
