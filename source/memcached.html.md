@@ -52,11 +52,9 @@ Load the new shell configurations.
 
 To start the Memcached server.
 
-	memcached -d
+	memcached -vv
 
-To stop the Memcached server.
-
-	killall memcached
+Press `CTRL-C` to stop the Memcached server.
 
 
 ### Automatically Start the Server at Boot
@@ -88,6 +86,8 @@ Copy and paste the following text into the aforementioned file.
 
 	    <key>RunAtLoad</key>
 	    <true/>
+	    <key>KeepAlive</key>
+	    <true/>
 	  </dict>
 	</plist>
 
@@ -95,7 +95,7 @@ Register with Launchd and start the server.
 
 	launchctl load -w ~/Library/LaunchAgents/org.memcached.memcached.plist
 
-Deregister with Launchd.
+Deregister with Launchd. Kill the process manually.
 
 	launchctl unload -w ~/Library/LaunchAgents/org.memcached.memcached.plist
 
