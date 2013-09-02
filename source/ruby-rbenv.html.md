@@ -42,12 +42,12 @@ Load the new shell configurations.
 
 ### Install Ruby Versions
 
-To install Ruby versions, check the section on installing [Ruby](/ruby/).
+To install Ruby versions, check the sections on installing [Ruby](/ruby/).
 
 
-### Upgrading
+### Upgrade
 
-To upgrade to the latest development version of **rbenv**, use git pull.
+To upgrade to the latest version of **rbenv**, use git pull.
 
 	cd /usr/local/rbenv
 	git pull
