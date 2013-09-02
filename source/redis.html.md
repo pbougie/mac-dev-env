@@ -63,14 +63,10 @@ Copy and paste the following text into the aforementioned file.
 
 	# Daemonize Redis
 	daemonize yes
-	# Log to file
+	# Log file
 	logfile /usr/local/var/log/redis.log
-	# Save database in folder
+	# Data folder
 	dir /usr/local/var/redis
-
-Make sure the log folder exists.
-
-	mkdir -p /usr/local/var/log
 
 
 ### Manual Start/Stop
@@ -107,6 +103,8 @@ Copy and paste the following text into the aforementioned file.
 
 	    <key>RunAtLoad</key>
 	    <true/>
+	    <key>KeepAlive</key>
+	    <true/>
 	  </dict>
 	</plist>
 
@@ -114,7 +112,7 @@ Register with Launchd and start the server.
 
 	launchctl load -w ~/Library/LaunchAgents/io.redis.redis-server.plist
 
-Deregister with Launchd.
+Deregister with Launchd. Kill the process manually.
 
 	launchctl unload -w ~/Library/LaunchAgents/io.redis.redis-server.plist
 
