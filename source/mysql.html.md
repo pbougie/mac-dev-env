@@ -105,6 +105,7 @@ Copy and paste the following text into the aforementioned file.
 	<dict>
 		<key>Label</key>
 		<string>com.mysql.mysqld</string>
+
 		<key>ProgramArguments</key>
 		<array>
 			<string>/usr/local/mysql/bin/mysqld_safe</string>
@@ -112,6 +113,7 @@ Copy and paste the following text into the aforementioned file.
 			<string>--datadir=/usr/local/var/mysql</string>
 			<string>--log-error=/usr/local/var/log/mysql.log</string>
 		</array>
+		
 		<key>RunAtLoad</key>
 		<true/>
 		<key>KeepAlive</key>

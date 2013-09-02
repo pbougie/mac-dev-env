@@ -93,11 +93,13 @@ Copy and paste the following text into the aforementioned file.
 	<dict>
 		<key>Label</key>
 		<string>org.mongodb.mongod</string>
+
 		<key>ProgramArguments</key>
 		<array>
 			<string>/usr/local/mongodb/bin/mongod</string>
 			<string>--config=/usr/local/mongodb/mongod.conf</string>
 		</array>
+		
 		<key>RunAtLoad</key>
 		<true/>
 		<key>KeepAlive</key>

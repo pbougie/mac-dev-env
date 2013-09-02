@@ -40,12 +40,14 @@ Copy and paste the following text into the aforementioned file. The path to the 
 	<dict>
 		<key>Label</key>
 		<string>org.rubygems.gem</string>
+
 		<key>ProgramArguments</key>
 		<array>
 			<string>/usr/local/rbenv/versions/*RUBY-VERSION*/bin/gem</string>
 			<string>server</string>
 			<string>--daemon</string>
 		</array>
+		
 		<key>RunAtLoad</key>
 		<true/>
 		<key>KeepAlive</key>

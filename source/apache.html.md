@@ -111,12 +111,14 @@ Copy and paste the following text into the aforementioned file.
 	<dict>
 		<key>Label</key>
 		<string>org.apache.apache2</string>
+
 		<key>ProgramArguments</key>
 		<array>
 			<string>/usr/local/apache/bin/httpd</string>
 			<string>-D</string>
 			<string>FOREGROUND</string>
 		</array>
+
 		<key>RunAtLoad</key>
 		<true/>
 		<key>KeepAlive</key>
