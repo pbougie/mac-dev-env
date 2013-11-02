@@ -125,3 +125,10 @@ To exit the Telnet session.
 	quit
 
 For more information on using [Memcached Telnet commands](http://blog.elijaa.org/?post/2010/05/21/Memcached-telnet-command-summary).
+
+
+### Invalidate All Cache Items
+
+To flush the contents of your Memcached server. Useful in a development environment.
+
+	echo 'flush_all' | nc localhost 11211
