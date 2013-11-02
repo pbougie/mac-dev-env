@@ -86,8 +86,6 @@ Copy and paste the following text into the aforementioned file.
 
 	    <key>RunAtLoad</key>
 	    <true/>
-	    <key>KeepAlive</key>
-	    <true/>
 	  </dict>
 	</plist>
 
