@@ -7,7 +7,7 @@ gem 'middleman'
 # https://github.com/middleman/middleman-livereload
 gem 'middleman-livereload'
 
-# http://tvaughan.github.com/middleman-deploy/
+# https://github.com/tvaughan/middleman-deploy
 gem 'middleman-deploy'
 
 # https://github.com/jimweirich/rake
