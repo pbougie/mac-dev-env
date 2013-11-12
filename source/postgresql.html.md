@@ -4,7 +4,7 @@ title: PostgreSQL
 
 > **Links:** [Homepage](http://www.postgresql.org/) | [Downloads](http://www.postgresql.org/ftp/source/) | [Documentation](http://www.postgresql.org/docs/9.2/static/)  
 > **Dependencies:** None  
-> **Version:** <span id="version">9.2.4</span>
+> **Version:** <span id="version">9.3.1</span>
 
 
 **PostgreSQL** is an enterprise-class, open source object-relational database system. It has been in active development for more than 15 years and has a strong reputation for standards compliance, reliability and data integrity.
@@ -122,6 +122,6 @@ Display the **PostgreSQL** server version.
 
 	postgres --version
 
-Show a list of available databases (the database has to be running).
+Show a list of available databases (the server has to be running).
 
 	psql -l

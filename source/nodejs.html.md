@@ -4,7 +4,7 @@ title: Node.js
 
 > **Links:** [Homepage](http://nodejs.org/) | [Downloads](http://nodejs.org/download/)  
 > **Dependencies:** None  
-> **Version:** <span id="version">0.10.17</span>
+> **Version:** <span id="version">0.10.21</span>
 
 
 **Node.js** is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications. **Node.js** uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.
@@ -43,6 +43,6 @@ Load the new shell configurations.
 
 ### Verify the Installation
 
-To verify that you have correctly installed Node.js, execute the following command. It should display **vVERSION**.
+To verify that you have correctly installed Node.js. It should display **vVERSION**.
 
 	node --version

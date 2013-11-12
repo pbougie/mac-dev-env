@@ -2,7 +2,7 @@
 priority: 1.0
 ---
 
-This guide is for compiling a web development environment in OS X. There are easier methods (and faster) to set up a development environment — such as [Homebrew](http://mxcl.github.com/homebrew/), [MacPorts](http://www.macports.org/), [Fink](http://www.finkproject.org/) — but none provide the control I was looking for. These instructions were made for [Mountain Lion](http://en.wikipedia.org/wiki/OS_X_Mountain_Lion) but should be fairly similar for previous versions of OS X.
+This guide is for compiling a web development environment in OS X. There are easier and faster methods to set up a development environment — such as [Homebrew](http://mxcl.github.com/homebrew/), [MacPorts](http://www.macports.org/), [Fink](http://www.finkproject.org/) — but none provide absolute control. These instructions are for [OS X 10.9 Mavericks](https://en.wikipedia.org/wiki/OS_X_Mavericks). Earlier versions of the guide are available for [10.8 Mountain Lion](http://archives.patrickbougie.com/mac-dev-env/mountain_lion/) and [10.7 Lion](http://archives.patrickbougie.com/mac-dev-env/lion/).
 
 Start with the **Getting Started** section, then proceed with installing your desired packages. Some packages need to be installed in a certain order to satisfy dependencies. Each package lists its dependencies at the beginning of the instructions.
 
@@ -13,7 +13,9 @@ Start with the **Getting Started** section, then proceed with installing your de
 
 ### Source Code Management
 
-- [Git](/git/)
+- Git
+	- [Autoconf](/autoconf/)
+	- [Git](/git/)
 
 ### Data Stores
 
@@ -23,9 +25,6 @@ Start with the **Getting Started** section, then proceed with installing your de
 - [PostgreSQL](/postgresql/)
 - [MongoDB](/mongodb/)
 - [SQLite](/sqlite/)
-- Memcached
-	- [Libevent](/libevent/)
-	- [Memcached](/memcached/)
 - [Redis](/redis/)
 	
 ### PHP served by Apache

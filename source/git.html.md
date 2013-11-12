@@ -3,8 +3,8 @@ title: Git
 ---
 
 > **Links:** [Homepage](http://git-scm.com/) | [Downloads](http://git-scm.com/download)  
-> **Dependencies:** None  
-> **Version:** <span id="version">1.8.4</span>
+> **Dependencies:** [Autoconf](/autoconf/)  
+> **Version:** <span id="version">1.8.4.3</span>
 
 
 **Git** is a distributed version control system that was initially designed and developed by Linus Torvalds for Linux kernel development.
@@ -48,8 +48,7 @@ Switch to `/usr/local/src` and download the documentation.
 
 Extract the documentation to `/usr/local/git/man`.
 
-	mkdir -p /usr/local/git/man
-	tar -xzvof git-manpages-VERSION.tar.gz -C /usr/local/git/man
+	tar -xzvof git-manpages-VERSION.tar.gz -C /usr/local/git/share/man
 
 
 ### Shell
@@ -57,7 +56,7 @@ Extract the documentation to `/usr/local/git/man`.
 Execute the following lines to update your [Bash](http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) startup script.
 
 	echo 'export PATH=/usr/local/git/bin:$PATH' >> ~/.bash_profile
-	echo 'export MANPATH=/usr/local/git/man:$MANPATH' >> ~/.bash_profile
+	echo 'export MANPATH=/usr/local/git/share/man:$MANPATH' >> ~/.bash_profile
 
 Load the new shell configurations.
 
@@ -66,6 +65,6 @@ Load the new shell configurations.
 
 ### Verify the Installation
 
-To verify that you have correctly installed Git, execute the following command. It should display **git version VERSION**.
+To verify that you have correctly installed Git. It should display **git version VERSION**.
 
 	git --version

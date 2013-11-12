@@ -19,6 +19,6 @@ Install Bower globally using [NPM](https://npmjs.org/).
 
 ### Verify the Installation
 
-To verify that you have correctly installed Bower, execute the following command. It should display the usage instructions.
+To verify that you have correctly installed Bower. It should display the usage instructions.
 
 	bower

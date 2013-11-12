@@ -26,10 +26,11 @@ Extract the archive and move into the folder.
 
 ### Compile and Install
 
-There are some broken references when attempting to compile using the Command Line Tools. This symbolic link temporarily fixes the problem. You can delete `/Applications/Xcode` once you are done.
+There are some missing references when attempting to compile using the **Command Line Tools**. The following commands fix the problem. You can delete `/Applications/Xcode` once you are done.
 
-	mkdir -p /Applications/Xcode.app/Contents/Developer/Toolchains/OSX10.8.xctoolchain/usr/bin
-	ln -s /usr/bin/cc /Applications/Xcode.app/Contents/Developer/Toolchains/OSX10.8.xctoolchain/usr/bin/cc
+	sudo xcode-select -switch /
+	mkdir -p /Applications/Xcode.app/Contents/Developer/Toolchains/OSX10.9.xctoolchain/usr/bin
+	ln -s /usr/bin/cc /Applications/Xcode.app/Contents/Developer/Toolchains/OSX10.9.xctoolchain/usr/bin/cc
 
 Configure, compile and install into `/usr/local/apache-VERSION`.
 
@@ -67,12 +68,12 @@ Copy and paste the following text at the end of the aforementioned file. Make su
 		Require host 127.0.0.1
 	</Directory>
 
-You need to disable the `ErrorLog` and `CustomLog` directives in the Apache configuration file (leaving the above directives intact). Otherwise, Apache will log the same information to two separate locations.
+You also need to disable the `ErrorLog` and `CustomLog` directives in the Apache configuration file (leaving the above directives intact). Otherwise, Apache will log the same information in two separate locations.
 
 
 ### Web Root
 
-Create a folder that will contain your web sites and applications; such as `~/Sites` You can place your projects wherever you'd like but make sure you update the path when mentioned in this article.
+Create a folder that will contain your web sites and applications. I keep my projects in `~/Sites`. You can place your projects wherever you'd like but make sure you update the path when mentioned in this article.
 
 	mkdir -p ~/Sites
 
@@ -83,12 +84,6 @@ Execute the following lines to update your [Bash](http://en.wikipedia.org/wiki/B
 
 	echo 'export PATH=/usr/local/apache/bin:$PATH' >> ~/.bash_profile
 	echo 'export MANPATH=/usr/local/apache/man:$MANPATH' >> ~/.bash_profile
-
-You can also create the following shortcuts if you'd like.
-
-	echo 'alias apache-start="sudo /usr/local/apache/bin/apachectl -k start"' >> ~/.bash_profile
-	echo 'alias apache-stop="sudo /usr/local/apache/bin/apachectl -k graceful-stop"' >> ~/.bash_profile
-	echo 'alias apache-restart="sudo /usr/local/apache/bin/apachectl -k graceful"' >> ~/.bash_profile
 
 Load the new shell configurations.
 
@@ -101,7 +96,7 @@ Create a configuration file for [Launchd](http://en.wikipedia.org/wiki/Launchd).
 
 	sudo nano /Library/LaunchDaemons/org.apache.apache2.plist
 
-<small>Do not name the file *org.apache.httpd.plist* as it collides with a similarly named file for loading the OS X web server.</small>
+Do not name the file *org.apache.httpd.plist* as it collides with a similarly named file for loading the OS X web server.
 
 Copy and paste the following text into the aforementioned file.
 

@@ -5,10 +5,10 @@ title: CMake
 
 > **Links:** [Homepage](http://www.cmake.org/) | [Downloads](http://www.cmake.org/cmake/resources/software.html)  
 > **Dependencies:** None  
-> **Version:** <span id="version">2.8.11.2</span>
+> **Version:** <span id="version">2.8.12.1</span>
 
 
-**CMake** is a cross-platform, open-source build system designed to build, test and package software. **CMake** is used to control the software compilation process using platform and compiler independent configuration files. **MySQL** replaced the *GNU autotools* with **CMake** on all platforms beginning with version 5.5.
+**CMake** is a cross-platform, open-source build system designed to build, test and package software. **CMake** is used to control the software compilation process using platform and compiler independent configuration files.
 
 
 ### Get the Code
@@ -51,6 +51,6 @@ Load the new shell configurations.
 
 ### Verify the Installation
 
-To verify that you have correctly installed CMake, execute the following command. It should display **cmake version VERSION**.
+To verify that you have correctly installed CMake. It should display **cmake version VERSION**.
 
 	cmake --version

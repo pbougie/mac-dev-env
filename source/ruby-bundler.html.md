@@ -19,6 +19,6 @@ Install Bundler using [RubyGems](http://rubygems.org/).
 
 ### Verify the Installation
 
-To verify that you have correctly installed Bundler, execute the following command. It should display the version number.
+To verify that you have correctly installed Bundler. It should display the version number.
 
 	bundle -v

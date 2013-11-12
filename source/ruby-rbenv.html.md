@@ -12,13 +12,9 @@ Ruby version manager that lets you easily switch between multiple versions of Ru
 
 ### Install
 
-Switch to the `/usr/local` folder.
-
-	cd /usr/local
-
 Check out rbenv into `/usr/local/rbenv`.
 
-	git clone git://github.com/sstephenson/rbenv.git rbenv
+	git clone git://github.com/sstephenson/rbenv.git /usr/local/rbenv
 
 
 ### Shell

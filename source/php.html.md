@@ -5,7 +5,7 @@ title: PHP
 
 > **Links:** [Homepage](http://www.php.net/) | [Downloads](http://www.php.net/downloads.php)  
 > **Dependencies:** [Apache](/apache/) | [LibJPEG](/libjpeg/) | [LibPNG](/libpng/) | [LibMCrypt](/libmcrypt/) | [FreeType](/freetype/)  
-> **Version:** <span id="version">5.5.3</span>
+> **Version:** <span id="version">5.5.5</span>
 
 
 **PHP** is a general-purpose server-side scripting language that is especially suited to web development.
@@ -81,6 +81,9 @@ Copy and paste the following text at the end of the aforementioned file.
 	<IfModule mime_module>
 	  AddType application/x-httpd-php .php
 	</IfModule>
+	<IfModule dir_module>
+      DirectoryIndex index.html index.php
+	</IfModule>
 
 
 ### Shell
@@ -99,11 +102,11 @@ Load the new shell configurations.
 
 The web server must be restarted for the changes to take effect.
 
-	sudo /usr/local/apache/bin/apachectl -k restart
+	sudo apachectl restart
 
 
 ### Verify the Installation
 
-To verify that you have correctly installed PHP, execute the following command. It should display the version number along with other information.
+To verify that you have correctly installed PHP. It should display the version number along with other information.
 
 	php --version

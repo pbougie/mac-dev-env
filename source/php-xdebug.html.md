@@ -27,4 +27,4 @@ Make sure the path to the extension is the same.
 
 The web server must be restarted for the changes to take effect.
 
-	sudo /usr/local/apache/bin/apachectl -k restart
+	sudo apachectl restart

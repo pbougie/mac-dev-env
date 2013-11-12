@@ -27,7 +27,9 @@ Extract the archive and move into the folder.
 
 Configure, compile and install into `/usr/local/memcached-VERSION`.
 
-	./configure --prefix=/usr/local/memcached-VERSION --with-libevent=/usr/local/libevent/
+	./configure \
+		--prefix=/usr/local/memcached-VERSION \
+		--with-libevent=/usr/local/libevent
 	make
 	make install
 

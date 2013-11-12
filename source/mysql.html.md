@@ -4,7 +4,7 @@ title: MySQL
 
 > **Links:** [Homepage](http://www.mysql.com/) | [Downloads](http://www.mysql.com/downloads/mysql/) | [Reference Manual](http://dev.mysql.com/doc/refman/5.5/en/index.html)  
 > **Dependencies:** [CMake](/cmake/)  
-> **Version:** <span id="version">5.6.13</span>
+> **Version:** <span id="version">5.6.14</span>
 
 
 **MySQL** is an open-source relational database management server (RDBMS).
@@ -29,6 +29,7 @@ Configure, compile and install into `/usr/local/mysql-VERSION`.
 
 	cmake \
 		-DCMAKE_INSTALL_PREFIX=/usr/local/mysql-VERSION \
+		-DCMAKE_CXX_FLAGS="-stdlib=libstdc++" \
 		-DDEFAULT_CHARSET=utf8 \
 		-DDEFAULT_COLLATION=utf8_general_ci \
 		.
@@ -131,6 +132,10 @@ Deregister with Launchd.
 
 
 ### Verify the Installation
+
+Display the **MySQL** server version.
+
+	mysqld --version
 
 Log into the database using the **MySQL** client.
 

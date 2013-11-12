@@ -22,4 +22,4 @@ Execute the following line to update your `php.ini` file.
 
 The web server must be restarted for the changes to take effect.
 
-	sudo /usr/local/apache/bin/apachectl -k restart
+	sudo apachectl restart

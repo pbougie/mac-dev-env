@@ -28,7 +28,10 @@ Extract the archive and move into the folder.
 
 Configure, compile and install into `/usr/local/libevent-VERSION`.
 
-	./configure --prefix=/usr/local/libevent-VERSION
+	./configure \
+		--prefix=/usr/local/libevent-VERSION \
+		--disable-dependency-tracking \
+		--disable-debug-mode
 	make
 	make install
 

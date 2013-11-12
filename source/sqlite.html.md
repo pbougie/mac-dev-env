@@ -5,7 +5,7 @@ title: SQLite
 
 > **Links:** [Homepage](http://www.sqlite.org/) | [Downloads](http://www.sqlite.org/download.html)  
 > **Dependencies:** None  
-> **Version:** <span id="version">3080001</span>
+> **Version:** <span id="version">3080100</span>
 
 
 **SQLite** is a self-contained, serverless, zero-configuration, transactional SQL database engine.
@@ -50,6 +50,6 @@ Load the new shell configurations.
 
 ### Verify the Installation
 
-To verify that you have correctly installed SQLite, execute the following command. It should display the version number along with other information.
+To verify that you have correctly installed SQLite. It should display the version number along with other information.
 
 	sqlite3 -version

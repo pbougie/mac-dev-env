@@ -52,7 +52,7 @@ Load the new shell configurations.
 
 ### Verify the Installation
 
-To verify that you have correctly installed GraphicsMagick, execute the following command.
+To verify that you have correctly installed GraphicsMagick.
 
 	gm version
 

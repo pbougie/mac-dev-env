@@ -3,12 +3,12 @@ title: Autoconf
 ---
 
 
-> **Links:** [Homepage](http://www.gnu.org/software/autoconf/)  
+> **Links:** [Homepage](http://www.gnu.org/software/autoconf/) | [Downloads](http://ftp.gnu.org/gnu/autoconf/)  
 > **Dependencies:** None  
 > **Version:** <span id="version">2.69</span>
 
 
-**Autoconf** creates a configuration script for a package from a template file that lists the operating system features that the package can use. This is a requirement for installing [PECL](http://pecl.php.net/) packages.
+**Autoconf** creates a configuration script for a package from a template file that lists the operating system features that the package can use.
 
 
 ### Get the Code
@@ -50,6 +50,6 @@ Load the new shell configurations.
 
 ### Verify the Installation
 
-To verify that you have correctly installed Autoconf, execute the following command.
+To verify that you have correctly installed Autoconf.
 
 	autoconf --version

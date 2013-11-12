@@ -19,13 +19,15 @@ Configure Pow prior to running the installation script.
 	echo 'export POW_DST_PORT=88' >> ~/.powconfig
 	source ~/.powconfig
 
-
-
 Add the following to the Apache configuration file `/usr/local/apache/conf/httpd.conf`.
 
 	LoadModule proxy_module modules/mod_proxy.so
 	LoadModule proxy_http_module modules/mod_proxy_http.so
-	
+
+	<VirtualHost *:80>
+		# Passthrough to non-Ruby projects.
+	</VirtualHost>
+
 	<VirtualHost *:80>
 		ServerName pow
 		ServerAlias *.dev
@@ -35,16 +37,20 @@ Add the following to the Apache configuration file `/usr/local/apache/conf/httpd
 		ProxyPassReverse / http://localhost:20559/
 		ProxyPreserveHost On
 	</VirtualHost>
-	
-	<VirtualHost *:80>
-		# Stops Pow from serving requests on port 80
-	</VirtualHost>
 
 Restart Apache.
 
 	sudo apachectl restart
 
 
+### Configure Pow for use with `rbenv`
+
+This will install Pow to work with `rbenv`. You can skip this section if you are not using `rbenv`
+
+	echo 'export PATH=/usr/local/rbenv/shims:/usr/local/rbenv/bin:$PATH' >> ~/.powconfig
+	source ~/.powconfig
+	
+	
 ### Install or Upgrade
 
 Install or upgrade Pow using the installation script.
@@ -66,10 +72,3 @@ Load the application.
 Uninstall Pow.
 
 	curl get.pow.cx/uninstall.sh | sh
-
-
-### Useful
-
-![Anvil](/images/anvil.png)
-
-[Anvil](http://anvilformac.com/) is a menubar app for managing your local websites. Serve your Rack apps and static sites with a simple `.dev` URL. Anvil actually incorporates Pow so you can omit the above installation when using it.

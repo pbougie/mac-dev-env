@@ -8,6 +8,7 @@ Create the necessary folders.
 
 	sudo mkdir -p /usr/local/src
 	sudo mkdir -p /usr/local/var/log
+	mkdir -p ~/Library/LaunchAgents
 
 Modify the ownership of `/usr/local` and its children to make yourself the owner.
 
