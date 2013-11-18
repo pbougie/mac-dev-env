@@ -8,7 +8,7 @@ title: Apache
 > **Version:** <span id="version">2.4.6</span>
 
 
-The **Apache HTTP Server** is an open-source web server that was released in 1995. It has been the most popular web server on the Internet since April 1996. It is estimated to serve over 60% of all websites.
+The **Apache HTTP Server** is an open-source web server that was released in 1995. It has been the most popular web server on the Internet since April 1996.
 
 
 ### Get the Code
@@ -59,13 +59,13 @@ Copy and paste the following text at the end of the aforementioned file. Make su
 	ErrorLog "/usr/local/var/log/apache-error.log"
 	CustomLog "/usr/local/var/log/apache-access.log" common
 	<Directory "/Users/<username>/Sites">
-		Options All
-		AllowOverride All
-		IndexOptions NameWidth=*
+	  Options All
+	  AllowOverride All
+	  IndexOptions NameWidth=*
 
-		Require all denied
-		Require host localhost
-		Require host 127.0.0.1
+	  Require all denied
+	  Require host localhost
+	  Require host 127.0.0.1
 	</Directory>
 
 You also need to disable the `ErrorLog` and `CustomLog` directives in the Apache configuration file (leaving the above directives intact). Otherwise, Apache will log the same information in two separate locations.
@@ -90,6 +90,17 @@ Load the new shell configurations.
 	source ~/.bash_profile
 
 
+### Manual Start/Stop
+
+To start the HTTPd.
+
+	sudo apachectl start
+
+To shut down the HTTPd.
+
+	sudo apachectl stop
+
+
 ### Automatically Start the Server at Boot
 
 Create a configuration file for [Launchd](http://en.wikipedia.org/wiki/Launchd).
@@ -104,22 +115,22 @@ Copy and paste the following text into the aforementioned file.
 	<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 	<plist version="1.0">
 	<dict>
-		<key>Label</key>
-		<string>org.apache.apache2</string>
+	  <key>Label</key>
+	  <string>org.apache.apache2</string>
 
-		<key>ProgramArguments</key>
-		<array>
-			<string>/usr/local/apache/bin/httpd</string>
-			<string>-D</string>
-			<string>FOREGROUND</string>
-		</array>
+	  <key>ProgramArguments</key>
+	  <array>
+	    <string>/usr/local/apache/bin/httpd</string>
+	    <string>-D</string>
+	    <string>FOREGROUND</string>
+	  </array>
 
-		<key>RunAtLoad</key>
-		<true/>
-		<key>KeepAlive</key>
-		<true/>
-		<key>WorkingDirectory</key>
-		<string>/usr/local/apache</string>
+	  <key>RunAtLoad</key>
+	  <true/>
+	  <key>KeepAlive</key>
+	  <true/>
+	  <key>WorkingDirectory</key>
+	  <string>/usr/local/apache</string>
 	</dict>
 	</plist>
 
