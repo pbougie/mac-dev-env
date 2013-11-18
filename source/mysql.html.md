@@ -59,10 +59,6 @@ Create a folder that will contain your databases. My databases are located in `/
 
 	mkdir -p /usr/local/var/mysql
 
-Set the permissions on the folder.
-
-	sudo chown -R mysql /usr/local/var/mysql
-
 
 ### Post-Installation
 
@@ -72,31 +68,31 @@ If you are copying the data from a former MySQL installation, you can skip these
 
 Initialize your database before launching the server.
 
-	sudo /usr/local/mysql/scripts/mysql_install_db --user=mysql --basedir=/usr/local/mysql --datadir=/usr/local/var/mysql
+	/usr/local/mysql/scripts/mysql_install_db --basedir=/usr/local/mysql --datadir=/usr/local/var/mysql
 
 #### Secure the Server
 
 The server needs to be running to perform this step which will set a root password and generally secure the server.
 
-	sudo /usr/local/mysql/bin/mysql_secure_installation
+	mysql_secure_installation
 
 
 ### Manual Start/Stop
 
 To start the MySQL server.
 
-	sudo -b /usr/local/mysql/bin/mysqld_safe --user=mysql --datadir=/usr/local/var/mysql --log-error=/usr/local/var/log/mysql.log
+	mysqld_safe --datadir=/usr/local/var/mysql --log-error=/usr/local/var/log/mysql.log
 
 To shut down the MySQL server.
 
-	sudo /usr/local/mysql/bin/mysqladmin --password shutdown
+	mysqladmin --user=root --password shutdown
 
 
 ### Automatically Start the Server at Boot
 
 Create a configuration file for [Launchd](http://en.wikipedia.org/wiki/Launchd).
 
-	sudo nano /Library/LaunchDaemons/com.mysql.mysqld.plist
+	nano ~/Library/LaunchAgents/com.mysql.mysqld.plist
 
 Copy and paste the following text into the aforementioned file.
 
@@ -104,31 +100,31 @@ Copy and paste the following text into the aforementioned file.
 	<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 	<plist version="1.0">
 	<dict>
-		<key>Label</key>
-		<string>com.mysql.mysqld</string>
+	  <key>Label</key>
+	  <string>com.mysql.mysqld</string>
 
-		<key>ProgramArguments</key>
-		<array>
-			<string>/usr/local/mysql/bin/mysqld_safe</string>
-			<string>--user=mysql</string>
-			<string>--datadir=/usr/local/var/mysql</string>
-			<string>--log-error=/usr/local/var/log/mysql.log</string>
-		</array>
+	  <key>ProgramArguments</key>
+	  <array>
+	    <string>/usr/local/mysql/bin/mysqld_safe</string>
+	    <string>--user=mysql</string>
+	    <string>--datadir=/usr/local/var/mysql</string>
+	    <string>--log-error=/usr/local/var/log/mysql.log</string>
+	  </array>
 		
-		<key>RunAtLoad</key>
-		<true/>
-		<key>KeepAlive</key>
-		<true/>
+	  <key>RunAtLoad</key>
+	  <true/>
+	  <key>KeepAlive</key>
+	  <true/>
 	</dict>
 	</plist>
 
 Register with Launchd and start the server.
 
-	sudo launchctl load -w /Library/LaunchDaemons/com.mysql.mysqld.plist
+	launchctl load -w ~/Library/LaunchAgents/com.mysql.mysqld.plist
 
 Deregister with Launchd.
 
-	sudo launchctl unload -w /Library/LaunchDaemons/com.mysql.mysqld.plist
+	launchctl unload -w ~/Library/LaunchAgents/com.mysql.mysqld.plist
 
 
 ### Verify the Installation

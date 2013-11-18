@@ -30,7 +30,7 @@ To view the documentation, point your web browser to [`http://localhost:8808/`](
 
 Create a configuration file for [Launchd](http://en.wikipedia.org/wiki/Launchd).
 
-	sudo nano /Library/LaunchDaemons/org.rubygems.gem.plist
+	nano ~/Library/LaunchAgents/org.rubygems.gem.plist
 
 Copy and paste the following text into the aforementioned file. The path to the `gem` executable cannot use the `rbenv` shim binary because the environment in your startup script never gets set up. Pick your primary version of Ruby and use an absolute path to the `gem` executable. Make sure you update the path in the configuration below.
 
@@ -38,28 +38,28 @@ Copy and paste the following text into the aforementioned file. The path to the 
 	<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 	<plist version="1.0">
 	<dict>
-		<key>Label</key>
-		<string>org.rubygems.gem</string>
+	  <key>Label</key>
+	  <string>org.rubygems.gem</string>
 
-		<key>ProgramArguments</key>
-		<array>
-			<string>/usr/local/rbenv/versions/*RUBY-VERSION*/bin/gem</string>
-			<string>server</string>
-			<string>--daemon</string>
-		</array>
-		
-		<key>RunAtLoad</key>
-		<true/>
-		<key>KeepAlive</key>
-		<true/>
+	  <key>ProgramArguments</key>
+	  <array>
+	    <string>/usr/local/rbenv/versions/*RUBY-VERSION*/bin/gem</string>
+	    <string>server</string>
+	    <string>--daemon</string>
+	  </array>
+
+	  <key>RunAtLoad</key>
+	  <true/>
+	  <key>KeepAlive</key>
+	  <true/>
 	</dict>
 	</plist>
 
 Register with Launchd and start the server.
 
-	sudo launchctl load -w /Library/LaunchDaemons/org.rubygems.gem.plist
+	launchctl load -w ~/Library/LaunchAgents/org.rubygems.gem.plist
 
 Deregister with Launchd.
 
-	sudo launchctl unload -w /Library/LaunchDaemons/org.rubygems.gem.plist
+	launchctl unload -w ~/Library/LaunchAgents/org.rubygems.gem.plist
 

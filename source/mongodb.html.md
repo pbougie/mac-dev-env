@@ -74,7 +74,7 @@ Load the new shell configurations.
 
 Start the server to test your installation.
 
-	sudo mongod --config=/usr/local/mongodb/mongod.conf
+	mongod --config=/usr/local/mongodb/mongod.conf
 
 To shut down the MongoDB server, press `CTRL-C`.
 
@@ -83,7 +83,7 @@ To shut down the MongoDB server, press `CTRL-C`.
 
 Create a configuration file for [Launchd](http://en.wikipedia.org/wiki/Launchd).
 
-	sudo nano /Library/LaunchDaemons/org.mongodb.mongod.plist
+	nano ~/Library/LaunchAgents/org.mongodb.mongod.plist
 
 Copy and paste the following text into the aforementioned file.
 
@@ -91,29 +91,29 @@ Copy and paste the following text into the aforementioned file.
 	<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 	<plist version="1.0">
 	<dict>
-		<key>Label</key>
-		<string>org.mongodb.mongod</string>
+	  <key>Label</key>
+	  <string>org.mongodb.mongod</string>
 
-		<key>ProgramArguments</key>
-		<array>
-			<string>/usr/local/mongodb/bin/mongod</string>
-			<string>--config=/usr/local/mongodb/mongod.conf</string>
-		</array>
+	  <key>ProgramArguments</key>
+	  <array>
+	    <string>/usr/local/mongodb/bin/mongod</string>
+	    <string>--config=/usr/local/mongodb/mongod.conf</string>
+	  </array>
 		
-		<key>RunAtLoad</key>
-		<true/>
-		<key>KeepAlive</key>
-		<true/>
+	  <key>RunAtLoad</key>
+	  <true/>
+	  <key>KeepAlive</key>
+	  <true/>
 	</dict>
 	</plist>
 
 Register with Launchd and start the server.
 
-	sudo launchctl load -w /Library/LaunchDaemons/org.mongodb.mongod.plist
+	launchctl load -w ~/Library/LaunchAgents/org.mongodb.mongod.plist
 
 Deregister with Launchd.
 
-	sudo launchctl unload -w /Library/LaunchDaemons/org.mongodb.mongod.plist
+	launchctl unload -w ~/Library/LaunchAgents/org.mongodb.mongod.plist
 
 
 ### Verify the Installation
