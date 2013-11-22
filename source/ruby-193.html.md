@@ -5,7 +5,7 @@ title: Ruby 1.9.3
 
 > **Links:** [Homepage](http://www.ruby-lang.org/) | [Downloads](http://www.ruby-lang.org/en/downloads/)  
 > **Dependencies:** [rbenv](/ruby-rbenv/) | [LibYAML](/libyaml/)  
-> **Version:** <span id="version">1.9.3-p448</span>
+> **Version:** <span id="version">1.9.3-p484</span>
 
 
 ### Get the Code
