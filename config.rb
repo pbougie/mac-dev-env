@@ -1,4 +1,5 @@
 Dotenv.load
+I18n.enforce_available_locales = false
 
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
