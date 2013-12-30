@@ -5,7 +5,7 @@ title: Apache
 
 > **Links:** [Homepage](http://httpd.apache.org/) | [Downloads](http://httpd.apache.org/download.cgi) | [Documentation](http://httpd.apache.org/docs/2.4/)  
 > **Dependencies:** [PCRE](/pcre/)  
-> **Version:** <span id="version">2.4.6</span>
+> **Version:** <span id="version">2.4.7</span>
 
 
 The **Apache HTTP Server** is an open-source web server that was released in 1995. It has been the most popular web server on the Internet since April 1996.
@@ -26,7 +26,7 @@ Extract the archive and move into the folder.
 
 ### Compile and Install
 
-There are some missing references when attempting to compile using the **Command Line Tools**. The following commands fix the problem. You can delete `/Applications/Xcode` once you are done.
+There are missing references when attempting to compile using the **Command Line Tools**. The following commands fix the problem. You can delete `/Applications/Xcode` once you are done.
 
 	sudo xcode-select -switch /
 	mkdir -p /Applications/Xcode.app/Contents/Developer/Toolchains/OSX10.9.xctoolchain/usr/bin
