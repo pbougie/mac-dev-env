@@ -1,5 +1,5 @@
 ---
-title: Ruby 2
+title: Ruby 2.0.0
 ---
 
 
@@ -46,8 +46,3 @@ To see all installed versions, use `rbenv versions`.
 To verify that you have correctly installed this version of Ruby.
 
 	ruby --version
-
-
-### Adding Other Versions
-
-Change the version number in the textbox at the top and follow the instructions again. You may have to modify the path when downloading the source for certain versions. Also the `./configure` command may need to be adjusted for each version – check the installation documentation before proceeding.

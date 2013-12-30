@@ -1,11 +1,11 @@
 ---
-title: Ruby 1.9.3
+title: Ruby 2.1.0
 ---
 
 
 > **Links:** [Homepage](http://www.ruby-lang.org/) | [Downloads](http://www.ruby-lang.org/en/downloads/)  
-> **Dependencies:** [rbenv](/ruby-rbenv/) | [LibYAML](/libyaml/)  
-> **Version:** <span id="version">1.9.3-p484</span>
+> **Dependencies:** [rbenv](/ruby-rbenv/) | [OpenSSL](/openssl/)  
+> **Version:** <span id="version">2.1.0</span>
 
 
 ### Get the Code
@@ -27,7 +27,7 @@ Configure, compile and install into `/usr/local/rbenv/versions/VERSION`.
 
 	./configure \
 		--prefix=/usr/local/rbenv/versions/VERSION \
-		--with-opt-dir=/usr/local/libyaml
+		--with-opt-dir=/usr/local/openssl
 	make
 	make install
 
@@ -46,8 +46,3 @@ To see all installed versions, use `rbenv versions`.
 To verify that you have correctly installed this version of Ruby.
 
 	ruby --version
-
-
-### Adding Other Versions
-
-Change the version number in the textbox at the top and follow the instructions again. You may have to modify the path when downloading the source for certain versions. Also the `./configure` command may need to be adjusted for each version – check the installation documentation before proceeding.
