@@ -25,6 +25,9 @@ Start with the **Getting Started** section, then proceed with installing your de
 - [PostgreSQL](/postgresql/)
 - [MongoDB](/mongodb/)
 - [SQLite](/sqlite/)
+- Memcached
+	- [Libevent](/libevent/)
+	- [Memcached](/memcached/)
 - [Redis](/redis/)
 	
 ### PHP served by Apache

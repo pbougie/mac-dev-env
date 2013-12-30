@@ -4,7 +4,7 @@ title: Memcached
 
 > **Links:** [Homepage](http://memcached.org/) | [Documentation](http://code.google.com/p/memcached/wiki/NewStart)  
 > **Dependencies:** [Libevent](/libevent/)  
-> **Version:** <span id="version">1.4.15</span>
+> **Version:** <span id="version">1.4.17</span>
 
 
 **Memcached** is an in-memory key-value store for small chunks of arbitrary data.
@@ -15,7 +15,7 @@ title: Memcached
 Switch to `/usr/local/src` and download the source package.
 
 	cd /usr/local/src
-	curl --remote-name http://memcached.googlecode.com/files/memcached-VERSION.tar.gz
+	curl --remote-name http://www.memcached.org/files/memcached-VERSION.tar.gz
 
 Extract the archive and move into the folder.
 
