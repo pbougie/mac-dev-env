@@ -13,8 +13,9 @@ end
 
 desc "Deploy website via rsync to production server"
 task :deploy do
+  puts '## Updating file permissions before uploading'
+  system 'chmod -R u+rwX,go=u-w build'
   puts "## Deploying website via rsync to production server"
-  system("chmod -R +r build/*")
   system("bundle exec middleman deploy")
 end
 
