@@ -54,7 +54,7 @@ GEM
       rack-test (~> 0.6.1)
       thor (>= 0.15.2, < 2.0)
       tilt (~> 1.4.1)
-    middleman-deploy (0.2.1)
+    middleman-deploy (0.1.4)
       middleman-core (>= 3.0.0)
       net-sftp
       ptools
@@ -112,7 +112,7 @@ DEPENDENCIES
   builder
   dotenv
   middleman
-  middleman-deploy
+  middleman-deploy (~> 0.1.4)
   middleman-livereload
   rack-gauges
   rack-google-analytics
