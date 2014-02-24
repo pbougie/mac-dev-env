@@ -56,9 +56,9 @@ Start with the **Getting Started** section, then proceed with installing your de
 	- Ruby 2.0.0
 		- [OpenSSL](/openssl/)
 		- [Ruby](/ruby-200/)
-	- Ruby 2.1.0
+	- Ruby 2.1.1
 		- [OpenSSL](/openssl/)
-		- [Ruby](/ruby-210/)
+		- [Ruby](/ruby-21/)
 	- [Ruby](/ruby/) (all versions)
 		- [RubyGems](/ruby-gems/)
 		- [Bundler](/ruby-bundler/)

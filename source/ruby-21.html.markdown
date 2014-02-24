@@ -1,11 +1,11 @@
 ---
-title: Ruby 2.1.0
+title: Ruby 2.1.1
 ---
 
 
 > **Links:** [Homepage](http://www.ruby-lang.org/) | [Downloads](http://www.ruby-lang.org/en/downloads/)  
 > **Dependencies:** [rbenv](/ruby-rbenv/) | [OpenSSL](/openssl/)  
-> **Version:** <span id="version">2.1.0</span>
+> **Version:** <span id="version">2.1.1</span>
 
 
 ### Get the Code
@@ -13,7 +13,7 @@ title: Ruby 2.1.0
 Switch to `/usr/local/src` and download the source package.
 
 	cd /usr/local/src
-	curl --remote-name http://ftp.ruby-lang.org/pub/ruby/ruby-VERSION.tar.gz
+	curl --remote-name http://cache.ruby-lang.org/pub/ruby/2.1/ruby-VERSION.tar.gz
 
 Extract the archive and move into the folder.
 
