@@ -17,7 +17,7 @@ gem 'rake'
 # https://github.com/bkeepers/dotenv
 gem 'dotenv'
 
-# https://github.com/leehambley/rack-google-analytics
+# https://github.com/kangguru/rack-google-analytics
 gem 'rack-google-analytics'
 
 # https://github.com/thunderboltlabs/rack-gauges
