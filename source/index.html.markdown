@@ -55,8 +55,8 @@ Start with the **Getting Started** section, then proceed with installing your de
 		- [rbenv-gem-rehash](/ruby-rbenv-gem-rehash/)
 	- Ruby 2.0.0
 		- [OpenSSL](/openssl/)
-		- [Ruby](/ruby-200/)
-	- Ruby 2.1.1
+		- [Ruby](/ruby-20/)
+	- Ruby 2.1.2
 		- [OpenSSL](/openssl/)
 		- [Ruby](/ruby-21/)
 	- [Ruby](/ruby/) (all versions)

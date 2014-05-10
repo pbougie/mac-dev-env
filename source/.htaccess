@@ -16,4 +16,6 @@ RewriteRule ^node-grunt/?$ /nodejs-grunt [R=permanent,L]
 
 RewriteRule ^ruby-193/?$ /ruby [R=permanent,L]
 RewriteRule ^ruby-2/?$ /ruby [R=permanent,L]
+RewriteRule ^ruby-200/?$ /ruby [R=permanent,L]
 RewriteRule ^ruby-210/?$ /ruby [R=permanent,L]
+RewriteRule ^ruby-211/?$ /ruby [R=permanent,L]
