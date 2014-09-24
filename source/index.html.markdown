@@ -53,13 +53,10 @@ Start with the **Getting Started** section, then proceed with installing your de
 - Ruby
 	- [rbenv](/ruby-rbenv/)
 		- [rbenv-gem-rehash](/ruby-rbenv-gem-rehash/)
-	- Ruby 2.0.0
-		- [OpenSSL](/openssl/)
-		- [Ruby](/ruby-20/)
 	- Ruby 2.1.2
 		- [OpenSSL](/openssl/)
 		- [Ruby](/ruby-21/)
-	- [Ruby](/ruby/) (all versions)
+	- Gems
 		- [RubyGems](/ruby-gems/)
 		- [Bundler](/ruby-bundler/)
 		- [Ruby on Rails](/ruby-rails/)
