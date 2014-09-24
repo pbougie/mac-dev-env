@@ -8,8 +8,7 @@ gem 'middleman'
 gem 'middleman-livereload'
 
 # https://github.com/tvaughan/middleman-deploy
-# Downgrade because RSync deploy bug in version 0.2.1
-gem 'middleman-deploy', "~> 0.1.4"
+gem 'middleman-deploy'
 
 # https://github.com/jimweirich/rake
 gem 'rake'
