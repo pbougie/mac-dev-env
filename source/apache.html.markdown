@@ -3,9 +3,9 @@ title: Apache
 ---
 
 
-> **Links:** [Homepage](http://httpd.apache.org/) | [Downloads](http://httpd.apache.org/download.cgi) | [Documentation](http://httpd.apache.org/docs/2.4/)  
-> **Dependencies:** [PCRE](/pcre/)  
-> **Version:** <span id="version">2.4.9</span>
+> **Links:** [Homepage](http://httpd.apache.org/) | [Downloads](http://httpd.apache.org/download.cgi) | [Documentation](http://httpd.apache.org/docs/2.4/)
+> **Dependencies:** [PCRE](/pcre/)
+> **Version:** <span id="version">2.4.10</span>
 
 
 The **Apache HTTP Server** is an open-source web server that was released in 1995. It has been the most popular web server on the Internet since April 1996.
