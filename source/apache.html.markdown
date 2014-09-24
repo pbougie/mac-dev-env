@@ -3,8 +3,8 @@ title: Apache
 ---
 
 
-> **Links:** [Homepage](http://httpd.apache.org/) | [Downloads](http://httpd.apache.org/download.cgi) | [Documentation](http://httpd.apache.org/docs/2.4/)
-> **Dependencies:** [PCRE](/pcre/)
+> **Links:** [Homepage](http://httpd.apache.org/) | [Downloads](http://httpd.apache.org/download.cgi) | [Documentation](http://httpd.apache.org/docs/2.4/)  
+> **Dependencies:** [PCRE](/pcre/)  
 > **Version:** <span id="version">2.4.10</span>
 
 
