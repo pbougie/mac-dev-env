@@ -15,7 +15,7 @@ title: GraphicsMagick
 Switch to `/usr/local/src` and download the source package.
 
 	cd /usr/local/src
-	curl --location --output GraphicsMagick-VERSION.tar.gz http://download.sourceforge.net/graphicsmagick/GraphicsMagick-VERSION.tar.gz
+	curl --remote-name --location http://download.sourceforge.net/graphicsmagick/GraphicsMagick-VERSION.tar.gz
 
 Extract the archive and move into the folder.
 

@@ -16,7 +16,7 @@ title: LibMCrypt
 Switch to `/usr/local/src` and download the source package.
 
 	cd /usr/local/src
-	curl --location --output libmcrypt-VERSION.tar.gz http://downloads.sourceforge.net/project/mcrypt/Libmcrypt/2.5.8/libmcrypt-2.5.8.tar.gz
+	curl --remote-name --location http://downloads.sourceforge.net/project/mcrypt/Libmcrypt/VERSION/libmcrypt-VERSION.tar.gz
 
 Extract the archive and move into the folder.
 

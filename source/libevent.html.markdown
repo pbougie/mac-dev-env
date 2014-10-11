@@ -16,7 +16,7 @@ title: Libevent
 Switch to `/usr/local/src` and download the source package.
 
 	cd /usr/local/src
-	curl --location --remote-name https://github.com/downloads/libevent/libevent/libevent-VERSION-stable.tar.gz
+	curl --remote-name --location https://github.com/downloads/libevent/libevent/libevent-VERSION-stable.tar.gz
 
 Extract the archive and move into the folder.
 

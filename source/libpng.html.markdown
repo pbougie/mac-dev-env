@@ -16,7 +16,7 @@ title: LibPNG
 Switch to `/usr/local/src` and download the source package.
 
 	cd /usr/local/src
-	curl --location --output libpng-VERSION.tar.gz http://download.sourceforge.net/libpng/libpng-VERSION.tar.gz
+	curl --remote-name --location http://download.sourceforge.net/libpng/libpng-VERSION.tar.gz
 
 Extract the archive and move into the folder.
 

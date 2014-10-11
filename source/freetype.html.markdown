@@ -16,7 +16,7 @@ title: FreeType
 Switch to `/usr/local/src` and download the source package.
 
 	cd /usr/local/src
-	curl --location --output freetype-VERSION.tar.gz http://download.savannah.gnu.org/releases/freetype/freetype-VERSION.tar.gz
+	curl --remote-name --location http://sourceforge.net/projects/freetype/files/freetype2/VERSION/freetype-VERSION.tar.gz
 
 Extract the archive and move into the folder.
 
