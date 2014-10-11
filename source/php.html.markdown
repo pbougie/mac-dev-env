@@ -3,9 +3,9 @@ title: PHP
 ---
 
 
-> **Links:** [Homepage](http://www.php.net/) | [Downloads](http://www.php.net/downloads.php)  
+> **Links:** [Homepage](http://php.net/) | [Documentation](http://php.net/manual/en/) | [Downloads](http://php.net/downloads.php)  
 > **Dependencies:** [Apache](/apache/) | [LibJPEG](/libjpeg/) | [LibPNG](/libpng/) | [LibMCrypt](/libmcrypt/) | [FreeType](/freetype/)  
-> **Version:** <span id="version">5.5.13</span>
+> **Version:** <span id="version">5.5.17</span>
 
 
 **PHP** is a general-purpose server-side scripting language that is especially suited to web development.
@@ -43,11 +43,12 @@ Configure, compile and install into `/usr/local/php-VERSION`.
 		--with-imap-ssl \
 		--with-jpeg-dir=/usr/local/libjpeg \
 		--with-mcrypt=/usr/local/libmcrypt \
-		--with-mysql=mysqlnd \
-		--with-mysqli=mysqlnd \
+		--with-mysql \
+		--with-mysqli \
 		--with-pear \
-		--with-pdo-mysql=mysqlnd \
-		--with-pgsql \
+		--with-pdo-mysql \
+		--with-pdo-pgsql=/usr/local/postgresql \
+		--with-pgsql=/usr/local/postgresql \
 		--with-png-dir=/usr/local/libpng \
 		--with-openssl \
 		--with-xmlrpc \
@@ -63,11 +64,14 @@ Create a symbolic link that points `/usr/local/php` to `/usr/local/php-VERSION`.
 
 ### PHP Configuration
 
-Copy a PHP configuration template to the target folder.
+Copy a PHP configuration template to the target folder. You can configure any of the [php.ini directives](http://www.php.net/manual/en/ini.list.php) by editing this file.
 
 	cp php.ini-development /usr/local/php/etc/php.ini
 
-You can configure any of the [php.ini directives](http://www.php.net/manual/en/ini.list.php) by editing this file.
+Set the location of the `php.ini` configuration file for PECL and PEAR.
+
+	pecl config-set php_ini /usr/local/php/etc/php.ini 
+	pear config-set php_ini /usr/local/php/etc/php.ini 
 
 
 ### Apache Configuration

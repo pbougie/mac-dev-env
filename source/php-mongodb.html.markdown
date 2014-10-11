@@ -4,7 +4,7 @@ title: MongoDB for PHP
 
 
 > **Links:** [Homepage](http://www.mongodb.org/display/DOCS/PHP+Language+Center)  
-> **Dependencies:** [PHP](/php/) | [Autoconf](/autoconf/) | [MongoDB](/mongodb/)
+> **Dependencies:** [Autoconf](/autoconf/) | [MongoDB](/mongodb/) | [PHP](/php/)
 
 
 ### Install
@@ -13,9 +13,7 @@ Install MongoDB driver for PHP using [PECL](http://pecl.php.net/).
 
 	pecl install mongo
 
-Execute the following line to update your `php.ini` file.
-	
-	echo 'extension=mongo.so' >> /usr/local/php/etc/php.ini
+The extension should be added to your `php.ini` file automatically. If not, follow the on-screen instructions to enable the extension.
 
 
 ### Restart the Web Server

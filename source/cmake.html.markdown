@@ -5,7 +5,7 @@ title: CMake
 
 > **Links:** [Homepage](http://www.cmake.org/) | [Downloads](http://www.cmake.org/cmake/resources/software.html)  
 > **Dependencies:** None  
-> **Version:** <span id="version">2.8.12.2</span>
+> **Version:** <span id="version">3.0.2</span>
 
 
 **CMake** is a cross-platform, open-source build system designed to build, test and package software. **CMake** is used to control the software compilation process using platform and compiler independent configuration files.
@@ -16,7 +16,7 @@ title: CMake
 Switch to `/usr/local/src` and download the source package.
 
 	cd /usr/local/src
-	curl --remote-name http://www.cmake.org/files/v2.8/cmake-VERSION.tar.gz
+	curl --remote-name http://www.cmake.org/files/v3.0/cmake-VERSION.tar.gz
 
 Extract the archive and move into the folder.
 

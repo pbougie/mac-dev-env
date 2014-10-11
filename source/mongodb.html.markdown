@@ -2,9 +2,9 @@
 title: MongoDB
 ---
 
-> **Links:** [Homepage](http://www.mongodb.org/) | [Downloads](http://www.mongodb.org/downloads)  
+> **Links:** [Homepage](http://www.mongodb.org/) | [Documentation](http://docs.mongodb.org/) | [Downloads](http://www.mongodb.org/downloads)  
 > **Dependencies:** None  
-> **Version:** <span id="version">2.6.1</span>
+> **Version:** <span id="version">2.6.5</span>
 
 
 **MongoDB** is a scalable, high-performance, open source, schema-free, document-oriented database. MongoDB was created by [10gen](http://www.10gen.com/) and they have been kind enough to provide pre-compiled binaries for various platforms including OS X.
@@ -38,25 +38,31 @@ Create a folder that will contain your databases. My databases are located in `/
 
 ### Configuration File
 
-Create a configuration file so you can make changes to your database configuration without messing around with command line arguments.
+Create a configuration file to customize your server.
 
 	nano /usr/local/mongodb/mongod.conf
 
 Copy and paste the following text into the aforementioned file.
 
-	# Location of MongoDB databases
-	dbpath = /usr/local/var/mongodb
-	# Location of log files
-	logpath = /usr/local/var/log/mongodb.log
-	# Only accept local connections
-	bind_ip = localhost
-	# Enable journaling
-	journal = true
-	# Enable REST
-	rest = true
-	# Enable smaller default file sizes
-	# (saves space on development servers)
-	smallfiles = true
+	# http://docs.mongodb.org/manual/reference/configuration-options/
+	systemLog:
+	  path: /usr/local/var/log/mongodb.log
+	  destination: file
+	  logAppend: true
+	storage:
+	  dbPath: /usr/local/var/mongodb
+	  directoryPerDB: true
+	  smallFiles: true
+	  journal:
+	    enabled: true
+	processManagement:
+	  fork: true
+	net:
+	  port: 27017
+	  bindIp: 127.0.0.1
+	  http:
+	    enabled: true
+	    RESTInterfaceEnabled: true
 
 
 ### Shell
@@ -72,11 +78,13 @@ Load the new shell configurations.
 
 ### Manual Start/Stop
 
-Start the server to test your installation.
+To start the MongoDB server.
 
 	mongod --config=/usr/local/mongodb/mongod.conf
 
-To shut down the MongoDB server, press `CTRL-C`.
+To stop the MongoDB server.
+
+	killall mongod
 
 
 ### Automatically Start the Server at Boot

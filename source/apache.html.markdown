@@ -16,7 +16,7 @@ The **Apache HTTP Server** is an open-source web server that was released in 199
 Switch to `/usr/local/src` and download the source package.
 
 	cd /usr/local/src
-	curl --remote-name http://mirror.csclub.uwaterloo.ca/apache/httpd/httpd-VERSION.tar.gz
+	curl --remote-name http://apache.sunsite.ualberta.ca/httpd/httpd-VERSION.tar.gz
 
 Extract the archive and move into the folder.
 

@@ -4,7 +4,7 @@ title: Redis
 
 > **Links:** [Homepage](http://redis.io/) | [Downloads](http://redis.io/download) | [Documentation](http://redis.io/documentation)  
 > **Dependencies:** None  
-> **Version:** <span id="version">2.8.10</span>
+> **Version:** <span id="version">2.8.17</span>
 
 
 **Redis** is an open source, BSD licensed, advanced key-value store.
@@ -61,12 +61,14 @@ Create a configuration file so you can make changes to your configuration withou
 
 Copy and paste the following text into the aforementioned file.
 
-	# Daemonize Redis
-	daemonize yes
-	# Log file
-	logfile /usr/local/var/log/redis.log
 	# Data folder
 	dir /usr/local/var/redis
+	# Log file
+	logfile /usr/local/var/log/redis.log
+	# Daemonize Redis
+	daemonize yes
+	# Bind to localhost
+	bind 127.0.0.1
 
 
 ### Manual Start/Stop
