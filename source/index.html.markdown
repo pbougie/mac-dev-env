@@ -2,9 +2,7 @@
 priority: 1.0
 ---
 
-This guide is for compiling a web development environment in OS X. There are easier and faster methods to set up a development environment — such as [Homebrew](http://brew.sh/), [MacPorts](http://www.macports.org/), [Fink](http://www.finkproject.org/) — but none provide absolute control. These instructions are for [OS X 10.9 Mavericks](https://en.wikipedia.org/wiki/OS_X_Mavericks). Earlier versions of the guide are available for [10.8 Mountain Lion](http://archives.patrickbougie.com/mac-dev-env/mountain_lion/) and [10.7 Lion](http://archives.patrickbougie.com/mac-dev-env/lion/).
-
-Start with the **Getting Started** section, then proceed with installing your desired packages. Some packages need to be installed in a certain order to satisfy dependencies. Each package lists its dependencies at the beginning of the instructions.
+This guide is for compiling a web development environment in [OS X 10.10 Yosemite](https://en.wikipedia.org/wiki/OS_X_Yosemite). Start with the **Getting Started** section, then proceed with installing your desired packages. Some packages need to be installed in a certain order to satisfy dependencies. Each package lists its dependencies at the beginning of the instructions.
 
 ### Getting Started
 
@@ -80,4 +78,15 @@ Start with the **Getting Started** section, then proceed with installing your de
 	- [GraphicsMagick](/graphicsmagick/)
 
 ---
-**Warning:** Remember that these instructions are for creating a development environment and therefore security is not considered. For a production system, please refer to each product's respective documentation on how to properly secure each service.
+
+**Warning:** These instructions are for creating a development environment and therefore security is not considered. For a production system, please refer to each product's respective documentation on how to properly secure each service.
+
+---
+
+If you are attempting to compile a web development environment in a previous version of OS X, check out past versions of the guide:
+
+- [OS X 10.9 Mavericks](http://archives.patrickbougie.com/mac-dev-env/10.9-mavericks/)
+- [OS X 10.8 Mountain Lion](http://archives.patrickbougie.com/mac-dev-env/10.8-mountain-lion/)
+- [OS X 10.7 Lion](http://archives.patrickbougie.com/mac-dev-env/10.7-lion/)
+
+---
