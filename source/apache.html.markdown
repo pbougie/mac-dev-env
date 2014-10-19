@@ -29,8 +29,8 @@ Extract the archive and move into the folder.
 There are missing references when attempting to compile using the **Command Line Tools**. The following commands fix the problem. You can delete `/Applications/Xcode` once you are done.
 
 	sudo xcode-select -switch /
-	mkdir -p /Applications/Xcode.app/Contents/Developer/Toolchains/OSX10.9.xctoolchain/usr/bin
-	ln -s /usr/bin/cc /Applications/Xcode.app/Contents/Developer/Toolchains/OSX10.9.xctoolchain/usr/bin/cc
+	mkdir -p /Applications/Xcode.app/Contents/Developer/Toolchains/OSX10.10.xctoolchain/usr/bin
+	ln -s /usr/bin/cc /Applications/Xcode.app/Contents/Developer/Toolchains/OSX10.10.xctoolchain/usr/bin/cc
 
 Configure, compile and install into `/usr/local/apache-VERSION`.
 
