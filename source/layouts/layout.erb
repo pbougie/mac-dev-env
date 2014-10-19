@@ -19,7 +19,7 @@
   <link rel="shortcut icon" href="/images/favicon.ico">
   <link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon.png">
 
-  <!--[if gte IE 8]><!-->
+  <!--[if gte IE 9]><!-->
   <%= stylesheet_link_tag "styles", media: nil, type: nil %>
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:regular,bold">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Serif">
@@ -27,10 +27,6 @@
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <%= javascript_include_tag "versioning", type: nil %>
-  <!--[if IE 8]>
-  <%= javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js' %>
-  <%= javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js' %>
-  <![endif]-->
 
 </head>
 <body id="<%= current_page.path.split('.').first %>">
