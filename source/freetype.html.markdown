@@ -35,10 +35,3 @@ Configure, compile and install into `/usr/local/freetype-VERSION`.
 Create a symbolic link that points `/usr/local/freetype` to `/usr/local/freetype-VERSION`.
 
 	ln -s freetype-VERSION /usr/local/freetype
-
-
-### Temporary Fix
-
-The folder structure has changed recently for include files and is causing problems when compiling certain packages (namely PHP). To fix the problem, create this symbolic link.
-
-	ln -s /usr/local/freetype/include/freetype2 /usr/local/freetype/include/freetype2/freetype
