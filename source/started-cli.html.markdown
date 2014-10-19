@@ -2,7 +2,7 @@
 title: Command Line Tools
 ---
 
-To compile our own software, we need to install the **Command Line Tools** from Apple. Alternatively, you could install **[Xcode](http://developer.apple.com/xcode/)** — Apple's complete development environment for OS X. Xcode is available as a free download from the [Mac App Store](http://www.apple.com/mac/app-store/).
+To compile our own software, we need to install the **Command Line Tools** from Apple. Alternatively, you can install **[Xcode](http://developer.apple.com/xcode/)** — Apple's complete development environment for OS X. Xcode is available as a free download from the [Mac App Store](http://www.apple.com/mac/app-store/).
 
 First, launch [Terminal](http://en.wikipedia.org/wiki/Terminal_%28OS_X%29) from **Applications ➤ Utilities**.
 
