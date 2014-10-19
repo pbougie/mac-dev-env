@@ -1,10 +1,10 @@
-<header role="banner">
-  <h1 class="title">
+<header class="header" role="banner">
+  <h1 class="header__title">
     <a href="/">
       Compiling a Web Development Environment on Mac OS X
     </a>
   </h1>
-  <section class="elsewhere">
+  <div class="header__elsewhere">
     <ul>
       <li class="www" title="Website">
         <a href="http://patrickbougie.com/">
@@ -31,14 +31,14 @@
         </a>
       </li>
     </ul>
-  </section>
+  </div>
   <% if @message %>
-    <section class="message">
+    <p class="header__message">
       <%=
         html = Kramdown::Document.new(@message).to_html
         html = Regexp.new('^<p>(.*)<\/p>$').match(html)[1]
         html
       %>
-    </section>
+    </p>
   <% end %>
 </header>
