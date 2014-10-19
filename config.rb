@@ -28,3 +28,7 @@ activate :deploy do |deploy|
   deploy.path = ENV['RSYNC_PATH']
   deploy.clean = true
 end
+
+page '/' do
+  @message = '**19 Oct 2014:** Updated for OS X 10.10 Yosemite.'
+end

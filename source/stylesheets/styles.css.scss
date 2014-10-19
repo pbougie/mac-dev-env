@@ -134,6 +134,14 @@ header[role="banner"] {
       }
     }
   }
+  .message {
+    margin-bottom: 15px;
+    border-radius: 3px;
+    padding: 10px 20px;
+    background-color: #1377c2;
+    color: white;
+    text-align: center;
+  }
 }
 .ie8 {
   header[role="banner"] {

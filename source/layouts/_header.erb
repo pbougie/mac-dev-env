@@ -32,4 +32,13 @@
       </li>
     </ul>
   </section>
+  <% if @message %>
+    <section class="message">
+      <%=
+        html = Kramdown::Document.new(@message).to_html
+        html = Regexp.new('^<p>(.*)<\/p>$').match(html)[1]
+        html
+      %>
+    </section>
+  <% end %>
 </header>
