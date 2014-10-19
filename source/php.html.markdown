@@ -70,8 +70,8 @@ Copy a PHP configuration template to the target folder. You can configure any of
 
 Set the location of the `php.ini` configuration file for PECL and PEAR.
 
-	pecl config-set php_ini /usr/local/php/etc/php.ini 
-	pear config-set php_ini /usr/local/php/etc/php.ini 
+	/usr/local/php/bin/pecl config-set php_ini /usr/local/php/etc/php.ini 
+	/usr/local/php/bin/pear config-set php_ini /usr/local/php/etc/php.ini 
 
 
 ### Apache Configuration
