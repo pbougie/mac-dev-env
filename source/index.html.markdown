@@ -88,5 +88,3 @@ If you are attempting to compile a web development environment in a previous ver
 - [OS X 10.9 Mavericks](http://archives.patrickbougie.com/mac-dev-env/10.9-mavericks/)
 - [OS X 10.8 Mountain Lion](http://archives.patrickbougie.com/mac-dev-env/10.8-mountain-lion/)
 - [OS X 10.7 Lion](http://archives.patrickbougie.com/mac-dev-env/10.7-lion/)
-
----
