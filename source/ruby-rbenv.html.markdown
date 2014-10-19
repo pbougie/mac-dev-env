@@ -38,7 +38,7 @@ Load the new shell configurations.
 
 ### Install Ruby Versions
 
-To install Ruby versions, check the sections on installing [Ruby](/ruby/).
+Install all the Ruby versions that you require.
 
 
 ### Upgrade
