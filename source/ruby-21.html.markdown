@@ -41,6 +41,13 @@ Set the global ruby version to **VERSION**.
 To see all installed versions, use `rbenv versions`.
 
 
+### Update rbenv
+
+Rehash the rbenv shims.
+
+	rbenv rehash
+
+
 ### Verify the Installation
 
 To verify that you have correctly installed this version of Ruby.
