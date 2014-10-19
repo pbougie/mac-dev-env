@@ -47,7 +47,6 @@ A detailed guide with instructions to compile various software packages to build
 
 ### Ruby served by Pow
 
-- [Pow](/pow/)
 - Ruby
 	- [rbenv](/ruby-rbenv/)
 		- [rbenv-gem-rehash](/ruby-rbenv-gem-rehash/)
@@ -62,6 +61,7 @@ A detailed guide with instructions to compile various software packages to build
 		- [PostgreSQL for Ruby](/ruby-postgresql/)
 		- [MongoDB for Ruby](/ruby-mongodb/)
 		- [SQLite for Ruby](/ruby-sqlite/)
+- [Pow](/pow/)
 
 ### Node.js
 
