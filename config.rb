@@ -30,5 +30,5 @@ activate :deploy do |deploy|
 end
 
 page '/' do
-  @message = '**19 October 2014:** Updated for OS X 10.10 Yosemite.'
+  @message = nil
 end
