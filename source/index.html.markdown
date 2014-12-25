@@ -53,6 +53,9 @@ A detailed guide with instructions to compile various software packages to build
 	- Ruby 2.1.x
 		- [OpenSSL](/openssl/)
 		- [Ruby](/ruby-21/)
+	- Ruby 2.2.x
+		- [OpenSSL](/openssl/)
+		- [Ruby](/ruby-22/)
 	- Gems
 		- [RubyGems](/ruby-gems/)
 		- [Bundler](/ruby-bundler/)
