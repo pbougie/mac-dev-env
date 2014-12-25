@@ -4,8 +4,7 @@ title: FreeType
 
 > **Links:** [Homepage](http://www.freetype.org/) | [Downloads](http://www.freetype.org/download.html)  
 > **Dependencies:** None  
-> **Version:** <span id="version">2.5.3</span>
-
+> **Version:** <span id="version">2.5.4</span>
 
 **FreeType** is a freely available software library to render fonts.
 
