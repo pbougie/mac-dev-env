@@ -2,11 +2,9 @@
 title: Libevent
 ---
 
-
 > **Links:** [Homepage](http://libevent.org/)  
 > **Dependencies:** None  
 > **Version:** <span id="version">2.0.21</span>
-
 
 **Libevent** is an event notification library.
 

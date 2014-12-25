@@ -2,7 +2,6 @@
 title: MySQL for PHP
 ---
 
-
 > **Links:** [Homepage](http://us.php.net/manual/en/book.mysqlnd.php)  
 > **Dependencies:** [PHP](/php/) | [MySQL](/mysql/)
 

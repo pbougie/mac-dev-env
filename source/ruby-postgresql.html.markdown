@@ -2,7 +2,6 @@
 title: PostgreSQL for Ruby
 ---
 
-
 > **Links:** [Homepage](https://bitbucket.org/ged/ruby-pg/wiki/Home)  
 > **Dependencies:** [Ruby](/ruby/) | [PostgreSQL](/postgresql/)
 

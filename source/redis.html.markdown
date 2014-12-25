@@ -6,7 +6,6 @@ title: Redis
 > **Dependencies:** None  
 > **Version:** <span id="version">2.8.17</span>
 
-
 **Redis** is an open source, BSD licensed, advanced key-value store.
 
 

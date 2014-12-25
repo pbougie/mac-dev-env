@@ -2,7 +2,6 @@
 title: MongoDB for PHP
 ---
 
-
 > **Links:** [Homepage](http://www.mongodb.org/display/DOCS/PHP+Language+Center)  
 > **Dependencies:** [Autoconf](/autoconf/) | [MongoDB](/mongodb/) | [PHP](/php/)
 

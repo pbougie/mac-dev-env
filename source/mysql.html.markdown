@@ -6,7 +6,6 @@ title: MySQL
 > **Dependencies:** [CMake](/cmake/)  
 > **Version:** <span id="version">5.6.21</span>
 
-
 **MySQL** is an open-source relational database management server (RDBMS).
 
 
@@ -110,7 +109,7 @@ Copy and paste the following text into the aforementioned file.
 	    <string>--datadir=/usr/local/var/mysql</string>
 	    <string>--log-error=/usr/local/var/log/mysql.log</string>
 	  </array>
-		
+
 	  <key>RunAtLoad</key>
 	  <true/>
 	  <key>KeepAlive</key>

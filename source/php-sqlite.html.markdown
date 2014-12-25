@@ -2,7 +2,6 @@
 title: SQLite for PHP
 ---
 
-
 > **Links:** [Homepage](http://us.php.net/manual/en/book.sqlite3.php)  
 > **Dependencies:** [PHP](/php/) | [SQLite](/sqlite/)
 

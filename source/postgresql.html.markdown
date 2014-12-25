@@ -6,7 +6,6 @@ title: PostgreSQL
 > **Dependencies:** None  
 > **Version:** <span id="version">9.3.5</span>
 
-
 **PostgreSQL** is an enterprise-class, open source object-relational database system. It has been in active development for more than 15 years and has a strong reputation for standards compliance, reliability and data integrity.
 
 
@@ -87,19 +86,19 @@ Copy and paste the following text into the aforementioned file.
 	  <dict>
 	    <key>Label</key>
 	    <string>org.postgresql.postgres</string>
-	
+
 	    <key>ProgramArguments</key>
 	    <array>
 	      <string>/usr/local/postgresql/bin/postgres</string>
 	      <string>-D</string>
 	      <string>/usr/local/var/postgresql</string>
 	    </array>
-	
+
 	    <key>StandardOutPath</key>
 	    <string>/usr/local/var/log/postgresql.log</string>
 	    <key>StandardErrorPath</key>
 	    <string>/usr/local/var/log/postgresql.log</string>
-	
+
 	    <key>RunAtLoad</key>
 	    <true/>
 	    <key>KeepAlive</key>

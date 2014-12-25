@@ -2,7 +2,6 @@
 title: PHP
 ---
 
-
 > **Links:** [Homepage](http://php.net/) | [Documentation](http://php.net/manual/en/) | [Downloads](http://php.net/downloads.php)  
 > **Dependencies:** [Apache](/apache/) | [LibJPEG](/libjpeg/) | [LibPNG](/libpng/) | [LibMCrypt](/libmcrypt/) | [FreeType](/freetype/)  
 > **Version:** <span id="version">5.5.18</span>
@@ -70,8 +69,8 @@ Copy a PHP configuration template to the target folder. You can configure any of
 
 Set the location of the `php.ini` configuration file for PECL and PEAR.
 
-	/usr/local/php/bin/pecl config-set php_ini /usr/local/php/etc/php.ini 
-	/usr/local/php/bin/pear config-set php_ini /usr/local/php/etc/php.ini 
+	/usr/local/php/bin/pecl config-set php_ini /usr/local/php/etc/php.ini
+	/usr/local/php/bin/pear config-set php_ini /usr/local/php/etc/php.ini
 
 
 ### Apache Configuration

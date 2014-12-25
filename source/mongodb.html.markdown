@@ -6,7 +6,6 @@ title: MongoDB
 > **Dependencies:** None  
 > **Version:** <span id="version">2.6.5</span>
 
-
 **MongoDB** is a scalable, high-performance, open source, schema-free, document-oriented database. MongoDB was created by [10gen](http://www.10gen.com/) and they have been kind enough to provide pre-compiled binaries for various platforms including OS X.
 
 
@@ -107,7 +106,7 @@ Copy and paste the following text into the aforementioned file.
 	    <string>/usr/local/mongodb/bin/mongod</string>
 	    <string>--config=/usr/local/mongodb/mongod.conf</string>
 	  </array>
-		
+
 	  <key>RunAtLoad</key>
 	  <true/>
 	  <key>KeepAlive</key>

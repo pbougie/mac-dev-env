@@ -2,10 +2,8 @@
 title: Bower
 ---
 
-
 > **Links:** [Homepage](http://bower.io/)  
 > **Dependencies:** [Node.js](/nodejs/)
-
 
 **Bower** is a front-end package manager.
 

@@ -2,10 +2,8 @@
 title: RubyGems
 ---
 
-
 > **Links:** [Homepage](http://rubygems.org/)  
 > **Dependencies:** [Ruby](/ruby/)  
-
 
 **RubyGems** ships with Ruby 1.9+. There is nothing to install. For prior versions of Ruby, see package instructions to install RubyGems.
 
@@ -62,4 +60,3 @@ Register with Launchd and start the server.
 Deregister with Launchd.
 
 	launchctl unload -w ~/Library/LaunchAgents/org.rubygems.gem.plist
-

@@ -2,7 +2,6 @@
 title: FreeType
 ---
 
-
 > **Links:** [Homepage](http://www.freetype.org/) | [Downloads](http://www.freetype.org/download.html)  
 > **Dependencies:** None  
 > **Version:** <span id="version">2.5.3</span>

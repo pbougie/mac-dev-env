@@ -2,7 +2,6 @@
 title: PostgreSQL for PHP
 ---
 
-
 > **Links:** [Homepage](http://us.php.net/manual/en/book.pgsql.php)  
 > **Dependencies:** [PHP](/php/) | [PostgreSQL](/postgresql/)
 

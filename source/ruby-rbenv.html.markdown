@@ -2,10 +2,8 @@
 title: rbenv
 ---
 
-
 > **Links:** [Homepage](https://github.com/sstephenson/rbenv)  
 > **Dependencies:** None  
-
 
 Ruby version manager that lets you easily switch between multiple versions of Ruby.
 

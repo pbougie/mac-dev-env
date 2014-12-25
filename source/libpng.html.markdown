@@ -2,7 +2,6 @@
 title: LibPNG
 ---
 
-
 > **Links:** [Homepage](http://www.libpng.org/pub/png/libpng.html)  
 > **Dependencies:** None  
 > **Version:** <span id="version">1.6.13</span>

@@ -27,7 +27,7 @@ A detailed guide with instructions to compile various software packages to build
 	- [Libevent](/libevent/)
 	- [Memcached](/memcached/)
 - [Redis](/redis/)
-	
+
 ### PHP served by Apache
 - Apache
 	- [PCRE](/pcre/)
@@ -69,8 +69,8 @@ A detailed guide with instructions to compile various software packages to build
 ### Node.js
 
 - [Node.js](/nodejs/)
-	- [Grunt](/nodejs-grunt/) 
-	- [Bower](/nodejs-bower/) 
+	- [Grunt](/nodejs-grunt/)
+	- [Bower](/nodejs-bower/)
 
 ### Image Processing
 

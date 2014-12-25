@@ -6,7 +6,6 @@ title: Memcached
 > **Dependencies:** [Libevent](/libevent/)  
 > **Version:** <span id="version">1.4.21</span>
 
-
 **Memcached** is an in-memory key-value store for small chunks of arbitrary data.
 
 
@@ -80,7 +79,7 @@ Copy and paste the following text into the aforementioned file.
 	      <string>-d</string>
 	      <string>-vv</string>
 	    </array>
-	
+
 	    <key>StandardOutPath</key>
 	    <string>/usr/local/var/log/memcached.log</string>
 	    <key>StandardErrorPath</key>

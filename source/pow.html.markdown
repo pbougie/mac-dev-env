@@ -2,10 +2,8 @@
 title: Pow
 ---
 
-
 > **Links:** [Homepage](http://pow.cx/) | [Documentation](http://pow.cx/manual.html)  
 > **Dependencies:** None  
-
 
 Pow is a zero-config Rack server for Mac OS X.
 
@@ -32,7 +30,7 @@ Add the following to the Apache configuration file `/usr/local/apache/conf/httpd
 		ServerName pow
 		ServerAlias *.dev
 		ServerAlias *.xip.io
-	
+
 		ProxyPass / http://localhost:20559/
 		ProxyPassReverse / http://localhost:20559/
 		ProxyPreserveHost On
@@ -49,8 +47,8 @@ This will install Pow to work with `rbenv`. You can skip this section if you are
 
 	echo 'export PATH=/usr/local/rbenv/shims:/usr/local/rbenv/bin:$PATH' >> ~/.powconfig
 	source ~/.powconfig
-	
-	
+
+
 ### Install or Upgrade
 
 Install or upgrade Pow using the installation script.

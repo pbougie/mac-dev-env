@@ -2,11 +2,9 @@
 title: Autoconf
 ---
 
-
 > **Links:** [Homepage](http://www.gnu.org/software/autoconf/) | [Downloads](http://ftp.gnu.org/gnu/autoconf/)  
 > **Dependencies:** None  
 > **Version:** <span id="version">2.69</span>
-
 
 **Autoconf** creates a configuration script for a package from a template file that lists the operating system features that the package can use.
 
