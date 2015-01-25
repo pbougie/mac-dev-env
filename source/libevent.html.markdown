@@ -4,7 +4,7 @@ title: Libevent
 
 > **Links:** [Homepage](http://libevent.org/)  
 > **Dependencies:** None  
-> **Version:** <span id="version">2.0.21</span>
+> **Version:** <span id="version">2.0.22</span>
 
 **Libevent** is an event notification library.
 
@@ -14,7 +14,7 @@ title: Libevent
 Switch to `/usr/local/src` and download the source package.
 
 	cd /usr/local/src
-	curl --remote-name --location https://github.com/downloads/libevent/libevent/libevent-VERSION-stable.tar.gz
+	curl --remote-name --location https://sourceforge.net/projects/levent/files/libevent/libevent-2.0/libevent-VERSION-stable.tar.gz
 
 Extract the archive and move into the folder.
 
