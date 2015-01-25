@@ -56,7 +56,9 @@ Create a folder that will contain your databases. My databases are located in `/
 
 ### Post-Installation
 
-If you are copying the data from a former PostgreSQL installation, you can skip this step. Initialize your database installation.
+If you are copying the data from a former PostgreSQL installation, you can skip this step. You may have to upgrade your database in some circumstances (like 9.3.x to 9.4.x). Check the documentation.
+
+Initialize your database installation.
 
 	initdb --pgdata=/usr/local/var/postgresql
 
