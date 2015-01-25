@@ -76,7 +76,6 @@ Copy and paste the following text into the aforementioned file.
 	    <key>ProgramArguments</key>
 	    <array>
 	      <string>/usr/local/memcached/bin/memcached</string>
-	      <string>-d</string>
 	      <string>-vv</string>
 	    </array>
 

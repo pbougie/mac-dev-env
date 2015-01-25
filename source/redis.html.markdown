@@ -64,8 +64,6 @@ Copy and paste the following text into the aforementioned file.
 	dir /usr/local/var/redis
 	# Log file
 	logfile /usr/local/var/log/redis.log
-	# Daemonize Redis
-	daemonize yes
 	# Bind to localhost
 	bind 127.0.0.1
 
@@ -76,9 +74,7 @@ To start the Redis server.
 
 	redis-server /usr/local/redis/redis.conf
 
-To stop the Redis server.
-
-	killall redis-server
+Press `CTRL-C` to stop the Redis server.
 
 
 ### Automatically Start the Server at Boot

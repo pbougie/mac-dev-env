@@ -54,8 +54,6 @@ Copy and paste the following text into the aforementioned file.
 	  smallFiles: true
 	  journal:
 	    enabled: true
-	processManagement:
-	  fork: true
 	net:
 	  port: 27017
 	  bindIp: 127.0.0.1
@@ -81,9 +79,7 @@ To start the MongoDB server.
 
 	mongod --config=/usr/local/mongodb/mongod.conf
 
-To stop the MongoDB server.
-
-	killall mongod
+Press `CTRL-C` to stop the MongoDB server.
 
 
 ### Automatically Start the Server at Boot
