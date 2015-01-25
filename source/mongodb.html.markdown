@@ -57,7 +57,6 @@ Copy and paste the following text into the aforementioned file.
 	  bindIp: 127.0.0.1
 	  http:
 	    enabled: true
-	    RESTInterfaceEnabled: true
 
 
 ### Shell
