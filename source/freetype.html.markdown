@@ -26,7 +26,7 @@ Extract the archive and move into the folder.
 
 Configure, compile and install into `/usr/local/freetype-VERSION`.
 
-	./configure --prefix=/usr/local/freetype-VERSION --without-png
+	./configure --prefix=/usr/local/freetype-VERSION
 	make
 	make install
 
