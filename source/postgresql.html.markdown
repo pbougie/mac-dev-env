@@ -110,11 +110,11 @@ Copy and paste the following text into the aforementioned file.
 
 Register with Launchd and start the server.
 
-	launchctl load -w ~/Library/LaunchAgents/org.postgresql.postgres.plist
+	launchctl load ~/Library/LaunchAgents/org.postgresql.postgres.plist
 
 Deregister with Launchd.
 
-	launchctl unload -w ~/Library/LaunchAgents/org.postgresql.postgres.plist
+	launchctl unload ~/Library/LaunchAgents/org.postgresql.postgres.plist
 
 
 ### Verify the Installation

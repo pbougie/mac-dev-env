@@ -55,8 +55,8 @@ Copy and paste the following text into the aforementioned file. The path to the 
 
 Register with Launchd and start the server.
 
-	launchctl load -w ~/Library/LaunchAgents/org.rubygems.gem.plist
+	launchctl load ~/Library/LaunchAgents/org.rubygems.gem.plist
 
 Deregister with Launchd.
 
-	launchctl unload -w ~/Library/LaunchAgents/org.rubygems.gem.plist
+	launchctl unload ~/Library/LaunchAgents/org.rubygems.gem.plist

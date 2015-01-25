@@ -109,11 +109,11 @@ Copy and paste the following text into the aforementioned file.
 
 Register with Launchd and start the server.
 
-	launchctl load -w ~/Library/LaunchAgents/org.mongodb.mongod.plist
+	launchctl load ~/Library/LaunchAgents/org.mongodb.mongod.plist
 
 Deregister with Launchd.
 
-	launchctl unload -w ~/Library/LaunchAgents/org.mongodb.mongod.plist
+	launchctl unload ~/Library/LaunchAgents/org.mongodb.mongod.plist
 
 
 ### Verify the Installation

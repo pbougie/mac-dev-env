@@ -119,11 +119,11 @@ Copy and paste the following text into the aforementioned file.
 
 Register with Launchd and start the server.
 
-	launchctl load -w ~/Library/LaunchAgents/com.mysql.mysqld.plist
+	launchctl load ~/Library/LaunchAgents/com.mysql.mysqld.plist
 
 Deregister with Launchd.
 
-	launchctl unload -w ~/Library/LaunchAgents/com.mysql.mysqld.plist
+	launchctl unload ~/Library/LaunchAgents/com.mysql.mysqld.plist
 
 
 ### Verify the Installation

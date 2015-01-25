@@ -93,11 +93,11 @@ Copy and paste the following text into the aforementioned file.
 
 Register with Launchd and start the server.
 
-	launchctl load -w ~/Library/LaunchAgents/org.memcached.memcached.plist
+	launchctl load ~/Library/LaunchAgents/org.memcached.memcached.plist
 
 Deregister with Launchd. Kill the process manually.
 
-	launchctl unload -w ~/Library/LaunchAgents/org.memcached.memcached.plist
+	launchctl unload ~/Library/LaunchAgents/org.memcached.memcached.plist
 
 
 ### Verify the Installation

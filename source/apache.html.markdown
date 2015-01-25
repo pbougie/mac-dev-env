@@ -134,11 +134,11 @@ Copy and paste the following text into the aforementioned file.
 
 Register with Launchd and start the server.
 
-	sudo launchctl load -w /Library/LaunchDaemons/org.apache.apache2.plist
+	sudo launchctl load /Library/LaunchDaemons/org.apache.apache2.plist
 
 Deregister with Launchd.
 
-	sudo launchctl unload -w /Library/LaunchDaemons/org.apache.apache2.plist
+	sudo launchctl unload /Library/LaunchDaemons/org.apache.apache2.plist
 
 
 ### Verify the Installation

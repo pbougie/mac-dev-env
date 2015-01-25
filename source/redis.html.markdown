@@ -105,11 +105,11 @@ Copy and paste the following text into the aforementioned file.
 
 Register with Launchd and start the server.
 
-	launchctl load -w ~/Library/LaunchAgents/io.redis.redis-server.plist
+	launchctl load ~/Library/LaunchAgents/io.redis.redis-server.plist
 
 Deregister with Launchd. Kill the process manually.
 
-	launchctl unload -w ~/Library/LaunchAgents/io.redis.redis-server.plist
+	launchctl unload ~/Library/LaunchAgents/io.redis.redis-server.plist
 
 
 ### Verify the Installation
