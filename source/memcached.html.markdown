@@ -104,7 +104,7 @@ Deregister with Launchd. Kill the process manually.
 
 Display the **Memcached** version.
 
-	memcached -h
+	memcached -V
 
 
 ### Using the Memcached Telnet Interface
