@@ -47,7 +47,6 @@ Copy and paste the following text into the aforementioned file.
 	systemLog:
 	  path: /usr/local/var/log/mongodb.log
 	  destination: file
-	  logAppend: true
 	storage:
 	  dbPath: /usr/local/var/mongodb
 	  directoryPerDB: true
@@ -55,7 +54,6 @@ Copy and paste the following text into the aforementioned file.
 	  journal:
 	    enabled: true
 	net:
-	  port: 27017
 	  bindIp: 127.0.0.1
 	  http:
 	    enabled: true
