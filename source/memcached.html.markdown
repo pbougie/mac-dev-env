@@ -53,7 +53,7 @@ Load the new shell configurations.
 
 To start the Memcached server.
 
-	memcached -vv
+	memcached -l 127.0.0.1 -vv
 
 Press `CTRL-C` to stop the Memcached server.
 
@@ -76,6 +76,8 @@ Copy and paste the following text into the aforementioned file.
 	    <key>ProgramArguments</key>
 	    <array>
 	      <string>/usr/local/memcached/bin/memcached</string>
+	      <string>-l</string>
+	      <string>127.0.0.1</string>
 	      <string>-vv</string>
 	    </array>
 
