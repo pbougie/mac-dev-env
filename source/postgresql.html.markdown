@@ -67,7 +67,7 @@ Initialize your database installation.
 
 To start the PostgreSQL server.
 
-	pg_ctl -D /usr/local/var/postgresql -l /usr/local/var/log/postgresql.log start
+	pg_ctl -D /usr/local/var/postgresql start
 
 To stop the PostgreSQL server.
 

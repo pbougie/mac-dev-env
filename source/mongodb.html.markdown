@@ -44,9 +44,6 @@ Create a configuration file to customize your server.
 Copy and paste the following text into the aforementioned file.
 
 	# http://docs.mongodb.org/manual/reference/configuration-options/
-	systemLog:
-	  path: /usr/local/var/log/mongodb.log
-	  destination: file
 	storage:
 	  dbPath: /usr/local/var/mongodb
 	  directoryPerDB: true
@@ -90,21 +87,26 @@ Copy and paste the following text into the aforementioned file.
 	<?xml version="1.0" encoding="UTF-8"?>
 	<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 	<plist version="1.0">
-	<dict>
-	  <key>Label</key>
-	  <string>org.mongodb.mongod</string>
+	  <dict>
+	    <key>Label</key>
+	    <string>org.mongodb.mongod</string>
 
-	  <key>ProgramArguments</key>
-	  <array>
-	    <string>/usr/local/mongodb/bin/mongod</string>
-	    <string>--config=/usr/local/mongodb/mongod.conf</string>
-	  </array>
+	    <key>ProgramArguments</key>
+	    <array>
+	      <string>/usr/local/mongodb/bin/mongod</string>
+	      <string>--config=/usr/local/mongodb/mongod.conf</string>
+	    </array>
 
-	  <key>RunAtLoad</key>
-	  <true/>
-	  <key>KeepAlive</key>
-	  <true/>
-	</dict>
+	    <key>StandardOutPath</key>
+	    <string>/usr/local/var/log/mongodb.log</string>
+	    <key>StandardErrorPath</key>
+	    <string>/usr/local/var/log/mongodb.log</string>
+
+	    <key>RunAtLoad</key>
+	    <true/>
+	    <key>KeepAlive</key>
+	    <true/>
+	  </dict>
 	</plist>
 
 Register with Launchd and start the server.

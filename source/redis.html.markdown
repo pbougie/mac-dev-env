@@ -62,8 +62,6 @@ Copy and paste the following text into the aforementioned file.
 
 	# Data folder
 	dir /usr/local/var/redis
-	# Log file
-	logfile /usr/local/var/log/redis.log
 	# Bind to localhost
 	bind 127.0.0.1
 
@@ -98,7 +96,14 @@ Copy and paste the following text into the aforementioned file.
 	      <string>/usr/local/redis/redis.conf</string>
 	    </array>
 
+	    <key>StandardOutPath</key>
+	    <string>/usr/local/var/log/redis.log</string>
+	    <key>StandardErrorPath</key>
+	    <string>/usr/local/var/log/redis.log</string>
+
 	    <key>RunAtLoad</key>
+	    <true/>
+	    <key>KeepAlive</key>
 	    <true/>
 	  </dict>
 	</plist>

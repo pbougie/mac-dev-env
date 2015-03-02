@@ -98,23 +98,27 @@ Copy and paste the following text into the aforementioned file.
 	<?xml version="1.0" encoding="UTF-8"?>
 	<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 	<plist version="1.0">
-	<dict>
-	  <key>Label</key>
-	  <string>com.mysql.mysqld</string>
+	  <dict>
+	    <key>Label</key>
+	    <string>com.mysql.mysqld</string>
 
-	  <key>ProgramArguments</key>
-	  <array>
-	    <string>/usr/local/mysql/bin/mysqld_safe</string>
-	    <string>--user=mysql</string>
-	    <string>--datadir=/usr/local/var/mysql</string>
-	    <string>--log-error=/usr/local/var/log/mysql.log</string>
-	  </array>
+	    <key>ProgramArguments</key>
+	    <array>
+	      <string>/usr/local/mysql/bin/mysqld_safe</string>
+	      <string>--user=mysql</string>
+	      <string>--datadir=/usr/local/var/mysql</string>
+	    </array>
 
-	  <key>RunAtLoad</key>
-	  <true/>
-	  <key>KeepAlive</key>
-	  <true/>
-	</dict>
+	    <key>StandardOutPath</key>
+	    <string>/usr/local/var/log/mysql.log</string>
+	    <key>StandardErrorPath</key>
+	    <string>/usr/local/var/log/mysql.log</string>
+
+	    <key>RunAtLoad</key>
+	    <true/>
+	    <key>KeepAlive</key>
+	    <true/>
+	  </dict>
 	</plist>
 
 Register with Launchd and start the server.

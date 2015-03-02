@@ -54,8 +54,8 @@ Copy and paste the following text at the end of the aforementioned file. Make su
 	Group staff
 
 	DocumentRoot "/Users/<username>/Sites"
-	ErrorLog "/usr/local/var/log/apache-error.log"
-	CustomLog "/usr/local/var/log/apache-access.log" common
+	ErrorLog "/usr/local/var/log/apache.log"
+	CustomLog "/usr/local/var/log/apache.log" common
 	<Directory "/Users/<username>/Sites">
 	  Options All
 	  AllowOverride All
@@ -112,24 +112,27 @@ Copy and paste the following text into the aforementioned file.
 	<?xml version="1.0" encoding="UTF-8"?>
 	<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 	<plist version="1.0">
-	<dict>
-	  <key>Label</key>
-	  <string>org.apache.apache2</string>
+	  <dict>
+	    <key>Label</key>
+	    <string>org.apache.apache2</string>
 
-	  <key>ProgramArguments</key>
-	  <array>
-	    <string>/usr/local/apache/bin/httpd</string>
-	    <string>-D</string>
-	    <string>FOREGROUND</string>
-	  </array>
+	    <key>ProgramArguments</key>
+	    <array>
+	      <string>/usr/local/apache/bin/httpd</string>
+	      <string>-D</string>
+	      <string>FOREGROUND</string>
+	    </array>
 
-	  <key>RunAtLoad</key>
-	  <true/>
-	  <key>KeepAlive</key>
-	  <true/>
-	  <key>WorkingDirectory</key>
-	  <string>/usr/local/apache</string>
-	</dict>
+	    <key>StandardOutPath</key>
+	    <string>/usr/local/var/log/apache.log</string>
+	    <key>StandardErrorPath</key>
+	    <string>/usr/local/var/log/apache.log</string>
+
+	    <key>RunAtLoad</key>
+	    <true/>
+	    <key>KeepAlive</key>
+	    <true/>
+	  </dict>
 	</plist>
 
 Register with Launchd and start the server.
