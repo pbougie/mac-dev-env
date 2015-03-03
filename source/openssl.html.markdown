@@ -53,3 +53,10 @@ Execute the following lines to install the certificates.
 
 	security find-certificate -a -p /Library/Keychains/System.keychain > /usr/local/openssl/ssl/certs/cert.pem
 	security find-certificate -a -p /System/Library/Keychains/SystemRootCertificates.keychain >> /usr/local/openssl/ssl/certs/cert.pem
+
+
+### Verify the Installation
+
+To verify that you have correctly installed OpenSSL.
+
+	openssl version -a
