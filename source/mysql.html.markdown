@@ -80,7 +80,7 @@ The server needs to be running to perform this step which will set a root passwo
 
 To start the MySQL server.
 
-	mysqld_safe --datadir=/usr/local/var/mysql --log-error=/usr/local/var/log/mysql.log
+	mysqld_safe --user=mysql --datadir=/usr/local/var/mysql --log-error=/usr/local/var/log/mysql.log &
 
 To shut down the MySQL server.
 
@@ -107,6 +107,7 @@ Copy and paste the following text into the aforementioned file.
 	      <string>/usr/local/mysql/bin/mysqld_safe</string>
 	      <string>--user=mysql</string>
 	      <string>--datadir=/usr/local/var/mysql</string>
+	      <string>--log-error=/usr/local/var/log/mysql.log</string>
 	    </array>
 
 	    <key>StandardOutPath</key>
