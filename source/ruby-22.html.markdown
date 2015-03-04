@@ -1,10 +1,10 @@
 ---
-title: Ruby 2.2.0
+title: Ruby 2.2.1
 ---
 
 > **Links:** [Homepage](http://www.ruby-lang.org/) | [Downloads](http://www.ruby-lang.org/en/downloads/)  
 > **Dependencies:** [rbenv](/ruby-rbenv/) | [OpenSSL](/openssl/)  
-> **Version:** <span id="version">2.2.0</span>
+> **Version:** <span id="version">2.2.1</span>
 
 
 ### Get the Code

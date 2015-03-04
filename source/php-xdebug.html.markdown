@@ -20,11 +20,11 @@ If the extension is added to your `php.ini` file automatically, **remove** the f
 
 And replace it with:
 
-	zend_extension="/usr/local/php/lib/php/extensions/no-debug-zts-20121212/xdebug.so"
+	zend_extension="/usr/local/php/lib/php/extensions/no-debug-zts-20131226/xdebug.so"
 
 **Or** directly from the CLI:
 
-	echo 'zend_extension="/usr/local/php/lib/php/extensions/no-debug-zts-20121212/xdebug.so"' >> /usr/local/php/etc/php.ini
+	echo 'zend_extension="/usr/local/php/lib/php/extensions/no-debug-zts-20131226/xdebug.so"' >> /usr/local/php/etc/php.ini
 
 
 ### Restart the Web Server
