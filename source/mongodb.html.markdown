@@ -47,9 +47,10 @@ Copy and paste the following text into the aforementioned file.
 	storage:
 	  dbPath: /usr/local/var/mongodb
 	  directoryPerDB: true
-	  smallFiles: true
 	  journal:
 	    enabled: true
+	  mmapv1:
+	    smallFiles: true
 	net:
 	  bindIp: 127.0.0.1
 	  http:
