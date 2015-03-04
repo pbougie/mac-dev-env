@@ -104,7 +104,7 @@ Deregister with Launchd. Kill the process manually.
 
 ### Verify the Installation
 
-Display the **Memcached** version.
+Verify that you have successfully installed **Memcached**.
 
 	memcached -V
 

@@ -48,6 +48,6 @@ Load the new shell configurations.
 
 ### Verify the Installation
 
-To verify that you have correctly installed SQLite. It should display the version number along with other information.
+Verify that you have successfully installed **SQLite**.
 
 	sqlite3 -version

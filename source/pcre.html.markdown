@@ -48,6 +48,6 @@ Load the new shell configurations.
 
 ### Verify the Installation
 
-To verify that you have correctly installed PCRE. It should display **VERSION**.
+Verify that you have successfully installed **PCRE**.
 
 	pcre-config --version

@@ -57,6 +57,6 @@ Execute the following lines to install the certificates.
 
 ### Verify the Installation
 
-To verify that you have correctly installed OpenSSL.
+Verify that you have successfully installed **OpenSSL**.
 
 	openssl version -a

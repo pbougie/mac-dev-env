@@ -64,6 +64,6 @@ Load the new shell configurations.
 
 ### Verify the Installation
 
-To verify that you have correctly installed Git. It should display **git version VERSION**.
+Verify that you have successfully installed **Git**.
 
 	git --version

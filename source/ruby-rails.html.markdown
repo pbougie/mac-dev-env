@@ -15,6 +15,6 @@ Install Ruby on Rails using [RubyGems](http://rubygems.org/).
 
 ### Verify the Installation
 
-To verify that you have correctly installed Ruby on Rails. It should display the version number.
+Verify that you have successfully installed **Ruby on Rails**.
 
-	rails -v
+	rails --version

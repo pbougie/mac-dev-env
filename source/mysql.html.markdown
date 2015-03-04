@@ -133,7 +133,7 @@ Deregister with Launchd.
 
 ### Verify the Installation
 
-Display the **MySQL** server version.
+Verify that you have successfully installed **MySQL**.
 
 	mysqld --version
 

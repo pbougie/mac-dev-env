@@ -48,6 +48,6 @@ Load the new shell configurations.
 
 ### Verify the Installation
 
-To verify that you have correctly installed Autoconf.
+Verify that you have successfully installed **Autoconf**.
 
 	autoconf --version

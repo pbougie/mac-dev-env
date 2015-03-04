@@ -119,7 +119,7 @@ Deregister with Launchd. Kill the process manually.
 
 ### Verify the Installation
 
-Display the **Redis** version.
+Verify that you have successfully installed **Redis**.
 
 	redis-server -v
 

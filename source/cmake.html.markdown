@@ -49,6 +49,6 @@ Load the new shell configurations.
 
 ### Verify the Installation
 
-To verify that you have correctly installed CMake. It should display **cmake version VERSION**.
+Verify that you have successfully installed **CMake**.
 
 	cmake --version

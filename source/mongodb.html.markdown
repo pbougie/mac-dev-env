@@ -122,4 +122,4 @@ Deregister with Launchd.
 
 ### Verify the Installation
 
-To verify that you have correctly installed and started your MongoDB server, point your web browser to [`http://localhost:28017/`](http://localhost:28017/) to load the MongoDB console.
+Verify that you have successfully installed **MongoDB**. Visit [`http://localhost:28017/`](http://localhost:28017/) in your web browser.

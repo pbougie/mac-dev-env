@@ -109,6 +109,6 @@ The web server must be restarted for the changes to take effect.
 
 ### Verify the Installation
 
-To verify that you have correctly installed PHP. It should display the version number along with other information.
+Verify that you have successfully installed **PHP**.
 
 	php --version

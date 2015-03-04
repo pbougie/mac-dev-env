@@ -10,7 +10,7 @@ Install the **Command Line Tools**. This will initiate the installer. Follow the
 
 	xcode-select --install
 
-To verify that the **Command Line Tools** are installed.
+Verify that you have successfully installed the **Command Line Tools**.
 
 	xcode-select -p
 

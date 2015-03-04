@@ -49,6 +49,6 @@ Rehash the rbenv shims.
 
 ### Verify the Installation
 
-To verify that you have correctly installed this version of Ruby.
+Verify that you have successfully installed **Ruby**.
 
 	ruby --version

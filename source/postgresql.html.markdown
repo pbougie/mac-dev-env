@@ -119,7 +119,7 @@ Deregister with Launchd.
 
 ### Verify the Installation
 
-Display the **PostgreSQL** server version.
+Verify that you have successfully installed **PostgreSQL**.
 
 	postgres --version
 
