@@ -146,4 +146,10 @@ Deregister with Launchd.
 
 ### Verify the Installation
 
-Verify that you have successfully installed **Apache**. Visit [`http://localhost/`](http://localhost/) in your web browser.
+Verify that you have successfully installed **Apache**.
+
+	httpd -v
+
+Visit your web server root page.
+
+[`http://localhost/`](http://localhost/)
