@@ -25,8 +25,8 @@ Extract the archive and move into the folder.
 Configure, compile and install into `/usr/local/rbenv/versions/VERSION`.
 
 	./configure \
-		--prefix=/usr/local/rbenv/versions/VERSION \
-		--with-opt-dir=/usr/local/openssl
+	  --prefix=/usr/local/rbenv/versions/VERSION \
+	  --with-opt-dir=/usr/local/openssl
 	make
 	make install
 

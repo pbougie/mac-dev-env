@@ -23,17 +23,17 @@ Add the following to the Apache configuration file `/usr/local/apache/conf/httpd
 	LoadModule proxy_http_module modules/mod_proxy_http.so
 
 	<VirtualHost *:80>
-		# Passthrough to non-Ruby projects.
+	  # Passthrough to non-Ruby projects.
 	</VirtualHost>
 
 	<VirtualHost *:80>
-		ServerName pow
-		ServerAlias *.dev
-		ServerAlias *.xip.io
+	  ServerName pow
+	  ServerAlias *.dev
+	  ServerAlias *.xip.io
 
-		ProxyPass / http://localhost:20559/
-		ProxyPassReverse / http://localhost:20559/
-		ProxyPreserveHost On
+	  ProxyPass / http://localhost:20559/
+	  ProxyPassReverse / http://localhost:20559/
+	  ProxyPreserveHost On
 	</VirtualHost>
 
 Restart Apache.

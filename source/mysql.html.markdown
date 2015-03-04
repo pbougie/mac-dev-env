@@ -27,11 +27,11 @@ Extract the archive and move into the folder.
 Configure, compile and install into `/usr/local/mysql-VERSION`.
 
 	cmake \
-		-DCMAKE_INSTALL_PREFIX=/usr/local/mysql-VERSION \
-		-DCMAKE_CXX_FLAGS="-stdlib=libstdc++" \
-		-DDEFAULT_CHARSET=utf8 \
-		-DDEFAULT_COLLATION=utf8_general_ci \
-		.
+	  -DCMAKE_INSTALL_PREFIX=/usr/local/mysql-VERSION \
+	  -DCMAKE_CXX_FLAGS="-stdlib=libstdc++" \
+	  -DDEFAULT_CHARSET=utf8 \
+	  -DDEFAULT_COLLATION=utf8_general_ci \
+	  .
 	make
 	make install
 

@@ -27,9 +27,9 @@ Extract the archive and move into the folder.
 Configure, compile and install into `/usr/local/graphicsmagick-VERSION`.
 
 	./configure CC=clang \
-		LDFLAGS="-L/usr/local/libjpeg/lib -L/usr/local/libpng/lib -L/usr/local/libtiff/lib" \
-		CPPFLAGS="-I/usr/local/libjpeg/include -I/usr/local/libpng/include -I/usr/local/libtiff/include" \
-		--prefix=/usr/local/graphicsmagick-VERSION
+	  LDFLAGS="-L/usr/local/libjpeg/lib -L/usr/local/libpng/lib -L/usr/local/libtiff/lib" \
+	  CPPFLAGS="-I/usr/local/libjpeg/include -I/usr/local/libpng/include -I/usr/local/libtiff/include" \
+	  --prefix=/usr/local/graphicsmagick-VERSION
 	make
 	make install
 

@@ -27,31 +27,31 @@ Extract the archive and move into the folder.
 Configure, compile and install into `/usr/local/php-VERSION`.
 
 	./configure \
-		--prefix=/usr/local/php-VERSION \
-		--with-config-file-path=/usr/local/php-VERSION/etc \
-		--enable-bcmath \
-		--enable-mbstring \
-		--enable-sockets \
-		--enable-zip \
-		--with-apxs2=/usr/local/apache/bin/apxs \
-		--with-bz2 \
-		--with-curl \
-		--with-freetype-dir=/usr/local/freetype \
-		--with-gd \
-		--with-imap-ssl \
-		--with-jpeg-dir=/usr/local/libjpeg \
-		--with-mcrypt=/usr/local/libmcrypt \
-		--with-mysql \
-		--with-mysqli \
-		--with-pear \
-		--with-pdo-mysql \
-		--with-pdo-pgsql=/usr/local/postgresql \
-		--with-pgsql=/usr/local/postgresql \
-		--with-png-dir=/usr/local/libpng \
-		--with-openssl \
-		--with-xmlrpc \
-		--with-xsl \
-		--with-zlib
+	  --prefix=/usr/local/php-VERSION \
+	  --with-config-file-path=/usr/local/php-VERSION/etc \
+	  --enable-bcmath \
+	  --enable-mbstring \
+	  --enable-sockets \
+	  --enable-zip \
+	  --with-apxs2=/usr/local/apache/bin/apxs \
+	  --with-bz2 \
+	  --with-curl \
+	  --with-freetype-dir=/usr/local/freetype \
+	  --with-gd \
+	  --with-imap-ssl \
+	  --with-jpeg-dir=/usr/local/libjpeg \
+	  --with-mcrypt=/usr/local/libmcrypt \
+	  --with-mysql \
+	  --with-mysqli \
+	  --with-pear \
+	  --with-pdo-mysql \
+	  --with-pdo-pgsql=/usr/local/postgresql \
+	  --with-pgsql=/usr/local/postgresql \
+	  --with-png-dir=/usr/local/libpng \
+	  --with-openssl \
+	  --with-xmlrpc \
+	  --with-xsl \
+	  --with-zlib
 	make
 	make install
 
