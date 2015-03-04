@@ -72,7 +72,7 @@ Load the new shell configurations.
 
 To start the MongoDB server.
 
-	mongod --config=/usr/local/mongodb/mongod.conf
+	mongod --config /usr/local/mongodb/mongod.conf
 
 Press `CTRL-C` to stop the MongoDB server.
 
@@ -95,7 +95,8 @@ Copy and paste the following text into the aforementioned file.
 	    <key>ProgramArguments</key>
 	    <array>
 	      <string>/usr/local/mongodb/bin/mongod</string>
-	      <string>--config=/usr/local/mongodb/mongod.conf</string>
+	      <string>--config</string>
+	      <string>/usr/local/mongodb/mongod.conf</string>
 	    </array>
 
 	    <key>StandardOutPath</key>
