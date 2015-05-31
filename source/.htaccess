@@ -1,22 +1,25 @@
 ErrorDocument 403 /error/index.html
 ErrorDocument 404 /error/index.html
 
-RewriteEngine On
-RewriteBase /
 
-RewriteRule ^lib-freetype/?$ /freetype [R=permanent,L]
-RewriteRule ^lib-jpeg/?$ /libjpeg [R=permanent,L]
-RewriteRule ^lib-mcrypt/?$ /libmcrypt [R=permanent,L]
-RewriteRule ^lib-png/?$ /libpng [R=permanent,L]
-RewriteRule ^lib-tiff/?$ /libtiff [R=permanent,L]
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
 
-RewriteRule ^node/?$ /nodejs [R=permanent,L]
-RewriteRule ^node-bower/?$ /nodejs-bower [R=permanent,L]
-RewriteRule ^node-grunt/?$ /nodejs-grunt [R=permanent,L]
+  RewriteRule ^lib-freetype/?$ /freetype [R=permanent,L]
+  RewriteRule ^lib-jpeg/?$ /libjpeg [R=permanent,L]
+  RewriteRule ^lib-mcrypt/?$ /libmcrypt [R=permanent,L]
+  RewriteRule ^lib-png/?$ /libpng [R=permanent,L]
+  RewriteRule ^lib-tiff/?$ /libtiff [R=permanent,L]
 
-RewriteRule ^ruby/?$ /ruby-21 [R=permanent,L]
-RewriteRule ^ruby-193/?$ /ruby-21 [R=permanent,L]
-RewriteRule ^ruby-2/?$ /ruby-21 [R=permanent,L]
-RewriteRule ^ruby-200/?$ /ruby-21 [R=permanent,L]
-RewriteRule ^ruby-210/?$ /ruby-21 [R=permanent,L]
-RewriteRule ^ruby-211/?$ /ruby-21 [R=permanent,L]
+  RewriteRule ^node/?$ /nodejs [R=permanent,L]
+  RewriteRule ^node-bower/?$ /nodejs-bower [R=permanent,L]
+  RewriteRule ^node-grunt/?$ /nodejs-grunt [R=permanent,L]
+
+  RewriteRule ^ruby/?$ /ruby-21 [R=permanent,L]
+  RewriteRule ^ruby-193/?$ /ruby-21 [R=permanent,L]
+  RewriteRule ^ruby-2/?$ /ruby-21 [R=permanent,L]
+  RewriteRule ^ruby-200/?$ /ruby-21 [R=permanent,L]
+  RewriteRule ^ruby-210/?$ /ruby-21 [R=permanent,L]
+  RewriteRule ^ruby-211/?$ /ruby-21 [R=permanent,L]
+</IfModule>
