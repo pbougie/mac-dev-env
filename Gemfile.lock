@@ -154,3 +154,6 @@ DEPENDENCIES
   rack-gauges
   rack-google-analytics
   rake
+
+BUNDLED WITH
+   1.10.2
