@@ -71,10 +71,18 @@ You also need to disable the `ErrorLog` and `CustomLog` directives in the Apache
 
 ### Web Root
 
-Create a folder that will contain your web sites and applications. I keep my projects in `~/Sites`. You can place your projects wherever you'd like but make sure you update the path when mentioned in this article.
+Create a folder that will contain your web sites and applications. I keep my projects in `~/Sites`.
 
 	mkdir -p ~/Sites
 
+You then need to update the folder name(s) in `/usr/local/apache/conf/extra/httpd-userdir.conf` file to point to your particular location, e.g.
+
+	UserDir Sites
+	<Directory "/home/*/Sites">
+	    AllowOverride FileInfo AuthConfig Limit Indexes
+	    Options MultiViews Indexes SymLinksIfOwnerMatch IncludesNoExec
+	    Require method GET POST OPTIONS
+	</Directory>
 
 ### Shell
 
