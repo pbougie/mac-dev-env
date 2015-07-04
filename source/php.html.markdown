@@ -55,6 +55,10 @@ Configure, compile and install into `/usr/local/php-VERSION`.
 	make
 	make install
 
+<p class="special">
+There is an issue compiling PHP 5.6.x with PostgreSQL support. Either remove PostgreSQL support (by removing the two configuration options above) or downgrade to PHP 5.5.x to successfully compile PHP. Please submit a <a href="https://github.com/pbougie/mac-dev-env"> pull request</a> if you find a solution.
+</p>
+
 Create a symbolic link that points `/usr/local/php` to `/usr/local/php-VERSION`.
 
 	ln -s php-VERSION /usr/local/php
