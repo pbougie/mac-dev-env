@@ -4,7 +4,7 @@ title: Memcached
 
 > **Links:** [Homepage](http://memcached.org/) | [Downloads](http://memcached.org/downloads) | [Documentation](http://code.google.com/p/memcached/wiki/NewStart)  
 > **Dependencies:** [Libevent](/libevent/)  
-> **Version:** <span id="version">1.4.22</span>
+> **Version:** <span id="version">1.4.24</span>
 
 **Memcached** is an in-memory key-value store for small chunks of arbitrary data.
 

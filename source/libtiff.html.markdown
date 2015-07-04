@@ -4,7 +4,7 @@ title: LibTIFF
 
 > **Links:** [Homepage](http://www.remotesensing.org/libtiff/)  
 > **Dependencies:** None  
-> **Version:** <span id="version">4.0.3</span>
+> **Version:** <span id="version">4.0.4</span>
 
 **LibTIFF** is a library and utilities for manipulating TIFF images.
 

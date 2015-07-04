@@ -4,7 +4,7 @@ title: MongoDB
 
 > **Links:** [Homepage](http://www.mongodb.org/) | [Documentation](http://docs.mongodb.org/) | [Downloads](http://www.mongodb.org/downloads)  
 > **Dependencies:** None  
-> **Version:** <span id="version">3.0.3</span>
+> **Version:** <span id="version">3.0.4</span>
 
 **MongoDB** is a scalable, high-performance, open source, schema-free, document-oriented database. MongoDB was created by [10gen](http://www.10gen.com/) and they have been kind enough to provide pre-compiled binaries for various platforms including OS X.
 
