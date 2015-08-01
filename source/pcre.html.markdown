@@ -1,5 +1,5 @@
 ---
-title: PCRE - Perl Compatible Regular Expressions
+title: PCRE — Perl Compatible Regular Expressions
 ---
 
 > **Links:** [Homepage](http://pcre.org/)  
