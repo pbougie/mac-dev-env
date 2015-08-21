@@ -1,5 +1,5 @@
 ---
-title: Ruby 2.2.3
+title: Ruby 2.2
 ---
 
 > **Links:** [Homepage](http://www.ruby-lang.org/) | [Downloads](http://www.ruby-lang.org/en/downloads/)  
