@@ -1,3 +1,4 @@
 /build
 .bundle
 .env
+Gemfile.lock
