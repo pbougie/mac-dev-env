@@ -16,9 +16,6 @@ ignore "/stylesheets/icons.css"
 configure :build do
   activate :minify_css
   activate :minify_javascript
-
-  use Rack::GoogleAnalytics, :tracker => ENV['GOOGLE_ANALYTICS']
-  use Rack::Gauges, :tracker => ENV['GAUGES']
 end
 
 activate :deploy do |deploy|

@@ -15,11 +15,5 @@ gem 'rake'
 # https://github.com/bkeepers/dotenv
 gem 'dotenv'
 
-# https://github.com/kangguru/rack-google-analytics
-gem 'rack-google-analytics'
-
-# https://github.com/thunderboltlabs/rack-gauges
-gem 'rack-gauges'
-
 # http://builder.rubyforge.org/
 gem 'builder'
