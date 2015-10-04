@@ -13,6 +13,7 @@ A detailed guide with instructions to compile various software packages to build
 
 - Git
 	- [Autoconf](/autoconf/)
+	- [OpenSSL](/openssl/)
 	- [Git](/git/)
 
 ### Data Stores

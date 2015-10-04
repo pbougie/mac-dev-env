@@ -4,7 +4,7 @@ title: CMake
 
 > **Links:** [Homepage](http://www.cmake.org/) | [Downloads](http://www.cmake.org/cmake/resources/software.html)  
 > **Dependencies:** None  
-> **Version:** <span id="version">3.3.1</span>
+> **Version:** <span id="version">3.3.2</span>
 
 **CMake** is a cross-platform, open-source build system designed to build, test and package software. **CMake** is used to control the software compilation process using platform and compiler independent configuration files.
 
