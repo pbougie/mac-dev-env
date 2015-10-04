@@ -9,9 +9,7 @@ activate :directory_indexes
 # Middleman-Livereload only works with "middleman server"; not with Pow
 activate :livereload
 
-ignore "/stylesheets/normalize.css"
-ignore "/stylesheets/gh-fork-ribbon.css"
-ignore "/stylesheets/icons.css"
+ignore '/stylesheets/vendor/*'
 
 configure :build do
   activate :minify_css

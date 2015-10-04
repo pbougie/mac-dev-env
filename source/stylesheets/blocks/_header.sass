@@ -1,0 +1,79 @@
+.header
+  border-top: 20px solid #1377c2
+  @media print
+    border-top: none
+
+  &__title,
+  &__elsewhere,
+  &__message
+    width: 90%
+    max-width: $container-width
+    margin: 0 auto
+
+  &__title
+    a
+      display: block
+      padding-top: 110px
+      background-image: url(../images/avatar.svg)
+      background-repeat: no-repeat
+      background-position: center 20px
+      background-size: 75px
+      color: black
+      font-family: $font-headlines
+      font-size: 18px
+      font-size: 1.8rem
+      font-weight: normal
+      line-height: 1.4em
+      text-align: center
+      text-decoration: none
+      @media screen and (min-width: 600px)
+        padding-top: 135px
+        background-size: 100px
+        font-size: 24px
+        font-size: 2.4rem
+      @media print
+        padding-top: 0
+        background-image: none
+        font-size: 28px
+        font-size: 2.8rem
+        text-align: left
+
+  &__elsewhere
+    margin-bottom: 20px
+    border-bottom: 3px solid #ddd
+    padding: 15px 0
+    font-size: 45px
+    font-size: 4.5rem
+    line-height: 1.25em
+    @media screen and (min-width: 600px)
+      li
+        margin: 0 10px
+    @media print
+      display: none
+    ul
+      margin: 0
+      padding: 0
+      text-align: center
+    li, a
+      display: inline-block
+      text-decoration: none
+    .www a
+      color: #047
+    .twitter a
+      color: #00aced
+    .github a
+      color: #4183c4
+    .email a
+      color: #333
+
+  &__message
+    margin-bottom: 15px
+    border-radius: 3px
+    padding: 10px 20px
+    background-color: #1377c2
+    color: white
+    text-align: center
+    @media print
+      margin-top: 15px
+      padding: 10px 0
+      text-align: left
