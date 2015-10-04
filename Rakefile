@@ -1,23 +1,31 @@
-task :default => :preview
+task :default => :build
 
-desc "Launch preview server at http://localhost:4567"
-task :preview do
-  exec("bundle exec middleman server")
-end
-
-desc "Build website for deployment"
+desc "Build website"
 task :build do
-  puts "## Building website for deployment"
-  system("bundle exec middleman build")
+  puts '## Building website'
+  system 'bundle exec middleman build'
 end
 
-desc "Deploy website via rsync to production server"
+desc "Deploy website to production"
 task :deploy do
   puts '## Updating file permissions before uploading'
   system 'chmod -R u+rwX,go=u-w build'
-  puts "## Deploying website via rsync to production server"
-  system("bundle exec middleman deploy")
+  puts '## Deploying website'
+  system "find build -name .DS_Store -exec rm -f '{}' ';'"
+  system 'bundle exec middleman deploy'
 end
 
-desc "Build and Deploy website to production server"
+desc "Rebuild website on filesystem changes"
+task :guard do
+  puts '## Rebuilding website because changes to the filesystem detected'
+  system 'bundle exec guard'
+end
+
+desc "Launch preview server at http://localhost:4567"
+task :preview do
+  puts '## Launching preview server at http://localhost:4567'
+  exec("bundle exec middleman server")
+end
+
+desc "Build and Deploy website to production"
 task :release => [:build, :deploy]
