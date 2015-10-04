@@ -17,3 +17,12 @@ gem 'dotenv'
 
 # http://builder.rubyforge.org/
 gem 'builder'
+
+# https://github.com/guard/guard-middleman
+gem 'guard-middleman'
+
+# https://github.com/alloy/terminal-notifier
+gem 'terminal-notifier'
+
+# https://github.com/Springest/terminal-notifier-guard
+gem 'terminal-notifier-guard'

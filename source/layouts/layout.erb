@@ -1,7 +1,5 @@
 <!doctype html>
-<!--[if IE 8]><html class="ie8" lang="en"><![endif]-->
-<!--[if IE 9]><html class="ie9" lang="en"><![endif]-->
-<!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
+<html lang="en">
 <head>
 
   <meta charset="utf-8">
@@ -19,14 +17,14 @@
   <link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon.png">
 
   <!--[if gte IE 9]><!-->
-  <%= stylesheet_link_tag "styles", media: nil, type: nil %>
+  <%= stylesheet_link_tag "site", media: nil, type: nil %>
   <!--<![endif]-->
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <%= javascript_include_tag "versioning", type: nil %>
 
 </head>
-<body id="<%= current_page.path.split('.').first %>">
+<body id="<%= page_id %>">
 
   <%= partial "layouts/header" %>
 
@@ -40,6 +38,9 @@
     <% if data.page.title %>
       <header>
         <h2><%= data.page.title %></h2>
+        <% unless %w(index started-cli started-folders).include?(page_id) %>
+          <%= partial "layouts/before_starting" %>
+        <% end %>
       </header>
     <% end %>
     <article>

@@ -3,8 +3,8 @@ title: Git
 ---
 
 > **Links:** [Homepage](http://git-scm.com/) | [Downloads](http://git-scm.com/download)  
-> **Dependencies:** [Autoconf](/autoconf/)  
-> **Version:** <span id="version">2.5.0</span>
+> **Dependencies:** [Autoconf](/autoconf/) | [OpenSSL](/openssl/)  
+> **Version:** <span id="version">2.6.0</span>
 
 **Git** is a distributed version control system that was initially designed and developed by Linus Torvalds for Linux kernel development.
 
@@ -27,7 +27,9 @@ Extract the archive and move into the folder.
 Configure, compile and install into `/usr/local/git-VERSION`.
 
 	make configure
-	./configure --prefix=/usr/local/git-VERSION
+	./configure \
+	  --prefix=/usr/local/git-VERSION \
+	  --with-openssl=/usr/local/openssl
 	make all
 	make install
 
