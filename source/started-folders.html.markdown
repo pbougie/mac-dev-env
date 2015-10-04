@@ -14,6 +14,6 @@ Modify the ownership of `/usr/local` and its children to make yourself the owner
 
 	sudo chown -R $LOGNAME:staff /usr/local
 
-**Important:** Since OS X El Capitan, a new feature called [System Integrity Protection](https://en.wikipedia.org/wiki/System_Integrity_Protection) protects certain system processes, files and folders from being modified or tampered — including `/usr/local`. You may have to update this folder's permissions after system updates by issuing the following command.
+**Important:** Since OS X El Capitan, a new feature called [System Integrity Protection](https://en.wikipedia.org/wiki/System_Integrity_Protection) protects certain system processes, files and folders from being modified or tampered with — including `/usr/local`. You may have to update this folder's permissions after system updates by issuing the following command.
 
 	sudo chown $LOGNAME:staff /usr/local
