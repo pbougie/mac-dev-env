@@ -27,3 +27,9 @@ end
 page '/' do
   @message = nil
 end
+
+helpers do
+  def page_id
+    current_page.path.split('.').first
+  end
+end
