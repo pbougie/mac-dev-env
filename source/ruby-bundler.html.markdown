@@ -3,7 +3,7 @@ title: Bundler
 ---
 
 > **Links:** [Homepage](http://gembundler.com/)  
-> **Dependencies:** [Ruby](/ruby/)
+> **Dependencies:** [Ruby](/ruby-22/)
 
 **Bundler** manages a Ruby application's dependencies using a *Gemfile*.
 
