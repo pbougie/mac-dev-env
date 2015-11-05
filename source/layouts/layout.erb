@@ -38,7 +38,7 @@
     <% if data.page.title %>
       <header>
         <h2><%= data.page.title %></h2>
-        <% unless %w(index started-cli started-folders).include?(page_id) %>
+        <% unless %w(index started-cli started-folders error).include?(page_id) %>
           <%= partial "layouts/before_starting" %>
         <% end %>
       </header>
