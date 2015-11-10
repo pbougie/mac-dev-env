@@ -3,7 +3,7 @@ title: PHP
 ---
 
 > **Links:** [Homepage](http://php.net/) | [Documentation](http://php.net/manual/en/) | [Downloads](http://php.net/downloads.php)  
-> **Dependencies:** [Apache](/apache/) | [LibJPEG](/libjpeg/) | [LibPNG](/libpng/) | [LibMCrypt](/libmcrypt/) | [FreeType](/freetype/)  
+> **Dependencies:** [Apache](/apache/) | [LibJPEG](/libjpeg/) | [LibPNG](/libpng/) | [LibMCrypt](/libmcrypt/) | [FreeType](/freetype/) | [OpenSSL](/openssl/) | [PostgreSQL](/postgresql/)  
 > **Version:** <span id="version">5.6.14</span>
 
 **PHP** is a general-purpose server-side scripting language that is especially suited to web development.
