@@ -27,12 +27,7 @@
 <body id="<%= page_id %>">
 
   <%= partial "layouts/header" %>
-
-  <div class="github-fork-ribbon-wrapper right">
-      <div class="github-fork-ribbon">
-          <a href="https://github.com/pbougie/mac-dev-env">Fork me on GitHub</a>
-      </div>
-  </div>
+  <%= partial "layouts/github" %>
 
   <section class="main" role="main">
     <% if data.page.title %>
