@@ -1,5 +1,7 @@
 html
   font-size: 62.5%
+
+
 body
   background-color: white
   color: black
@@ -7,12 +9,24 @@ body
   font-size: 14px
   font-size: 1.4rem
   line-height: 1.75em
+
+
 a
   background-color: transparent
   color: #1377c2
+
   &:visited
     color: #1377c2
   &:hover
-    color: #900
+    color: darken(#1377c2, 10%)
+
+
 img
   max-width: 100%
+
+
+@media print
+  *
+    background: transparent !important
+    color: black !important
+    text-decoration: none !important
