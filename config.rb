@@ -29,6 +29,13 @@ page '/' do
 end
 
 helpers do
+  def page_title
+    title  = ''
+    title += "#{data.page.title} - " if data.page.title
+    title += 'Compiling a Web Development Environment on Mac OS X'
+    title
+  end
+
   def page_desc
     desc  = 'Guide for compiling a Web Development Environment on Mac OS X'
     desc += ": #{data.page.title}" if data.page.title
