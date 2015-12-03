@@ -1,4 +1,5 @@
 ---
+layout: homepage_layout
 priority: 1.0
 ---
 

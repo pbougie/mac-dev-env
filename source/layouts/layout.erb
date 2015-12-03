@@ -34,24 +34,7 @@
   <%= partial "layouts/github" %>
 
   <section class="main" role="main">
-    <% if data.page.title %>
-      <header class="main__header">
-        <h2><%= data.page.title %></h2>
-        <% unless %w(index started-cli started-folders error).include?(page_id) %>
-          <%= partial "layouts/before_starting" %>
-        <% end %>
-      </header>
-    <% end %>
-    <article class="main__article">
-      <%= yield %>
-    </article>
-    <% if data.page.title %>
-      <footer class="main__footer">
-        <p>
-          <a href="/">← Return to the Table of Contents</a>
-        </p>
-      </footer>
-    <% end %>
+    <%= yield %>
   </section>
 
   <%= partial "layouts/footer" %>

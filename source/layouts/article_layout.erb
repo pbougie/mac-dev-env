@@ -1,0 +1,20 @@
+<% wrap_layout :layout do %>
+  <header class="main__header">
+    <h2>
+      <%= data.page.title %>
+    </h2>
+    <% unless %w(started-cli started-folders error).include?(page_id) %>
+      <%= partial "layouts/before_starting" %>
+    <% end %>
+  </header>
+
+  <article class="main__article">
+    <%= yield %>
+  </article>
+
+  <footer class="main__footer">
+    <p>
+      <a href="/">← Return to the Table of Contents</a>
+    </p>
+  </footer>
+<% end %>

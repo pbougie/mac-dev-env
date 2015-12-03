@@ -4,6 +4,7 @@ I18n.enforce_available_locales = false
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
+set :layout, 'article_layout'
 
 activate :directory_indexes
 # Middleman-Livereload only works with "middleman server"; not with Pow
