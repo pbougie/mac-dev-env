@@ -25,10 +25,6 @@ activate :deploy do |deploy|
   deploy.clean = true
 end
 
-page '/' do
-  @message = nil
-end
-
 helpers do
   def page_title
     title  = ''

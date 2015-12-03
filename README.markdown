@@ -42,6 +42,11 @@ Make sure the aforementioned environment variables are available before generati
 - Build and Deploy the website: `rake release`
 
 
+# Message
+
+To add a message at the top of any page, add a frontmatter variable named `message` to any Markdown source file.
+
+
 ---
 
 © [Patrick Bougie](http://patrickbougie.com/).
