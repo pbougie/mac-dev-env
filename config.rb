@@ -29,6 +29,13 @@ page '/' do
 end
 
 helpers do
+  def page_desc
+    desc  = 'Guide for compiling a Web Development Environment on Mac OS X'
+    desc += ": #{data.page.title}" if data.page.title
+    desc += '.'
+    desc
+  end
+
   def page_id
     current_page.path.split('.').first
   end
