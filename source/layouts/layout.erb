@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <title><%= page_title %></title>
 
-  <meta name="apple-mobile-web-app-title" content="Mac Dev Env">
-  <meta name="application-name" content="Mac Dev Env">
+  <meta name="apple-mobile-web-app-title" content="<%= short_site_title %>">
+  <meta name="application-name" content="<%= short_site_title %>">
   <meta name="author" content="Patrick Bougie (http://patrickbougie.com/)">
   <meta name="description" content="<%= page_desc %>">
   <meta name="viewport" content="initial-scale=1">
@@ -19,6 +19,13 @@
   <meta name="msapplication-TileColor" content="#1377c2">
   <meta name="msapplication-TileImage" content="/ms-tile.png">
   <meta name="theme-color" content="#1377c2">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@pbougie">
+  <meta property="og:title" content="<%= page_title(':') %>">
+  <meta property="og:description" content="<%= page_desc %>">
+  <meta property="og:url" content="http://mac-dev-env.patrickbougie.com/">
+  <meta property="og:image" content="http://mac-dev-env.patrickbougie.com/favicon.png">
 
   <!--[if gte IE 9]><!-->
   <%= stylesheet_link_tag "site", media: nil, type: nil %>

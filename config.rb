@@ -26,18 +26,34 @@ activate :deploy do |deploy|
 end
 
 helpers do
-  def page_title
-    title  = ''
-    title += "#{data.page.title} - " if data.page.title
-    title += 'Compiling a Web Development Environment on Mac OS X'
-    title
+  def site_title
+    'Compiling a Web Development Environment on Mac OS X'
+  end
+
+  def short_site_title
+    'Mac Dev Env'
+  end
+
+  def site_desc
+    'A guide for compiling a web development environment on OS X.'
+  end
+
+  def page_title(separator = '-')
+    if data.page.title.nil?
+      site_title
+    elsif separator == ':'
+      short_site_title + ": #{data.page.title}"
+    else
+      site_title.prepend("#{data.page.title} #{separator} ")
+    end
   end
 
   def page_desc
-    desc  = 'Guide for compiling a Web Development Environment on Mac OS X'
-    desc += ": #{data.page.title}" if data.page.title
-    desc += '.'
-    desc
+    if data.page.title.nil?
+      site_desc
+    else
+      site_desc.chomp('.') + ": #{data.page.title}."
+    end
   end
 
   def page_id
