@@ -3,7 +3,7 @@ title: MongoDB for Ruby
 ---
 
 > **Links:** [Homepage](http://rubygems.org/gems/mongo)  
-> **Dependencies:** [Ruby](/ruby-22/) | [MongoDB](/mongodb/)
+> **Dependencies:** [Ruby](/ruby/) | [MongoDB](/mongodb/)
 
 
 ### Install

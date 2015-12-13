@@ -3,7 +3,7 @@ title: Ruby on Rails
 ---
 
 > **Links:** [Homepage](http://rubyonrails.org/)  
-> **Dependencies:** [Ruby](/ruby-22/)
+> **Dependencies:** [Ruby](/ruby/)
 
 
 ### Install

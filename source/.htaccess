@@ -24,10 +24,5 @@ ErrorDocument 404 /error/index.html
   RewriteRule ^node-bower/?$ /nodejs-bower/ [R=permanent,L]
   RewriteRule ^node-grunt/?$ /nodejs-grunt/ [R=permanent,L]
 
-  RewriteRule ^ruby/?$ /ruby-22/ [R=permanent,L]
-  RewriteRule ^ruby-193/?$ /ruby-22/ [R=permanent,L]
-  RewriteRule ^ruby-2/?$ /ruby-22/ [R=permanent,L]
-  RewriteRule ^ruby-200/?$ /ruby-22/ [R=permanent,L]
-  RewriteRule ^ruby-210/?$ /ruby-22/ [R=permanent,L]
-  RewriteRule ^ruby-211/?$ /ruby-22/ [R=permanent,L]
+  RewriteRule ^ruby-([0-9]+)/?$ /ruby/ [R=permanent,L]
 </IfModule>

@@ -52,12 +52,9 @@ A detailed guide with instructions to compile various software packages to build
 - Ruby
 	- [rbenv](/ruby-rbenv/)
 		- [rbenv-gem-rehash](/ruby-rbenv-gem-rehash/)
-	- Ruby 2.1
+	- Ruby
 		- [OpenSSL](/openssl/)
-		- [Ruby](/ruby-21/)
-	- Ruby 2.2
-		- [OpenSSL](/openssl/)
-		- [Ruby](/ruby-22/)
+		- [Ruby](/ruby/)
 	- Gems
 		- [RubyGems](/ruby-gems/)
 		- [Bundler](/ruby-bundler/)

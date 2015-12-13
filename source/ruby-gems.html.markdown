@@ -3,7 +3,7 @@ title: RubyGems
 ---
 
 > **Links:** [Homepage](http://rubygems.org/)  
-> **Dependencies:** [Ruby](/ruby-22/)  
+> **Dependencies:** [Ruby](/ruby/)  
 
 **RubyGems** ships with Ruby 1.9+. There is nothing to install. For prior versions of Ruby, see package instructions to install RubyGems.
 
