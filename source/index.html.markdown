@@ -58,10 +58,6 @@ A detailed guide with instructions to compile various software packages to build
 		- [RubyGems](/ruby-gems/)
 		- [Bundler](/ruby-bundler/)
 		- [Ruby on Rails](/ruby-rails/)
-		- [MySQL for Ruby](/ruby-mysql/)
-		- [PostgreSQL for Ruby](/ruby-postgresql/)
-		- [MongoDB for Ruby](/ruby-mongodb/)
-		- [SQLite for Ruby](/ruby-sqlite/)
 - [Pow](/pow/)
 
 ### Node.js
