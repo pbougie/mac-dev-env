@@ -63,12 +63,12 @@ Create a symbolic link that points `/usr/local/php` to `/usr/local/php-VERSION`.
 
 Copy a PHP configuration template to the target folder. You can configure any of the [php.ini directives](http://www.php.net/manual/en/ini.list.php) by editing this file.
 
-	cp php.ini-development /usr/local/php/etc/php.ini
+	cp php.ini-development /usr/local/php-VERSION/etc/php.ini
 
 Set the location of the `php.ini` configuration file for PECL and PEAR.
 
-	/usr/local/php/bin/pecl config-set php_ini /usr/local/php/etc/php.ini
-	/usr/local/php/bin/pear config-set php_ini /usr/local/php/etc/php.ini
+	/usr/local/php/bin/pecl config-set php_ini /usr/local/php-VERSION/etc/php.ini
+	/usr/local/php/bin/pear config-set php_ini /usr/local/php-VERSION/etc/php.ini
 
 
 ### Apache Configuration
