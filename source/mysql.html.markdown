@@ -63,26 +63,34 @@ Create a folder that will contain your databases. My databases are located in `/
 
 ### Post-Installation
 
-If you are copying the data from a former MySQL installation, you can skip these steps.
+Perform either the upgrade or new installation steps below depending on your situation.
 
-#### Initialize your Database
+#### Upgrade
 
-Initialize your database before launching the server.
+Upgrade your database server after the installation.
 
-	/usr/local/mysql/scripts/mysql_install_db --basedir=/usr/local/mysql --datadir=/usr/local/var/mysql
+	mysql_upgrade -u root -p
 
-#### Secure the Server
+#### New Installation
 
-The server needs to be running to perform this step which will set a root password and generally secure the server.
+Initialize your database server.
 
-	mysql_secure_installation
+	mysqld --initialize --basedir=/usr/local/mysql --datadir=/usr/local/var/mysql
+
+The password from the previous command is temporary. Launch the MySQL client and enter the temporary password.
+
+	mysql -u root -p
+
+After connecting, assign a new root password.
+
+	ALTER USER 'root'@'localhost' IDENTIFIED BY 'new_password';
 
 
 ### Manual Start/Stop
 
 To start the MySQL server.
 
-	mysqld_safe --user=mysql --datadir=/usr/local/var/mysql --log-error=/usr/local/var/log/mysql.log &
+	mysqld_safe --datadir=/usr/local/var/mysql --log-error=/usr/local/var/log/mysql.log &
 
 To shut down the MySQL server.
 
@@ -107,7 +115,6 @@ Copy and paste the following text into the aforementioned file.
 	    <key>ProgramArguments</key>
 	    <array>
 	      <string>/usr/local/mysql/bin/mysqld_safe</string>
-	      <string>--user=mysql</string>
 	      <string>--datadir=/usr/local/var/mysql</string>
 	      <string>--log-error=/usr/local/var/log/mysql.log</string>
 	    </array>
