@@ -4,7 +4,7 @@ title: GraphicsMagick
 
 > **Links:** [Homepage](http://www.graphicsmagick.org/) | [Downloads](http://www.graphicsmagick.org/download.html)  
 > **Dependencies:** [LibJPEG](/libjpeg/) | [LibPNG](/libpng/) | [LibTIFF](/libtiff/)  
-> **Version:** <span id="version">1.3.22</span>
+> **Version:** <span id="version">1.3.23</span>
 
 **GraphicsMagick** provides a comprehensive collection of utilities, programming interfaces, and GUIs, to support file format conversion, image processing, and 2D vector rendering.
 
