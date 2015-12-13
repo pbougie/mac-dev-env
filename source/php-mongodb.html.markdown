@@ -1,8 +1,9 @@
 ---
 title: MongoDB for PHP
+message: MongoDB driver for PHP 7 not available yet!
 ---
 
-> **Links:** [Homepage](http://www.mongodb.org/display/DOCS/PHP+Language+Center)  
+> **Links:** [Homepage](https://docs.mongodb.org/ecosystem/drivers/php/)  
 > **Dependencies:** [Autoconf](/autoconf/) | [MongoDB](/mongodb/) | [PHP](/php/)
 
 
@@ -10,7 +11,7 @@ title: MongoDB for PHP
 
 Install MongoDB driver for PHP using [PECL](http://pecl.php.net/).
 
-	pecl install mongo
+	pecl install mongodb
 
 The extension should be added to your `php.ini` file automatically. If not, follow the on-screen instructions to enable the extension.
 
