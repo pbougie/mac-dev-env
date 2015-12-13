@@ -41,7 +41,6 @@ A detailed guide with instructions to compile various software packages to build
 	- [FreeType](/freetype/)
 	- [PHP](/php/)
 		- [Autoconf](/autoconf/)
-		- [Xdebug](/php-xdebug/)
 		- [MySQL for PHP](/php-mysql/)
 		- [PostgreSQL for PHP](/php-postgresql/)
 		- [MongoDB for PHP](/php-mongodb/)
