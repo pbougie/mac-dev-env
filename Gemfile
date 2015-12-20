@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # http://middlemanapp.com/
-gem 'middleman'
+gem 'middleman', '~> 3'
 
 # https://github.com/middleman/middleman-livereload
 gem 'middleman-livereload'
