@@ -44,8 +44,9 @@
   </section>
 
   <%= partial "layouts/footer" %>
-  <%= partial "layouts/gauges" %>
-  <%= partial "layouts/google_analytics" %>
+
+  <%= javascript_include_tag "google_analytics" %>
+  <%= javascript_include_tag "gauges" %>
 
 </body>
 </html>
