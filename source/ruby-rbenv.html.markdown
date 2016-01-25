@@ -2,7 +2,7 @@
 title: rbenv
 ---
 
-> **Links:** [Homepage](https://github.com/sstephenson/rbenv)  
+> **Links:** [Homepage](https://github.com/rbenv/rbenv)  
 > **Dependencies:** None  
 
 Ruby version manager that lets you easily switch between multiple versions of Ruby.
@@ -12,7 +12,7 @@ Ruby version manager that lets you easily switch between multiple versions of Ru
 
 Check out rbenv into `/usr/local/rbenv`.
 
-	git clone git://github.com/sstephenson/rbenv.git /usr/local/rbenv
+	git clone git://github.com/rbenv/rbenv.git /usr/local/rbenv
 
 
 ### Shell
