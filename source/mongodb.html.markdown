@@ -1,12 +1,12 @@
 ---
-title: MongoDB
+title: MongoDB w/ SSL
 ---
 
-> **Links:** [Homepage](http://www.mongodb.org/) | [Documentation](http://docs.mongodb.org/) | [Downloads](http://www.mongodb.org/downloads)  
+> **Links:** [Homepage](http://www.mongodb.org/) | [Documentation](https://docs.mongodb.com/manual/) | [Downloads](http://www.mongodb.org/downloads)  
 > **Dependencies:** None  
-> **Version:** <span id="version">3.2.0</span>
+> **Version:** <span id="version">3.2.6</span>
 
-**MongoDB** is a scalable, high-performance, open source, schema-free, document-oriented database. MongoDB was created by [10gen](http://www.10gen.com/) and they have been kind enough to provide pre-compiled binaries for various platforms including OS X.
+**MongoDB** is a free and open-source cross-platform document-oriented database.
 
 
 ### Get the Code
@@ -14,14 +14,14 @@ title: MongoDB
 Switch to `/usr/local/src` and download the pre-compiled binaries.
 
 	cd /usr/local/src
-	curl --remote-name http://fastdl.mongodb.org/osx/mongodb-osx-x86_64-VERSION.tgz
+	curl --remote-name https://fastdl.mongodb.org/osx/mongodb-osx-ssl-x86_64-VERSION.tgz
 
 
 ### Install
 
 Unpack the binaries into `/usr/local`.
 
-	tar -zxvf mongodb-osx-x86_64-VERSION.tgz -C ..
+	tar -zxvf mongodb-osx-ssl-x86_64-VERSION.tgz -C ..
 
 Create a symbolic link to `/usr/local/mongodb`.
 
