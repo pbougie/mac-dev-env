@@ -2,7 +2,7 @@
 title: MySQL
 ---
 
-> **Links:** [Homepage](http://www.mysql.com/) | [Downloads](http://www.mysql.com/downloads/mysql/) | [Reference Manual](http://dev.mysql.com/doc/refman/5.7/en/index.html)  
+> **Links:** [Homepage](http://www.mysql.com/) | [Downloads](http://www.mysql.com/downloads/mysql/) | [Reference Manual](http://dev.mysql.com/doc/refman/5.7/en/)  
 > **Dependencies:** [CMake](/cmake/)  
 > **Version:** <span id="version">5.7.12</span>
 
@@ -67,7 +67,7 @@ Perform either the upgrade or new installation steps below depending on your sit
 
 #### Upgrade
 
-Upgrade your database server after the installation.
+Upgrade your database server after the installation. Must start server first (see below).
 
 	mysql_upgrade -u root -p
 
@@ -77,7 +77,7 @@ Initialize your database server.
 
 	mysqld --initialize --basedir=/usr/local/mysql --datadir=/usr/local/var/mysql
 
-The password from the previous command is temporary. Launch the MySQL client and enter the temporary password.
+The password from the previous command is temporary. Launch the MySQL client and enter the temporary password. Must start server first (see below).
 
 	mysql -u root -p
 
