@@ -4,7 +4,7 @@ title: Apache
 
 > **Links:** [Homepage](http://httpd.apache.org/) | [Downloads](http://httpd.apache.org/download.cgi) | [Documentation](http://httpd.apache.org/docs/2.4/)  
 > **Dependencies:** [PCRE](/pcre/)  
-> **Version:** <span id="version">2.4.18</span>
+> **Version:** <span id="version">2.4.20</span>
 
 The **Apache HTTP Server** is an open-source web server that was released in 1995. It has been the most popular web server on the Internet since April 1996.
 
@@ -14,7 +14,7 @@ The **Apache HTTP Server** is an open-source web server that was released in 199
 Switch to `/usr/local/src` and download the source package.
 
 	cd /usr/local/src
-	curl --remote-name http://apache.sunsite.ualberta.ca/httpd/httpd-VERSION.tar.gz
+	curl --remote-name http://apache.mirror.iweb.ca//httpd/httpd-VERSION.tar.gz
 
 Extract the archive and move into the folder.
 
