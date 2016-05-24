@@ -6,7 +6,7 @@ title: Apache
 > **Dependencies:** [PCRE](/pcre/)  
 > **Version:** <span id="version">2.4.20</span>
 
-The **Apache HTTP Server** is an open-source web server that was released in 1995. It has been the most popular web server on the Internet since April 1996.
+The **Apache HTTP Server** is an open-source web server that was released in 1995.
 
 
 ### Get the Code
