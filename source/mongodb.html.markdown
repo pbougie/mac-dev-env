@@ -57,6 +57,9 @@ Copy and paste the following text into the aforementioned file.
 	    enabled: true
 
 
+> **To configure MongoDB with SSL, see instructions at [Configure mongod and mongos for TLS/SSL](https://docs.mongodb.com/manual/tutorial/configure-ssl/).**
+
+
 ### Shell
 
 Execute the following lines to update your [Bash](http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) startup script.
