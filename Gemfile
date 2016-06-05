@@ -10,7 +10,7 @@ gem 'sprockets', '~> 4.beta'
 # https://github.com/middleman-contrib/middleman-deploy
 gem 'middleman-deploy', '~> 2.pre'
 
-# https://github.com/jimweirich/rake
+# https://github.com/ruby/rake
 gem 'rake'
 
 # https://github.com/bkeepers/dotenv
@@ -25,8 +25,8 @@ gem 'sassc'
 # https://github.com/guard/guard-middleman
 gem 'guard-middleman'
 
-# https://github.com/alloy/terminal-notifier
+# https://github.com/julienXX/terminal-notifier
 gem 'terminal-notifier'
 
-# https://github.com/Springest/terminal-notifier-guard
+# https://github.com/Codaisseur/terminal-notifier-guard
 gem 'terminal-notifier-guard'
