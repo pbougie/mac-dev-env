@@ -7,9 +7,6 @@ gem 'middleman', '~> 4'
 gem 'middleman-sprockets', '~> 4.rc'
 gem 'sprockets', '~> 4.beta'
 
-# https://github.com/middleman/middleman-livereload
-gem 'middleman-livereload'
-
 # https://github.com/middleman-contrib/middleman-deploy
 gem 'middleman-deploy', '~> 2.pre'
 
