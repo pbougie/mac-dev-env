@@ -9,6 +9,7 @@ set :layout, 'article_layout'
 activate :directory_indexes
 # Middleman-Livereload only works with "middleman server"; not with Pow
 activate :livereload
+activate :sprockets
 
 ignore '/stylesheets/vendor/*'
 
