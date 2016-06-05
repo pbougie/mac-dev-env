@@ -1,7 +1,7 @@
 <% wrap_layout :layout do %>
   <header class="main__header">
     <h2>
-      <%= data.page.title %>
+      <%= current_resource.data.title %>
     </h2>
     <% unless %w(started-cli started-folders error).include?(page_id) %>
       <%= partial "layouts/before_starting" %>

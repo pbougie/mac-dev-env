@@ -28,10 +28,10 @@
       </li>
     </ul>
   </div>
-  <% if data.page.message %>
+  <% if current_resource.data.message %>
     <p class="header__message">
       <%=
-        html = Kramdown::Document.new(data.page.message).to_html
+        html = Kramdown::Document.new(current_resource.data.message).to_html
         html = Regexp.new('^<p>(.*)<\/p>$').match(html)[1]
         html
       %>

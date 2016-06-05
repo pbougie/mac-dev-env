@@ -40,20 +40,20 @@ helpers do
   end
 
   def page_title(separator = '-')
-    if data.page.title.nil?
+    if current_resource.data.title.nil?
       site_title
     elsif separator == ':'
-      short_site_title + ": #{data.page.title}"
+      short_site_title + ": #{current_resource.data.title}"
     else
-      site_title.prepend("#{data.page.title} #{separator} ")
+      site_title.prepend("#{current_resource.data.title} #{separator} ")
     end
   end
 
   def page_desc
-    if data.page.title.nil?
+    if current_resource.data.title.nil?
       site_desc
     else
-      site_desc.chomp('.') + ": #{data.page.title}."
+      site_desc.chomp('.') + ": #{current_resource.data.title}."
     end
   end
 
