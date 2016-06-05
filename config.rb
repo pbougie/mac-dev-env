@@ -9,6 +9,7 @@ set :layout, 'article_layout'
 activate :directory_indexes
 # Middleman-Livereload only works with "middleman server"; not with Pow
 activate :livereload
+activate :sprockets
 
 ignore '/stylesheets/vendor/*'
 
@@ -18,7 +19,7 @@ configure :build do
 end
 
 activate :deploy do |deploy|
-  deploy.method = :rsync
+  deploy.deploy_method = :rsync
   deploy.user = ENV['RSYNC_USER']
   deploy.host = ENV['RSYNC_HOST']
   deploy.path = ENV['RSYNC_PATH']
@@ -39,20 +40,20 @@ helpers do
   end
 
   def page_title(separator = '-')
-    if data.page.title.nil?
+    if current_resource.data.title.nil?
       site_title
     elsif separator == ':'
-      short_site_title + ": #{data.page.title}"
+      short_site_title + ": #{current_resource.data.title}"
     else
-      site_title.prepend("#{data.page.title} #{separator} ")
+      site_title.prepend("#{current_resource.data.title} #{separator} ")
     end
   end
 
   def page_desc
-    if data.page.title.nil?
+    if current_resource.data.title.nil?
       site_desc
     else
-      site_desc.chomp('.') + ": #{data.page.title}."
+      site_desc.chomp('.') + ": #{current_resource.data.title}."
     end
   end
 

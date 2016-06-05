@@ -1,13 +1,17 @@
 source 'https://rubygems.org'
 
 # http://middlemanapp.com/
-gem 'middleman', '~> 3'
+gem 'middleman', '~> 4'
+
+# https://github.com/middleman/middleman-sprockets
+gem 'middleman-sprockets', '~> 4.rc'
+gem 'sprockets', '~> 4.beta'
 
 # https://github.com/middleman/middleman-livereload
 gem 'middleman-livereload'
 
-# https://github.com/tvaughan/middleman-deploy
-gem 'middleman-deploy'
+# https://github.com/middleman-contrib/middleman-deploy
+gem 'middleman-deploy', '~> 2.pre'
 
 # https://github.com/jimweirich/rake
 gem 'rake'
@@ -17,6 +21,9 @@ gem 'dotenv'
 
 # http://builder.rubyforge.org/
 gem 'builder'
+
+# https://github.com/sass/sassc-ruby
+gem 'sassc'
 
 # https://github.com/guard/guard-middleman
 gem 'guard-middleman'
