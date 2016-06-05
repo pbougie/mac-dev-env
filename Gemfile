@@ -22,6 +22,9 @@ gem 'dotenv'
 # http://builder.rubyforge.org/
 gem 'builder'
 
+# https://github.com/sass/sassc-ruby
+gem 'sassc'
+
 # https://github.com/guard/guard-middleman
 gem 'guard-middleman'
 
