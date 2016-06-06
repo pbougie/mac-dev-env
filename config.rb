@@ -15,7 +15,7 @@ configure :build do
 end
 
 activate :deploy do |deploy|
-  deploy.deploy_method = :rsync
+  deploy.deploy_method = :sftp
   deploy.user = ENV['RSYNC_USER']
   deploy.host = ENV['RSYNC_HOST']
   deploy.path = ENV['RSYNC_PATH']
