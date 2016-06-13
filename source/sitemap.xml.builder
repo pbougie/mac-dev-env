@@ -9,7 +9,7 @@ xml.urlset 'xmlns' => "http://www.sitemaps.org/schemas/sitemap/0.9" do
       xml.loc "http://mac-dev-env.patrickbougie.com#{page.url}"
       xml.lastmod Time.new.utc.iso8601
       xml.changefreq page.data.changefreq || "daily"
-      xml.priority page.data.priority || "0.8"
+      xml.priority page.data.priority || "0.9"
     end
   end
 end
