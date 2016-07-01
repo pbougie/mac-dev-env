@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'middleman', '~> 4'
 
 # https://github.com/middleman/middleman-sprockets
-gem 'middleman-sprockets', '~> 4.rc'
+gem 'middleman-sprockets'
 gem 'sprockets', '~> 4.beta'
 
 # https://github.com/middleman-contrib/middleman-deploy
