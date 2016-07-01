@@ -46,6 +46,7 @@ A detailed guide with instructions to compile various software packages to build
 		- [PostgreSQL for PHP](/php-postgresql/)
 		- [MongoDB for PHP](/php-mongodb/)
 		- [SQLite for PHP](/php-sqlite/)
+	- [Composer](/composer/)
 
 ### Ruby served by Pow
 
