@@ -26,7 +26,7 @@ Extract the archive and move into the folder.
 
 Configure, compile and install into `/usr/local/openssl-VERSION`.
 
-	./configure darwin64-x86_64-cc --prefix=/usr/local/openssl-VERSION
+	./configure darwin64-x86_64-cc --prefix=/usr/local/openssl-VERSION shared
 	make depend
 	make
 	make install

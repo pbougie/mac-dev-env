@@ -39,6 +39,7 @@ A detailed guide with instructions to compile various software packages to build
 	- [LibPNG](/libpng/)
 	- [LibMCrypt](/libmcrypt/)
 	- [FreeType](/freetype/)
+	- [OpenSSL](/openssl/)
 	- [PHP](/php/)
 		- [Autoconf](/autoconf/)
 		- [MySQL for PHP](/php-mysql/)

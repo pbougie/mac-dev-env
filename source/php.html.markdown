@@ -4,7 +4,7 @@ title: PHP
 
 > **Links:** [Homepage](http://php.net/) | [Documentation](http://php.net/manual/en/) | [Downloads](http://php.net/downloads.php)  
 > **Dependencies:** [Apache](/apache/) | [LibJPEG](/libjpeg/) | [LibPNG](/libpng/) | [LibMCrypt](/libmcrypt/) | [FreeType](/freetype/) | [OpenSSL](/openssl/) | [PostgreSQL](/postgresql/)  
-> **Version:** <span id="version">7.0.6</span>
+> **Version:** <span id="version">7.0.8</span>
 
 **PHP** is a general-purpose server-side scripting language that is especially suited to web development.
 
@@ -47,10 +47,21 @@ Configure, compile and install into `/usr/local/php-VERSION`.
 	  --with-pdo-pgsql=/usr/local/postgresql \
 	  --with-pgsql=/usr/local/postgresql \
 	  --with-png-dir=/usr/local/libpng \
-	  --with-openssl-dir=/usr/local/openssl \
+	  --with-openssl=/usr/local/openssl \
 	  --with-xmlrpc \
 	  --with-xsl \
 	  --with-zlib
+
+Edit PHP's `Makefile`.
+
+	nano Makefile
+
+Add the following to the end of the line that begins with `EXTRA_LIBS =`. Make sure there is a space before the new directives.
+
+	/usr/local/openssl/lib/libssl.dylib /usr/local/openssl/lib/libcrypto.dylib
+
+Then continue building PHP.
+
 	make
 	make install
 
