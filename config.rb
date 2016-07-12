@@ -9,6 +9,8 @@ set :layout, 'article_layout'
 activate :directory_indexes
 activate :sprockets
 
+page '/google386369349e5ac941.html', directory_index: false
+
 configure :build do
   activate :minify_css
   activate :minify_javascript
