@@ -56,7 +56,7 @@ Edit PHP's `Makefile`.
 
 	nano Makefile
 
-Add the following to the end of the line that begins with `EXTRA_LIBS =`. Make sure there is a space before the new directives.
+Find the line that begins with `EXTRA_LIBS =`. Remove all references to `-libcrypto` and `-libssl`. Then add the following directives to the end of the line. Make sure there is a space before the new directives.
 
 	/usr/local/openssl/lib/libssl.dylib /usr/local/openssl/lib/libcrypto.dylib
 
