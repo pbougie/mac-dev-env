@@ -2,9 +2,9 @@
 title: PostgreSQL
 ---
 
-> **Links:** [Homepage](http://www.postgresql.org/) | [Downloads](http://www.postgresql.org/ftp/source/) | [Documentation](http://www.postgresql.org/docs/9.4/static/)  
+> **Links:** [Homepage](http://www.postgresql.org/) | [Downloads](http://www.postgresql.org/ftp/source/) | [Documentation](http://www.postgresql.org/docs/9.5/static/)  
 > **Dependencies:** None  
-> **Version:** <span id="version">9.5.3</span>
+> **Version:** <span id="version">9.5.4</span>
 
 **PostgreSQL** is an enterprise-class, open source object-relational database system. It has been in active development for more than 15 years and has a strong reputation for standards compliance, reliability and data integrity.
 

@@ -4,7 +4,7 @@ title: Node.js
 
 > **Links:** [Homepage](http://nodejs.org/) | [Downloads](https://nodejs.org/en/download/current/)  
 > **Dependencies:** None  
-> **Version:** <span id="version">6.2.0</span>
+> **Version:** <span id="version">6.5.0</span>
 
 **Node.js** is an open-source, cross-platform runtime environment for developing server-side Web applications in JavaScript.
 

@@ -39,7 +39,7 @@ A detailed guide with instructions to compile various software packages to build
 	- [LibPNG](/libpng/)
 	- [LibMCrypt](/libmcrypt/)
 	- [FreeType](/freetype/)
-	- [OpenSSL](/openssl/)
+	- [OpenSSL](/openssl@102/) (1.0.2h)
 	- [PHP](/php/)
 		- [Autoconf](/autoconf/)
 		- [MySQL for PHP](/php-mysql/)
@@ -54,7 +54,7 @@ A detailed guide with instructions to compile various software packages to build
 	- [rbenv](/ruby-rbenv/)
 		- [rbenv-gem-rehash](/ruby-rbenv-gem-rehash/)
 	- Ruby
-		- [OpenSSL](/openssl/)
+		- [OpenSSL](/openssl@102/) (1.0.2h)
 		- [Ruby](/ruby/)
 	- Gems
 		- [RubyGems](/ruby-gems/)

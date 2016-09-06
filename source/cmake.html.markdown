@@ -4,7 +4,7 @@ title: CMake
 
 > **Links:** [Homepage](http://www.cmake.org/) | [Downloads](http://www.cmake.org/cmake/resources/software.html)  
 > **Dependencies:** None  
-> **Version:** <span id="version">3.5.2</span>
+> **Version:** <span id="version">3.6.1</span>
 
 **CMake** is a cross-platform, open-source build system designed to build, test and package software. **CMake** is used to control the software compilation process using platform and compiler independent configuration files.
 
@@ -14,7 +14,7 @@ title: CMake
 Switch to `/usr/local/src` and download the source package.
 
 	cd /usr/local/src
-	curl --remote-name https://cmake.org/files/v3.5/cmake-VERSION.tar.gz
+	curl --remote-name https://cmake.org/files/v3.6/cmake-VERSION.tar.gz
 
 Extract the archive and move into the folder.
 
@@ -40,7 +40,6 @@ Create a symbolic link that points `/usr/local/cmake` to `/usr/local/cmake-VERSI
 Execute the following lines to update your [Bash](http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) startup script.
 
 	echo 'export PATH=/usr/local/cmake/bin:$PATH' >> ~/.bash_profile
-	echo 'export MANPATH=/usr/local/cmake/man:$MANPATH' >> ~/.bash_profile
 
 Load the new shell configurations.
 

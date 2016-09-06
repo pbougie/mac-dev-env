@@ -4,7 +4,7 @@ title: Redis
 
 > **Links:** [Homepage](http://redis.io/) | [Downloads](http://redis.io/download) | [Documentation](http://redis.io/documentation)  
 > **Dependencies:** None  
-> **Version:** <span id="version">3.2.0</span>
+> **Version:** <span id="version">3.2.3</span>
 
 **Redis** is an open source, BSD licensed, advanced key-value store.
 

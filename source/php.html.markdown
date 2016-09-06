@@ -3,8 +3,8 @@ title: PHP
 ---
 
 > **Links:** [Homepage](http://php.net/) | [Documentation](http://php.net/manual/en/) | [Downloads](http://php.net/downloads.php)  
-> **Dependencies:** [Apache](/apache/) | [LibJPEG](/libjpeg/) | [LibPNG](/libpng/) | [LibMCrypt](/libmcrypt/) | [FreeType](/freetype/) | [OpenSSL](/openssl/) | [PostgreSQL](/postgresql/)  
-> **Version:** <span id="version">7.0.8</span>
+> **Dependencies:** [Apache](/apache/) | [LibJPEG](/libjpeg/) | [LibPNG](/libpng/) | [LibMCrypt](/libmcrypt/) | [FreeType](/freetype/) | [OpenSSL](/openssl@102/) | [PostgreSQL](/postgresql/)  
+> **Version:** <span id="version">7.0.10</span>
 
 **PHP** is a general-purpose server-side scripting language that is especially suited to web development.
 
@@ -14,7 +14,7 @@ title: PHP
 Switch to `/usr/local/src` and download the source package.
 
 	cd /usr/local/src
-	curl --location --output php-VERSION.tar.gz http://ca.php.net/get/php-VERSION.tar.gz/from/this/mirror
+	curl --location --output php-VERSION.tar.gz http://ca3.php.net/get/php-VERSION.tar.gz/from/this/mirror
 
 Extract the archive and move into the folder.
 
@@ -25,6 +25,8 @@ Extract the archive and move into the folder.
 ### Compile and Install
 
 Configure, compile and install into `/usr/local/php-VERSION`.
+
+> Latest release of OpenSSL does not work. Version 1.0.2h required.
 
 	./configure \
 	  --prefix=/usr/local/php-VERSION \
@@ -47,7 +49,7 @@ Configure, compile and install into `/usr/local/php-VERSION`.
 	  --with-pdo-pgsql=/usr/local/postgresql \
 	  --with-pgsql=/usr/local/postgresql \
 	  --with-png-dir=/usr/local/libpng \
-	  --with-openssl=/usr/local/openssl \
+	  --with-openssl=/usr/local/openssl-1.0.2h \
 	  --with-xmlrpc \
 	  --with-xsl \
 	  --with-zlib
@@ -56,9 +58,9 @@ Edit PHP's `Makefile`.
 
 	nano Makefile
 
-Find the line that begins with `EXTRA_LIBS =`. Remove all references to `-libcrypto` and `-libssl`. Then add the following directives to the end of the line. Make sure there is a space before the new directives.
+Find the line that begins with `EXTRA_LIBS =`. Remove all references to `-lcrypto` and `-lssl`. Then add the following directives to the end of the line. Make sure there is a space before the new directives.
 
-	/usr/local/openssl/lib/libssl.dylib /usr/local/openssl/lib/libcrypto.dylib
+	/usr/local/openssl-1.0.2h/lib/libssl.dylib /usr/local/openssl-1.0.2h/lib/libcrypto.dylib
 
 Then continue building PHP.
 
@@ -78,8 +80,8 @@ Copy a PHP configuration template to the target folder. You can configure any of
 
 Set the location of the `php.ini` configuration file for PECL and PEAR.
 
-	/usr/local/php/bin/pecl config-set php_ini /usr/local/php-VERSION/etc/php.ini
-	/usr/local/php/bin/pear config-set php_ini /usr/local/php-VERSION/etc/php.ini
+	/usr/local/php-VERSION/bin/pecl config-set php_ini /usr/local/php-VERSION/etc/php.ini
+	/usr/local/php-VERSION/bin/pear config-set php_ini /usr/local/php-VERSION/etc/php.ini
 
 
 ### Apache Configuration
@@ -103,7 +105,7 @@ Copy and paste the following text at the end of the aforementioned file.
 Execute the following lines to update your [Bash](http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) startup script.
 
 	echo 'export PATH=/usr/local/php/bin:$PATH' >> ~/.bash_profile
-	echo 'export MANPATH=/usr/local/php/man:$MANPATH' >> ~/.bash_profile
+	echo 'export MANPATH=/usr/local/php/php/man:$MANPATH' >> ~/.bash_profile
 
 Load the new shell configurations.
 

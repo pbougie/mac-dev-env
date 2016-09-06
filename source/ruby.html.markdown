@@ -3,7 +3,7 @@ title: Ruby
 ---
 
 > **Links:** [Homepage](http://www.ruby-lang.org/) | [Downloads](http://www.ruby-lang.org/en/downloads/)  
-> **Dependencies:** [rbenv](/ruby-rbenv/) | [OpenSSL](/openssl/)  
+> **Dependencies:** [rbenv](/ruby-rbenv/) | [OpenSSL](/openssl@102/)  
 > **Version:** <span id="version">2.3.1</span>
 
 
@@ -24,9 +24,11 @@ Extract the archive and move into the folder.
 
 Configure, compile and install into `/usr/local/rbenv/versions/VERSION`.
 
+> Latest release of OpenSSL does not work. Version 1.0.2h required.
+
 	./configure \
 	  --prefix=/usr/local/rbenv/versions/VERSION \
-	  --with-opt-dir=/usr/local/openssl
+	  --with-opt-dir=/usr/local/openssl-1.0.2h
 	make
 	make install
 
