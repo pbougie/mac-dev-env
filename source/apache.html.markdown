@@ -47,7 +47,7 @@ Edit Apache's configuration file.
 
 	nano /usr/local/apache/conf/httpd.conf
 
-Copy and paste the following text at the end of the aforementioned file. Make sure you replace the `<username>` string (3 times) with your OS X short username. This configuration only allows access from your local computer; all outside access is blocked.
+Copy and paste the following text at the end of the aforementioned file. Make sure you replace the `<username>` string (3 times) with your macOS short username. This configuration only allows access from your local computer; all outside access is blocked.
 
 	ServerName dev.local
 	User <username>
@@ -105,7 +105,7 @@ Create a configuration file for [Launchd](http://en.wikipedia.org/wiki/Launchd).
 
 	sudo nano /Library/LaunchDaemons/org.apache.apache2.plist
 
-Do not name the file *org.apache.httpd.plist* as it collides with a similarly named file for loading the OS X web server.
+Do not name the file *org.apache.httpd.plist* as it collides with a similarly named file for loading the macOS web server.
 
 Copy and paste the following text into the aforementioned file.
 

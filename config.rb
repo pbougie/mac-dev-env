@@ -26,7 +26,7 @@ end
 
 helpers do
   def site_title
-    'Compiling a Web Development Environment on Mac OS X'
+    'Compiling a Web Development Environment on macOS'
   end
 
   def short_site_title
@@ -34,7 +34,7 @@ helpers do
   end
 
   def site_desc
-    'A guide for compiling a web development environment on OS X.'
+    'A guide for compiling a web development environment on macOS.'
   end
 
   def page_title(separator = '-')

@@ -1,9 +1,9 @@
-# [Compiling a Web Development Environment on Mac OS X](http://mac-dev-env.patrickbougie.com/)
+# [Compiling a Web Development Environment on macOS](http://mac-dev-env.patrickbougie.com/)
 
 
 ## Overview
 
-Instructions for compiling/installing your own web development environment in OS X; primary packages include:
+Instructions for compiling/installing your own web development environment in macOS; primary packages include:
 
 - Apache
 - Git

@@ -3,7 +3,7 @@ layout: homepage_layout
 priority: 1.0
 ---
 
-A detailed guide with instructions to compile various software packages to build a web development environment in [OS X 10.11 El Capitan](https://en.wikipedia.org/wiki/OS_X_El_Capitan). Start with the **Getting Started** section, then proceed with installing your desired packages. Some packages need to be installed in a certain order to satisfy dependencies. Each package lists its dependencies at the top of its respective page. Archives for previous versions of OS X can be found at the end of this page.
+A detailed guide with instructions to compile various software packages to build a web development environment in [OS X 10.11 El Capitan](https://en.wikipedia.org/wiki/OS_X_El_Capitan). Start with the **Getting Started** section, then proceed with installing your desired packages. Some packages need to be installed in a certain order to satisfy dependencies. Each package lists its dependencies at the top of its respective page. Archives for previous versions of macOS can be found at the end of this page.
 
 ### Getting Started
 
@@ -79,7 +79,7 @@ A detailed guide with instructions to compile various software packages to build
 
 ---
 
-If you are attempting to compile a web development environment in a previous version of OS X, check out past versions of the guide:
+If you are attempting to compile a web development environment in a previous version of macOS, check out past versions of the guide:
 
 - [OS X 10.10 Yosemite](http://archives.patrickbougie.com/mac-dev-env/10.10-yosemite/)
 - [OS X 10.9 Mavericks](http://archives.patrickbougie.com/mac-dev-env/10.9-mavericks/)
