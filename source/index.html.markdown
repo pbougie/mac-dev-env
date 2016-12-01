@@ -51,13 +51,12 @@ A detailed guide with instructions to compile various software packages to build
 ### Ruby served by Pow
 
 - Ruby
-	- Ruby
-		- [OpenSSL](/openssl@102/) (1.0.2h)
-		- [Ruby](/ruby/)
-	- Gems
-		- [RubyGems](/ruby-gems/)
-		- [Bundler](/ruby-bundler/)
-		- [Ruby on Rails](/ruby-rails/)
+	- [OpenSSL](/openssl@102/) (1.0.2h)
+	- [Ruby](/ruby/)
+- Gems
+	- [RubyGems](/ruby-gems/)
+	- [Bundler](/ruby-bundler/)
+	- [Ruby on Rails](/ruby-rails/)
 
 ### Node.js
 
