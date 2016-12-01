@@ -48,7 +48,7 @@ A detailed guide with instructions to compile various software packages to build
 		- [SQLite for PHP](/php-sqlite/)
 	- [Composer](/composer/)
 
-### Ruby served by Pow
+### Ruby served by Puma-dev
 
 - Ruby
 	- [OpenSSL](/openssl@102/) (1.0.2)
@@ -57,6 +57,7 @@ A detailed guide with instructions to compile various software packages to build
 	- [RubyGems](/rubygems/)
 	- [Bundler](/bundler/)
 	- [Ruby on Rails](/ruby-on-rails/)
+- [Puma-dev](puma-dev/)
 
 ### Node.js
 
