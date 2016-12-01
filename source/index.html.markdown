@@ -51,8 +51,6 @@ A detailed guide with instructions to compile various software packages to build
 ### Ruby served by Pow
 
 - Ruby
-	- [rbenv](/ruby-rbenv/)
-		- [rbenv-gem-rehash](/ruby-rbenv-gem-rehash/)
 	- Ruby
 		- [OpenSSL](/openssl@102/) (1.0.2h)
 		- [Ruby](/ruby/)
@@ -60,7 +58,6 @@ A detailed guide with instructions to compile various software packages to build
 		- [RubyGems](/ruby-gems/)
 		- [Bundler](/ruby-bundler/)
 		- [Ruby on Rails](/ruby-rails/)
-- [Pow](/pow/)
 
 ### Node.js
 
