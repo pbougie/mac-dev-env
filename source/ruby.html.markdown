@@ -3,8 +3,8 @@ title: Ruby
 ---
 
 > **Links:** [Homepage](http://www.ruby-lang.org/) | [Downloads](http://www.ruby-lang.org/en/downloads/)  
-> **Version:** <span id="version">2.3.1</span>
 > **Dependencies:** [OpenSSL](/openssl@102/)  
+> **Version:** <span id="version">2.3.3</span>
 
 
 ### Get the Code
