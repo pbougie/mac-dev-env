@@ -54,9 +54,9 @@ A detailed guide with instructions to compile various software packages to build
 	- [OpenSSL](/openssl@102/) (1.0.2h)
 	- [Ruby](/ruby/)
 - Gems
-	- [RubyGems](/ruby-gems/)
-	- [Bundler](/ruby-bundler/)
-	- [Ruby on Rails](/ruby-rails/)
+	- [RubyGems](/rubygems/)
+	- [Bundler](/bundler/)
+	- [Ruby on Rails](/ruby-on-rails/)
 
 ### Node.js
 
