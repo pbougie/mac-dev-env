@@ -30,7 +30,7 @@ Create a configuration file for [Launchd](http://en.wikipedia.org/wiki/Launchd).
 
 	nano ~/Library/LaunchAgents/org.rubygems.gem.plist
 
-Copy and paste the following text into the aforementioned file. The path to the `gem` executable cannot use the `rbenv` shim binary because the environment in your startup script never gets set up. Pick your primary version of Ruby and use an absolute path to the `gem` executable. Make sure you update the path in the configuration below.
+Copy and paste the following text into the aforementioned file. Make sure you update the path in the configuration below.
 
 	<?xml version="1.0" encoding="UTF-8"?>
 	<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -41,7 +41,7 @@ Copy and paste the following text into the aforementioned file. The path to the 
 
 	    <key>ProgramArguments</key>
 	    <array>
-	      <string>/usr/local/rbenv/versions/*RUBY-VERSION*/bin/gem</string>
+	      <string>/usr/local/ruby-*RUBY-VERSION*/bin/gem</string>
 	      <string>server</string>
 	    </array>
 

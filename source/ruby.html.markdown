@@ -3,8 +3,8 @@ title: Ruby
 ---
 
 > **Links:** [Homepage](http://www.ruby-lang.org/) | [Downloads](http://www.ruby-lang.org/en/downloads/)  
-> **Dependencies:** [rbenv](/ruby-rbenv/) | [OpenSSL](/openssl@102/)  
-> **Version:** <span id="version">2.3.1</span>
+> **Dependencies:** [OpenSSL](/openssl@102/)  
+> **Version:** <span id="version">2.3.3</span>
 
 
 ### Get the Code
@@ -22,31 +22,31 @@ Extract the archive and move into the folder.
 
 ### Compile and Install
 
-Configure, compile and install into `/usr/local/rbenv/versions/VERSION`.
+Configure, compile and install into `/usr/local/ruby-VERSION`.
 
-> Latest release of OpenSSL does not work. Version 1.0.2h required.
+> Latest release of OpenSSL does not work. Version 1.0.2 required.
 
 	./configure \
-	  --prefix=/usr/local/rbenv/versions/VERSION \
-	  --with-opt-dir=/usr/local/openssl-1.0.2h
+	  --prefix=/usr/local/ruby-VERSION \
+	  --with-opt-dir=/usr/local/openssl-1.0.2j
 	make
 	make install
 
+Create a symbolic link that points `/usr/local/ruby` to `/usr/local/ruby-VERSION`.
 
-### Set Version
-
-Set the global ruby version to **VERSION**.
-
-	rbenv global VERSION
-
-To see all installed versions, use `rbenv versions`.
+	ln -s ruby-VERSION /usr/local/ruby
 
 
-### Update rbenv
+### Shell
 
-Rehash the rbenv shims.
+Execute the following lines to update your [Bash](http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) startup script.
 
-	rbenv rehash
+	echo 'export PATH=/usr/local/ruby/bin:$PATH' >> ~/.bash_profile
+	echo 'export MANPATH=/usr/local/ruby/share/man:$MANPATH' >> ~/.bash_profile
+
+Load the new shell configurations.
+
+	source ~/.bash_profile
 
 
 ### Verify the Installation

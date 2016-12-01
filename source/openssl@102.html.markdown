@@ -4,7 +4,7 @@ title: OpenSSL
 
 > **Links:** [Homepage](http://www.openssl.org/) | [Downloads](http://www.openssl.org/source/)  
 > **Dependencies:** None  
-> **Version:** <span id="version">1.0.2h</span>
+> **Version:** <span id="version">1.0.2j</span>
 
 The OpenSSL Project is a collaborative effort to develop a robust, commercial-grade, full-featured, and Open Source toolkit implementing the Secure Sockets Layer (SSL v2/v3) and Transport Layer Security (TLS v1) protocols as well as a full-strength general purpose cryptography library.
 

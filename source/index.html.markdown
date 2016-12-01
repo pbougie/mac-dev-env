@@ -39,7 +39,7 @@ A detailed guide with instructions to compile various software packages to build
 	- [LibPNG](/libpng/)
 	- [LibMCrypt](/libmcrypt/)
 	- [FreeType](/freetype/)
-	- [OpenSSL](/openssl@102/) (1.0.2h)
+	- [OpenSSL](/openssl@102/) (1.0.2)
 	- [PHP](/php/)
 		- [Autoconf](/autoconf/)
 		- [MySQL for PHP](/php-mysql/)
@@ -48,19 +48,16 @@ A detailed guide with instructions to compile various software packages to build
 		- [SQLite for PHP](/php-sqlite/)
 	- [Composer](/composer/)
 
-### Ruby served by Pow
+### Ruby served by Puma-dev
 
 - Ruby
-	- [rbenv](/ruby-rbenv/)
-		- [rbenv-gem-rehash](/ruby-rbenv-gem-rehash/)
-	- Ruby
-		- [OpenSSL](/openssl@102/) (1.0.2h)
-		- [Ruby](/ruby/)
-	- Gems
-		- [RubyGems](/ruby-gems/)
-		- [Bundler](/ruby-bundler/)
-		- [Ruby on Rails](/ruby-rails/)
-- [Pow](/pow/)
+	- [OpenSSL](/openssl@102/) (1.0.2)
+	- [Ruby](/ruby/)
+- Gems
+	- [RubyGems](/rubygems/)
+	- [Bundler](/bundler/)
+	- [Ruby on Rails](/ruby-on-rails/)
+- [Puma-dev](puma-dev/)
 
 ### Node.js
 

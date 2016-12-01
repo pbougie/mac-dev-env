@@ -26,7 +26,7 @@ Extract the archive and move into the folder.
 
 Configure, compile and install into `/usr/local/php-VERSION`.
 
-> Latest release of OpenSSL does not work. Version 1.0.2h required.
+> Latest release of OpenSSL does not work. Version 1.0.2 required.
 
 	./configure \
 	  --prefix=/usr/local/php-VERSION \
@@ -49,7 +49,7 @@ Configure, compile and install into `/usr/local/php-VERSION`.
 	  --with-pdo-pgsql=/usr/local/postgresql \
 	  --with-pgsql=/usr/local/postgresql \
 	  --with-png-dir=/usr/local/libpng \
-	  --with-openssl=/usr/local/openssl-1.0.2h \
+	  --with-openssl=/usr/local/openssl-1.0.2j \
 	  --with-xmlrpc \
 	  --with-xsl \
 	  --with-zlib
@@ -60,7 +60,7 @@ Edit PHP's `Makefile`.
 
 Find the line that begins with `EXTRA_LIBS =`. Remove all references to `-lcrypto` and `-lssl`. Then add the following directives to the end of the line. Make sure there is a space before the new directives.
 
-	/usr/local/openssl-1.0.2h/lib/libssl.dylib /usr/local/openssl-1.0.2h/lib/libcrypto.dylib
+	/usr/local/openssl-1.0.2j/lib/libssl.dylib /usr/local/openssl-1.0.2j/lib/libcrypto.dylib
 
 Then continue building PHP.
 
