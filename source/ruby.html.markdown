@@ -24,11 +24,11 @@ Extract the archive and move into the folder.
 
 Configure, compile and install into `/usr/local/rbenv/versions/VERSION`.
 
-> Latest release of OpenSSL does not work. Version 1.0.2h required.
+> Latest release of OpenSSL does not work. Version 1.0.2 required.
 
 	./configure \
 	  --prefix=/usr/local/rbenv/versions/VERSION \
-	  --with-opt-dir=/usr/local/openssl-1.0.2h
+	  --with-opt-dir=/usr/local/openssl-1.0.2j
 	make
 	make install
 

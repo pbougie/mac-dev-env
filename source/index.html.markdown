@@ -39,7 +39,7 @@ A detailed guide with instructions to compile various software packages to build
 	- [LibPNG](/libpng/)
 	- [LibMCrypt](/libmcrypt/)
 	- [FreeType](/freetype/)
-	- [OpenSSL](/openssl@102/) (1.0.2h)
+	- [OpenSSL](/openssl@102/) (1.0.2)
 	- [PHP](/php/)
 		- [Autoconf](/autoconf/)
 		- [MySQL for PHP](/php-mysql/)
@@ -51,7 +51,7 @@ A detailed guide with instructions to compile various software packages to build
 ### Ruby served by Pow
 
 - Ruby
-	- [OpenSSL](/openssl@102/) (1.0.2h)
+	- [OpenSSL](/openssl@102/) (1.0.2)
 	- [Ruby](/ruby/)
 - Gems
 	- [RubyGems](/rubygems/)
