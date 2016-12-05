@@ -45,8 +45,6 @@ Configure, compile and install into `/usr/local/mac-dev-env/php-VERSION`.
 	  --with-mysqli \
 	  --with-pear \
 	  --with-pdo-mysql \
-	  --with-pdo-pgsql=/usr/local/postgresql \
-	  --with-pgsql=/usr/local/postgresql \
 	  --with-png-dir=/usr/local/libpng \
 	  --with-openssl=/usr/local/openssl-1.0.2j \
 	  --with-xmlrpc \
