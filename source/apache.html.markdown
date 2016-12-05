@@ -30,7 +30,7 @@ Configure, compile and install into `/usr/local/mac-dev-env/apache-VERSION`.
 	make
 	make install
 
-Create a symbolic link that points `/usr/local/apache` to `/usr/local/mac-dev-env/apache-VERSION`.
+Create a symbolic link to `/usr/local/apache`.
 
 	ln -s mac-dev-env/apache-VERSION /usr/local/apache
 

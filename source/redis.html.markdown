@@ -29,7 +29,7 @@ Configure, compile and install into `/usr/local/mac-dev-env/redis-VERSION`.
 	make
 	make PREFIX=/usr/local/mac-dev-env/redis-VERSION install
 
-Create a symbolic link that points `/usr/local/redis` to `/usr/local/mac-dev-env/redis-VERSION`.
+Create a symbolic link to `/usr/local/redis`.
 
 	ln -s mac-dev-env/redis-VERSION /usr/local/redis
 

@@ -30,7 +30,7 @@ Configure, compile and install into `/usr/local/mac-dev-env/openssl-VERSION`.
 	make
 	make install
 
-Create a symbolic link that points `/usr/local/openssl` to `/usr/local/mac-dev-env/openssl-VERSION`.
+Create a symbolic link to `/usr/local/openssl`.
 
 	ln -s mac-dev-env/openssl-VERSION /usr/local/openssl
 

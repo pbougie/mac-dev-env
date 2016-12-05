@@ -30,6 +30,6 @@ Configure, compile and install into `/usr/local/mac-dev-env/libjpeg-VERSION`.
 	make
 	make install
 
-Create a symbolic link that points `/usr/local/libjpeg` to `/usr/local/mac-dev-env/libjpeg-VERSION`.
+Create a symbolic link to `/usr/local/libjpeg`.
 
 	ln -s mac-dev-env/libjpeg-VERSION /usr/local/libjpeg

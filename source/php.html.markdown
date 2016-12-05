@@ -53,7 +53,7 @@ Configure, compile and install into `/usr/local/mac-dev-env/php-VERSION`.
 	make
 	make install
 
-Create a symbolic link that points `/usr/local/php` to `/usr/local/mac-dev-env/php-VERSION`.
+Create a symbolic link to `/usr/local/php`.
 
 	ln -s mac-dev-env/php-VERSION /usr/local/php
 

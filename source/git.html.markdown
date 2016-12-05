@@ -33,7 +33,7 @@ Configure, compile and install into `/usr/local/mac-dev-env/git-VERSION`.
 	make all
 	make install
 
-Create a symbolic link that points `/usr/local/git` to `/usr/local/mac-dev-env/git-VERSION`.
+Create a symbolic link to `/usr/local/git`.
 
 	ln -s mac-dev-env/git-VERSION /usr/local/git
 

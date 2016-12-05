@@ -35,6 +35,6 @@ Configure, compile and install into `/usr/local/mac-dev-env/libevent-VERSION`.
 	make
 	make install
 
-Create a symbolic link that points `/usr/local/libevent` to `/usr/local/mac-dev-env/libevent-VERSION`.
+Create a symbolic link to `/usr/local/libevent`.
 
 	ln -s mac-dev-env/libevent-VERSION /usr/local/libevent

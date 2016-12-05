@@ -32,7 +32,7 @@ Configure, compile and install into `/usr/local/mac-dev-env/ruby-VERSION`.
 	make
 	make install
 
-Create a symbolic link that points `/usr/local/ruby` to `/usr/local/mac-dev-env/ruby-VERSION`.
+Create a symbolic link to `/usr/local/ruby`.
 
 	ln -s mac-dev-env/ruby-VERSION /usr/local/ruby
 

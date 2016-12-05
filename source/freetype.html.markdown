@@ -30,6 +30,6 @@ Configure, compile and install into `/usr/local/mac-dev-env/freetype-VERSION`.
 	make
 	make install
 
-Create a symbolic link that points `/usr/local/freetype` to `/usr/local/mac-dev-env/freetype-VERSION`.
+Create a symbolic link to `/usr/local/freetype`.
 
 	ln -s mac-dev-env/freetype-VERSION /usr/local/freetype

@@ -30,7 +30,7 @@ Configure, compile and install into `/usr/local/mac-dev-env/pcre-VERSION`.
 	make
 	make install
 
-Create a symbolic link that points `/usr/local/pcre` to `/usr/local/mac-dev-env/pcre-VERSION`.
+Create a symbolic link to `/usr/local/pcre`.
 
 	ln -s mac-dev-env/pcre-VERSION /usr/local/pcre
 

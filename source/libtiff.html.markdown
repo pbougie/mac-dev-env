@@ -30,6 +30,6 @@ Configure, compile and install into `/usr/local/mac-dev-env/libtiff-VERSION`.
 	make
 	make install
 
-Create a symbolic link that points `/usr/local/libtiff` to `/usr/local/mac-dev-env/libtiff-VERSION`.
+Create a symbolic link to `/usr/local/libtiff`.
 
 	ln -s mac-dev-env/libtiff-VERSION /usr/local/libtiff
