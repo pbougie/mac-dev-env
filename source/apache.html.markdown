@@ -24,13 +24,7 @@ Extract the archive and move into the folder.
 
 ### Compile and Install
 
-There are missing references when attempting to compile using the **Command Line Tools**. The following commands fix the problem. You can delete `/Applications/Xcode` once you are done.
 Configure, compile and install into `/usr/local/mac-dev-env/apache-VERSION`.
-
-	sudo xcode-select -switch /
-	mkdir -p /Applications/Xcode.app/Contents/Developer/Toolchains/OSX10.11.xctoolchain/usr/bin
-	ln -s /usr/bin/cc /Applications/Xcode.app/Contents/Developer/Toolchains/OSX10.11.xctoolchain/usr/bin/cc
-
 
 	./configure --prefix=/usr/local/mac-dev-env/apache-VERSION --enable-so
 	make
