@@ -14,7 +14,7 @@ title: Libevent
 Switch to `/usr/local/src` and download the source package.
 
 	cd /usr/local/src
-	curl --remote-name --location https://sourceforge.net/projects/levent/files/libevent/libevent-2.0/libevent-VERSION-stable.tar.gz
+	curl --remote-name --location https://github.com/libevent/libevent/releases/download/release-VERSION-stable/libevent-VERSION-stable.tar.gz
 
 Extract the archive and move into the folder.
 
