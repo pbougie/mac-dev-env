@@ -19,13 +19,13 @@ Switch to `/usr/local/src` and download the pre-compiled binaries.
 
 ### Install
 
-Unpack the binaries into `/usr/local`.
+Unpack the binaries into `/usr/local/mac-dev-env`.
 
-	tar -zxvf mongodb-osx-ssl-x86_64-VERSION.tgz -C ..
+	tar -zxvf mongodb-osx-ssl-x86_64-VERSION.tgz -C ../mac-dev-env
 
 Create a symbolic link to `/usr/local/mongodb`.
 
-	ln -s mongodb-osx-x86_64-VERSION /usr/local/mongodb
+	ln -s mac-dev-env/mongodb-osx-x86_64-VERSION /usr/local/mongodb
 
 
 ### Databases

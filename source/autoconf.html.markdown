@@ -24,15 +24,15 @@ Extract the archive and move into the folder.
 
 ### Compile and Install
 
-Configure, compile and install into `/usr/local/autoconf-VERSION`.
+Configure, compile and install into `/usr/local/mac-dev-env/autoconf-VERSION`.
 
-	./configure --prefix=/usr/local/autoconf-VERSION
+	./configure --prefix=/usr/local/mac-dev-env/autoconf-VERSION
 	make
 	make install
 
-Create a symbolic link that points `/usr/local/autoconf` to `/usr/local/autoconf-VERSION`.
+Create a symbolic link that points `/usr/local/autoconf` to `/usr/local/mac-dev-env/autoconf-VERSION`.
 
-	ln -s autoconf-VERSION /usr/local/autoconf
+	ln -s mac-dev-env/autoconf-VERSION /usr/local/autoconf
 
 
 ### Shell

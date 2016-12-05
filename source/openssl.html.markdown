@@ -24,15 +24,15 @@ Extract the archive and move into the folder.
 
 ### Compile and Install
 
-Configure, compile and install into `/usr/local/openssl-VERSION`.
+Configure, compile and install into `/usr/local/mac-dev-env/openssl-VERSION`.
 
-	./config --prefix=/usr/local/openssl-VERSION
+	./config --prefix=/usr/local/mac-dev-env/openssl-VERSION
 	make
 	make install
 
-Create a symbolic link that points `/usr/local/openssl` to `/usr/local/openssl-VERSION`.
+Create a symbolic link that points `/usr/local/openssl` to `/usr/local/mac-dev-env/openssl-VERSION`.
 
-	ln -s openssl-VERSION /usr/local/openssl
+	ln -s mac-dev-env/openssl-VERSION /usr/local/openssl
 
 
 ### Shell

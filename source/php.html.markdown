@@ -24,13 +24,13 @@ Extract the archive and move into the folder.
 
 ### Compile and Install
 
-Configure, compile and install into `/usr/local/php-VERSION`.
+Configure, compile and install into `/usr/local/mac-dev-env/php-VERSION`.
 
 > Latest release of OpenSSL does not work. Version 1.0.2 required.
 
 	./configure \
-	  --prefix=/usr/local/php-VERSION \
-	  --with-config-file-path=/usr/local/php-VERSION/etc \
+	  --prefix=/usr/local/mac-dev-env/php-VERSION \
+	  --with-config-file-path=/usr/local/mac-dev-env/php-VERSION/etc \
 	  --enable-bcmath \
 	  --enable-mbstring \
 	  --enable-sockets \
@@ -66,21 +66,21 @@ Then continue building PHP.
 	make
 	make install
 
-Create a symbolic link that points `/usr/local/php` to `/usr/local/php-VERSION`.
+Create a symbolic link that points `/usr/local/php` to `/usr/local/mac-dev-env/php-VERSION`.
 
-	ln -s php-VERSION /usr/local/php
+	ln -s mac-dev-env/php-VERSION /usr/local/php
 
 
 ### PHP Configuration
 
 Copy a PHP configuration template to the target folder. You can configure any of the [php.ini directives](http://www.php.net/manual/en/ini.list.php) by editing this file.
 
-	cp php.ini-development /usr/local/php-VERSION/etc/php.ini
+	cp php.ini-development /usr/local/mac-dev-env/php-VERSION/etc/php.ini
 
 Set the location of the `php.ini` configuration file for PECL and PEAR.
 
-	/usr/local/php-VERSION/bin/pecl config-set php_ini /usr/local/php-VERSION/etc/php.ini
-	/usr/local/php-VERSION/bin/pear config-set php_ini /usr/local/php-VERSION/etc/php.ini
+	/usr/local/mac-dev-env/php-VERSION/bin/pecl config-set php_ini /usr/local/mac-dev-env/php-VERSION/etc/php.ini
+	/usr/local/mac-dev-env/php-VERSION/bin/pear config-set php_ini /usr/local/mac-dev-env/php-VERSION/etc/php.ini
 
 
 ### Apache Configuration

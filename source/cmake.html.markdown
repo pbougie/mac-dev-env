@@ -24,15 +24,15 @@ Extract the archive and move into the folder.
 
 ### Compile and Install
 
-Configure, compile and install into `/usr/local/cmake-VERSION`.
+Configure, compile and install into `/usr/local/mac-dev-env/cmake-VERSION`.
 
-	./bootstrap --prefix=/usr/local/cmake-VERSION
+	./bootstrap --prefix=/usr/local/mac-dev-env/cmake-VERSION
 	make
 	make install
 
-Create a symbolic link that points `/usr/local/cmake` to `/usr/local/cmake-VERSION`.
+Create a symbolic link that points `/usr/local/cmake` to `/usr/local/mac-dev-env/cmake-VERSION`.
 
-	ln -s cmake-VERSION /usr/local/cmake
+	ln -s mac-dev-env/cmake-VERSION /usr/local/cmake
 
 
 ### Shell

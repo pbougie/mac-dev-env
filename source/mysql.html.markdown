@@ -24,10 +24,10 @@ Extract the archive and move into the folder.
 
 ### Compile and Install
 
-Configure, compile and install into `/usr/local/mysql-VERSION`.
+Configure, compile and install into `/usr/local/mac-dev-env/mysql-VERSION`.
 
 	cmake \
-	  -DCMAKE_INSTALL_PREFIX=/usr/local/mysql-VERSION \
+	  -DCMAKE_INSTALL_PREFIX=/usr/local/mac-dev-env/mysql-VERSION \
 	  -DCMAKE_CXX_FLAGS="-stdlib=libstdc++" \
 	  -DDEFAULT_CHARSET=utf8 \
 	  -DDEFAULT_COLLATION=utf8_general_ci \
@@ -37,9 +37,9 @@ Configure, compile and install into `/usr/local/mysql-VERSION`.
 	make
 	make install
 
-Create a symbolic link that points `/usr/local/mysql` to `/usr/local/mysql-VERSION`.
+Create a symbolic link that points `/usr/local/mysql` to `/usr/local/mac-dev-env/mysql-VERSION`.
 
-	ln -s mysql-VERSION /usr/local/mysql
+	ln -s mac-dev-env/mysql-VERSION /usr/local/mysql
 
 
 ### Shell

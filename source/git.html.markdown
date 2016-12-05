@@ -24,18 +24,18 @@ Extract the archive and move into the folder.
 
 ### Compile and Install
 
-Configure, compile and install into `/usr/local/git-VERSION`.
+Configure, compile and install into `/usr/local/mac-dev-env/git-VERSION`.
 
 	make configure
 	./configure \
-	  --prefix=/usr/local/git-VERSION \
+	  --prefix=/usr/local/mac-dev-env/git-VERSION \
 	  --with-openssl=/usr/local/openssl
 	make all
 	make install
 
-Create a symbolic link that points `/usr/local/git` to `/usr/local/git-VERSION`.
+Create a symbolic link that points `/usr/local/git` to `/usr/local/mac-dev-env/git-VERSION`.
 
-	ln -s git-VERSION /usr/local/git
+	ln -s mac-dev-env/git-VERSION /usr/local/git
 
 
 ### Documentation

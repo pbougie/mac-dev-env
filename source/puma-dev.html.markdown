@@ -19,14 +19,14 @@ Switch to `/usr/local/src` and download the pre-compiled binary.
 
 ### Install
 
-Unpack the binary into `/usr/local/puma-dev-VERSION`.
+Unpack the binary into `/usr/local/mac-dev-env/puma-dev-VERSION`.
 
-	mkdir -p ../puma-dev-VERSION
-	tar -zxvf puma-dev-vVERSION-darwin-amd64.zip -C ../puma-dev-VERSION
+	mkdir -p ../mac-dev-env/puma-dev-VERSION
+	tar -zxvf puma-dev-vVERSION-darwin-amd64.zip -C ../mac-dev-env/puma-dev-VERSION
 
 Create a symbolic link to `/usr/local/puma-dev`.
 
-	ln -s puma-dev-VERSION /usr/local/puma-dev
+	ln -s mac-dev-env/puma-dev-VERSION /usr/local/puma-dev
 
 
 ### Shell

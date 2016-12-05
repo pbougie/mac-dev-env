@@ -24,17 +24,17 @@ Extract the archive and move into the folder.
 
 ### Compile and Install
 
-Configure, compile and install into `/usr/local/memcached-VERSION`.
+Configure, compile and install into `/usr/local/mac-dev-env/memcached-VERSION`.
 
 	./configure \
-	  --prefix=/usr/local/memcached-VERSION \
+	  --prefix=/usr/local/mac-dev-env/memcached-VERSION \
 	  --with-libevent=/usr/local/libevent
 	make
 	make install
 
-Create a symbolic link that points `/usr/local/memcached` to `/usr/local/memcached-VERSION`.
+Create a symbolic link that points `/usr/local/memcached` to `/usr/local/mac-dev-env/memcached-VERSION`.
 
-	ln -s memcached-VERSION /usr/local/memcached
+	ln -s mac-dev-env/memcached-VERSION /usr/local/memcached
 
 
 ### Shell

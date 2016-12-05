@@ -24,12 +24,12 @@ Extract the archive and move into the folder.
 
 ### Compile and Install
 
-Configure, compile and install into `/usr/local/libtiff-VERSION`.
+Configure, compile and install into `/usr/local/mac-dev-env/libtiff-VERSION`.
 
-	./configure --prefix=/usr/local/libtiff-VERSION
+	./configure --prefix=/usr/local/mac-dev-env/libtiff-VERSION
 	make
 	make install
 
-Create a symbolic link that points `/usr/local/libtiff` to `/usr/local/libtiff-VERSION`.
+Create a symbolic link that points `/usr/local/libtiff` to `/usr/local/mac-dev-env/libtiff-VERSION`.
 
-	ln -s libtiff-VERSION /usr/local/libtiff
+	ln -s mac-dev-env/libtiff-VERSION /usr/local/libtiff

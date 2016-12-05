@@ -24,12 +24,12 @@ Extract the archive and move into the folder.
 
 ### Compile and Install
 
-Configure, compile and install into `/usr/local/freetype-VERSION`.
+Configure, compile and install into `/usr/local/mac-dev-env/freetype-VERSION`.
 
-	./configure --prefix=/usr/local/freetype-VERSION
+	./configure --prefix=/usr/local/mac-dev-env/freetype-VERSION
 	make
 	make install
 
-Create a symbolic link that points `/usr/local/freetype` to `/usr/local/freetype-VERSION`.
+Create a symbolic link that points `/usr/local/freetype` to `/usr/local/mac-dev-env/freetype-VERSION`.
 
-	ln -s freetype-VERSION /usr/local/freetype
+	ln -s mac-dev-env/freetype-VERSION /usr/local/freetype

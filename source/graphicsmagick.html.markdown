@@ -24,18 +24,18 @@ Extract the archive and move into the folder.
 
 ### Compile and Install
 
-Configure, compile and install into `/usr/local/graphicsmagick-VERSION`.
+Configure, compile and install into `/usr/local/mac-dev-env/graphicsmagick-VERSION`.
 
 	./configure CC=clang \
 	  LDFLAGS="-L/usr/local/libjpeg/lib -L/usr/local/libpng/lib -L/usr/local/libtiff/lib" \
 	  CPPFLAGS="-I/usr/local/libjpeg/include -I/usr/local/libpng/include -I/usr/local/libtiff/include" \
-	  --prefix=/usr/local/graphicsmagick-VERSION
+	  --prefix=/usr/local/mac-dev-env/graphicsmagick-VERSION
 	make
 	make install
 
-Create a symbolic link that points `/usr/local/graphicsmagick` to `/usr/local/graphicsmagick-VERSION`.
+Create a symbolic link that points `/usr/local/graphicsmagick` to `/usr/local/mac-dev-env/graphicsmagick-VERSION`.
 
-	ln -s graphicsmagick-VERSION /usr/local/graphicsmagick
+	ln -s mac-dev-env/graphicsmagick-VERSION /usr/local/graphicsmagick
 
 
 ### Shell

@@ -19,13 +19,13 @@ Switch to `/usr/local/src` and download the pre-compiled binaries.
 
 ### Install
 
-Unpack the binaries into `/usr/local`.
+Unpack the binaries into `/usr/local/mac-dev-env`.
 
-	tar -zxvf node-vVERSION-darwin-x64.tar.gz -C ..
+	tar -zxvf node-vVERSION-darwin-x64.tar.gz -C ../mac-dev-env
 
 Create a symbolic link to `/usr/local/node`.
 
-	ln -s node-vVERSION-darwin-x64 /usr/local/node
+	ln -s mac-dev-env/node-vVERSION-darwin-x64 /usr/local/node
 
 
 ### Shell

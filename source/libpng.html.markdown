@@ -24,12 +24,12 @@ Extract the archive and move into the folder.
 
 ### Compile and Install
 
-Configure, compile and install into `/usr/local/libpng-VERSION`.
+Configure, compile and install into `/usr/local/mac-dev-env/libpng-VERSION`.
 
-	./configure --prefix=/usr/local/libpng-VERSION
+	./configure --prefix=/usr/local/mac-dev-env/libpng-VERSION
 	make
 	make install
 
-Create a symbolic link that points `/usr/local/libpng` to `/usr/local/libpng-VERSION`.
+Create a symbolic link that points `/usr/local/libpng` to `/usr/local/mac-dev-env/libpng-VERSION`.
 
-	ln -s libpng-VERSION /usr/local/libpng
+	ln -s mac-dev-env/libpng-VERSION /usr/local/libpng
