@@ -104,6 +104,13 @@ Restart Apache.
 	sudo apachectl restart
 
 
+### Purge
+
+If you have any apps that have stopped responding, you can have `puma-dev` stop all the apps.
+
+	pkill -USR1 puma-dev
+
+
 ### Uninstall
 
 To uninstall **Puma-dev**.
