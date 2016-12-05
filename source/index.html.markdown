@@ -35,7 +35,6 @@ A detailed guide with instructions to compile various software packages to build
 - PHP
 	- [LibJPEG](/libjpeg/)
 	- [LibPNG](/libpng/)
-	- [LibMCrypt](/libmcrypt/)
 	- [FreeType](/freetype/)
 	- [OpenSSL](/openssl@102/) (1.0.2)
 	- [PHP](/php/)
