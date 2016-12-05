@@ -3,8 +3,8 @@ title: PHP
 ---
 
 > **Links:** [Homepage](http://php.net/) | [Documentation](http://php.net/manual/en/) | [Downloads](http://php.net/downloads.php)  
-> **Version:** <span id="version">7.0.10</span>
 > **Dependencies:** [Apache](/apache/) | [LibJPEG](/libjpeg/) | [LibPNG](/libpng/) | [FreeType](/freetype/) | [OpenSSL](/openssl@102/)  
+> **Version:** <span id="version">7.1.0</span>
 
 **PHP** is a general-purpose server-side scripting language that is especially suited to web development.
 
@@ -26,7 +26,7 @@ Extract the archive and move into the folder.
 
 Configure, compile and install into `/usr/local/mac-dev-env/php-VERSION`.
 
-> Latest release of OpenSSL does not work. Version 1.0.2 required.
+> OpenSSL 1.1+ does not work with PHP versions prior to 7.1.0.
 
 	./configure \
 	  --prefix=/usr/local/mac-dev-env/php-VERSION \
@@ -46,21 +46,10 @@ Configure, compile and install into `/usr/local/mac-dev-env/php-VERSION`.
 	  --with-pear \
 	  --with-pdo-mysql \
 	  --with-png-dir=/usr/local/libpng \
-	  --with-openssl=/usr/local/openssl-1.0.2j \
+	  --with-openssl=/usr/local/openssl \
 	  --with-xmlrpc \
 	  --with-xsl \
 	  --with-zlib
-
-Edit PHP's `Makefile`.
-
-	nano Makefile
-
-Find the line that begins with `EXTRA_LIBS =`. Remove all references to `-lcrypto` and `-lssl`. Then add the following directives to the end of the line. Make sure there is a space before the new directives.
-
-	/usr/local/openssl-1.0.2j/lib/libssl.dylib /usr/local/openssl-1.0.2j/lib/libcrypto.dylib
-
-Then continue building PHP.
-
 	make
 	make install
 
