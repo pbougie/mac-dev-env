@@ -3,7 +3,7 @@ title: Libevent
 ---
 
 > **Links:** [Homepage](http://libevent.org/)  
-> **Dependencies:** None  
+> **Dependencies:** [OpenSSL](/openssl@102/)  
 > **Version:** <span id="version">2.0.22</span>
 
 **Libevent** is an event notification library.

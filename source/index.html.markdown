@@ -24,6 +24,7 @@ A detailed guide with instructions to compile various software packages to build
 	- [MySQL](/mysql/)
 - [MongoDB](/mongodb/) w/ SSL
 - Memcached
+	- [OpenSSL](/openssl@102/) (1.0.2)
 	- [Libevent](/libevent/)
 	- [Memcached](/memcached/)
 - [Redis](/redis/)
@@ -38,9 +39,8 @@ A detailed guide with instructions to compile various software packages to build
 	- [LibJPEG](/libjpeg/)
 	- [LibPNG](/libpng/)
 	- [FreeType](/freetype/)
-	- [OpenSSL](/openssl@102/) (1.0.2)
+	- [OpenSSL](/openssl/)
 	- [PHP](/php/)
-		- [Autoconf](/autoconf/)
 		- [MySQL for PHP](/php-mysql/)
 		- [MongoDB for PHP](/php-mongodb/)
 	- [Composer](/composer/)
