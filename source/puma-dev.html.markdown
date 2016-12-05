@@ -104,16 +104,18 @@ Restart Apache.
 	sudo apachectl restart
 
 
-## Uninstall
+### Uninstall
 
 To uninstall **Puma-dev**.
 
 	puma-dev -uninstall
 
-Then remove the following symbolic links and folders.
+Then remove the following from your filesystem.
 
 	rm /usr/local/puma-dev
-	rm -r /usr/local/puma-dev-VERSION
+	rm ~/Library/Logs/puma-dev.log
+	rm -r /usr/local/mac-dev-env/puma-dev-VERSION
 	rm -r ~/.puma-dev
+	rm -r ~/Library/Application Support/io.puma.dev
 
-Don't forget to remove the **Apache** and **Bash** configurations if applicable.
+Don't forget to remove any **Apache** and **Bash** configurations if applicable.
