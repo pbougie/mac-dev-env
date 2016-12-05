@@ -26,8 +26,6 @@ Extract the archive and move into the folder.
 
 Configure, compile and install into `/usr/local/mac-dev-env/php-VERSION`.
 
-> OpenSSL 1.1+ does not work with PHP versions prior to 7.1.0.
-
 	./configure \
 	  --prefix=/usr/local/mac-dev-env/php-VERSION \
 	  --with-config-file-path=/usr/local/mac-dev-env/php-VERSION/etc \
