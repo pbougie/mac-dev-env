@@ -52,7 +52,6 @@ A detailed guide with instructions to compile various software packages to build
 - Gems
 	- [RubyGems](/rubygems/)
 	- [Bundler](/bundler/)
-	- [Ruby on Rails](/ruby-on-rails/)
 - [Puma-dev](puma-dev/)
 
 ### Node.js
