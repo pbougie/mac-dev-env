@@ -3,7 +3,7 @@ title: Apache
 ---
 
 > **Links:** [Homepage](http://httpd.apache.org/) | [Downloads](http://httpd.apache.org/download.cgi) | [Documentation](http://httpd.apache.org/docs/2.4/)  
-> **Dependencies:** [PCRE](/pcre/)  
+> **Dependencies:** [APR](/apr/) | [PCRE](/pcre/)  
 > **Version:** <span id="version">2.4.23</span>
 
 The **Apache HTTP Server** is an open-source web server that was released in 1995.

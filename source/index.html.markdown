@@ -30,6 +30,7 @@ A detailed guide with instructions to compile various software packages to build
 
 ### PHP served by Apache
 - Apache
+	- [APR](/apr/)
 	- [PCRE](/pcre/)
 	- [Apache](/apache/)
 - PHP
