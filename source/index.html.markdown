@@ -23,7 +23,6 @@ A detailed guide with instructions to compile various software packages to build
 	- [CMake](/cmake/)
 	- [MySQL](/mysql/)
 - [MongoDB](/mongodb/) w/ SSL
-- [SQLite](/sqlite/)
 - Memcached
 	- [Libevent](/libevent/)
 	- [Memcached](/memcached/)
@@ -43,7 +42,6 @@ A detailed guide with instructions to compile various software packages to build
 		- [Autoconf](/autoconf/)
 		- [MySQL for PHP](/php-mysql/)
 		- [MongoDB for PHP](/php-mongodb/)
-		- [SQLite for PHP](/php-sqlite/)
 	- [Composer](/composer/)
 
 ### Ruby served by Puma-dev
