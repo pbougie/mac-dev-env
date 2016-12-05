@@ -22,7 +22,6 @@ A detailed guide with instructions to compile various software packages to build
 - MySQL
 	- [CMake](/cmake/)
 	- [MySQL](/mysql/)
-- [PostgreSQL](/postgresql/)
 - [MongoDB](/mongodb/) w/ SSL
 - [SQLite](/sqlite/)
 - Memcached
@@ -43,7 +42,6 @@ A detailed guide with instructions to compile various software packages to build
 	- [PHP](/php/)
 		- [Autoconf](/autoconf/)
 		- [MySQL for PHP](/php-mysql/)
-		- [PostgreSQL for PHP](/php-postgresql/)
 		- [MongoDB for PHP](/php-mongodb/)
 		- [SQLite for PHP](/php-sqlite/)
 	- [Composer](/composer/)
