@@ -3,8 +3,8 @@ title: PHP
 ---
 
 > **Links:** [Homepage](http://php.net/) | [Documentation](http://php.net/manual/en/) | [Downloads](http://php.net/downloads.php)  
-> **Dependencies:** [Apache](/apache/) | [LibJPEG](/libjpeg/) | [LibPNG](/libpng/) | [LibMCrypt](/libmcrypt/) | [FreeType](/freetype/) | [OpenSSL](/openssl@102/) | [PostgreSQL](/postgresql/)  
-> **Version:** <span id="version">7.0.10</span>
+> **Dependencies:** [Apache](/apache/) | [LibJPEG](/libjpeg/) | [LibPNG](/libpng/) | [FreeType](/freetype/) | [OpenSSL](/openssl@102/)  
+> **Version:** <span id="version">7.1.0</span>
 
 **PHP** is a general-purpose server-side scripting language that is especially suited to web development.
 
@@ -24,13 +24,13 @@ Extract the archive and move into the folder.
 
 ### Compile and Install
 
-Configure, compile and install into `/usr/local/php-VERSION`.
+Configure, compile and install into `/usr/local/mac-dev-env/php-VERSION`.
 
-> Latest release of OpenSSL does not work. Version 1.0.2 required.
+> OpenSSL 1.1+ does not work with PHP versions prior to 7.1.0.
 
 	./configure \
-	  --prefix=/usr/local/php-VERSION \
-	  --with-config-file-path=/usr/local/php-VERSION/etc \
+	  --prefix=/usr/local/mac-dev-env/php-VERSION \
+	  --with-config-file-path=/usr/local/mac-dev-env/php-VERSION/etc \
 	  --enable-bcmath \
 	  --enable-mbstring \
 	  --enable-sockets \
@@ -42,46 +42,32 @@ Configure, compile and install into `/usr/local/php-VERSION`.
 	  --with-gd \
 	  --with-imap-ssl \
 	  --with-jpeg-dir=/usr/local/libjpeg \
-	  --with-mcrypt=/usr/local/libmcrypt \
 	  --with-mysqli \
 	  --with-pear \
 	  --with-pdo-mysql \
-	  --with-pdo-pgsql=/usr/local/postgresql \
-	  --with-pgsql=/usr/local/postgresql \
 	  --with-png-dir=/usr/local/libpng \
-	  --with-openssl=/usr/local/openssl-1.0.2j \
+	  --with-openssl=/usr/local/openssl \
 	  --with-xmlrpc \
 	  --with-xsl \
 	  --with-zlib
-
-Edit PHP's `Makefile`.
-
-	nano Makefile
-
-Find the line that begins with `EXTRA_LIBS =`. Remove all references to `-lcrypto` and `-lssl`. Then add the following directives to the end of the line. Make sure there is a space before the new directives.
-
-	/usr/local/openssl-1.0.2j/lib/libssl.dylib /usr/local/openssl-1.0.2j/lib/libcrypto.dylib
-
-Then continue building PHP.
-
 	make
 	make install
 
-Create a symbolic link that points `/usr/local/php` to `/usr/local/php-VERSION`.
+Create a symbolic link that points `/usr/local/php` to `/usr/local/mac-dev-env/php-VERSION`.
 
-	ln -s php-VERSION /usr/local/php
+	ln -s mac-dev-env/php-VERSION /usr/local/php
 
 
 ### PHP Configuration
 
 Copy a PHP configuration template to the target folder. You can configure any of the [php.ini directives](http://www.php.net/manual/en/ini.list.php) by editing this file.
 
-	cp php.ini-development /usr/local/php-VERSION/etc/php.ini
+	cp php.ini-development /usr/local/mac-dev-env/php-VERSION/etc/php.ini
 
 Set the location of the `php.ini` configuration file for PECL and PEAR.
 
-	/usr/local/php-VERSION/bin/pecl config-set php_ini /usr/local/php-VERSION/etc/php.ini
-	/usr/local/php-VERSION/bin/pear config-set php_ini /usr/local/php-VERSION/etc/php.ini
+	/usr/local/mac-dev-env/php-VERSION/bin/pecl config-set php_ini /usr/local/mac-dev-env/php-VERSION/etc/php.ini
+	/usr/local/mac-dev-env/php-VERSION/bin/pear config-set php_ini /usr/local/mac-dev-env/php-VERSION/etc/php.ini
 
 
 ### Apache Configuration

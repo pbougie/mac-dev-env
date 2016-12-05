@@ -4,7 +4,7 @@ title: Redis
 
 > **Links:** [Homepage](http://redis.io/) | [Downloads](http://redis.io/download) | [Documentation](http://redis.io/documentation)  
 > **Dependencies:** None  
-> **Version:** <span id="version">3.2.3</span>
+> **Version:** <span id="version">3.2.5</span>
 
 **Redis** is an open source, BSD licensed, advanced key-value store.
 
@@ -24,14 +24,14 @@ Extract the archive and move into the folder.
 
 ### Compile and Install
 
-Configure, compile and install into `/usr/local/redis-VERSION`.
+Configure, compile and install into `/usr/local/mac-dev-env/redis-VERSION`.
 
 	make
-	make PREFIX=/usr/local/redis-VERSION install
+	make PREFIX=/usr/local/mac-dev-env/redis-VERSION install
 
-Create a symbolic link that points `/usr/local/redis` to `/usr/local/redis-VERSION`.
+Create a symbolic link that points `/usr/local/redis` to `/usr/local/mac-dev-env/redis-VERSION`.
 
-	ln -s redis-VERSION /usr/local/redis
+	ln -s mac-dev-env/redis-VERSION /usr/local/redis
 
 
 ### Shell

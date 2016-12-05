@@ -4,7 +4,7 @@ title: Memcached
 
 > **Links:** [Homepage](http://memcached.org/) | [Downloads](http://memcached.org/downloads) | [Documentation](http://code.google.com/p/memcached/wiki/NewStart)  
 > **Dependencies:** [Libevent](/libevent/)  
-> **Version:** <span id="version">1.4.31</span>
+> **Version:** <span id="version">1.4.32</span>
 
 **Memcached** is an in-memory key-value store for small chunks of arbitrary data.
 
@@ -24,17 +24,17 @@ Extract the archive and move into the folder.
 
 ### Compile and Install
 
-Configure, compile and install into `/usr/local/memcached-VERSION`.
+Configure, compile and install into `/usr/local/mac-dev-env/memcached-VERSION`.
 
 	./configure \
-	  --prefix=/usr/local/memcached-VERSION \
+	  --prefix=/usr/local/mac-dev-env/memcached-VERSION \
 	  --with-libevent=/usr/local/libevent
 	make
 	make install
 
-Create a symbolic link that points `/usr/local/memcached` to `/usr/local/memcached-VERSION`.
+Create a symbolic link that points `/usr/local/memcached` to `/usr/local/mac-dev-env/memcached-VERSION`.
 
-	ln -s memcached-VERSION /usr/local/memcached
+	ln -s mac-dev-env/memcached-VERSION /usr/local/memcached
 
 
 ### Shell

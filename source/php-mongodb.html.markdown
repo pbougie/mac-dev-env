@@ -3,7 +3,7 @@ title: MongoDB for PHP
 ---
 
 > **Links:** [Homepage](https://docs.mongodb.org/ecosystem/drivers/php/)  
-> **Dependencies:** [Autoconf](/autoconf/) | [MongoDB](/mongodb/) | [PHP](/php/)
+> **Dependencies:** [MongoDB](/mongodb/) | [PHP](/php/)
 
 
 ### Install

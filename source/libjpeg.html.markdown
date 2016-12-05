@@ -24,12 +24,12 @@ Extract the archive and move into the folder.
 
 ### Compile and Install
 
-Configure, compile and install into `/usr/local/libjpeg-VERSION`.
+Configure, compile and install into `/usr/local/mac-dev-env/libjpeg-VERSION`.
 
-	./configure --prefix=/usr/local/libjpeg-VERSION
+	./configure --prefix=/usr/local/mac-dev-env/libjpeg-VERSION
 	make
 	make install
 
-Create a symbolic link that points `/usr/local/libjpeg` to `/usr/local/libjpeg-VERSION`.
+Create a symbolic link that points `/usr/local/libjpeg` to `/usr/local/mac-dev-env/libjpeg-VERSION`.
 
-	ln -s libjpeg-VERSION /usr/local/libjpeg
+	ln -s mac-dev-env/libjpeg-VERSION /usr/local/libjpeg

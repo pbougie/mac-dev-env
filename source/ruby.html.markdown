@@ -22,19 +22,19 @@ Extract the archive and move into the folder.
 
 ### Compile and Install
 
-Configure, compile and install into `/usr/local/ruby-VERSION`.
+Configure, compile and install into `/usr/local/mac-dev-env/ruby-VERSION`.
 
 > Latest release of OpenSSL does not work. Version 1.0.2 required.
 
 	./configure \
-	  --prefix=/usr/local/ruby-VERSION \
-	  --with-opt-dir=/usr/local/openssl-1.0.2j
+	  --prefix=/usr/local/mac-dev-env/ruby-VERSION \
+	  --with-opt-dir=/usr/local/mac-dev-env/openssl-1.0.2j
 	make
 	make install
 
-Create a symbolic link that points `/usr/local/ruby` to `/usr/local/ruby-VERSION`.
+Create a symbolic link that points `/usr/local/ruby` to `/usr/local/mac-dev-env/ruby-VERSION`.
 
-	ln -s ruby-VERSION /usr/local/ruby
+	ln -s mac-dev-env/ruby-VERSION /usr/local/ruby
 
 
 ### Shell

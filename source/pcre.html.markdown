@@ -24,15 +24,15 @@ Extract the archive and move into the folder.
 
 ### Compile and Install
 
-Configure, compile and install into `/usr/local/pcre-VERSION`.
+Configure, compile and install into `/usr/local/mac-dev-env/pcre-VERSION`.
 
-	./configure --prefix=/usr/local/pcre-VERSION
+	./configure --prefix=/usr/local/mac-dev-env/pcre-VERSION
 	make
 	make install
 
-Create a symbolic link that points `/usr/local/pcre` to `/usr/local/pcre-VERSION`.
+Create a symbolic link that points `/usr/local/pcre` to `/usr/local/mac-dev-env/pcre-VERSION`.
 
-	ln -s pcre-VERSION /usr/local/pcre
+	ln -s mac-dev-env/pcre-VERSION /usr/local/pcre
 
 
 ### Shell

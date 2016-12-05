@@ -3,7 +3,7 @@ title: Apache
 ---
 
 > **Links:** [Homepage](http://httpd.apache.org/) | [Downloads](http://httpd.apache.org/download.cgi) | [Documentation](http://httpd.apache.org/docs/2.4/)  
-> **Dependencies:** [PCRE](/pcre/)  
+> **Dependencies:** [APR](/apr/) | [APR-util](/apr-util/) | [PCRE](/pcre/)  
 > **Version:** <span id="version">2.4.23</span>
 
 The **Apache HTTP Server** is an open-source web server that was released in 1995.
@@ -24,21 +24,15 @@ Extract the archive and move into the folder.
 
 ### Compile and Install
 
-There are missing references when attempting to compile using the **Command Line Tools**. The following commands fix the problem. You can delete `/Applications/Xcode` once you are done.
+Configure, compile and install into `/usr/local/mac-dev-env/apache-VERSION`.
 
-	sudo xcode-select -switch /
-	mkdir -p /Applications/Xcode.app/Contents/Developer/Toolchains/OSX10.11.xctoolchain/usr/bin
-	ln -s /usr/bin/cc /Applications/Xcode.app/Contents/Developer/Toolchains/OSX10.11.xctoolchain/usr/bin/cc
-
-Configure, compile and install into `/usr/local/apache-VERSION`.
-
-	./configure --prefix=/usr/local/apache-VERSION
+	./configure --prefix=/usr/local/mac-dev-env/apache-VERSION --enable-so
 	make
 	make install
 
-Create a symbolic link that points `/usr/local/apache` to `/usr/local/apache-VERSION`.
+Create a symbolic link that points `/usr/local/apache` to `/usr/local/mac-dev-env/apache-VERSION`.
 
-	ln -s apache-VERSION /usr/local/apache
+	ln -s mac-dev-env/apache-VERSION /usr/local/apache
 
 
 ### Configuration File
@@ -47,7 +41,7 @@ Edit Apache's configuration file.
 
 	nano /usr/local/apache/conf/httpd.conf
 
-Copy and paste the following text at the end of the aforementioned file. Make sure you replace the `<username>` string (3 times) with your OS X short username. This configuration only allows access from your local computer; all outside access is blocked.
+Copy and paste the following text at the end of the aforementioned file. Make sure you replace the `<username>` string (3 times) with your macOS short username. This configuration only allows access from your local computer; all outside access is blocked.
 
 	ServerName dev.local
 	User <username>
@@ -105,7 +99,7 @@ Create a configuration file for [Launchd](http://en.wikipedia.org/wiki/Launchd).
 
 	sudo nano /Library/LaunchDaemons/org.apache.apache2.plist
 
-Do not name the file *org.apache.httpd.plist* as it collides with a similarly named file for loading the OS X web server.
+Do not name the file *org.apache.httpd.plist* as it collides with a similarly named file for loading the macOS web server.
 
 Copy and paste the following text into the aforementioned file.
 

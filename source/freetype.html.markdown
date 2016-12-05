@@ -4,7 +4,7 @@ title: FreeType
 
 > **Links:** [Homepage](http://www.freetype.org/) | [Downloads](http://www.freetype.org/download.html)  
 > **Dependencies:** None  
-> **Version:** <span id="version">2.6.5</span>
+> **Version:** <span id="version">2.7</span>
 
 **FreeType** is a freely available software library to render fonts.
 
@@ -14,7 +14,7 @@ title: FreeType
 Switch to `/usr/local/src` and download the source package.
 
 	cd /usr/local/src
-	curl --remote-name --location http://sourceforge.net/projects/freetype/files/freetype2/VERSION/freetype-VERSION.tar.gz
+	curl --remote-name --location http://download.savannah.gnu.org/releases/freetype/freetype-VERSION.tar.gz
 
 Extract the archive and move into the folder.
 
@@ -24,12 +24,12 @@ Extract the archive and move into the folder.
 
 ### Compile and Install
 
-Configure, compile and install into `/usr/local/freetype-VERSION`.
+Configure, compile and install into `/usr/local/mac-dev-env/freetype-VERSION`.
 
-	./configure --prefix=/usr/local/freetype-VERSION
+	./configure --prefix=/usr/local/mac-dev-env/freetype-VERSION
 	make
 	make install
 
-Create a symbolic link that points `/usr/local/freetype` to `/usr/local/freetype-VERSION`.
+Create a symbolic link that points `/usr/local/freetype` to `/usr/local/mac-dev-env/freetype-VERSION`.
 
-	ln -s freetype-VERSION /usr/local/freetype
+	ln -s mac-dev-env/freetype-VERSION /usr/local/freetype

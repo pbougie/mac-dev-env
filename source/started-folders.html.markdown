@@ -2,10 +2,11 @@
 title: Create the Folder Structure
 ---
 
-We will be compiling and installing all the packages into `/usr/local`. You may want to verify if this folder already exists and its contents before proceeding. The folder `/usr/local` does exist on a fresh installation of OS X El Capitan — but not in previous versions of OS X.
+We will be compiling and installing all the packages into `/usr/local/mac-dev-env`. This is different from previous versions of the guide so you may have to make some adjustments.
 
 Create the necessary folders.
 
+	sudo mkdir -p /usr/local/mac-dev-env
 	sudo mkdir -p /usr/local/src
 	sudo mkdir -p /usr/local/var/log
 	mkdir -p ~/Library/LaunchAgents

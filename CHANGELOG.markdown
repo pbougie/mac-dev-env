@@ -1,4 +1,4 @@
-# [Compiling a Web Development Environment on Mac OS X](http://mac-dev-env.patrickbougie.com/)
+# [Compiling a Web Development Environment on macOS](http://mac-dev-env.patrickbougie.com/)
 
 
 ## Changelog

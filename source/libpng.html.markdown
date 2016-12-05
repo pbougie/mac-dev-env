@@ -4,7 +4,7 @@ title: LibPNG
 
 > **Links:** [Homepage](http://www.libpng.org/pub/png/libpng.html)  
 > **Dependencies:** None  
-> **Version:** <span id="version">1.6.24</span>
+> **Version:** <span id="version">1.6.26</span>
 
 **LibPNG** is the official PNG reference library.
 
@@ -24,12 +24,12 @@ Extract the archive and move into the folder.
 
 ### Compile and Install
 
-Configure, compile and install into `/usr/local/libpng-VERSION`.
+Configure, compile and install into `/usr/local/mac-dev-env/libpng-VERSION`.
 
-	./configure --prefix=/usr/local/libpng-VERSION
+	./configure --prefix=/usr/local/mac-dev-env/libpng-VERSION
 	make
 	make install
 
-Create a symbolic link that points `/usr/local/libpng` to `/usr/local/libpng-VERSION`.
+Create a symbolic link that points `/usr/local/libpng` to `/usr/local/mac-dev-env/libpng-VERSION`.
 
-	ln -s libpng-VERSION /usr/local/libpng
+	ln -s mac-dev-env/libpng-VERSION /usr/local/libpng

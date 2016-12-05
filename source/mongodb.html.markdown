@@ -4,7 +4,7 @@ title: MongoDB w/ SSL
 
 > **Links:** [Homepage](http://www.mongodb.org/) | [Documentation](https://docs.mongodb.com/manual/) | [Downloads](http://www.mongodb.org/downloads)  
 > **Dependencies:** None  
-> **Version:** <span id="version">3.2.9</span>
+> **Version:** <span id="version">3.4.0</span>
 
 **MongoDB** is a free and open-source cross-platform document-oriented database.
 
@@ -19,13 +19,13 @@ Switch to `/usr/local/src` and download the pre-compiled binaries.
 
 ### Install
 
-Unpack the binaries into `/usr/local`.
+Unpack the binaries into `/usr/local/mac-dev-env`.
 
-	tar -zxvf mongodb-osx-ssl-x86_64-VERSION.tgz -C ..
+	tar -zxvf mongodb-osx-ssl-x86_64-VERSION.tgz -C ../mac-dev-env
 
 Create a symbolic link to `/usr/local/mongodb`.
 
-	ln -s mongodb-osx-x86_64-VERSION /usr/local/mongodb
+	ln -s mac-dev-env/mongodb-osx-x86_64-VERSION /usr/local/mongodb
 
 
 ### Databases
@@ -49,8 +49,6 @@ Copy and paste the following text into the aforementioned file.
 	  directoryPerDB: true
 	  journal:
 	    enabled: true
-	  mmapv1:
-	    smallFiles: true
 	net:
 	  bindIp: 127.0.0.1
 	  http:

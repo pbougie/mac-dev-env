@@ -4,7 +4,7 @@ title: CMake
 
 > **Links:** [Homepage](http://www.cmake.org/) | [Downloads](http://www.cmake.org/cmake/resources/software.html)  
 > **Dependencies:** None  
-> **Version:** <span id="version">3.6.1</span>
+> **Version:** <span id="version">3.7.1</span>
 
 **CMake** is a cross-platform, open-source build system designed to build, test and package software. **CMake** is used to control the software compilation process using platform and compiler independent configuration files.
 
@@ -14,7 +14,7 @@ title: CMake
 Switch to `/usr/local/src` and download the source package.
 
 	cd /usr/local/src
-	curl --remote-name https://cmake.org/files/v3.6/cmake-VERSION.tar.gz
+	curl --remote-name https://cmake.org/files/v3.7/cmake-VERSION.tar.gz
 
 Extract the archive and move into the folder.
 
@@ -24,15 +24,15 @@ Extract the archive and move into the folder.
 
 ### Compile and Install
 
-Configure, compile and install into `/usr/local/cmake-VERSION`.
+Configure, compile and install into `/usr/local/mac-dev-env/cmake-VERSION`.
 
-	./bootstrap --prefix=/usr/local/cmake-VERSION
+	./bootstrap --prefix=/usr/local/mac-dev-env/cmake-VERSION
 	make
 	make install
 
-Create a symbolic link that points `/usr/local/cmake` to `/usr/local/cmake-VERSION`.
+Create a symbolic link that points `/usr/local/cmake` to `/usr/local/mac-dev-env/cmake-VERSION`.
 
-	ln -s cmake-VERSION /usr/local/cmake
+	ln -s mac-dev-env/cmake-VERSION /usr/local/cmake
 
 
 ### Shell

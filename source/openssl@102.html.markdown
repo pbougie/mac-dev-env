@@ -24,9 +24,9 @@ Extract the archive and move into the folder.
 
 ### Compile and Install
 
-Configure, compile and install into `/usr/local/openssl-VERSION`.
+Configure, compile and install into `/usr/local/mac-dev-env/openssl-VERSION`.
 
-	./configure darwin64-x86_64-cc --prefix=/usr/local/openssl-VERSION shared
+	./configure darwin64-x86_64-cc --prefix=/usr/local/mac-dev-env/openssl-VERSION shared
 	make depend
 	make
 	make install
@@ -36,12 +36,12 @@ Configure, compile and install into `/usr/local/openssl-VERSION`.
 
 Execute the following lines to install the certificates.
 
-	security find-certificate -a -p /Library/Keychains/System.keychain > /usr/local/openssl-VERSION/ssl/cert.pem
-	security find-certificate -a -p /System/Library/Keychains/SystemRootCertificates.keychain >> /usr/local/openssl-VERSION/ssl/cert.pem
+	security find-certificate -a -p /Library/Keychains/System.keychain > /usr/local/mac-dev-env/openssl-VERSION/ssl/cert.pem
+	security find-certificate -a -p /System/Library/Keychains/SystemRootCertificates.keychain >> /usr/local/mac-dev-env/openssl-VERSION/ssl/cert.pem
 
 
 ### Verify the Installation
 
 Verify that you have successfully installed **OpenSSL**.
 
-	/usr/local/openssl-VERSION/bin/openssl version -a
+	/usr/local/mac-dev-env/openssl-VERSION/bin/openssl version -a
