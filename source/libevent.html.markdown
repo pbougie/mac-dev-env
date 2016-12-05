@@ -27,6 +27,8 @@ Extract the archive and move into the folder.
 Configure, compile and install into `/usr/local/mac-dev-env/libevent-VERSION`.
 
 	./configure \
+	  LDFLAGS="-L/usr/local/mac-dev-env/openssl-1.0.2j/lib" \
+	  CPPFLAGS="-I/usr/local/mac-dev-env/openssl-1.0.2j/include" \
 	  --prefix=/usr/local/mac-dev-env/libevent-VERSION \
 	  --disable-dependency-tracking \
 	  --disable-debug-mode
