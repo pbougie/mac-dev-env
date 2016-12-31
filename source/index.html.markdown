@@ -48,7 +48,7 @@ A detailed guide with instructions to compile various software packages to build
 ### Ruby served by Puma-dev
 
 - Ruby
-	- [OpenSSL](/openssl@102/) (1.0.2)
+	- [OpenSSL](/openssl/)
 	- [Ruby](/ruby/)
 - Gems
 	- [RubyGems](/rubygems/)
