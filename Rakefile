@@ -26,6 +26,3 @@ task :preview do
   puts '## Launching preview server at http://localhost:4567'
   exec("bundle exec middleman server")
 end
-
-desc "Build and Deploy website to production"
-task :release => [:build, :deploy]

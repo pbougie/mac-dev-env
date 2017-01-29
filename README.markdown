@@ -39,7 +39,6 @@ Make sure the aforementioned environment variables are available before generati
 - Launch the preview server: `rake preview`
 - Build the website: `rake build`
 - Deploy the website: `rake deploy`
-- Build and Deploy the website: `rake release`
 
 
 # Message
