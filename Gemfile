@@ -7,9 +7,6 @@ gem 'middleman', '~> 4'
 gem 'middleman-sprockets'
 gem 'sprockets', '~> 4.beta'
 
-# https://github.com/middleman-contrib/middleman-deploy
-gem 'middleman-deploy', '~> 2.pre'
-
 # https://github.com/ruby/rake
 gem 'rake'
 

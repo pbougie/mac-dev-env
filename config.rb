@@ -16,14 +16,6 @@ configure :build do
   activate :minify_javascript
 end
 
-activate :deploy do |deploy|
-  deploy.deploy_method = :sftp
-  deploy.user = ENV['RSYNC_USER']
-  deploy.host = ENV['RSYNC_HOST']
-  deploy.path = ENV['RSYNC_PATH']
-  deploy.clean = true
-end
-
 helpers do
   def site_title
     'Compiling a Web Development Environment on macOS'
