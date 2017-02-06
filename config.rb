@@ -16,6 +16,10 @@ configure :build do
   activate :minify_javascript
 end
 
+after_build do |builder|
+  `/usr/bin/afplay /System/Library/Sounds/Tink.aiff`
+end
+
 helpers do
   def site_title
     'Compiling a Web Development Environment on macOS'
