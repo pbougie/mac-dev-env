@@ -22,12 +22,6 @@ gem 'sassc'
 # https://github.com/guard/guard-middleman
 gem 'guard-middleman'
 
-# https://github.com/julienXX/terminal-notifier
-gem 'terminal-notifier'
-
-# https://github.com/Codaisseur/terminal-notifier-guard
-gem 'terminal-notifier-guard'
-
 # https://rails-assets.org/
 source 'https://rails-assets.org' do
   # https://github.com/necolas/normalize.css
