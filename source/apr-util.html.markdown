@@ -4,7 +4,7 @@ title: APR-util
 
 > **Links:** [Homepage](https://apr.apache.org/) | [Downloads](https://apr.apache.org/download.cgi)  
 > **Dependencies:** None  
-> **Version:** <span id="version">1.5.4</span>
+> **Version:** <span id="version">1.6.0</span>
 
 **Apache Portable Runtime Utility (APR-util)**.
 

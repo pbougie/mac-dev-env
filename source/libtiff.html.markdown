@@ -4,7 +4,7 @@ title: LibTIFF
 
 > **Links:** [Homepage](http://simplesystems.org/libtiff/)  
 > **Dependencies:** None  
-> **Version:** <span id="version">4.0.7</span>
+> **Version:** <span id="version">4.0.8</span>
 
 **LibTIFF** is a library and utilities for manipulating TIFF images.
 
