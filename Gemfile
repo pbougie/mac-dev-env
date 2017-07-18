@@ -21,9 +21,3 @@ gem 'sassc'
 
 # https://github.com/guard/guard-middleman
 gem 'guard-middleman'
-
-# https://rails-assets.org/
-source 'https://rails-assets.org' do
-  # https://github.com/necolas/normalize.css
-  gem 'rails-assets-normalize-css'
-end
