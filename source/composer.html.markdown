@@ -8,9 +8,9 @@ title: Composer
 Dependency Manager for PHP.
 
 
-### Install
+### Install/Upgrade
 
-Install **Composer**.
+Install or upgrade **Composer**.
 
 	curl https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
@@ -19,4 +19,4 @@ Install **Composer**.
 
 Verify that you have successfully installed **Composer**.
 
-	composer -V
+	composer --version

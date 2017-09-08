@@ -4,7 +4,7 @@ title: PCRE — Perl Compatible Regular Expressions
 
 > **Links:** [Homepage](http://pcre.org/)  
 > **Dependencies:** None  
-> **Version:** <span id="version">8.40</span>
+> **Version:** <span id="version">8.41</span>
 
 The **PCRE** library is a set of functions that implement regular expression pattern matching using the same syntax and semantics as Perl 5.
 

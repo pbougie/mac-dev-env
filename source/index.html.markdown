@@ -24,7 +24,6 @@ A detailed guide with instructions to compile various software packages to build
 	- [MySQL](/mysql/)
 - [MongoDB](/mongodb/) w/ SSL
 - Memcached
-	- [OpenSSL](/openssl/)
 	- [Libevent](/libevent/)
 	- [Memcached](/memcached/)
 - [Redis](/redis/)
@@ -58,8 +57,7 @@ A detailed guide with instructions to compile various software packages to build
 ### Node.js
 
 - [Node.js](/nodejs/)
-	- [Grunt](/nodejs-grunt/)
-	- [Bower](/nodejs-bower/)
+	- [Yarn](/nodejs-yarn/)
 
 ### Image Processing
 
