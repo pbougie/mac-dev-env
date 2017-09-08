@@ -4,7 +4,8 @@ source 'https://rubygems.org'
 gem 'middleman', '~> 4'
 
 # https://github.com/middleman/middleman-sprockets
-gem 'middleman-sprockets'
+# Version 4.1.1 generates errors during compilation
+gem 'middleman-sprockets', '4.1.0'
 gem 'sprockets', '~> 4.beta'
 
 # https://github.com/ruby/rake
