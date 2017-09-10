@@ -115,6 +115,7 @@ Copy and paste the following text into the aforementioned file.
 	    <key>ProgramArguments</key>
 	    <array>
 	      <string>/usr/local/mysql/bin/mysqld_safe</string>
+	      <string>--bind-address=localhost</string>
 	      <string>--datadir=/usr/local/var/mysql</string>
 	      <string>--log-error=/usr/local/var/log/mysql.log</string>
 	    </array>
