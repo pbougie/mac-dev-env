@@ -109,6 +109,12 @@ Copy and paste the following text into the aforementioned file.
 	    <true/>
 	    <key>KeepAlive</key>
 	    <true/>
+
+	    <key>SoftResourceLimits</key>
+	    <dict>
+	      <key>NumberOfFiles</key>
+	      <integer>1024</integer>
+	    </dict>
 	  </dict>
 	</plist>
 
