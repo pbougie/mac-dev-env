@@ -4,7 +4,7 @@ title: Ruby
 
 > **Links:** [Homepage](http://www.ruby-lang.org/) | [Downloads](http://www.ruby-lang.org/en/downloads/)  
 > **Dependencies:** [OpenSSL](/openssl/)  
-> **Version:** <span id="version">2.4.1</span>
+> **Version:** <span id="version">2.4.2</span>
 
 
 ### Get the Code
