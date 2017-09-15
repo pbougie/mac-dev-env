@@ -4,7 +4,10 @@ layout: false
 
 xml.instruct!
 xml.urlset 'xmlns' => "http://www.sitemaps.org/schemas/sitemap/0.9" do
-  sitemap.resources.select{ |p| p.ext == '.html' }.sort_by{ |p| p.url }.each do |page|
+  sitemap.resources.find_all{ |p|
+    p.ext == '.html' &&
+    !p.path.start_with?('archives')
+  }.sort_by{ |p| p.url }.each do |page|
     xml.url do
       xml.loc "http://mac-dev-env.patrickbougie.com#{page.url}"
       xml.lastmod Time.new.utc.iso8601
