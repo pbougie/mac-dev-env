@@ -75,8 +75,8 @@ A detailed guide with instructions to compile various software packages to build
 
 If you are attempting to compile a web development environment in a previous version of macOS, check out past versions of the guide:
 
-- [OS X 10.11 El Capitan](http://archives.patrickbougie.com/mac-dev-env/10.11-el-capitan/)
-- [OS X 10.10 Yosemite](http://archives.patrickbougie.com/mac-dev-env/10.10-yosemite/)
-- [OS X 10.9 Mavericks](http://archives.patrickbougie.com/mac-dev-env/10.9-mavericks/)
-- [OS X 10.8 Mountain Lion](http://archives.patrickbougie.com/mac-dev-env/10.8-mountain-lion/)
-- [OS X 10.7 Lion](http://archives.patrickbougie.com/mac-dev-env/10.7-lion/)
+- [OS X 10.11 El Capitan](/archives/10.11-el-capitan/)
+- [OS X 10.10 Yosemite](/archives/10.10-yosemite/)
+- [OS X 10.9 Mavericks](/archives/10.9-mavericks/)
+- [OS X 10.8 Mountain Lion](/archives/10.8-mountain-lion/)
+- [OS X 10.7 Lion](/archives/10.7-lion/)
