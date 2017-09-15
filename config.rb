@@ -9,6 +9,7 @@ set :layout, 'article_layout'
 activate :directory_indexes
 activate :sprockets
 
+page '/archives/*', directory_index: false
 page '/google386369349e5ac941.html', directory_index: false
 
 configure :build do
