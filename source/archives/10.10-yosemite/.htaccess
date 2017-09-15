@@ -1,0 +1,11 @@
+ErrorDocument 403 /archives/10.10-yosemite/error/index.html
+ErrorDocument 404 /archives/10.10-yosemite/error/index.html
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/plain text/html
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/javascript application/javascript application/x-javascript
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE application/rss+xml
+  AddOutputFilterByType DEFLATE text/xml application/xml
+</IfModule>

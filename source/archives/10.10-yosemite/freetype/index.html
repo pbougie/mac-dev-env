@@ -1,0 +1,135 @@
+<!doctype html>
+<!--[if IE 8]><html class="ie8" lang="en"><![endif]-->
+<!--[if IE 9]><html class="ie9" lang="en"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
+<head>
+
+  <meta charset="utf-8">
+  <base href="/archives/10.10-yosemite/">
+  <title>
+    FreeType - 
+    Compiling a Web Development Environment on Mac OS X
+  </title>
+
+  <meta name="author" content="Patrick Bougie">
+  <meta name="description" content="Guide for compiling a Web Development Environment on Mac OS X: FreeType.">
+  <meta name="apple-mobile-web-app-title" content="Mac Dev Env">
+  <meta name="viewport" content="initial-scale=1">
+
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon.png">
+
+  <!--[if gte IE 9]><!-->
+  <link href="stylesheets/styles.css" rel="stylesheet" />
+  <!--<![endif]-->
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="javascripts/versioning.js"></script>
+
+</head>
+<body id="freetype">
+
+  <header class="header" role="banner">
+  <h1 class="header__title">
+    <a href=".">
+      Compiling a Web Development Environment on Mac OS X
+    </a>
+  </h1>
+  <div class="header__elsewhere">
+    <ul>
+      <li class="www" title="Website">
+        <a href="http://patrickbougie.com/">
+          <span aria-hidden="true" data-icon="&#xe000;"></span>
+          <span class="text-to-speech">patrickbougie.com</span>
+        </a>
+      </li>
+      <li class="twitter" title="Twitter">
+        <a href="https://twitter.com/pbougie">
+          <span aria-hidden="true" data-icon="&#xe001;"></span>
+          <span class="text-to-speech">@pbougie</span>
+        </a>
+      </li>
+      <li class="github" title="GitHub">
+        <a href="https://github.com/pbougie/mac-dev-env">
+          <span aria-hidden="true" data-icon="&#xe002;"></span>
+          <span class="text-to-speech">github.com/pbougie</span>
+        </a>
+      </li>
+      <li class="email" title="Email">
+        <a href="mailto:hello@patrickbougie.com">
+          <span aria-hidden="true" data-icon="&#xe003;"></span>
+          <span class="text-to-speech">hello@patrickbougie.com</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+
+  <div class="github-fork-ribbon-wrapper right">
+      <div class="github-fork-ribbon">
+          <a href="https://github.com/pbougie/mac-dev-env">Fork me on GitHub</a>
+      </div>
+  </div>
+
+  <section class="main" role="main">
+      <header>
+        <h2>FreeType</h2>
+      </header>
+    <article>
+      <blockquote>
+  <p><strong>Links:</strong> <a href="http://www.freetype.org/">Homepage</a> | <a href="http://www.freetype.org/download.html">Downloads</a><br />
+<strong>Dependencies:</strong> None<br />
+<strong>Version:</strong> <span id="version">2.6</span></p>
+</blockquote>
+
+<p><strong>FreeType</strong> is a freely available software library to render fonts.</p>
+
+<h3 id="get-the-code">Get the Code</h3>
+
+<p>Switch to <code>/usr/local/src</code> and download the source package.</p>
+
+<pre><code>cd /usr/local/src
+curl --remote-name --location http://sourceforge.net/projects/freetype/files/freetype2/VERSION/freetype-VERSION.tar.gz
+</code></pre>
+
+<p>Extract the archive and move into the folder.</p>
+
+<pre><code>tar -xzvf freetype-VERSION.tar.gz
+cd freetype-VERSION
+</code></pre>
+
+<h3 id="compile-and-install">Compile and Install</h3>
+
+<p>Configure, compile and install into <code>/usr/local/freetype-VERSION</code>.</p>
+
+<pre><code>./configure --prefix=/usr/local/freetype-VERSION
+make
+make install
+</code></pre>
+
+<p>Create a symbolic link that points <code>/usr/local/freetype</code> to <code>/usr/local/freetype-VERSION</code>.</p>
+
+<pre><code>ln -s freetype-VERSION /usr/local/freetype
+</code></pre>
+
+    </article>
+      <footer>
+        <p>
+          <a href=".">← Return to the Table of Contents</a>
+        </p>
+      </footer>
+  </section>
+
+  <footer class="footer" role="contentinfo">
+  <p>
+    © 2015 <a href="http://patrickbougie.com/">Patrick Bougie</a>. All rights reserved.<br>
+    Please do not reproduce without written consent.<br>
+    OS X version: 10.10 Yosemite<br>
+    Last revised: 21 September 2015<br>
+    Needs updating? <a href="https://github.com/pbougie/mac-dev-env">Fork on GitHub</a>
+  </p>
+</footer>
+
+</body>
+</html>

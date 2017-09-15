@@ -1,0 +1,207 @@
+<!doctype html>
+<!--[if IE 7]><html class="ie7 lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if IE 8]><html class="ie8 lt-ie9" lang="en"><![endif]-->
+<!--[if IE 9]><html class="ie9" lang="en"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
+<head>
+
+	<meta charset="utf-8">
+	<title>MongoDB — Compiling a Web Development Environment on Mac OS X</title>
+
+	<meta name="author" content="Patrick Bougie">
+	<meta name="description" content="MongoDB — Compiling a Web Development Environment on Mac OS X">
+	<meta name="viewport" content="initial-scale=1.0">
+
+	<link rel="shortcut icon" href="images/favicon.png">
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-57x57.png">
+
+	<!--[if gte IE 7]><!-->
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:regular,bold">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Serif">
+	<!--<![endif]-->
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<script src="js/ios-fix.js"></script>
+  <script src="js/dynamic-versioning.js"></script>
+
+</head>
+<body id="mongodb">
+
+	<header role="banner">
+	<div>
+		<h1>
+			<a href="index.html" title="Patrick Bougie">Patrick Bougie</a>
+		</h1>
+		<section class="elsewhere">
+			<ul>
+				<li class="www" title="patrickbougie.com">
+					<a href="http://patrickbougie.com/">patrickbougie.com</a>
+				</li>
+				<li class="twitter" title="@pbougie">
+					<a href="https://twitter.com/pbougie">@pbougie</a>
+				</li>
+				<li class="github" title="github.com/pbougie">
+					<a href="https://github.com/pbougie">github.com/pbougie</a>
+				</li>
+			</ul>
+		</section>
+	</div>
+</header>
+
+
+	<section role="main">
+		<header>
+			<hgroup>
+				<h1>Compiling a Web Development Environment on Mac OS X</h1>
+				<h2>MongoDB</h2>
+			</hgroup>
+		</header>
+		<article>
+			<blockquote><p><strong>Links:</strong> <a href="http://mongodb.org/">Homepage</a> | <a href="http://www.mongodb.org/downloads">Downloads</a><br/>
+<strong>Dependencies:</strong> None<br/>
+<strong>Version:</strong> <span id="version">2.0.2</span></p></blockquote>
+
+<p><strong>MongoDB</strong> is a scalable, high-performance, open source, schema-free, document-oriented database. MongoDB was created by <a href="10gen.com">10gen</a> and they have been kind enough to provide pre-compiled binaries for various platforms including Mac OS X.</p>
+
+<h3>Get the Code</h3>
+
+<p>Switch to <code>/usr/local/src</code> and download the pre-compiled binaries.</p>
+
+<pre><code>cd /usr/local/src
+curl --remote-name http://fastdl.mongodb.org/osx/mongodb-osx-x86_64-VERSION.tgz
+</code></pre>
+
+<h3>Install</h3>
+
+<p>Unpack the binaries into <code>/usr/local</code>.</p>
+
+<pre><code>tar -zxvf mongodb-osx-x86_64-VERSION.tgz -C ..
+</code></pre>
+
+<p>Create a symbolic link to <code>/usr/local/mongodb</code>.</p>
+
+<pre><code>ln -s mongodb-osx-x86_64-VERSION /usr/local/mongodb
+</code></pre>
+
+<h3>Databases</h3>
+
+<p>Create a folder that will contain your databases. My databases are located in <code>/usr/local/var/mongodb</code>. You can place your databases wherever you'd like but make sure you update the path when mentioned in this article.</p>
+
+<pre><code>mkdir -p /usr/local/var/mongodb
+</code></pre>
+
+<h3>Configuration File</h3>
+
+<p>Create a configuration file so you can make changes to your database configuration without messing around with command line arguments.</p>
+
+<pre><code>nano /usr/local/mongodb/mongod.conf
+</code></pre>
+
+<p>Copy and paste the following text into the aforementioned file.</p>
+
+<pre><code># Location of MongoDB databases
+dbpath = /usr/local/var/mongodb
+# Location of log files
+logpath = /var/log/mongod.log
+# Only accept local connections
+bind_ip = localhost
+# Enable journaling
+journal = true
+# Enable REST
+rest = true
+# Enable smaller default file sizes
+# (saves space on development servers)
+smallfiles = true
+</code></pre>
+
+<h3>Shell</h3>
+
+<p>Add the following line to your <a href="http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29">Bash</a> startup script to put MongoDB into your path.</p>
+
+<pre><code>echo 'export PATH=/usr/local/mongodb/bin:$PATH' &gt;&gt; ~/.bash_profile
+</code></pre>
+
+<p>Load the new shell configurations.</p>
+
+<pre><code>source ~/.bash_profile
+</code></pre>
+
+<h3>Manually Starting and Stopping the Server</h3>
+
+<p>Start the server to test your installation.</p>
+
+<pre><code>sudo mongod --config=/usr/local/mongodb/mongod.conf
+</code></pre>
+
+<p>To shut down the MongoDB server, press <code>CTRL-C</code>.</p>
+
+<h3>Automatically Starting the Server at Boot</h3>
+
+<p>Create a configuration file for <a href="http://en.wikipedia.org/wiki/Launchd">Launchd</a>.</p>
+
+<pre><code>sudo nano /Library/LaunchDaemons/org.mongodb.mongod.plist
+</code></pre>
+
+<p>Copy and paste the following text into the aforementioned file.</p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
+&lt;plist version="1.0"&gt;
+&lt;dict&gt;
+    &lt;key&gt;Label&lt;/key&gt;
+    &lt;string&gt;org.mongodb.mongod&lt;/string&gt;
+    &lt;key&gt;ProgramArguments&lt;/key&gt;
+    &lt;array&gt;
+        &lt;string&gt;/usr/local/mongodb/bin/mongod&lt;/string&gt;
+        &lt;string&gt;--config=/usr/local/mongodb/mongod.conf&lt;/string&gt;
+    &lt;/array&gt;
+    &lt;key&gt;RunAtLoad&lt;/key&gt;
+    &lt;true/&gt;
+    &lt;key&gt;KeepAlive&lt;/key&gt;
+    &lt;true/&gt;
+&lt;/dict&gt;
+&lt;/plist&gt;
+</code></pre>
+
+<p>And finally, execute the following command to register the configuration file with Launchd.</p>
+
+<pre><code>sudo launchctl load -w /Library/LaunchDaemons/org.mongodb.mongod.plist
+</code></pre>
+
+<p>If you ever want to stop your MongoDB server from automatically starting at boot, issue the following command.</p>
+
+<pre><code>sudo launchctl unload -w /Library/LaunchDaemons/org.mongodb.mongod.plist
+</code></pre>
+
+<h3>Verify the Installation</h3>
+
+<p>To verify that you have correctly installed and started your MongoDB server, point your web browser to <a href="http://localhost:28017/"><code>http://localhost:28017/</code></a> to load the MongoDB console.</p>
+
+		</article>
+
+			<footer>
+				<p>
+					<a href="index.html">« Return to the Table of Contents</a>
+				</p>
+			</footer>
+
+	</section>
+
+	<footer role="contentinfo">
+	<p>© 2012 Patrick Bougie. All rights reserved.</p>
+	<p>Please do not reproduce without written consent.</p>
+  <p>OS X version: 10.7 Lion</p>
+	<p>Last revised: 14 March 2012</p>
+</footer>
+
+
+</body>
+</html>

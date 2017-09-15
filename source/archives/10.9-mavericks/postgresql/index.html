@@ -1,0 +1,239 @@
+<!doctype html>
+<!--[if IE 8]><html class="ie8" lang="en"><![endif]-->
+<!--[if IE 9]><html class="ie9" lang="en"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
+<head>
+
+  <meta charset="utf-8">
+  <base href="/archives/10.9-mavericks/">
+  <title>
+    PostgreSQL —
+    Compiling a Web Development Environment on Mac OS X
+  </title>
+
+  <meta name="author" content="Patrick Bougie">
+  <meta name="description" content="Guide for compiling a Web Development Environment on Mac OS X: PostgreSQL.">
+  <meta name="apple-mobile-web-app-title" content="Mac Dev Env">
+  <meta name="viewport" content="initial-scale=1">
+
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon.png">
+
+  <!--[if gte IE 8]><!-->
+  <link rel="stylesheet" href="stylesheets/styles.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:regular,bold">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Serif">
+  <!--<![endif]-->
+  <!--[if IE]>
+  <link rel="stylesheet" href="stylesheets/gh-fork-ribbon.ie.css">
+  <![endif]-->
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="javascripts/versioning.js"></script>
+  <!--[if IE 8]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+<body id="postgresql">
+
+  <header role="banner">
+  <h1 class="title">
+    <a href=".">
+      Compiling a Web Development Environment on Mac OS X
+    </a>
+  </h1>
+  <section class="elsewhere">
+    <ul>
+      <li class="www" title="Website">
+        <a href="http://patrickbougie.com/">
+          <span aria-hidden="true" data-icon="&#xe000;"></span>
+          <span class="text-to-speech">patrickbougie.com</span>
+        </a>
+      </li>
+      <li class="twitter" title="Twitter">
+        <a href="https://twitter.com/pbougie">
+          <span aria-hidden="true" data-icon="&#xe001;"></span>
+          <span class="text-to-speech">@pbougie</span>
+        </a>
+      </li>
+      <li class="github" title="GitHub">
+        <a href="https://github.com/pbougie/mac-dev-env">
+          <span aria-hidden="true" data-icon="&#xe002;"></span>
+          <span class="text-to-speech">github.com/pbougie</span>
+        </a>
+      </li>
+      <li class="email" title="Email">
+        <a href="mailto:hello@patrickbougie.com">
+          <span aria-hidden="true" data-icon="&#xe003;"></span>
+          <span class="text-to-speech">hello@patrickbougie.com</span>
+        </a>
+      </li>
+    </ul>
+  </section>
+</header>
+
+
+  <div class="github-fork-ribbon-wrapper right">
+      <div class="github-fork-ribbon">
+          <a href="https://github.com/pbougie/mac-dev-env">Fork me on GitHub</a>
+      </div>
+  </div>
+
+  <section role="main">
+      <header>
+        <h2>PostgreSQL</h2>
+      </header>
+    <article>
+      <blockquote>
+  <p><strong>Links:</strong> <a href="http://www.postgresql.org/">Homepage</a> | <a href="http://www.postgresql.org/ftp/source/">Downloads</a> | <a href="http://www.postgresql.org/docs/9.3/static/">Documentation</a><br />
+<strong>Dependencies:</strong> None<br />
+<strong>Version:</strong> <span id="version">9.3.5</span></p>
+</blockquote>
+
+<p><strong>PostgreSQL</strong> is an enterprise-class, open source object-relational database system. It has been in active development for more than 15 years and has a strong reputation for standards compliance, reliability and data integrity.</p>
+
+<h3 id="get-the-code">Get the Code</h3>
+
+<p>Switch to <code>/usr/local/src</code> and download the source package.</p>
+
+<pre><code>cd /usr/local/src
+curl --remote-name http://ftp.postgresql.org/pub/source/vVERSION/postgresql-VERSION.tar.gz
+</code></pre>
+
+<p>Extract the archive and move into the folder.</p>
+
+<pre><code>tar -xzvf postgresql-VERSION.tar.gz
+cd postgresql-VERSION
+</code></pre>
+
+<h3 id="compile-and-install">Compile and Install</h3>
+
+<p>Configure, compile and install into <code>/usr/local/postgresql-VERSION</code>.</p>
+
+<pre><code>./configure --prefix=/usr/local/postgresql-VERSION
+make world
+make install-world
+</code></pre>
+
+<p>Create a symbolic link that points <code>/usr/local/postgresql</code> to <code>/usr/local/postgresql-VERSION</code>.</p>
+
+<pre><code>ln -s postgresql-VERSION /usr/local/postgresql
+</code></pre>
+
+<h3 id="shell">Shell</h3>
+
+<p>Execute the following lines to update your <a href="http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29">Bash</a> startup script.</p>
+
+<pre><code>echo 'export PATH=/usr/local/postgresql/bin:$PATH' &gt;&gt; ~/.bash_profile
+echo 'export MANPATH=/usr/local/postgresql/share/man:$MANPATH' &gt;&gt; ~/.bash_profile
+</code></pre>
+
+<p>Load the new shell configurations.</p>
+
+<pre><code>source ~/.bash_profile
+</code></pre>
+
+<h3 id="databases">Databases</h3>
+
+<p>Create a folder that will contain your databases. My databases are located in <code>/usr/local/var/postgresql</code>. You can place your databases wherever you'd like but make sure you update the path when mentioned in this article.</p>
+
+<pre><code>mkdir -p /usr/local/var/postgresql
+</code></pre>
+
+<h3 id="post-installation">Post-Installation</h3>
+
+<p>If you are copying the data from a former PostgreSQL installation, you can skip this step. Initialize your database installation.</p>
+
+<pre><code>initdb --pgdata=/usr/local/var/postgresql
+</code></pre>
+
+<h3 id="manual-startstop">Manual Start/Stop</h3>
+
+<p>To start the PostgreSQL server.</p>
+
+<pre><code>pg_ctl -D /usr/local/var/postgresql -l /usr/local/var/log/postgresql.log start
+</code></pre>
+
+<p>To stop the PostgreSQL server.</p>
+
+<pre><code>pg_ctl -D /usr/local/var/postgresql stop
+</code></pre>
+
+<h3 id="automatically-start-the-server-at-boot">Automatically Start the Server at Boot</h3>
+
+<p>Create a configuration file for <a href="http://en.wikipedia.org/wiki/Launchd">Launchd</a>.</p>
+
+<pre><code>nano ~/Library/LaunchAgents/org.postgresql.postgres.plist
+</code></pre>
+
+<p>Copy and paste the following text into the aforementioned file.</p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
+&lt;plist version="1.0"&gt;
+  &lt;dict&gt;
+    &lt;key&gt;Label&lt;/key&gt;
+    &lt;string&gt;org.postgresql.postgres&lt;/string&gt;
+
+    &lt;key&gt;ProgramArguments&lt;/key&gt;
+    &lt;array&gt;
+      &lt;string&gt;/usr/local/postgresql/bin/postgres&lt;/string&gt;
+      &lt;string&gt;-D&lt;/string&gt;
+      &lt;string&gt;/usr/local/var/postgresql&lt;/string&gt;
+    &lt;/array&gt;
+
+    &lt;key&gt;StandardOutPath&lt;/key&gt;
+    &lt;string&gt;/usr/local/var/log/postgresql.log&lt;/string&gt;
+    &lt;key&gt;StandardErrorPath&lt;/key&gt;
+    &lt;string&gt;/usr/local/var/log/postgresql.log&lt;/string&gt;
+
+    &lt;key&gt;RunAtLoad&lt;/key&gt;
+    &lt;true/&gt;
+    &lt;key&gt;KeepAlive&lt;/key&gt;
+    &lt;true/&gt;
+  &lt;/dict&gt;
+&lt;/plist&gt;
+</code></pre>
+
+<p>Register with Launchd and start the server.</p>
+
+<pre><code>launchctl load -w ~/Library/LaunchAgents/org.postgresql.postgres.plist
+</code></pre>
+
+<p>Deregister with Launchd.</p>
+
+<pre><code>launchctl unload -w ~/Library/LaunchAgents/org.postgresql.postgres.plist
+</code></pre>
+
+<h3 id="verify-the-installation">Verify the Installation</h3>
+
+<p>Display the <strong>PostgreSQL</strong> server version.</p>
+
+<pre><code>postgres --version
+</code></pre>
+
+<p>Show a list of available databases (the server has to be running).</p>
+
+<pre><code>psql -l
+</code></pre>
+
+    </article>
+      <footer>
+        <p>
+          <a href=".">← Return to the Table of Contents</a>
+        </p>
+      </footer>
+  </section>
+
+  <footer role="contentinfo">
+  <p>© 2014 <a href="http://patrickbougie.com">Patrick Bougie</a>. All rights reserved.</p>
+  <p>Please do not reproduce without written consent.</p>
+  <p>OS X version: 10.9 Mavericks</p>
+  <p>Last revised: 11 October 2014</p>
+  <p>Needs updating? <a href="https://github.com/pbougie/mac-dev-env">Fork on GitHub</a></p>
+</footer>
+
+</body>
+</html>

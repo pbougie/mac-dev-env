@@ -1,0 +1,262 @@
+<!doctype html>
+<!--[if IE 8]><html class="ie8" lang="en"><![endif]-->
+<!--[if IE 9]><html class="ie9" lang="en"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
+<head>
+
+  <meta charset="utf-8">
+  <base href="/archives/10.10-yosemite/">
+  <title>
+    Apache - 
+    Compiling a Web Development Environment on Mac OS X
+  </title>
+
+  <meta name="author" content="Patrick Bougie">
+  <meta name="description" content="Guide for compiling a Web Development Environment on Mac OS X: Apache.">
+  <meta name="apple-mobile-web-app-title" content="Mac Dev Env">
+  <meta name="viewport" content="initial-scale=1">
+
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon.png">
+
+  <!--[if gte IE 9]><!-->
+  <link href="stylesheets/styles.css" rel="stylesheet" />
+  <!--<![endif]-->
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="javascripts/versioning.js"></script>
+
+</head>
+<body id="apache">
+
+  <header class="header" role="banner">
+  <h1 class="header__title">
+    <a href=".">
+      Compiling a Web Development Environment on Mac OS X
+    </a>
+  </h1>
+  <div class="header__elsewhere">
+    <ul>
+      <li class="www" title="Website">
+        <a href="http://patrickbougie.com/">
+          <span aria-hidden="true" data-icon="&#xe000;"></span>
+          <span class="text-to-speech">patrickbougie.com</span>
+        </a>
+      </li>
+      <li class="twitter" title="Twitter">
+        <a href="https://twitter.com/pbougie">
+          <span aria-hidden="true" data-icon="&#xe001;"></span>
+          <span class="text-to-speech">@pbougie</span>
+        </a>
+      </li>
+      <li class="github" title="GitHub">
+        <a href="https://github.com/pbougie/mac-dev-env">
+          <span aria-hidden="true" data-icon="&#xe002;"></span>
+          <span class="text-to-speech">github.com/pbougie</span>
+        </a>
+      </li>
+      <li class="email" title="Email">
+        <a href="mailto:hello@patrickbougie.com">
+          <span aria-hidden="true" data-icon="&#xe003;"></span>
+          <span class="text-to-speech">hello@patrickbougie.com</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+
+  <div class="github-fork-ribbon-wrapper right">
+      <div class="github-fork-ribbon">
+          <a href="https://github.com/pbougie/mac-dev-env">Fork me on GitHub</a>
+      </div>
+  </div>
+
+  <section class="main" role="main">
+      <header>
+        <h2>Apache</h2>
+      </header>
+    <article>
+      <blockquote>
+  <p><strong>Links:</strong> <a href="http://httpd.apache.org/">Homepage</a> | <a href="http://httpd.apache.org/download.cgi">Downloads</a> | <a href="http://httpd.apache.org/docs/2.4/">Documentation</a><br />
+<strong>Dependencies:</strong> <a href="pcre/">PCRE</a><br />
+<strong>Version:</strong> <span id="version">2.4.16</span></p>
+</blockquote>
+
+<p>The <strong>Apache HTTP Server</strong> is an open-source web server that was released in 1995. It has been the most popular web server on the Internet since April 1996.</p>
+
+<h3 id="get-the-code">Get the Code</h3>
+
+<p>Switch to <code>/usr/local/src</code> and download the source package.</p>
+
+<pre><code>cd /usr/local/src
+curl --remote-name http://apache.sunsite.ualberta.ca/httpd/httpd-VERSION.tar.gz
+</code></pre>
+
+<p>Extract the archive and move into the folder.</p>
+
+<pre><code>tar -xzvf httpd-VERSION.tar.gz
+cd httpd-VERSION
+</code></pre>
+
+<h3 id="compile-and-install">Compile and Install</h3>
+
+<p>There are missing references when attempting to compile using the <strong>Command Line Tools</strong>. The following commands fix the problem. You can delete <code>/Applications/Xcode</code> once you are done.</p>
+
+<pre><code>sudo xcode-select -switch /
+mkdir -p /Applications/Xcode.app/Contents/Developer/Toolchains/OSX10.10.xctoolchain/usr/bin
+ln -s /usr/bin/cc /Applications/Xcode.app/Contents/Developer/Toolchains/OSX10.10.xctoolchain/usr/bin/cc
+</code></pre>
+
+<p>Configure, compile and install into <code>/usr/local/apache-VERSION</code>.</p>
+
+<pre><code>./configure --prefix=/usr/local/apache-VERSION
+make
+make install
+</code></pre>
+
+<p>Create a symbolic link that points <code>/usr/local/apache</code> to <code>/usr/local/apache-VERSION</code>.</p>
+
+<pre><code>ln -s apache-VERSION /usr/local/apache
+</code></pre>
+
+<h3 id="configuration-file">Configuration File</h3>
+
+<p>Edit Apache's configuration file.</p>
+
+<pre><code>nano /usr/local/apache/conf/httpd.conf
+</code></pre>
+
+<p>Copy and paste the following text at the end of the aforementioned file. Make sure you replace the <code>&lt;username&gt;</code> string (3 times) with your OS X short username. This configuration only allows access from your local computer; all outside access is blocked.</p>
+
+<pre><code>ServerName dev.local
+User &lt;username&gt;
+Group staff
+
+DocumentRoot "/Users/&lt;username&gt;/Sites"
+ErrorLog "/usr/local/var/log/apache.log"
+CustomLog "/usr/local/var/log/apache.log" common
+&lt;Directory "/Users/&lt;username&gt;/Sites"&gt;
+  Options All
+  AllowOverride All
+  IndexOptions NameWidth=*
+
+  Require all denied
+  Require host localhost
+  Require host 127.0.0.1
+&lt;/Directory&gt;
+</code></pre>
+
+<p>You also need to disable the <code>ErrorLog</code> and <code>CustomLog</code> directives in the Apache configuration file (leaving the above directives intact). Otherwise, Apache will log the same information in two separate locations.</p>
+
+<h3 id="web-root">Web Root</h3>
+
+<p>Create a folder that will contain your web sites and applications. I keep my projects in <code>~/Sites</code>. You can place your projects wherever you'd like but make sure you update the path when mentioned in this article.</p>
+
+<pre><code>mkdir -p ~/Sites
+</code></pre>
+
+<h3 id="shell">Shell</h3>
+
+<p>Execute the following lines to update your <a href="http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29">Bash</a> startup script.</p>
+
+<pre><code>echo 'export PATH=/usr/local/apache/bin:$PATH' &gt;&gt; ~/.bash_profile
+echo 'export MANPATH=/usr/local/apache/man:$MANPATH' &gt;&gt; ~/.bash_profile
+</code></pre>
+
+<p>Load the new shell configurations.</p>
+
+<pre><code>source ~/.bash_profile
+</code></pre>
+
+<h3 id="manual-startstop">Manual Start/Stop</h3>
+
+<p>To start the HTTPd.</p>
+
+<pre><code>sudo apachectl start
+</code></pre>
+
+<p>To shut down the HTTPd.</p>
+
+<pre><code>sudo apachectl stop
+</code></pre>
+
+<h3 id="automatically-start-the-server-at-boot">Automatically Start the Server at Boot</h3>
+
+<p>Create a configuration file for <a href="http://en.wikipedia.org/wiki/Launchd">Launchd</a>.</p>
+
+<pre><code>sudo nano /Library/LaunchDaemons/org.apache.apache2.plist
+</code></pre>
+
+<p>Do not name the file <em>org.apache.httpd.plist</em> as it collides with a similarly named file for loading the OS X web server.</p>
+
+<p>Copy and paste the following text into the aforementioned file.</p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
+&lt;plist version="1.0"&gt;
+  &lt;dict&gt;
+    &lt;key&gt;Label&lt;/key&gt;
+    &lt;string&gt;org.apache.apache2&lt;/string&gt;
+
+    &lt;key&gt;ProgramArguments&lt;/key&gt;
+    &lt;array&gt;
+      &lt;string&gt;/usr/local/apache/bin/httpd&lt;/string&gt;
+      &lt;string&gt;-D&lt;/string&gt;
+      &lt;string&gt;FOREGROUND&lt;/string&gt;
+    &lt;/array&gt;
+
+    &lt;key&gt;StandardOutPath&lt;/key&gt;
+    &lt;string&gt;/usr/local/var/log/apache.log&lt;/string&gt;
+    &lt;key&gt;StandardErrorPath&lt;/key&gt;
+    &lt;string&gt;/usr/local/var/log/apache.log&lt;/string&gt;
+
+    &lt;key&gt;RunAtLoad&lt;/key&gt;
+    &lt;true/&gt;
+    &lt;key&gt;KeepAlive&lt;/key&gt;
+    &lt;true/&gt;
+  &lt;/dict&gt;
+&lt;/plist&gt;
+</code></pre>
+
+<p>Register with Launchd and start the server.</p>
+
+<pre><code>sudo launchctl load /Library/LaunchDaemons/org.apache.apache2.plist
+</code></pre>
+
+<p>Deregister with Launchd.</p>
+
+<pre><code>sudo launchctl unload /Library/LaunchDaemons/org.apache.apache2.plist
+</code></pre>
+
+<h3 id="verify-the-installation">Verify the Installation</h3>
+
+<p>Verify that you have successfully installed <strong>Apache</strong>.</p>
+
+<pre><code>httpd -v
+</code></pre>
+
+<p>Visit your web server root page.</p>
+
+<p><a href="http://localhost/"><code>http://localhost/</code></a></p>
+
+    </article>
+      <footer>
+        <p>
+          <a href=".">← Return to the Table of Contents</a>
+        </p>
+      </footer>
+  </section>
+
+  <footer class="footer" role="contentinfo">
+  <p>
+    © 2015 <a href="http://patrickbougie.com/">Patrick Bougie</a>. All rights reserved.<br>
+    Please do not reproduce without written consent.<br>
+    OS X version: 10.10 Yosemite<br>
+    Last revised: 21 September 2015<br>
+    Needs updating? <a href="https://github.com/pbougie/mac-dev-env">Fork on GitHub</a>
+  </p>
+</footer>
+
+</body>
+</html>

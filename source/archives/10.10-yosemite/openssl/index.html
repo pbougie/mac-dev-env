@@ -1,0 +1,163 @@
+<!doctype html>
+<!--[if IE 8]><html class="ie8" lang="en"><![endif]-->
+<!--[if IE 9]><html class="ie9" lang="en"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
+<head>
+
+  <meta charset="utf-8">
+  <base href="/archives/10.10-yosemite/">
+  <title>
+    OpenSSL - 
+    Compiling a Web Development Environment on Mac OS X
+  </title>
+
+  <meta name="author" content="Patrick Bougie">
+  <meta name="description" content="Guide for compiling a Web Development Environment on Mac OS X: OpenSSL.">
+  <meta name="apple-mobile-web-app-title" content="Mac Dev Env">
+  <meta name="viewport" content="initial-scale=1">
+
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon.png">
+
+  <!--[if gte IE 9]><!-->
+  <link href="stylesheets/styles.css" rel="stylesheet" />
+  <!--<![endif]-->
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="javascripts/versioning.js"></script>
+
+</head>
+<body id="openssl">
+
+  <header class="header" role="banner">
+  <h1 class="header__title">
+    <a href=".">
+      Compiling a Web Development Environment on Mac OS X
+    </a>
+  </h1>
+  <div class="header__elsewhere">
+    <ul>
+      <li class="www" title="Website">
+        <a href="http://patrickbougie.com/">
+          <span aria-hidden="true" data-icon="&#xe000;"></span>
+          <span class="text-to-speech">patrickbougie.com</span>
+        </a>
+      </li>
+      <li class="twitter" title="Twitter">
+        <a href="https://twitter.com/pbougie">
+          <span aria-hidden="true" data-icon="&#xe001;"></span>
+          <span class="text-to-speech">@pbougie</span>
+        </a>
+      </li>
+      <li class="github" title="GitHub">
+        <a href="https://github.com/pbougie/mac-dev-env">
+          <span aria-hidden="true" data-icon="&#xe002;"></span>
+          <span class="text-to-speech">github.com/pbougie</span>
+        </a>
+      </li>
+      <li class="email" title="Email">
+        <a href="mailto:hello@patrickbougie.com">
+          <span aria-hidden="true" data-icon="&#xe003;"></span>
+          <span class="text-to-speech">hello@patrickbougie.com</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+
+  <div class="github-fork-ribbon-wrapper right">
+      <div class="github-fork-ribbon">
+          <a href="https://github.com/pbougie/mac-dev-env">Fork me on GitHub</a>
+      </div>
+  </div>
+
+  <section class="main" role="main">
+      <header>
+        <h2>OpenSSL</h2>
+      </header>
+    <article>
+      <blockquote>
+  <p><strong>Links:</strong> <a href="http://www.openssl.org/">Homepage</a> | <a href="http://www.openssl.org/source/">Downloads</a><br />
+<strong>Dependencies:</strong> None<br />
+<strong>Version:</strong> <span id="version">1.0.2d</span></p>
+</blockquote>
+
+<p>The OpenSSL Project is a collaborative effort to develop a robust, commercial-grade, full-featured, and Open Source toolkit implementing the Secure Sockets Layer (SSL v2/v3) and Transport Layer Security (TLS v1) protocols as well as a full-strength general purpose cryptography library.</p>
+
+<h3 id="get-the-code">Get the Code</h3>
+
+<p>Switch to <code>/usr/local/src</code> and download the source package.</p>
+
+<pre><code>cd /usr/local/src
+curl --remote-name http://www.openssl.org/source/openssl-VERSION.tar.gz
+</code></pre>
+
+<p>Extract the archive and move into the folder.</p>
+
+<pre><code>tar -xzvf openssl-VERSION.tar.gz
+cd openssl-VERSION
+</code></pre>
+
+<h3 id="compile-and-install">Compile and Install</h3>
+
+<p>Configure, compile and install into <code>/usr/local/openssl-VERSION</code>.</p>
+
+<pre><code>./configure darwin64-x86_64-cc --prefix=/usr/local/openssl-VERSION
+make
+make install
+</code></pre>
+
+<p>Create a symbolic link that points <code>/usr/local/openssl</code> to <code>/usr/local/openssl-VERSION</code>.</p>
+
+<pre><code>ln -s openssl-VERSION /usr/local/openssl
+</code></pre>
+
+<h3 id="shell">Shell</h3>
+
+<p>Execute the following lines to update your <a href="http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29">Bash</a> startup script.</p>
+
+<pre><code>echo 'export PATH=/usr/local/openssl/bin:$PATH' &gt;&gt; ~/.bash_profile
+echo 'export MANPATH=/usr/local/openssl/ssl/man:$MANPATH' &gt;&gt; ~/.bash_profile
+</code></pre>
+
+<p>Load the new shell configurations.</p>
+
+<pre><code>source ~/.bash_profile
+</code></pre>
+
+<h3 id="certificates">Certificates</h3>
+
+<p>Execute the following lines to install the certificates.</p>
+
+<pre><code>security find-certificate -a -p /Library/Keychains/System.keychain &gt; /usr/local/openssl/ssl/cert.pem
+security find-certificate -a -p /System/Library/Keychains/SystemRootCertificates.keychain &gt;&gt; /usr/local/openssl/ssl/cert.pem
+</code></pre>
+
+<h3 id="verify-the-installation">Verify the Installation</h3>
+
+<p>Verify that you have successfully installed <strong>OpenSSL</strong>.</p>
+
+<pre><code>openssl version -a
+</code></pre>
+
+    </article>
+      <footer>
+        <p>
+          <a href=".">← Return to the Table of Contents</a>
+        </p>
+      </footer>
+  </section>
+
+  <footer class="footer" role="contentinfo">
+  <p>
+    © 2015 <a href="http://patrickbougie.com/">Patrick Bougie</a>. All rights reserved.<br>
+    Please do not reproduce without written consent.<br>
+    OS X version: 10.10 Yosemite<br>
+    Last revised: 21 September 2015<br>
+    Needs updating? <a href="https://github.com/pbougie/mac-dev-env">Fork on GitHub</a>
+  </p>
+</footer>
+
+</body>
+</html>
