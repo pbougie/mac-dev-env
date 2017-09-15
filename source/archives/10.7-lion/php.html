@@ -1,0 +1,193 @@
+<!doctype html>
+<!--[if IE 7]><html class="ie7 lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if IE 8]><html class="ie8 lt-ie9" lang="en"><![endif]-->
+<!--[if IE 9]><html class="ie9" lang="en"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
+<head>
+
+	<meta charset="utf-8">
+	<title>PHP — Compiling a Web Development Environment on Mac OS X</title>
+
+	<meta name="author" content="Patrick Bougie">
+	<meta name="description" content="PHP — Compiling a Web Development Environment on Mac OS X">
+	<meta name="viewport" content="initial-scale=1.0">
+
+	<link rel="shortcut icon" href="images/favicon.png">
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-57x57.png">
+
+	<!--[if gte IE 7]><!-->
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:regular,bold">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Serif">
+	<!--<![endif]-->
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<script src="js/ios-fix.js"></script>
+  <script src="js/dynamic-versioning.js"></script>
+
+</head>
+<body id="php">
+
+	<header role="banner">
+	<div>
+		<h1>
+			<a href="index.html" title="Patrick Bougie">Patrick Bougie</a>
+		</h1>
+		<section class="elsewhere">
+			<ul>
+				<li class="www" title="patrickbougie.com">
+					<a href="http://patrickbougie.com/">patrickbougie.com</a>
+				</li>
+				<li class="twitter" title="@pbougie">
+					<a href="https://twitter.com/pbougie">@pbougie</a>
+				</li>
+				<li class="github" title="github.com/pbougie">
+					<a href="https://github.com/pbougie">github.com/pbougie</a>
+				</li>
+			</ul>
+		</section>
+	</div>
+</header>
+
+
+	<section role="main">
+		<header>
+			<hgroup>
+				<h1>Compiling a Web Development Environment on Mac OS X</h1>
+				<h2>PHP</h2>
+			</hgroup>
+		</header>
+		<article>
+			<blockquote><p><strong>Links:</strong> <a href="http://www.php.net/">Homepage</a> | <a href="http://www.php.net/downloads.php">Downloads</a><br/>
+<strong>Dependencies:</strong> <a href="apache.html">Apache</a> | <a href="php-libjpeg.html">LibJPEG</a> | <a href="php-libpng.html">LibPNG</a> | <a href="php-libmcrypt.html">LibMCrypt</a><br/>
+<strong>Version:</strong> <span id="version">5.4.0</span></p></blockquote>
+
+<p><strong>PHP</strong> is a general-purpose server-side scripting language that is especially suited to web development.</p>
+
+<h3>Get the Code</h3>
+
+<p>Switch to <code>/usr/local/src</code> and download the source package.</p>
+
+<pre><code>cd /usr/local/src
+curl --location --output php-VERSION.tar.gz http://ca.php.net/get/php-VERSION.tar.gz/from/this/mirror
+</code></pre>
+
+<p>Extract the archive and move into the folder.</p>
+
+<pre><code>tar -xzvf php-VERSION.tar.gz
+cd php-VERSION
+</code></pre>
+
+<h3>Compile and Install</h3>
+
+<p>Configure, compile and install into <code>/usr/local/php-VERSION</code>.</p>
+
+<pre><code>./configure \
+    --prefix=/usr/local/php-VERSION \
+    --with-config-file-path=/usr/local/php-VERSION \
+    --enable-bcmath \
+    --enable-mbstring \
+    --enable-sockets \
+    --enable-zip \
+    --with-apxs2=/usr/local/apache/bin/apxs \
+    --with-bz2 \
+    --with-curl \
+    --with-gd \
+    --with-imap-ssl \
+    --with-jpeg-dir=/usr/local/libjpeg \
+    --with-mcrypt=/usr/local/libmcrypt \
+    --with-mysql=mysqlnd \
+    --with-mysqli=mysqlnd \
+    --with-pear \
+    --with-pdo-mysql=mysqlnd \
+    --with-png-dir=/usr/local/libpng \
+    --with-openssl \
+    --with-xmlrpc \
+    --with-xsl \
+    --with-zlib
+make
+make install
+</code></pre>
+
+<p>Create a symbolic link that points <code>/usr/local/php</code> to <code>/usr/local/php-VERSION</code>.</p>
+
+<pre><code>ln -s php-VERSION /usr/local/php
+</code></pre>
+
+<h3>PHP Configuration</h3>
+
+<p>Copy a PHP configuration template to the target folder.</p>
+
+<pre><code>cp php.ini-development /usr/local/php/php.ini
+</code></pre>
+
+<p>You can configure any of the <a href="http://www.php.net/manual/en/ini.list.php">php.ini directives</a> by editing this file.</p>
+
+<h3>Apache Configuration</h3>
+
+<p>Edit Apache's configuration file.</p>
+
+<pre><code>nano /usr/local/apache/conf/httpd.conf
+</code></pre>
+
+<p>Copy and paste the following text at the end of the aforementioned file.</p>
+
+<pre><code>&lt;IfModule mime_module&gt;
+    AddType application/x-httpd-php .php
+&lt;/IfModule&gt;
+</code></pre>
+
+<h3>Shell</h3>
+
+<p>Add the following lines to your <a href="http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29">Bash</a> startup script to put PHP and its Man Pages into your path.</p>
+
+<pre><code>echo 'export PATH=/usr/local/php/bin:$PATH' &gt;&gt; ~/.bash_profile
+echo 'export MANPATH=/usr/local/php/man:$MANPATH' &gt;&gt; ~/.bash_profile
+</code></pre>
+
+<p>Load the new shell configurations.</p>
+
+<pre><code>source ~/.bash_profile
+</code></pre>
+
+<h3>Restart the Web Server</h3>
+
+<p>The web server must be restarted for the changes to take effect.</p>
+
+<pre><code>sudo /usr/local/apache/bin/apachectl -k restart
+</code></pre>
+
+<h3>Verify the Installation</h3>
+
+<p>To verify that you have correctly installed PHP, execute the following command. It should display the version number along with other information.</p>
+
+<pre><code>php --version
+</code></pre>
+
+		</article>
+
+			<footer>
+				<p>
+					<a href="index.html">« Return to the Table of Contents</a>
+				</p>
+			</footer>
+
+	</section>
+
+	<footer role="contentinfo">
+	<p>© 2012 Patrick Bougie. All rights reserved.</p>
+	<p>Please do not reproduce without written consent.</p>
+  <p>OS X version: 10.7 Lion</p>
+	<p>Last revised: 14 March 2012</p>
+</footer>
+
+
+</body>
+</html>

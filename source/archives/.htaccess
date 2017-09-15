@@ -1,0 +1,2 @@
+RewriteEngine on
+RewriteRule ^$ http://mac-dev-env.patrickbougie.com/ [R=permanent,L]

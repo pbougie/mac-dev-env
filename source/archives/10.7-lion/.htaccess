@@ -1,0 +1,2 @@
+ErrorDocument 403 /mac-dev-env/10.7-lion/error.html
+ErrorDocument 404 /mac-dev-env/10.7-lion/error.html

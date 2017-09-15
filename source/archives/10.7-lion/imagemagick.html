@@ -1,0 +1,134 @@
+<!doctype html>
+<!--[if IE 7]><html class="ie7 lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if IE 8]><html class="ie8 lt-ie9" lang="en"><![endif]-->
+<!--[if IE 9]><html class="ie9" lang="en"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
+<head>
+
+	<meta charset="utf-8">
+	<title>ImageMagick — Compiling a Web Development Environment on Mac OS X</title>
+
+	<meta name="author" content="Patrick Bougie">
+	<meta name="description" content="ImageMagick — Compiling a Web Development Environment on Mac OS X">
+	<meta name="viewport" content="initial-scale=1.0">
+
+	<link rel="shortcut icon" href="images/favicon.png">
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-57x57.png">
+
+	<!--[if gte IE 7]><!-->
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:regular,bold">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Serif">
+	<!--<![endif]-->
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<script src="js/ios-fix.js"></script>
+  <script src="js/dynamic-versioning.js"></script>
+
+</head>
+<body id="imagemagick">
+
+	<header role="banner">
+	<div>
+		<h1>
+			<a href="index.html" title="Patrick Bougie">Patrick Bougie</a>
+		</h1>
+		<section class="elsewhere">
+			<ul>
+				<li class="www" title="patrickbougie.com">
+					<a href="http://patrickbougie.com/">patrickbougie.com</a>
+				</li>
+				<li class="twitter" title="@pbougie">
+					<a href="https://twitter.com/pbougie">@pbougie</a>
+				</li>
+				<li class="github" title="github.com/pbougie">
+					<a href="https://github.com/pbougie">github.com/pbougie</a>
+				</li>
+			</ul>
+		</section>
+	</div>
+</header>
+
+
+	<section role="main">
+		<header>
+			<hgroup>
+				<h1>Compiling a Web Development Environment on Mac OS X</h1>
+				<h2>ImageMagick</h2>
+			</hgroup>
+		</header>
+		<article>
+			<blockquote><p><strong>Links:</strong> <a href="http://www.imagemagick.org/">Homepage</a> | <a href="http://www.imagemagick.org/script/download.php">Downloads</a><br/>
+<strong>Dependencies:</strong> None <br/>
+<strong>Version:</strong> <span id="version">6.7.5</span></p></blockquote>
+
+<p><strong>ImageMagick</strong> is a library to create, edit, compose or convert bitmap images. It can read and write images in a variety of formats (over 100). ImageMagick can resize, flip, mirror, rotate, distort, shear and transform images, adjust image colors, apply various special effects, or draw text, lines, polygons, ellipses and Bézier curves.</p>
+
+<h3>Get the Code</h3>
+
+<p>Switch to <code>/usr/local/src</code> and download the pre-compiled binaries.</p>
+
+<pre><code>cd /usr/local/src
+curl --remote-name http://www.imagemagick.org/download/binaries/ImageMagick-x86_64-apple-darwin11.3.0.tar.gz
+</code></pre>
+
+<h3>Install</h3>
+
+<p>Unpack the binaries into <code>/usr/local</code>.</p>
+
+<pre><code>tar xvfz ImageMagick-x86_64-apple-darwin11.3.0.tar.gz -C ..
+</code></pre>
+
+<p>Create a symbolic link to <code>/usr/local/ImageMagick</code>.</p>
+
+<pre><code>ln -s ImageMagick-VERSION /usr/local/ImageMagick
+</code></pre>
+
+<h3>Shell</h3>
+
+<p>Add the following lines to your <a href="http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29">Bash</a> startup script to put ImageMagick into your path.</p>
+
+<pre><code>echo 'export MAGICK_HOME="/usr/local/ImageMagick"' &gt;&gt; ~/.bash_profile
+echo 'export PATH="$MAGICK_HOME/bin:$PATH"' &gt;&gt; ~/.bash_profile
+echo 'export DYLD_LIBRARY_PATH="$MAGICK_HOME/lib/"' &gt;&gt; ~/.bash_profile
+</code></pre>
+
+<p>Load the new shell configurations.</p>
+
+<pre><code>source ~/.bash_profile
+</code></pre>
+
+<h3>Verify the Installation</h3>
+
+<p>To verify that you have correctly installed ImageMagick and your required file formats are available.</p>
+
+<pre><code>identify -list format
+</code></pre>
+
+		</article>
+
+			<footer>
+				<p>
+					<a href="index.html">« Return to the Table of Contents</a>
+				</p>
+			</footer>
+
+	</section>
+
+	<footer role="contentinfo">
+	<p>© 2012 Patrick Bougie. All rights reserved.</p>
+	<p>Please do not reproduce without written consent.</p>
+  <p>OS X version: 10.7 Lion</p>
+	<p>Last revised: 14 March 2012</p>
+</footer>
+
+
+</body>
+</html>

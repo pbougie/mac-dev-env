@@ -1,0 +1,255 @@
+<!doctype html>
+<!--[if IE 8]><html class="ie8" lang="en"><![endif]-->
+<!--[if IE 9]><html class="ie9" lang="en"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
+<head>
+
+  <meta charset="utf-8">
+  <base href="/mac-dev-env/10.8-mountain-lion/">
+  <title>
+    MySQL —
+    Compiling a Web Development Environment on Mac OS X
+  </title>
+
+  <meta name="author" content="Patrick Bougie">
+  <meta name="description" content="Guide for compiling a Web Development Environment on Mac OS X: MySQL.">
+  <meta name="apple-mobile-web-app-title" content="Mac Dev Env">
+  <meta name="viewport" content="initial-scale=1.0">
+
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon.png">
+
+  <!--[if gte IE 8]><!-->
+  <link rel="stylesheet" href="stylesheets/styles.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:regular,bold">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Serif">
+  <!--<![endif]-->
+  <!--[if IE]>
+  <link href="stylesheets/gh-fork-ribbon.ie.css" rel="stylesheet" />
+  <![endif]-->
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="javascripts/versioning.js"></script>
+  <!--[if IE 8]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js" type="text/javascript"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js" type="text/javascript"></script>
+  <![endif]-->
+
+</head>
+<body id="mysql">
+
+  <header role="banner">
+  <h1 class="title">
+    <a href=".">
+      Compiling a Web Development Environment on Mac OS X
+    </a>
+  </h1>
+  <section class="elsewhere">
+    <ul>
+      <li class="www" title="Website">
+        <a href="http://patrickbougie.com/">
+          <span aria-hidden="true" data-icon="&#xe000;"></span>
+          <span class="text-to-speech">patrickbougie.com</span>
+        </a>
+      </li>
+      <li class="twitter" title="Twitter">
+        <a href="https://twitter.com/pbougie">
+          <span aria-hidden="true" data-icon="&#xe001;"></span>
+          <span class="text-to-speech">@pbougie</span>
+        </a>
+      </li>
+      <li class="github" title="GitHub">
+        <a href="https://github.com/pbougie/mac-dev-env">
+          <span aria-hidden="true" data-icon="&#xe002;"></span>
+          <span class="text-to-speech">github.com/pbougie</span>
+        </a>
+      </li>
+      <li class="email" title="Email">
+        <a href="mailto:hello@patrickbougie.com">
+          <span aria-hidden="true" data-icon="&#xe003;"></span>
+          <span class="text-to-speech">hello@patrickbougie.com</span>
+        </a>
+      </li>
+    </ul>
+  </section>
+</header>
+
+
+  <div class="github-fork-ribbon-wrapper right">
+      <div class="github-fork-ribbon">
+          <a href="https://github.com/pbougie/mac-dev-env">Fork me on GitHub</a>
+      </div>
+  </div>
+
+  <section role="main">
+
+      <header>
+        <h2>MySQL</h2>
+      </header>
+
+    <article>
+      <blockquote>
+  <p><strong>Links:</strong> <a href="http://www.mysql.com/">Homepage</a> | <a href="http://www.mysql.com/downloads/mysql/">Downloads</a> | <a href="http://dev.mysql.com/doc/refman/5.5/en/index.html">Reference Manual</a><br />
+<strong>Dependencies:</strong> <a href="cmake/">CMake</a><br />
+<strong>Version:</strong> <span id="version">5.6.13</span></p>
+</blockquote>
+
+<p><strong>MySQL</strong> is an open-source relational database management server (RDBMS).</p>
+
+<h3 id="get-the-code">Get the Code</h3>
+
+<p>Switch to <code>/usr/local/src</code> and download the source package.</p>
+
+<pre><code>cd /usr/local/src
+curl --remote-name http://mirror.csclub.uwaterloo.ca/mysql/Downloads/MySQL-5.6/mysql-VERSION.tar.gz
+</code></pre>
+
+<p>Extract the archive and move into the folder.</p>
+
+<pre><code>tar -xzvf mysql-VERSION.tar.gz
+cd mysql-VERSION
+</code></pre>
+
+<h3 id="compile-and-install">Compile and Install</h3>
+
+<p>Configure, compile and install into <code>/usr/local/mysql-VERSION</code>.</p>
+
+<pre><code>cmake \
+	-DCMAKE_INSTALL_PREFIX=/usr/local/mysql-VERSION \
+	-DDEFAULT_CHARSET=utf8 \
+	-DDEFAULT_COLLATION=utf8_general_ci \
+	.
+make
+make install
+</code></pre>
+
+<p>Create a symbolic link that points <code>/usr/local/mysql</code> to <code>/usr/local/mysql-VERSION</code>.</p>
+
+<pre><code>ln -s mysql-VERSION /usr/local/mysql
+</code></pre>
+
+<h3 id="shell">Shell</h3>
+
+<p>Execute the following lines to update your <a href="http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29">Bash</a> startup script.</p>
+
+<pre><code>echo 'export PATH=/usr/local/mysql/bin:$PATH' &gt;&gt; ~/.bash_profile
+echo 'export MANPATH=/usr/local/mysql/man:$MANPATH' &gt;&gt; ~/.bash_profile
+</code></pre>
+
+<p>Load the new shell configurations.</p>
+
+<pre><code>source ~/.bash_profile
+</code></pre>
+
+<h3 id="databases">Databases</h3>
+
+<p>Create a folder that will contain your databases. My databases are located in <code>/usr/local/var/mysql</code>. You can place your databases wherever you'd like but make sure you update the path when mentioned throughout this article.</p>
+
+<pre><code>mkdir -p /usr/local/var/mysql
+</code></pre>
+
+<p>Set the permissions on the folder.</p>
+
+<pre><code>sudo chown -R mysql /usr/local/var/mysql
+</code></pre>
+
+<h3 id="post-installation">Post-Installation</h3>
+
+<p>If you are copying the data from a former MySQL installation, you can skip these steps.</p>
+
+<h4 id="initialize-your-database">Initialize your Database</h4>
+
+<p>Initialize your database before launching the server.</p>
+
+<pre><code>sudo /usr/local/mysql/scripts/mysql_install_db --user=mysql --basedir=/usr/local/mysql --datadir=/usr/local/var/mysql
+</code></pre>
+
+<h4 id="secure-the-server">Secure the Server</h4>
+
+<p>The server needs to be running to perform this step which will set a root password and generally secure the server.</p>
+
+<pre><code>sudo /usr/local/mysql/bin/mysql_secure_installation
+</code></pre>
+
+<h3 id="manual-startstop">Manual Start/Stop</h3>
+
+<p>To start the MySQL server.</p>
+
+<pre><code>sudo -b /usr/local/mysql/bin/mysqld_safe --user=mysql --datadir=/usr/local/var/mysql --log-error=/usr/local/var/log/mysql.log
+</code></pre>
+
+<p>To shut down the MySQL server.</p>
+
+<pre><code>sudo /usr/local/mysql/bin/mysqladmin --password shutdown
+</code></pre>
+
+<h3 id="automatically-start-the-server-at-boot">Automatically Start the Server at Boot</h3>
+
+<p>Create a configuration file for <a href="http://en.wikipedia.org/wiki/Launchd">Launchd</a>.</p>
+
+<pre><code>sudo nano /Library/LaunchDaemons/com.mysql.mysqld.plist
+</code></pre>
+
+<p>Copy and paste the following text into the aforementioned file.</p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
+&lt;plist version="1.0"&gt;
+&lt;dict&gt;
+	&lt;key&gt;Label&lt;/key&gt;
+	&lt;string&gt;com.mysql.mysqld&lt;/string&gt;
+
+	&lt;key&gt;ProgramArguments&lt;/key&gt;
+	&lt;array&gt;
+		&lt;string&gt;/usr/local/mysql/bin/mysqld_safe&lt;/string&gt;
+		&lt;string&gt;--user=mysql&lt;/string&gt;
+		&lt;string&gt;--datadir=/usr/local/var/mysql&lt;/string&gt;
+		&lt;string&gt;--log-error=/usr/local/var/log/mysql.log&lt;/string&gt;
+	&lt;/array&gt;
+
+	&lt;key&gt;RunAtLoad&lt;/key&gt;
+	&lt;true/&gt;
+	&lt;key&gt;KeepAlive&lt;/key&gt;
+	&lt;true/&gt;
+&lt;/dict&gt;
+&lt;/plist&gt;
+</code></pre>
+
+<p>Register with Launchd and start the server.</p>
+
+<pre><code>sudo launchctl load -w /Library/LaunchDaemons/com.mysql.mysqld.plist
+</code></pre>
+
+<p>Deregister with Launchd.</p>
+
+<pre><code>sudo launchctl unload -w /Library/LaunchDaemons/com.mysql.mysqld.plist
+</code></pre>
+
+<h3 id="verify-the-installation">Verify the Installation</h3>
+
+<p>Log into the database using the <strong>MySQL</strong> client.</p>
+
+<pre><code>mysql --user=root --password
+</code></pre>
+
+    </article>
+
+      <footer>
+        <p>
+          <a href=".">← Return to the Table of Contents</a>
+        </p>
+      </footer>
+
+  </section>
+
+  <footer role="contentinfo">
+  <p>© 2013 <a href="http://patrickbougie.com">Patrick Bougie</a>. All rights reserved.</p>
+  <p>Please do not reproduce without written consent.</p>
+  <p>OS X version: 10.8 Mountain Lion</p>
+  <p>Last revised: 10 September 2013</p>
+  <p>Needs updating? <a href="https://github.com/pbougie/mac-dev-env">Fork on GitHub</a></p>
+</footer>
+
+
+</body>
+</html>

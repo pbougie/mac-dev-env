@@ -1,0 +1,174 @@
+<!doctype html>
+<!--[if IE 8]><html class="ie8" lang="en"><![endif]-->
+<!--[if IE 9]><html class="ie9" lang="en"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
+<head>
+
+  <meta charset="utf-8">
+  <base href="/mac-dev-env/10.10-yosemite/">
+  <title>
+    Pow -
+    Compiling a Web Development Environment on Mac OS X
+  </title>
+
+  <meta name="author" content="Patrick Bougie">
+  <meta name="description" content="Guide for compiling a Web Development Environment on Mac OS X: Pow.">
+  <meta name="apple-mobile-web-app-title" content="Mac Dev Env">
+  <meta name="viewport" content="initial-scale=1">
+
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon.png">
+
+  <!--[if gte IE 9]><!-->
+  <link href="stylesheets/styles.css" rel="stylesheet" />
+  <!--<![endif]-->
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="javascripts/versioning.js"></script>
+
+</head>
+<body id="pow">
+
+  <header class="header" role="banner">
+  <h1 class="header__title">
+    <a href=".">
+      Compiling a Web Development Environment on Mac OS X
+    </a>
+  </h1>
+  <div class="header__elsewhere">
+    <ul>
+      <li class="www" title="Website">
+        <a href="http://patrickbougie.com/">
+          <span aria-hidden="true" data-icon="&#xe000;"></span>
+          <span class="text-to-speech">patrickbougie.com</span>
+        </a>
+      </li>
+      <li class="twitter" title="Twitter">
+        <a href="https://twitter.com/pbougie">
+          <span aria-hidden="true" data-icon="&#xe001;"></span>
+          <span class="text-to-speech">@pbougie</span>
+        </a>
+      </li>
+      <li class="github" title="GitHub">
+        <a href="https://github.com/pbougie/mac-dev-env">
+          <span aria-hidden="true" data-icon="&#xe002;"></span>
+          <span class="text-to-speech">github.com/pbougie</span>
+        </a>
+      </li>
+      <li class="email" title="Email">
+        <a href="mailto:hello@patrickbougie.com">
+          <span aria-hidden="true" data-icon="&#xe003;"></span>
+          <span class="text-to-speech">hello@patrickbougie.com</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+
+  <div class="github-fork-ribbon-wrapper right">
+      <div class="github-fork-ribbon">
+          <a href="https://github.com/pbougie/mac-dev-env">Fork me on GitHub</a>
+      </div>
+  </div>
+
+  <section class="main" role="main">
+      <header>
+        <h2>Pow</h2>
+      </header>
+    <article>
+      <blockquote>
+  <p><strong>Links:</strong> <a href="http://pow.cx/">Homepage</a> | <a href="http://pow.cx/manual.html">Documentation</a><br />
+<strong>Dependencies:</strong> None</p>
+</blockquote>
+
+<p>Pow is a zero-config Rack server for Mac OS X.</p>
+
+<h3 id="configure-pow-for-use-with-apache">Configure Pow for use with Apache</h3>
+
+<p>This will install Pow to work with Apache. You can skip this section for a standalone installation.</p>
+
+<p>Configure Pow prior to running the installation script.</p>
+
+<pre><code>echo 'export POW_DST_PORT=88' &gt;&gt; ~/.powconfig
+source ~/.powconfig
+</code></pre>
+
+<p>Add the following to the Apache configuration file <code>/usr/local/apache/conf/httpd.conf</code>.</p>
+
+<pre><code>LoadModule proxy_module modules/mod_proxy.so
+LoadModule proxy_http_module modules/mod_proxy_http.so
+
+&lt;VirtualHost *:80&gt;
+  # Passthrough to non-Ruby projects.
+&lt;/VirtualHost&gt;
+
+&lt;VirtualHost *:80&gt;
+  ServerName pow
+  ServerAlias *.dev
+  ServerAlias *.xip.io
+
+  ProxyPass / http://localhost:20559/
+  ProxyPassReverse / http://localhost:20559/
+  ProxyPreserveHost On
+&lt;/VirtualHost&gt;
+</code></pre>
+
+<p>Restart Apache.</p>
+
+<pre><code>sudo apachectl restart
+</code></pre>
+
+<h3 id="configure-pow-for-use-with-rbenv">Configure Pow for use with <code>rbenv</code></h3>
+
+<p>This will install Pow to work with <code>rbenv</code>. You can skip this section if you are not using <code>rbenv</code></p>
+
+<pre><code>echo 'export PATH=/usr/local/rbenv/shims:/usr/local/rbenv/bin:$PATH' &gt;&gt; ~/.powconfig
+source ~/.powconfig
+</code></pre>
+
+<h3 id="install-or-upgrade">Install or Upgrade</h3>
+
+<p>Install or upgrade Pow using the installation script.</p>
+
+<pre><code>curl get.pow.cx | sh
+</code></pre>
+
+<p>To add a Rack-based application.</p>
+
+<pre><code>cd ~/.pow
+ln -s /path/to/appname
+</code></pre>
+
+<p>Load the application.</p>
+
+<pre><code>http://appname.dev/
+</code></pre>
+
+<h3 id="uninstall">Uninstall</h3>
+
+<p>Uninstall Pow.</p>
+
+<pre><code>curl get.pow.cx/uninstall.sh | sh
+</code></pre>
+
+    </article>
+      <footer>
+        <p>
+          <a href=".">← Return to the Table of Contents</a>
+        </p>
+      </footer>
+  </section>
+
+  <footer class="footer" role="contentinfo">
+  <p>
+    © 2015 <a href="http://patrickbougie.com/">Patrick Bougie</a>. All rights reserved.<br>
+    Please do not reproduce without written consent.<br>
+    OS X version: 10.10 Yosemite<br>
+    Last revised: 21 September 2015<br>
+    Needs updating? <a href="https://github.com/pbougie/mac-dev-env">Fork on GitHub</a>
+  </p>
+</footer>
+
+</body>
+</html>

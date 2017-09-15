@@ -1,0 +1,161 @@
+<!doctype html>
+<!--[if IE 8]><html class="ie8" lang="en"><![endif]-->
+<!--[if IE 9]><html class="ie9" lang="en"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
+<head>
+
+  <meta charset="utf-8">
+  <base href="/mac-dev-env/10.9-mavericks/">
+  <title>
+    PCRE - Perl Compatible Regular Expressions —
+    Compiling a Web Development Environment on Mac OS X
+  </title>
+
+  <meta name="author" content="Patrick Bougie">
+  <meta name="description" content="Guide for compiling a Web Development Environment on Mac OS X: PCRE - Perl Compatible Regular Expressions.">
+  <meta name="apple-mobile-web-app-title" content="Mac Dev Env">
+  <meta name="viewport" content="initial-scale=1">
+
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon.png">
+
+  <!--[if gte IE 8]><!-->
+  <link rel="stylesheet" href="stylesheets/styles.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:regular,bold">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Serif">
+  <!--<![endif]-->
+  <!--[if IE]>
+  <link rel="stylesheet" href="stylesheets/gh-fork-ribbon.ie.css">
+  <![endif]-->
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="javascripts/versioning.js"></script>
+  <!--[if IE 8]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+<body id="pcre">
+
+  <header role="banner">
+  <h1 class="title">
+    <a href=".">
+      Compiling a Web Development Environment on Mac OS X
+    </a>
+  </h1>
+  <section class="elsewhere">
+    <ul>
+      <li class="www" title="Website">
+        <a href="http://patrickbougie.com/">
+          <span aria-hidden="true" data-icon="&#xe000;"></span>
+          <span class="text-to-speech">patrickbougie.com</span>
+        </a>
+      </li>
+      <li class="twitter" title="Twitter">
+        <a href="https://twitter.com/pbougie">
+          <span aria-hidden="true" data-icon="&#xe001;"></span>
+          <span class="text-to-speech">@pbougie</span>
+        </a>
+      </li>
+      <li class="github" title="GitHub">
+        <a href="https://github.com/pbougie/mac-dev-env">
+          <span aria-hidden="true" data-icon="&#xe002;"></span>
+          <span class="text-to-speech">github.com/pbougie</span>
+        </a>
+      </li>
+      <li class="email" title="Email">
+        <a href="mailto:hello@patrickbougie.com">
+          <span aria-hidden="true" data-icon="&#xe003;"></span>
+          <span class="text-to-speech">hello@patrickbougie.com</span>
+        </a>
+      </li>
+    </ul>
+  </section>
+</header>
+
+
+  <div class="github-fork-ribbon-wrapper right">
+      <div class="github-fork-ribbon">
+          <a href="https://github.com/pbougie/mac-dev-env">Fork me on GitHub</a>
+      </div>
+  </div>
+
+  <section role="main">
+      <header>
+        <h2>PCRE - Perl Compatible Regular Expressions</h2>
+      </header>
+    <article>
+      <blockquote>
+  <p><strong>Links:</strong> <a href="http://pcre.org/">Homepage</a><br />
+<strong>Dependencies:</strong> None<br />
+<strong>Version:</strong> <span id="version">8.36</span></p>
+</blockquote>
+
+<p>The <strong>PCRE</strong> library is a set of functions that implement regular expression pattern matching using the same syntax and semantics as Perl 5.</p>
+
+<h3 id="get-the-code">Get the Code</h3>
+
+<p>Switch to <code>/usr/local/src</code> and download the source package.</p>
+
+<pre><code>cd /usr/local/src
+curl --remote-name ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-VERSION.tar.gz
+</code></pre>
+
+<p>Extract the archive and move into the folder.</p>
+
+<pre><code>tar -xzvf pcre-VERSION.tar.gz
+cd pcre-VERSION
+</code></pre>
+
+<h3 id="compile-and-install">Compile and Install</h3>
+
+<p>Configure, compile and install into <code>/usr/local/pcre-VERSION</code>.</p>
+
+<pre><code>./configure --prefix=/usr/local/pcre-VERSION
+make
+make install
+</code></pre>
+
+<p>Create a symbolic link that points <code>/usr/local/pcre</code> to <code>/usr/local/pcre-VERSION</code>.</p>
+
+<pre><code>ln -s pcre-VERSION /usr/local/pcre
+</code></pre>
+
+<h3 id="shell">Shell</h3>
+
+<p>Execute the following lines to update your <a href="http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29">Bash</a> startup script.</p>
+
+<pre><code>echo 'export PATH=/usr/local/pcre/bin:$PATH' &gt;&gt; ~/.bash_profile
+</code></pre>
+
+<p>Load the new shell configurations.</p>
+
+<pre><code>source ~/.bash_profile
+</code></pre>
+
+<h3 id="verify-the-installation">Verify the Installation</h3>
+
+<p>To verify that you have correctly installed PCRE. It should display <strong>VERSION</strong>.</p>
+
+<pre><code>pcre-config --version
+</code></pre>
+
+    </article>
+      <footer>
+        <p>
+          <a href=".">← Return to the Table of Contents</a>
+        </p>
+      </footer>
+  </section>
+
+  <footer role="contentinfo">
+  <p>© 2014 <a href="http://patrickbougie.com">Patrick Bougie</a>. All rights reserved.</p>
+  <p>Please do not reproduce without written consent.</p>
+  <p>OS X version: 10.9 Mavericks</p>
+  <p>Last revised: 11 October 2014</p>
+  <p>Needs updating? <a href="https://github.com/pbougie/mac-dev-env">Fork on GitHub</a></p>
+</footer>
+
+</body>
+</html>
