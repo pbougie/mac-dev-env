@@ -55,15 +55,14 @@ This configures the settings that require root access on macOS.
 
 Enter your system password to continue.
 
-To add a Rack-based application.
+Create folder for your applications.
 
 	mkdir -p ~/.puma-dev
 	cd ~/.puma-dev
+
+For each application, add a symlink.
+
 	ln -s /path/to/appname
-
-Load the application (must start server first; see below).
-
-	http://appname.dev/
 
 
 ### Manual Start/Stop
@@ -71,6 +70,10 @@ Load the application (must start server first; see below).
 To start the **Puma-dev** server.
 
 	puma-dev
+
+Load the application.
+
+	http://appname.dev:9280/
 
 Press `CTRL-C` to stop the **Puma-dev** server.
 
@@ -102,6 +105,10 @@ Add the following to the Apache configuration file `/usr/local/apache/conf/httpd
 Restart Apache.
 
 	sudo apachectl restart
+
+Load the application.
+
+	http://appname.dev/
 
 
 ### Purge
