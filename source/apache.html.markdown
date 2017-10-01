@@ -32,7 +32,7 @@ Configure, compile and install into `/usr/local/mac-dev-env/apache-VERSION`.
 
 Create a symbolic link to `/usr/local/apache`.
 
-	ln -s mac-dev-env/apache-VERSION /usr/local/apache
+	sudo ln -s mac-dev-env/apache-VERSION /usr/local/apache
 
 
 ### Configuration File

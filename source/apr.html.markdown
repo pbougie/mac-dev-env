@@ -32,7 +32,7 @@ Configure, compile and install into `/usr/local/mac-dev-env/apr-VERSION`.
 
 Create a symbolic link to `/usr/local/apr`.
 
-	ln -s mac-dev-env/apr-VERSION /usr/local/apr
+	sudo ln -s mac-dev-env/apr-VERSION /usr/local/apr
 
 
 ### Shell

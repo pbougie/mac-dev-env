@@ -32,7 +32,7 @@ Configure, compile and install into `/usr/local/mac-dev-env/autoconf-VERSION`.
 
 Create a symbolic link to `/usr/local/autoconf`.
 
-	ln -s mac-dev-env/autoconf-VERSION /usr/local/autoconf
+	sudo ln -s mac-dev-env/autoconf-VERSION /usr/local/autoconf
 
 
 ### Shell

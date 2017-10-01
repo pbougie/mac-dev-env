@@ -34,7 +34,7 @@ Configure, compile and install into `/usr/local/mac-dev-env/apr-util-VERSION`.
 
 Create a symbolic link to `/usr/local/apr-util`.
 
-	ln -s mac-dev-env/apr-util-VERSION /usr/local/apr-util
+	sudo ln -s mac-dev-env/apr-util-VERSION /usr/local/apr-util
 
 
 ### Shell

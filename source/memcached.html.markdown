@@ -34,7 +34,7 @@ Configure, compile and install into `/usr/local/mac-dev-env/memcached-VERSION`.
 
 Create a symbolic link to `/usr/local/memcached`.
 
-	ln -s mac-dev-env/memcached-VERSION /usr/local/memcached
+	sudo ln -s mac-dev-env/memcached-VERSION /usr/local/memcached
 
 
 ### Shell

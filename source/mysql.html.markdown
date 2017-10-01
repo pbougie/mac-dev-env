@@ -39,7 +39,7 @@ Configure, compile and install into `/usr/local/mac-dev-env/mysql-VERSION`.
 
 Create a symbolic link to `/usr/local/mysql`.
 
-	ln -s mac-dev-env/mysql-VERSION /usr/local/mysql
+	sudo ln -s mac-dev-env/mysql-VERSION /usr/local/mysql
 
 
 ### Shell

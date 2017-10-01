@@ -32,4 +32,4 @@ Configure, compile and install into `/usr/local/mac-dev-env/libjpeg-VERSION`.
 
 Create a symbolic link to `/usr/local/libjpeg`.
 
-	ln -s mac-dev-env/libjpeg-VERSION /usr/local/libjpeg
+	sudo ln -s mac-dev-env/libjpeg-VERSION /usr/local/libjpeg

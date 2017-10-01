@@ -25,7 +25,7 @@ Unpack the binaries into `/usr/local/mac-dev-env`.
 
 Create a symbolic link to `/usr/local/node`.
 
-	ln -s mac-dev-env/node-vVERSION-darwin-x64 /usr/local/node
+	sudo ln -s mac-dev-env/node-vVERSION-darwin-x64 /usr/local/node
 
 
 ### Shell

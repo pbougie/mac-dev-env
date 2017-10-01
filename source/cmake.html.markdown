@@ -32,7 +32,7 @@ Configure, compile and install into `/usr/local/mac-dev-env/cmake-VERSION`.
 
 Create a symbolic link to `/usr/local/cmake`.
 
-	ln -s mac-dev-env/cmake-VERSION /usr/local/cmake
+	sudo ln -s mac-dev-env/cmake-VERSION /usr/local/cmake
 
 
 ### Shell

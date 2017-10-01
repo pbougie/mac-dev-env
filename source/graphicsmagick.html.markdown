@@ -35,7 +35,7 @@ Configure, compile and install into `/usr/local/mac-dev-env/graphicsmagick-VERSI
 
 Create a symbolic link to `/usr/local/graphicsmagick`.
 
-	ln -s mac-dev-env/graphicsmagick-VERSION /usr/local/graphicsmagick
+	sudo ln -s mac-dev-env/graphicsmagick-VERSION /usr/local/graphicsmagick
 
 
 ### Shell

@@ -31,7 +31,7 @@ Configure, compile and install into `/usr/local/mac-dev-env/redis-VERSION`.
 
 Create a symbolic link to `/usr/local/redis`.
 
-	ln -s mac-dev-env/redis-VERSION /usr/local/redis
+	sudo ln -s mac-dev-env/redis-VERSION /usr/local/redis
 
 
 ### Shell

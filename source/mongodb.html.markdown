@@ -25,7 +25,7 @@ Unpack the binaries into `/usr/local/mac-dev-env`.
 
 Create a symbolic link to `/usr/local/mongodb`.
 
-	ln -s mac-dev-env/mongodb-osx-x86_64-VERSION /usr/local/mongodb
+	sudo ln -s mac-dev-env/mongodb-osx-x86_64-VERSION /usr/local/mongodb
 
 
 ### Databases

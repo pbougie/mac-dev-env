@@ -32,4 +32,4 @@ Configure, compile and install into `/usr/local/mac-dev-env/libpng-VERSION`.
 
 Create a symbolic link to `/usr/local/libpng`.
 
-	ln -s mac-dev-env/libpng-VERSION /usr/local/libpng
+	sudo ln -s mac-dev-env/libpng-VERSION /usr/local/libpng

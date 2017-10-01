@@ -32,7 +32,7 @@ Configure, compile and install into `/usr/local/mac-dev-env/openssl-VERSION`.
 
 Create a symbolic link to `/usr/local/openssl`.
 
-	ln -s mac-dev-env/openssl-VERSION /usr/local/openssl
+	sudo ln -s mac-dev-env/openssl-VERSION /usr/local/openssl
 
 
 ### Shell
