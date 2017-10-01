@@ -9,12 +9,26 @@ set :layout, 'article_layout'
 activate :directory_indexes
 activate :sprockets
 
-page '/archives/*', directory_index: false
+ignore '/archives/*'
+
 page '/google386369349e5ac941.html', directory_index: false
 
 configure :build do
   activate :minify_css
   activate :minify_javascript
+end
+
+before_build do |builder|
+  dir = "#{config[:build_dir]}/archives"
+  builder.thor.say_status :remove, dir, :red
+  system "rm -rf #{dir}"
+end
+
+after_build do |builder|
+  src = "#{config[:source]}/archives"
+  dst = "#{config[:build_dir]}/archives"
+  builder.thor.say_status :copy, "#{src} -> #{dst}", :green
+  system "cp -R #{src} #{dst}"
 end
 
 after_build do |builder|
