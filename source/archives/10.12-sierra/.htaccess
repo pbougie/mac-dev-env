@@ -1,0 +1,2 @@
+ErrorDocument 403 /archives/10.12-sierra/error/index.html
+ErrorDocument 404 /archives/10.12-sierra/error/index.html

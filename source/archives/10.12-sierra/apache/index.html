@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <base href="/archives/10.12-sierra/">
+  <title>Apache - Compiling a Web Development Environment on macOS</title>
+
+  <meta name="apple-mobile-web-app-title" content="Mac Dev Env">
+  <meta name="application-name" content="Mac Dev Env">
+  <meta name="author" content="Patrick Bougie (http://patrickbougie.com/)">
+  <meta name="description" content="A guide for compiling a web development environment on macOS: Apache.">
+  <meta name="viewport" content="initial-scale=1">
+
+  <link rel="icon" type="image/png" sizes="any" href="favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#1377c2">
+  <meta name="msapplication-TileColor" content="#1377c2">
+  <meta name="msapplication-TileImage" content="/ms-tile.png">
+  <meta name="theme-color" content="#1377c2">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@pbougie">
+  <meta property="og:title" content="Mac Dev Env: Apache">
+  <meta property="og:description" content="A guide for compiling a web development environment on macOS: Apache.">
+  <meta property="og:url" content="http://mac-dev-env.patrickbougie.com/">
+  <meta property="og:image" content="http://mac-dev-env.patrickbougie.com/favicon.png">
+
+  <!--[if gte IE 9]><!-->
+  <link href="stylesheets/site.css" rel="stylesheet" />
+  <!--<![endif]-->
+
+  <script src="javascripts/versioning.js"></script>
+
+</head>
+<body data-page="apache">
+
+  <header class="header" role="banner">
+  <h1 class="header__title">
+    <a class="header__title__link" href=".">
+      Compiling a Web Development Environment on macOS
+    </a>
+  </h1>
+  <div class="header__external">
+    <ul class="header__external__items">
+      <li class="header__external__item" title="Website">
+        <a class="header__external__link www" href="http://patrickbougie.com/">
+          patrickbougie.com
+        </a>
+      </li>
+      <li class="header__external__item" title="Twitter">
+        <a class="header__external__link twitter" href="https://twitter.com/pbougie">
+          twitter.com/pbougie
+        </a>
+      </li>
+      <li class="header__external__item" title="GitHub">
+        <a class="header__external__link github" href="https://github.com/pbougie/mac-dev-env">
+          github.com/pbougie/mac-dev-env
+        </a>
+      </li>
+      <li class="header__external__item" title="Email">
+        <a class="header__external__link email" href="mailto:hello@patrickbougie.com">
+          hello@patrickbougie.com
+        </a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+  <a href="https://github.com/pbougie/mac-dev-env" class="github-corner"><svg width="100px" height="100px" viewBox="0 0 250 250" style="fill:#333; color:#fff; position: absolute; top: 20px; border: 0; right: 0;"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+  <section class="main" role="main">
+      <header class="main__header">
+    <h2>
+      Apache
+    </h2>
+      <blockquote>
+  <strong>Before starting:</strong> Make sure you have the necessary folders and permissions — <a href="started-folders/">get more information</a>.
+</blockquote>
+
+  </header>
+
+  <article class="main__article" id="article">
+    <blockquote>
+  <p><strong>Links:</strong> <a href="http://httpd.apache.org/">Homepage</a> | <a href="http://httpd.apache.org/download.cgi">Downloads</a> | <a href="http://httpd.apache.org/docs/2.4/">Documentation</a><br />
+<strong>Dependencies:</strong> <a href="apr/">APR</a> | <a href="apr-util/">APR-util</a> | <a href="pcre/">PCRE</a><br />
+<strong>Version:</strong> <span id="version">2.4.27</span></p>
+</blockquote>
+
+<p>The <strong>Apache HTTP Server</strong> is an open-source web server that was released in 1995.</p>
+
+<h3 id="get-the-code">Get the Code</h3>
+
+<p>Switch to <code>/usr/local/src</code> and download the source package.</p>
+
+<pre><code>cd /usr/local/src
+curl --remote-name http://apache.mirror.iweb.ca//httpd/httpd-VERSION.tar.gz
+</code></pre>
+
+<p>Extract the archive and move into the folder.</p>
+
+<pre><code>tar -xzvf httpd-VERSION.tar.gz
+cd httpd-VERSION
+</code></pre>
+
+<h3 id="compile-and-install">Compile and Install</h3>
+
+<p>Configure, compile and install into <code>/usr/local/mac-dev-env/apache-VERSION</code>.</p>
+
+<pre><code>./configure --prefix=/usr/local/mac-dev-env/apache-VERSION --enable-so
+make
+make install
+</code></pre>
+
+<p>Create a symbolic link to <code>/usr/local/apache</code>.</p>
+
+<pre><code>ln -s mac-dev-env/apache-VERSION /usr/local/apache
+</code></pre>
+
+<h3 id="configuration-file">Configuration File</h3>
+
+<p>Edit Apache's configuration file.</p>
+
+<pre><code>nano /usr/local/apache/conf/httpd.conf
+</code></pre>
+
+<p>Copy and paste the following text at the end of the aforementioned file. Make sure you replace the <code>&lt;username&gt;</code> string (3 times) with your macOS short username. This configuration only allows access from your local computer; all outside access is blocked.</p>
+
+<pre><code>ServerName dev.local
+User &lt;username&gt;
+Group staff
+
+DocumentRoot "/Users/&lt;username&gt;/Sites"
+ErrorLog "/usr/local/var/log/apache.log"
+CustomLog "/usr/local/var/log/apache.log" common
+&lt;Directory "/Users/&lt;username&gt;/Sites"&gt;
+  Options All
+  AllowOverride All
+  IndexOptions NameWidth=*
+
+  Require all denied
+  Require host localhost
+  Require host 127.0.0.1
+&lt;/Directory&gt;
+</code></pre>
+
+<p>You also need to disable the <code>ErrorLog</code> and <code>CustomLog</code> directives in the Apache configuration file (leaving the above directives intact). Otherwise, Apache will log the same information in two separate locations.</p>
+
+<h3 id="web-root">Web Root</h3>
+
+<p>Create a folder that will contain your web sites and applications. I keep my projects in <code>~/Sites</code>. You can place your projects wherever you'd like but make sure you update the path when mentioned in this article.</p>
+
+<pre><code>mkdir -p ~/Sites
+</code></pre>
+
+<h3 id="shell">Shell</h3>
+
+<p>Execute the following lines to update your <a href="http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29">Bash</a> startup script.</p>
+
+<pre><code>echo 'export PATH=/usr/local/apache/bin:$PATH' &gt;&gt; ~/.bash_profile
+echo 'export MANPATH=/usr/local/apache/man:$MANPATH' &gt;&gt; ~/.bash_profile
+</code></pre>
+
+<p>Load the new shell configurations.</p>
+
+<pre><code>source ~/.bash_profile
+</code></pre>
+
+<h3 id="manual-startstop">Manual Start/Stop</h3>
+
+<p>To start the HTTPd.</p>
+
+<pre><code>sudo apachectl start
+</code></pre>
+
+<p>To shut down the HTTPd.</p>
+
+<pre><code>sudo apachectl stop
+</code></pre>
+
+<h3 id="automatically-start-the-server-at-boot">Automatically Start the Server at Boot</h3>
+
+<p>Create a configuration file for <a href="http://en.wikipedia.org/wiki/Launchd">Launchd</a>.</p>
+
+<pre><code>sudo nano /Library/LaunchDaemons/org.apache.apache2.plist
+</code></pre>
+
+<p>Do not name the file <em>org.apache.httpd.plist</em> as it collides with a similarly named file for loading the macOS web server.</p>
+
+<p>Copy and paste the following text into the aforementioned file.</p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
+&lt;plist version="1.0"&gt;
+  &lt;dict&gt;
+    &lt;key&gt;Label&lt;/key&gt;
+    &lt;string&gt;org.apache.apache2&lt;/string&gt;
+
+    &lt;key&gt;ProgramArguments&lt;/key&gt;
+    &lt;array&gt;
+      &lt;string&gt;/usr/local/apache/bin/httpd&lt;/string&gt;
+      &lt;string&gt;-D&lt;/string&gt;
+      &lt;string&gt;FOREGROUND&lt;/string&gt;
+    &lt;/array&gt;
+
+    &lt;key&gt;StandardOutPath&lt;/key&gt;
+    &lt;string&gt;/usr/local/var/log/apache.log&lt;/string&gt;
+    &lt;key&gt;StandardErrorPath&lt;/key&gt;
+    &lt;string&gt;/usr/local/var/log/apache.log&lt;/string&gt;
+
+    &lt;key&gt;RunAtLoad&lt;/key&gt;
+    &lt;true/&gt;
+    &lt;key&gt;KeepAlive&lt;/key&gt;
+    &lt;true/&gt;
+  &lt;/dict&gt;
+&lt;/plist&gt;
+</code></pre>
+
+<p>Register with Launchd and start the server.</p>
+
+<pre><code>sudo launchctl load /Library/LaunchDaemons/org.apache.apache2.plist
+</code></pre>
+
+<p>Deregister with Launchd.</p>
+
+<pre><code>sudo launchctl unload /Library/LaunchDaemons/org.apache.apache2.plist
+</code></pre>
+
+<h3 id="verify-the-installation">Verify the Installation</h3>
+
+<p>Verify that you have successfully installed <strong>Apache</strong>.</p>
+
+<pre><code>httpd -v
+</code></pre>
+
+<p>Visit your web server root page.</p>
+
+<p><a href="http://localhost/"><code>http://localhost/</code></a></p>
+
+  </article>
+
+  <footer class="main__footer">
+    <p>
+      <a href=".">← Return to the Table of Contents</a>
+    </p>
+  </footer>
+
+  </section>
+
+  <footer class="footer" role="contentinfo">
+  <p>
+    © 2017 <a href="http://patrickbougie.com">Patrick Bougie</a>. All rights reserved.<br>
+    Please do not reproduce without written consent.<br>
+    macOS version: 10.12 Sierra<br>
+    Last revised: 28 September 2017<br>
+    Needs updating? <a href="https://github.com/pbougie/mac-dev-env">Fork on GitHub</a>
+  </p>
+</footer>
+
+</body>
+</html>
