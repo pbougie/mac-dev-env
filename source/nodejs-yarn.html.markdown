@@ -10,7 +10,7 @@ title: Yarn
 
 ### Install
 
-Install Yarn globally using [NPM](https://npmjs.org/).
+Install **Yarn** globally using [NPM](https://npmjs.org/).
 
 	npm install --global yarn
 
@@ -20,3 +20,10 @@ Install Yarn globally using [NPM](https://npmjs.org/).
 Verify that you have successfully installed **Yarn**.
 
 	yarn --version
+
+
+### Update (if required)
+
+Update your **Yarn** installation.
+
+	npm update --global yarn
