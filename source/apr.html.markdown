@@ -4,7 +4,7 @@ title: APR
 
 > **Links:** [Homepage](https://apr.apache.org/) | [Downloads](https://apr.apache.org/download.cgi)  
 > **Dependencies:** None  
-> **Version:** <span id="version">1.6.2</span>
+> **Version:** <span id="version">1.6.3</span>
 
 **Apache Portable Runtime (APR)**.
 

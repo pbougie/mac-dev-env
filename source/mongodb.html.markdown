@@ -4,7 +4,7 @@ title: MongoDB w/ SSL
 
 > **Links:** [Homepage](http://www.mongodb.org/) | [Documentation](https://docs.mongodb.com/manual/) | [Downloads](https://www.mongodb.com/download-center#community)  
 > **Dependencies:** None  
-> **Version:** <span id="version">3.4.9</span>
+> **Version:** <span id="version">3.6.0</span>
 
 **MongoDB** is a free and open-source cross-platform document-oriented database.
 
@@ -51,8 +51,6 @@ Copy and paste the following text into the aforementioned file.
 	    enabled: true
 	net:
 	  bindIp: 127.0.0.1
-	  http:
-	    enabled: true
 
 
 > **To configure MongoDB with SSL, see instructions at [Configure mongod and mongos for TLS/SSL](https://docs.mongodb.com/manual/tutorial/configure-ssl/).**
@@ -132,7 +130,3 @@ Deregister with Launchd.
 Verify that you have successfully installed **MongoDB**.
 
 	mongod --version
-
-Visit the web status page.
-
-[`http://localhost:28017/`](http://localhost:28017/)

@@ -4,7 +4,7 @@ title: GraphicsMagick
 
 > **Links:** [Homepage](http://www.graphicsmagick.org/) | [Downloads](http://www.graphicsmagick.org/download.html)  
 > **Dependencies:** [LibJPEG](/libjpeg/) | [LibPNG](/libpng/) | [LibTIFF](/libtiff/)  
-> **Version:** <span id="version">1.3.26</span>
+> **Version:** <span id="version">1.3.27a</span>
 
 **GraphicsMagick** provides a comprehensive collection of utilities, programming interfaces, and GUIs, to support file format conversion, image processing, and 2D vector rendering.
 
@@ -14,7 +14,7 @@ title: GraphicsMagick
 Switch to `/usr/local/src` and download the source package.
 
 	cd /usr/local/src
-	curl --remote-name --location http://download.sourceforge.net/graphicsmagick/GraphicsMagick-VERSION.tar.gz
+	curl --remote-name --location ftp://ftp.graphicsmagick.org/pub/GraphicsMagick/1.3/GraphicsMagick-VERSION.tar.gz
 
 Extract the archive and move into the folder.
 
