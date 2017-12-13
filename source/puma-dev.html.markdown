@@ -56,7 +56,7 @@ This configures the settings that require root access on macOS.
 
 Enter your system password to continue.
 
-Create folder for your applications.
+Create a folder for your applications.
 
 	mkdir -p ~/.puma-dev
 	cd ~/.puma-dev
@@ -112,11 +112,11 @@ Load the application.
 	http://appname.localhost/
 
 
-### Purge
+### Stop
 
 If you have any apps that have stopped responding, you can have `puma-dev` stop all the apps.
 
-	pkill -USR1 puma-dev
+	puma-dev -stop
 
 
 ### Uninstall
@@ -127,10 +127,10 @@ To uninstall **Puma-dev**.
 
 Then remove the following from your filesystem.
 
-	rm /usr/local/puma-dev
+	sudo rm /usr/local/puma-dev
 	rm ~/Library/Logs/puma-dev.log
 	rm -r /usr/local/mac-dev-env/puma-dev-VERSION
 	rm -r ~/.puma-dev
-	rm -r ~/Library/Application Support/io.puma.dev
+	rm -r "~/Library/Application Support/io.puma.dev"
 
 Don't forget to remove any **Apache** and **Bash** configurations if applicable.
