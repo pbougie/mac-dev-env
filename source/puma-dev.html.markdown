@@ -1,5 +1,6 @@
 ---
 title: Puma-dev
+message: The `.dev` gTLD is owned by Google. Beginning in **Google Chrome version 63**, `.dev` domains are redirected to HTTPS. Therefore, this guide is now using `.localhost` to host local web projects.
 ---
 
 > **Links:** [Homepage](https://github.com/puma/puma-dev) | [Downloads](https://github.com/puma/puma-dev/releases)  
@@ -69,11 +70,11 @@ For each application, add a symlink.
 
 To start the **Puma-dev** server.
 
-	puma-dev
+	puma-dev -d localhost
 
 Load the application.
 
-	http://appname.dev:9280/
+	http://appname.localhost:9280/
 
 Press `CTRL-C` to stop the **Puma-dev** server.
 
@@ -82,7 +83,7 @@ Press `CTRL-C` to stop the **Puma-dev** server.
 
 Configure **Puma-dev** to start as a service.
 
-	puma-dev -install -install-port 9280 -install-https-port 9283
+	puma-dev -install -install-port 9280 -install-https-port 9283 -d localhost
 
 Add the following to the Apache configuration file `/usr/local/apache/conf/httpd.conf`.
 
@@ -108,7 +109,7 @@ Restart Apache.
 
 Load the application.
 
-	http://appname.dev/
+	http://appname.localhost/
 
 
 ### Purge
@@ -122,7 +123,7 @@ If you have any apps that have stopped responding, you can have `puma-dev` stop 
 
 To uninstall **Puma-dev**.
 
-	puma-dev -uninstall
+	puma-dev -uninstall -d localhost
 
 Then remove the following from your filesystem.
 
