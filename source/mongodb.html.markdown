@@ -51,6 +51,7 @@ Copy and paste the following text into the aforementioned file.
 	    enabled: true
 	net:
 	  bindIp: 127.0.0.1
+	  port: 27017
 
 
 > **To configure MongoDB with SSL, see instructions at [Configure mongod and mongos for TLS/SSL](https://docs.mongodb.com/manual/tutorial/configure-ssl/).**
