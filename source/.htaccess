@@ -11,7 +11,7 @@ ErrorDocument 404 /error/index.html
 </IfModule>
 
 <IfModule mod_headers.c>
-  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' data: http://www.google-analytics.com https://track.gaug.es; style-src 'self' 'unsafe-inline' http://fonts.googleapis.com; img-src 'self' http://www.google-analytics.com https://track.gaug.es; font-src 'self' http://fonts.gstatic.com"
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' data: http://www.google-analytics.com https://track.gaug.es http://ajax.googleapis.com; style-src 'self' 'unsafe-inline' http://fonts.googleapis.com; img-src 'self' http://www.google-analytics.com https://track.gaug.es; font-src 'self' http://fonts.gstatic.com"
   Header always set X-Frame-Options "SAMEORIGIN"
   Header always set X-XSS-Protection "1; mode=block"
   Header always set X-Content-Type-Options "nosniff"
