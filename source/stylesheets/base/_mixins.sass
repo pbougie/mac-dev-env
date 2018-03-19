@@ -1,0 +1,14 @@
+// FONT-SIZE
+@mixin font-size($size: 16, $important: false)
+  @if $important
+    font-size: ($size * 0.0625) + rem !important
+  @else
+    font-size: ($size * 0.0625) + rem
+
+
+// IMAGE REPLACEMENT
+// http://www.sitepoint.com/new-css-image-replacement-technique/
+@mixin image-replacement
+  overflow: hidden
+  text-indent: 100%
+  white-space: nowrap

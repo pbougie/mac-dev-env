@@ -1,40 +1,8 @@
 <header class="header" role="banner">
-  <h1 class="header__title">
-    <a class="header__title__link" href="/">
+  <a class="header__link" href="/">
+    <img class="header__image" src="/images/macos.svg" alt="macOS" width="100" height="100" />
+    <h1 class="header__title">
       <%= site_title %>
-    </a>
-  </h1>
-  <div class="header__external">
-    <ul class="header__external__items">
-      <li class="header__external__item" title="Website">
-        <a class="header__external__link www" href="http://patrickbougie.com/">
-          patrickbougie.com
-        </a>
-      </li>
-      <li class="header__external__item" title="Twitter">
-        <a class="header__external__link twitter" href="https://twitter.com/pbougie">
-          twitter.com/pbougie
-        </a>
-      </li>
-      <li class="header__external__item" title="GitHub">
-        <a class="header__external__link github" href="https://github.com/pbougie/mac-dev-env">
-          github.com/pbougie/mac-dev-env
-        </a>
-      </li>
-      <li class="header__external__item" title="Email">
-        <a class="header__external__link email" href="mailto:hello@patrickbougie.com">
-          hello@patrickbougie.com
-        </a>
-      </li>
-    </ul>
-  </div>
-  <% if current_resource.data.message %>
-    <p class="header__message">
-      <%=
-        html = Kramdown::Document.new(current_resource.data.message).to_html
-        html = Regexp.new('^<p>(.*)<\/p>$').match(html)[1]
-        html
-      %>
-    </p>
-  <% end %>
+    </h1>
+  </a>
 </header>

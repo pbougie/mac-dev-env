@@ -1,15 +1,11 @@
-html
-  font-size: 62.5%
-
-
 body
   margin: 0
-  background-color: white
+  background-color: #111
   color: black
-  font-family: $font-base
-  font-size: 14px
-  font-size: 1.4rem
-  line-height: 1.75em
+  font-family: $font-default
+  +font-size(14)
+  font-weight: 300
+  line-height: 1.5
 
 
 a
@@ -22,12 +18,5 @@ a
     color: darken(#1377c2, 10%)
 
 
-img
-  max-width: 100%
-
-
-@media print
-  *
-    background: transparent !important
-    color: black !important
-    text-decoration: none !important
+strong
+  font-weight: 700

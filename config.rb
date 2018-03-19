@@ -4,7 +4,6 @@ I18n.enforce_available_locales = false
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
-set :layout, 'article_layout'
 
 activate :directory_indexes
 activate :sprockets
@@ -70,3 +69,18 @@ helpers do
     current_page.path.split('.').first
   end
 end
+
+class TableOfContents < Middleman::Extension
+  def initialize(app, options_hash={}, &block)
+    super
+    app.before_render do |body, path, locs, template_class|
+      if body.include?('{{ toc }}')
+        contents = File.read('source/layouts/toc.md')
+        toc = Kramdown::Document.new(contents).to_html
+        body.gsub!('{{ toc }}', toc)
+      end
+    end
+  end
+end
+::Middleman::Extensions.register(:toc, TableOfContents)
+activate :toc

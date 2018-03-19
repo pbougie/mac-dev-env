@@ -1,0 +1,30 @@
+$breakpoint: 850px
+
+@supports (display: grid)
+
+  .header
+    grid-area: header
+  .main
+    grid-area: main
+  .toc
+    grid-area: toc
+  .return
+    grid-area: return
+  .external
+    grid-area: external
+  .footer
+    grid-area: footer
+
+  body
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-areas: "header" "main" "toc" "return" "external" "footer"
+
+  @media screen and (min-width: $breakpoint)
+    body[data-page="index"]
+      grid-template-columns: 1fr
+      grid-template-areas: "header" "main" "external" "footer"
+    body
+      grid-template-columns: 2fr 5fr
+      grid-template-rows: auto 1fr auto
+      grid-template-areas: "toc header" "toc main" "toc return" "external external" "footer footer"
