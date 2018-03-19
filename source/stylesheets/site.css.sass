@@ -1,20 +1,17 @@
 @charset "utf-8"
 
-@import url("//fonts.googleapis.com/css?family=Open+Sans:regular,bold")
-@import url("//fonts.googleapis.com/css?family=Droid+Serif")
-@import "vendor/github_corners"
-
-
-$container-width: 700px
-$font-base: 'Open Sans', sans-serif
-$font-headlines: 'Droid Serif', serif
-$font-mono: Courier, 'Courier New', monospace
-
-
+@import "base/mixins"
+@import "base/fonts"
 @import "base/root"
-@import "base/pages"
+@import "base/print"
 @import "base/resets"
+@import "base/layout"
 
 @import "blocks/header"
 @import "blocks/main"
+@import "blocks/toc"
+@import "blocks/return"
+@import "blocks/external"
 @import "blocks/footer"
+
+@import "vendor/github_corners"

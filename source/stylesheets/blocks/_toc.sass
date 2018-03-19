@@ -1,0 +1,32 @@
+.toc
+  background-color: #f3f3f3
+
+  @media print
+    display: none
+
+
+.toc__wrap
+  max-width: 700px
+  margin: 0 auto
+  padding: 1.5rem 1rem 0
+
+  @media screen and (min-width: 500px)
+    column-count: 2
+    column-gap: 1rem
+    padding-bottom: 1.25rem
+  @media screen and (min-width: $breakpoint)
+    column-count: auto
+    border-top: 20px solid #1377c2
+    padding-bottom: 0
+
+  h3
+    margin: 0 0 1rem
+    font-family: $font-headings
+  ul
+    margin: 0 0 2rem
+    padding-left: 1.5rem
+    list-style-type: circle
+  ul ul
+    margin-bottom: .75rem
+  li
+    margin: .4rem 0

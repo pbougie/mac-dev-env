@@ -1,0 +1,43 @@
+.external
+  margin: 0
+  padding: 2em 1em 1em
+  list-style-type: none
+  text-align: center
+
+  @media print
+    display: none
+
+
+.external__item
+  display: inline-block
+
+
+.external__link
+  display: block
+  width: 3rem
+  height: 3rem
+  background-repeat: no-repeat
+  background-size: 100%
+  +image-replacement
+
+  @media screen and (min-width: 21rem)
+    width: 3.5rem
+    height: 3.5rem
+  @media screen and (min-width: 26rem)
+    width: 4rem
+    height: 4rem
+  @media screen and (min-width: 31rem)
+    width: 4.5rem
+    height: 4.5rem
+  @media screen and (min-width: 36rem)
+    width: 5rem
+    height: 5rem
+
+  .external__item--www &
+    background-image: url(/images/www.svg)
+  .external__item--twitter &
+    background-image: url(/images/twitter.svg)
+  .external__item--github &
+    background-image: url(/images/github.svg)
+  .external__item--email &
+    background-image: url(/images/email.svg)

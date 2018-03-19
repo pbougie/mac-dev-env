@@ -1,13 +1,14 @@
 .footer
-  padding: 20px 0 40px
-  color: #888
-  font-family: $font-headlines
-  font-size: 0.9em
-  line-height: 1.5em
+  padding: 0 1em 3em
+  color: #bbb
+  +font-size(10)
+  text-align: center
 
-  p
-    width: 90%
-    max-width: $container-width
-    margin: 0 auto
-  a
-    color: #888
+  @media screen and (min-width: 21rem)
+    +font-size(11)
+  @media screen and (min-width: 26rem)
+    +font-size(12)
+  @media screen and (min-width: 31rem)
+    +font-size(13)
+  @media screen and (min-width: 36rem)
+    +font-size(14)
