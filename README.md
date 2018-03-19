@@ -13,10 +13,8 @@ Instructions for compiling/installing your own web development environment in ma
 - MySQL
 - Node.js
 - PHP
-- PostgreSQL
 - Redis
 - Ruby
-- SQLite
 
 This website is built with [Middleman](http://middlemanapp.com/).
 
@@ -49,5 +47,5 @@ To add a message at the top of any page, add a frontmatter variable named `messa
 ---
 
 © [Patrick Bougie](http://patrickbougie.com/).
-All Rights Reserved.
+All Rights Reserved.  
 Please do not reproduce without written consent.
