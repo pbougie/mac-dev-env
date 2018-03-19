@@ -27,23 +27,34 @@
   <meta property="og:url" content="http://mac-dev-env.patrickbougie.com/">
   <meta property="og:image" content="http://mac-dev-env.patrickbougie.com/favicon.png">
 
-  <!--[if gte IE 9]><!-->
   <%= stylesheet_link_tag "site" %>
-  <!--<![endif]-->
-
   <%= javascript_include_tag "versioning" %>
 
 </head>
 <body data-page="<%= page_id %>">
 
   <%= partial "layouts/header" %>
-  <%= partial "layouts/github" %>
 
-  <section class="main" role="main">
-    <%= yield %>
-  </section>
+  <main class="main" role="main">
+    <article class="main__<%= page_id == 'index' ? 'homepage' : 'other' %>" id="article">
+      <% if current_resource.data.title %>
+        <h2 class="main__title">
+          <%= current_resource.data.title %>
+        </h2>
+      <% end %>
 
+      <%= partial "layouts/message" %>
+      <%= partial "layouts/before" %>
+
+      <%= yield %>
+    </article>
+  </main>
+
+  <%= partial "layouts/toc" unless page_id == 'index' %>
+  <%= partial "layouts/return" unless page_id == 'index' %>
+  <%= partial "layouts/external" %>
   <%= partial "layouts/footer" %>
+  <%= partial "layouts/github" %>
 
   <%= javascript_include_tag "google_analytics" %>
   <%= javascript_include_tag "gauges" %>

@@ -1,0 +1,11 @@
+<% if current_resource.data.message %>
+  <div class="main__message">
+    <p>
+      <%=
+        html = Kramdown::Document.new(current_resource.data.message).to_html
+        html = Regexp.new('^<p>(.*)<\/p>$').match(html)[1]
+        html
+      %>
+    </p>
+  </div>
+<% end %>
