@@ -4,7 +4,7 @@ title: MySQL
 
 > **Links:** [Homepage](http://www.mysql.com/) | [Downloads](http://www.mysql.com/downloads/mysql/) | [Reference Manual](http://dev.mysql.com/doc/refman/5.7/en/)  
 > **Dependencies:** [CMake](/cmake/)  
-> **Version:** <span id="version">5.7.20</span>
+> **Version:** <span id="version">5.7.21</span>
 
 **MySQL** is an open-source relational database management server (RDBMS).
 

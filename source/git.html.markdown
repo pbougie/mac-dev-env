@@ -4,7 +4,7 @@ title: Git
 
 > **Links:** [Homepage](http://git-scm.com/) | [Downloads](http://git-scm.com/download)  
 > **Dependencies:** [Autoconf](/autoconf/) | [OpenSSL](/openssl/)  
-> **Version:** <span id="version">2.15.1</span>
+> **Version:** <span id="version">2.16.3</span>
 
 **Git** is a distributed version control system that was initially designed and developed by Linus Torvalds for Linux kernel development.
 
@@ -14,7 +14,7 @@ title: Git
 Switch to `/usr/local/src` and download the source package.
 
 	cd /usr/local/src
-	curl --remote-name https://www.kernel.org/pub/software/scm/git/git-VERSION.tar.gz
+	curl --remote-name https://mirrors.edge.kernel.org/pub/software/scm/git/git-VERSION.tar.gz
 
 Extract the archive and move into the folder.
 
@@ -45,7 +45,7 @@ Git can be compiled with the **[Man Pages](http://en.wikipedia.org/wiki/Man_page
 Switch to `/usr/local/src` and download the documentation.
 
 	cd /usr/local/src
-	curl --remote-name https://www.kernel.org/pub/software/scm/git/git-manpages-VERSION.tar.gz
+	curl --remote-name https://mirrors.edge.kernel.org/pub/software/scm/git/git-manpages-VERSION.tar.gz
 
 Extract the documentation to `/usr/local/git/man`.
 
