@@ -3,8 +3,8 @@ title: PHP
 ---
 
 > **Links:** [Homepage](http://php.net/) | [Documentation](http://php.net/manual/en/) | [Downloads](http://php.net/downloads.php)  
-> **Dependencies:** [Apache](/apache/) | [LibJPEG](/libjpeg/) | [LibPNG](/libpng/) | [FreeType](/freetype/) | [OpenSSL](/openssl/)  
 > **Version:** <span id="version">7.2.4</span>
+> **Dependencies:** [Apache](/apache/) | [LibJPEG](/libjpeg/) | [LibPNG](/libpng/) | [OpenSSL](/openssl/)  
 
 **PHP** is a general-purpose server-side scripting language that is especially suited to web development.
 
@@ -36,7 +36,6 @@ Configure, compile and install into `/usr/local/mac-dev-env/php-VERSION`.
 	  --with-apxs2=/usr/local/apache/bin/apxs \
 	  --with-bz2 \
 	  --with-curl \
-	  --with-freetype-dir=/usr/local/freetype \
 	  --with-gd \
 	  --with-imap-ssl \
 	  --with-jpeg-dir=/usr/local/libjpeg \

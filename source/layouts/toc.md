@@ -30,7 +30,6 @@
 - PHP
 	- [LibJPEG](/libjpeg/)
 	- [LibPNG](/libpng/)
-	- [FreeType](/freetype/)
 	- [OpenSSL](/openssl/)
 	- [PHP](/php/)
 		- [MySQL for PHP](/php-mysql/)
