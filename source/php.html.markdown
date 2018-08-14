@@ -3,8 +3,8 @@ title: PHP
 ---
 
 > **Links:** [Homepage](http://php.net/) | [Documentation](http://php.net/manual/en/) | [Downloads](http://php.net/downloads.php)  
-> **Version:** <span id="version">7.2.4</span>
 > **Dependencies:** [Apache](/apache/) | [LibJPEG](/libjpeg/) | [LibPNG](/libpng/) | [OpenSSL](/openssl/)  
+> **Version:** <span id="version">7.2.8</span>
 
 **PHP** is a general-purpose server-side scripting language that is especially suited to web development.
 

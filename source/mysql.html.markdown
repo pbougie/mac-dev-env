@@ -2,9 +2,9 @@
 title: MySQL
 ---
 
-> **Links:** [Homepage](http://www.mysql.com/) | [Downloads](http://www.mysql.com/downloads/mysql/) | [Reference Manual](http://dev.mysql.com/doc/refman/5.7/en/)  
-> **Dependencies:** [CMake](/cmake/)  
-> **Version:** <span id="version">5.7.21</span>
+> **Links:** [Homepage](http://www.mysql.com/) | [Downloads](http://www.mysql.com/downloads/mysql/) | [Reference Manual](http://dev.mysql.com/doc/refman/8.0/en/)  
+> **Dependencies:** [CMake](/cmake/) | [OpenSSL](/openssl/)  
+> **Version:** <span id="version">8.0.12</span>
 
 **MySQL** is an open-source relational database management server (RDBMS).
 
@@ -14,7 +14,7 @@ title: MySQL
 Switch to `/usr/local/src` and download the source package.
 
 	cd /usr/local/src
-	curl --remote-name --location https://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-VERSION.tar.gz
+	curl --remote-name --location https://dev.mysql.com/get/Downloads/MySQL-8.0/mysql-VERSION.tar.gz
 
 Extract the archive and move into the folder.
 
@@ -28,11 +28,9 @@ Configure, compile and install into `/usr/local/mac-dev-env/mysql-VERSION`.
 
 	cmake \
 	  -DCMAKE_INSTALL_PREFIX=/usr/local/mac-dev-env/mysql-VERSION \
-	  -DCMAKE_CXX_FLAGS="-stdlib=libstdc++" \
-	  -DDEFAULT_CHARSET=utf8 \
-	  -DDEFAULT_COLLATION=utf8_general_ci \
 	  -DDOWNLOAD_BOOST=ON \
 	  -DWITH_BOOST=/usr/local/src/boost \
+	  -DWITH_SSL=/usr/local/openssl \
 	  .
 	make
 	make install

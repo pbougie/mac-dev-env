@@ -4,7 +4,7 @@ title: Git
 
 > **Links:** [Homepage](http://git-scm.com/) | [Downloads](http://git-scm.com/download)  
 > **Dependencies:** [Autoconf](/autoconf/) | [OpenSSL](/openssl/)  
-> **Version:** <span id="version">2.16.3</span>
+> **Version:** <span id="version">2.18.0</span>
 
 **Git** is a distributed version control system that was initially designed and developed by Linus Torvalds for Linux kernel development.
 
@@ -49,6 +49,7 @@ Switch to `/usr/local/src` and download the documentation.
 
 Extract the documentation to `/usr/local/git/man`.
 
+	mkdir /usr/local/git/share/man
 	tar -xzvof git-manpages-VERSION.tar.gz -C /usr/local/git/share/man
 
 

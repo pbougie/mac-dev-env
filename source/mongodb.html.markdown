@@ -4,7 +4,7 @@ title: MongoDB w/ SSL
 
 > **Links:** [Homepage](http://www.mongodb.org/) | [Documentation](https://docs.mongodb.com/manual/) | [Downloads](https://www.mongodb.com/download-center#community)  
 > **Dependencies:** None  
-> **Version:** <span id="version">3.6.3</span>
+> **Version:** <span id="version">4.0.1</span>
 
 **MongoDB** is a free and open-source cross-platform document-oriented database.
 
@@ -45,13 +45,17 @@ Copy and paste the following text into the aforementioned file.
 
 	# http://docs.mongodb.org/manual/reference/configuration-options/
 	storage:
-	  dbPath: /usr/local/var/mongodb
+	  dbPath: "/usr/local/var/mongodb"
 	  directoryPerDB: true
 	  journal:
 	    enabled: true
 	net:
 	  bindIp: 127.0.0.1
 	  port: 27017
+	systemLog:
+	  destination: file
+	  logAppend: false
+	  path: "/usr/local/var/log/mongodb.log"
 
 
 > **To configure MongoDB with SSL, see instructions at [Configure mongod and mongos for TLS/SSL](https://docs.mongodb.com/manual/tutorial/configure-ssl/).**
