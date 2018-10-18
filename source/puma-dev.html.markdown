@@ -5,7 +5,7 @@ message: The `.dev` gTLD is owned by Google. Beginning in **Google Chrome versio
 
 > **Links:** [Homepage](https://github.com/puma/puma-dev) | [Downloads](https://github.com/puma/puma-dev/releases)  
 > **Dependencies:** None  
-> **Version:** <span id="version">0.11</span>
+> **Version:** <span id="version">0.12</span>
 
 **Puma-dev** is a tool to manage Rack apps in development with Puma.
 
@@ -15,7 +15,7 @@ message: The `.dev` gTLD is owned by Google. Beginning in **Google Chrome versio
 Switch to `/usr/local/src` and download the pre-compiled binary.
 
 	cd /usr/local/src
-	curl --remote-name --location https://github.com/puma/puma-dev/releases/download/VERSION/puma-dev-vVERSION-darwin-amd64.zip
+	curl --remote-name --location https://github.com/puma/puma-dev/releases/download/vVERSION/puma-dev-vVERSION-darwin-amd64.zip
 
 
 ### Install
