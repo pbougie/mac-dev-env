@@ -3,7 +3,7 @@ title: Libevent
 ---
 
 > **Links:** [Homepage](http://libevent.org/)  
-> **Dependencies:** [OpenSSL](/openssl/)  
+> **Dependencies:** None  
 > **Version:** <span id="version">2.1.8</span>
 
 **Libevent** is an event notification library.
@@ -27,11 +27,10 @@ Extract the archive and move into the folder.
 Configure, compile and install into `/usr/local/mac-dev-env/libevent-VERSION`.
 
 	./configure \
-	  LDFLAGS="-L/usr/local/openssl/lib" \
-	  CPPFLAGS="-I/usr/local/openssl/include" \
 	  --prefix=/usr/local/mac-dev-env/libevent-VERSION \
+	  --disable-debug-mode \
 	  --disable-dependency-tracking \
-	  --disable-debug-mode
+	  --disable-openssl
 	make
 	make install
 
