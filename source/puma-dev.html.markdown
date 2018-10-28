@@ -5,7 +5,7 @@ message: The `.dev` gTLD is owned by Google. Beginning in **Google Chrome versio
 
 > **Links:** [Homepage](https://github.com/puma/puma-dev) | [Downloads](https://github.com/puma/puma-dev/releases)  
 > **Dependencies:** None  
-> **Version:** <span id="version">0.12</span>
+> **Version:** <span data-version>0.12</span>
 
 **Puma-dev** is a tool to manage Rack apps in development with Puma.
 

@@ -4,7 +4,7 @@ title: MongoDB w/ SSL
 
 > **Links:** [Homepage](http://www.mongodb.org/) | [Documentation](https://docs.mongodb.com/manual/) | [Downloads](https://www.mongodb.com/download-center#community)  
 > **Dependencies:** None  
-> **Version:** <span id="version">4.0.3</span>
+> **Version:** <span data-version>4.0.3</span>
 
 **MongoDB** is a free and open-source cross-platform document-oriented database.
 

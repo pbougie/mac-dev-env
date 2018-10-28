@@ -4,7 +4,7 @@ title: Libevent
 
 > **Links:** [Homepage](http://libevent.org/)  
 > **Dependencies:** None  
-> **Version:** <span id="version">2.1.8</span>
+> **Version:** <span data-version>2.1.8</span>
 
 **Libevent** is an event notification library.
 

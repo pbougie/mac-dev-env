@@ -3,35 +3,39 @@
 
   var original;
 
-  function version_form() {
-    var version = document.getElementById('version');
-    var article = document.getElementById('article');
-    var version_number = version.textContent;
+  function createFormInput() {
+    var versionEl = document.querySelector('[data-version]');
+    var version = versionEl.textContent;
 
-    version.innerHTML = '';
+    versionEl.innerHTML = '';
     var el = document.createElement('input');
-    el.setAttribute('id', 'textbox');
     el.setAttribute('type', 'text');
-    el.setAttribute('value', version_number);
-    version.appendChild(el);
-
-    var regex = new RegExp(version_number, 'g');
-    original = article.innerHTML.replace(regex, 'VERSION');
+    el.setAttribute('value', version);
+    versionEl.appendChild(el);
   }
 
-  function update_version() {
-    var textbox = document.getElementById('textbox');
-    var article = document.getElementById('article');
-    article.innerHTML = original.replace(/VERSION/g, textbox.value);
+  function saveOriginalContent() {
+    var contentEl = document.querySelector('[data-content]');
+    original = contentEl.innerHTML;
+  }
 
-    var textbox = document.getElementById('textbox');
-    textbox.addEventListener('change', update_version);
+  function updateVersion() {
+    var versionEl = document.querySelector('[data-version]');
+    var version = versionEl.querySelector('input').value;
+
+    var contentEl = document.querySelector('[data-content]');
+    contentEl.innerHTML = original.replace(/VERSION/g, version);
+
+    var inputEl = document.querySelector('[data-version] input');
+    inputEl.value = version;
+    inputEl.addEventListener('change', updateVersion);
   }
 
   document.addEventListener('DOMContentLoaded', function() {
-    if (document.getElementById('version')) {
-      version_form();
-      update_version();
+    if (document.querySelector('[data-version]')) {
+      createFormInput();
+      saveOriginalContent();
+      updateVersion();
     }
   });
 

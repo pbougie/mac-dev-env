@@ -36,7 +36,7 @@
   <%= partial "layouts/header" %>
 
   <main class="main" role="main">
-    <article class="main__<%= page_id == 'index' ? 'homepage' : 'other' %>" id="article">
+    <article class="main__<%= page_id == 'index' ? 'homepage' : 'other' %>">
       <% if current_resource.data.title %>
         <h2 class="main__title">
           <%= current_resource.data.title %>
@@ -46,7 +46,9 @@
       <%= partial "layouts/message" %>
       <%= partial "layouts/before" %>
 
-      <%= yield %>
+      <div class="main__content" data-content>
+        <%= yield %>
+      </div>
     </article>
   </main>
 
