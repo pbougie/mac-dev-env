@@ -4,7 +4,7 @@ title: Git
 
 > **Links:** [Homepage](http://git-scm.com/) | [Downloads](http://git-scm.com/download)  
 > **Dependencies:** [Autoconf](/autoconf/) | [OpenSSL](/openssl/)  
-> **Version:** <span id="version">2.18.0</span>
+> **Version:** <span id="version">2.19.1</span>
 
 **Git** is a distributed version control system that was initially designed and developed by Linus Torvalds for Linux kernel development.
 
@@ -28,8 +28,10 @@ Configure, compile and install into `/usr/local/mac-dev-env/git-VERSION`.
 
 	make configure
 	./configure \
+	  LDFLAGS="-L/usr/local/openssl/lib" \
+	  CPPFLAGS="-I/usr/local/openssl/include" \
 	  --prefix=/usr/local/mac-dev-env/git-VERSION \
-	  --with-openssl=/usr/local/openssl
+	  --with-openssl
 	make all
 	make install
 

@@ -4,7 +4,7 @@ title: PHP
 
 > **Links:** [Homepage](http://php.net/) | [Documentation](http://php.net/manual/en/) | [Downloads](http://php.net/downloads.php)  
 > **Dependencies:** [Apache](/apache/) | [LibJPEG](/libjpeg/) | [LibPNG](/libpng/) | [OpenSSL](/openssl/)  
-> **Version:** <span id="version">7.2.8</span>
+> **Version:** <span id="version">7.2.11</span>
 
 **PHP** is a general-purpose server-side scripting language that is especially suited to web development.
 
@@ -23,6 +23,10 @@ Extract the archive and move into the folder.
 
 
 ### Compile and Install
+
+Need to install some missing headers in `macOS Mojave` (if not already installed).
+
+	sudo installer -pkg /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg -target /
 
 Configure, compile and install into `/usr/local/mac-dev-env/php-VERSION`.
 
