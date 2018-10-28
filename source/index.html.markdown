@@ -16,6 +16,7 @@ A detailed guide with instructions to compile various software packages to build
 
 If you are attempting to compile a web development environment in a previous version of macOS, check out past versions of the guide:
 
+- [macOS 10.13 High Sierra](/archives/10.13-high-sierra/)
 - [macOS 10.12 Sierra](/archives/10.12-sierra/)
 - [OS X 10.11 El Capitan](/archives/10.11-el-capitan/)
 - [OS X 10.10 Yosemite](/archives/10.10-yosemite/)

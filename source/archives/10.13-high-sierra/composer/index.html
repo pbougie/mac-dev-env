@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <base href="/archives/10.13-high-sierra/">
+  <title>Composer - Compiling a Web Development Environment on macOS</title>
+
+  <meta name="apple-mobile-web-app-title" content="Mac Dev Env">
+  <meta name="application-name" content="Mac Dev Env">
+  <meta name="author" content="Patrick Bougie (http://patrickbougie.com/)">
+  <meta name="description" content="A guide for compiling a web development environment on macOS: Composer.">
+  <meta name="viewport" content="initial-scale=1">
+
+  <link rel="icon" type="image/png" sizes="any" href="./favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32.png">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+  <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#1377c2">
+  <meta name="msapplication-TileColor" content="#1377c2">
+  <meta name="msapplication-TileImage" content="./ms-tile.png">
+  <meta name="theme-color" content="#1377c2">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@pbougie">
+  <meta property="og:title" content="Mac Dev Env: Composer">
+  <meta property="og:description" content="A guide for compiling a web development environment on macOS: Composer.">
+  <meta property="og:url" content="http://mac-dev-env.patrickbougie.com/">
+  <meta property="og:image" content="http://mac-dev-env.patrickbougie.com/favicon.png">
+
+  <link href="./stylesheets/site.css" rel="stylesheet" />
+  <script src="./javascripts/versioning.js"></script>
+
+</head>
+<body data-page="composer">
+
+  <header class="header" role="banner">
+  <a class="header__link" href="./">
+    <img class="header__image" src="./images/macos.svg" alt="macOS" width="100" height="100" />
+    <h1 class="header__title">
+      Compiling a Web Development Environment on macOS
+    </h1>
+  </a>
+</header>
+
+
+  <main class="main" role="main">
+    <article class="main__other" id="article">
+        <h2 class="main__title">
+          Composer
+        </h2>
+
+      
+        <div class="main__before">
+    <p>
+      <strong>Before starting:</strong>
+      Make sure you have the necessary folders and permissions —
+      <a href="./started-folders/">get more information</a>.
+    </p>
+  </div>
+
+
+      <blockquote>
+  <p><strong>Links:</strong> <a href="https://getcomposer.org/">Homepage</a><br />
+<strong>Dependencies:</strong> <a href="./php/">PHP</a></p>
+</blockquote>
+
+<p>Dependency Manager for PHP.</p>
+
+<h3 id="installupgrade">Install/Upgrade</h3>
+
+<p>Install or upgrade <strong>Composer</strong>.</p>
+
+<pre><code>curl https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+</code></pre>
+
+<h3 id="verify-the-installation">Verify the Installation</h3>
+
+<p>Verify that you have successfully installed <strong>Composer</strong>.</p>
+
+<pre><code>composer --version
+</code></pre>
+
+    </article>
+  </main>
+
+  <aside class="toc">
+  <div class="toc__wrap">
+    <h3 id="getting-started">Getting Started</h3>
+
+<ul>
+  <li><a href="./started-cli/">Command Line Tools</a></li>
+  <li><a href="./started-folders/">Create the Folder Structure</a></li>
+</ul>
+
+<h3 id="source-code-management">Source Code Management</h3>
+
+<ul>
+  <li>Git
+    <ul>
+      <li><a href="./autoconf/">Autoconf</a></li>
+      <li><a href="./openssl/">OpenSSL</a></li>
+      <li><a href="./git/">Git</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="data-stores">Data Stores</h3>
+
+<ul>
+  <li>MySQL
+    <ul>
+      <li><a href="./cmake/">CMake</a></li>
+      <li><a href="./mysql/">MySQL</a></li>
+    </ul>
+  </li>
+  <li><a href="./mongodb/">MongoDB</a> w/ SSL</li>
+  <li>Memcached
+    <ul>
+      <li><a href="./libevent/">Libevent</a></li>
+      <li><a href="./memcached/">Memcached</a></li>
+    </ul>
+  </li>
+  <li><a href="./redis/">Redis</a></li>
+</ul>
+
+<h3 id="php-served-by-apache">PHP served by Apache</h3>
+<ul>
+  <li>Apache
+    <ul>
+      <li><a href="./apr/">APR</a></li>
+      <li><a href="./apr-util/">APR-util</a></li>
+      <li><a href="./pcre/">PCRE</a></li>
+      <li><a href="./apache/">Apache</a></li>
+    </ul>
+  </li>
+  <li>PHP
+    <ul>
+      <li><a href="./libjpeg/">LibJPEG</a></li>
+      <li><a href="./libpng/">LibPNG</a></li>
+      <li><a href="./openssl/">OpenSSL</a></li>
+      <li><a href="./php/">PHP</a>
+        <ul>
+          <li><a href="./php-mysql/">MySQL for PHP</a></li>
+          <li><a href="./php-mongodb/">MongoDB for PHP</a></li>
+        </ul>
+      </li>
+      <li><a href="./composer/">Composer</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="ruby-served-by-puma-dev">Ruby served by Puma-dev</h3>
+
+<ul>
+  <li>Ruby
+    <ul>
+      <li><a href="./openssl/">OpenSSL</a></li>
+      <li><a href="./ruby/">Ruby</a></li>
+    </ul>
+  </li>
+  <li>Gems
+    <ul>
+      <li><a href="./rubygems/">RubyGems</a></li>
+      <li><a href="./bundler/">Bundler</a></li>
+    </ul>
+  </li>
+  <li><a href="./puma-dev/">Puma-dev</a></li>
+</ul>
+
+<h3 id="nodejs">Node.js</h3>
+
+<ul>
+  <li><a href="./nodejs/">Node.js</a>
+    <ul>
+      <li><a href="./nodejs-yarn/">Yarn</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="image-processing">Image Processing</h3>
+
+<ul>
+  <li>GraphicsMagick
+    <ul>
+      <li><a href="./libjpeg/">LibJPEG</a></li>
+      <li><a href="./libpng/">LibPNG</a></li>
+      <li><a href="./libtiff/">LibTIFF</a></li>
+      <li><a href="./graphicsmagick/">GraphicsMagick</a></li>
+    </ul>
+  </li>
+</ul>
+
+  </div>
+</aside>
+
+  <p class="return">
+  ← <a class="return__link" href="./">
+      Return to the <strong>Homepage</strong>
+    </a>
+</p>
+
+  <ul class="external">
+  <li class="external__item external__item--www" title="Website">
+    <a class="external__link" href="http://patrickbougie.com/">
+      patrickbougie.com
+    </a>
+  </li>
+  <li class="external__item external__item--twitter" title="Twitter">
+    <a class="external__link" href="https://twitter.com/pbougie">
+      twitter.com/pbougie
+    </a>
+  </li>
+  <li class="external__item external__item--github" title="GitHub">
+    <a class="external__link" href="https://github.com/pbougie/mac-dev-env">
+      github.com/pbougie/mac-dev-env
+    </a>
+  </li>
+  <li class="external__item external__item--email" title="Email">
+    <a class="external__link" href="mailto:hello@patrickbougie.com">
+      hello@patrickbougie.com
+    </a>
+  </li>
+</ul>
+
+  <footer class="footer" role="contentinfo">
+  © 2018 <a href="http://patrickbougie.com/">Patrick Bougie</a>. All rights reserved.<br>
+  Please do not reproduce without written consent.<br>
+  macOS version: 10.13 High Sierra<br>
+  Last revised: 28 October 2018<br>
+  Needs updating? <a href="https://github.com/pbougie/mac-dev-env">Fork on GitHub</a>
+</footer>
+
+  <a href="https://github.com/pbougie/mac-dev-env" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#333; color:#fff; position: absolute; top: 20px; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+  <script src="./javascripts/google_analytics.js"></script>
+  <script src="./javascripts/gauges.js"></script>
+
+</body>
+</html>
