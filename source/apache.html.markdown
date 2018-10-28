@@ -3,22 +3,37 @@ title: Apache
 ---
 
 > **Links:** [Homepage](http://httpd.apache.org/) | [Downloads](http://httpd.apache.org/download.cgi) | [Documentation](http://httpd.apache.org/docs/2.4/)  
-> **Dependencies:** [APR](/apr/) | [APR-util](/apr-util/) | [PCRE](/pcre/)  
 > **Version:** <span id="version">2.4.34</span>
+> **Dependencies:** [PCRE](/pcre/)  
 
 The **Apache HTTP Server** is an open-source web server that was released in 1995.
 
 
 ### Get the Code
 
-Switch to `/usr/local/src` and download the source package.
+Switch to `/usr/local/src`.
 
 	cd /usr/local/src
+
+Download and extract the **Apache HTTP Server**.
+
 	curl --remote-name http://apache.mirror.iweb.ca//httpd/httpd-VERSION.tar.gz
-
-Extract the archive and move into the folder.
-
 	tar -xzvf httpd-VERSION.tar.gz
+
+Download and extract the **Apache Portable Runtime**.
+
+	curl --remote-name http://mirror.dsrg.utoronto.ca/apache/apr/apr-1.6.5.tar.gz
+	mkdir -p ./httpd-VERSION/srclib/apr
+	tar -xzvf apr-1.6.5.tar.gz --strip 1 --directory ./httpd-VERSION/srclib/apr
+
+Download and extract the **Apache Portable Runtime Utility**.
+
+	curl --remote-name http://mirror.dsrg.utoronto.ca/apache/apr/apr-util-1.6.1.tar.gz
+	mkdir -p ./httpd-VERSION/srclib/apr-util
+	tar -xzvf apr-util-1.6.1.tar.gz --strip 1 --directory ./httpd-VERSION/srclib/apr-util
+
+Move into the folder.
+
 	cd httpd-VERSION
 
 
@@ -26,7 +41,10 @@ Extract the archive and move into the folder.
 
 Configure, compile and install into `/usr/local/mac-dev-env/apache-VERSION`.
 
-	./configure --prefix=/usr/local/mac-dev-env/apache-VERSION --enable-so
+	./configure \
+	  --prefix=/usr/local/mac-dev-env/apache-VERSION \
+	  --enable-so \
+	  --with-included-apr
 	make
 	make install
 

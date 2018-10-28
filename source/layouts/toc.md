@@ -23,8 +23,6 @@
 
 ### PHP served by Apache
 - Apache
-	- [APR](/apr/)
-	- [APR-util](/apr-util/)
 	- [PCRE](/pcre/)
 	- [Apache](/apache/)
 - PHP
