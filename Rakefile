@@ -8,19 +8,17 @@ task :build do
   system 'bundle exec middleman build'
 end
 
-desc "Deploy website via rsync to production server"
-task :deploy => :dotenv do
-  puts '## Updating file permissions before uploading'
-  system 'chmod -R u+rwX,go=u-w build'
-  puts '## Deploying website via rsync to production server'
-  src = 'build/'
-  dst = "#{ENV['RSYNC_USER']}@#{ENV['RSYNC_HOST']}:#{ENV['RSYNC_PATH']}"
-  system "rsync -avz -e ssh --delete --progress #{src} #{dst}"
+desc "Deploy website to AWS"
+task :deploy do
+  puts '## Deploying website to AWS S3'
+  system "aws s3 sync build/ s3://macdevenv-website --delete"
+  puts '## Invalidating objects from AWS CloudFront edge caches'
+  system "aws cloudfront create-invalidation --distribution-id E32XIM7EFUQNFX --paths '/*'"
 end
 
-desc "Rebuild website on filesystem changes"
+desc "Watch website for changes"
 task :guard do
-  puts '## Rebuilding website because changes to the filesystem detected'
+  puts '## Watching website for changes'
   system 'bundle exec guard'
 end
 
