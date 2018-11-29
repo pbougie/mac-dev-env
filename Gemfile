@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 
-# http://middlemanapp.com/
+# https://middlemanapp.com/
 gem 'middleman', '~> 4'
 
-# http://builder.rubyforge.org/
+# https://github.com/jimweirich/builder
 gem 'builder'
 
 # https://github.com/bkeepers/dotenv
