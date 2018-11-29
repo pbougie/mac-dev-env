@@ -1,4 +1,4 @@
-Sitemap: http://mac-dev-env.patrickbougie.com/sitemap.xml
+Sitemap: https://mac-dev-env.patrickbougie.com/sitemap.xml
 
 User-agent: *
 Disallow: /archives/
