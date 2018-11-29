@@ -46,6 +46,6 @@ To add a message at the top of any page, add a frontmatter variable named `messa
 
 ---
 
-© [Patrick Bougie](http://patrickbougie.com/).
+© [Patrick Bougie](https://patrickbougie.com/).
 All Rights Reserved.  
 Please do not reproduce without written consent.
