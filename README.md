@@ -1,4 +1,4 @@
-# [Compiling a Web Development Environment on macOS](http://mac-dev-env.patrickbougie.com/)
+# [Compiling a Web Development Environment on macOS](https://mac-dev-env.patrickbougie.com/)
 
 
 ## Overview
@@ -46,6 +46,6 @@ To add a message at the top of any page, add a frontmatter variable named `messa
 
 ---
 
-© [Patrick Bougie](http://patrickbougie.com/).
+© [Patrick Bougie](https://patrickbougie.com/).
 All Rights Reserved.  
 Please do not reproduce without written consent.

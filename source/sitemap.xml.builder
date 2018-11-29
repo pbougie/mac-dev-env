@@ -11,7 +11,7 @@ xml.urlset 'xmlns' => "http://www.sitemaps.org/schemas/sitemap/0.9" do
     !p.path.start_with?('google')
   }.sort_by{ |p| p.url }.each do |page|
     xml.url do
-      xml.loc "http://mac-dev-env.patrickbougie.com#{page.url}"
+      xml.loc "https://mac-dev-env.patrickbougie.com#{page.url}"
       xml.lastmod Time.new.utc.iso8601
       xml.changefreq page.data.changefreq || "daily"
       xml.priority page.data.priority || "0.9"
