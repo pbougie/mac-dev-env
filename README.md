@@ -16,27 +16,25 @@ Instructions for compiling/installing your own web development environment in ma
 - Redis
 - Ruby
 
-This website is built with [Middleman](http://middlemanapp.com/).
+This website is built with [Middleman](https://middlemanapp.com/).
 
 
 ## Environment Variables
 
 Environment variables required to build and deploy the website:
 
-- **GAUGES**: Tracking code for [Gauges](http://get.gaug.es/).
-- **GOOGLE_ANALYTICS**: Tracking code for [Google Analytics](http://www.google.com/analytics/).
-- **RSYNC_USER**: Username for deployment via [rsync](http://rsync.samba.org/).
-- **RSYNC_HOST**: Hostname for deployment via [rsync](http://rsync.samba.org/).
-- **RSYNC_PATH**: Pathname for deployment via [rsync](http://rsync.samba.org/).
+- **GAUGES**: Tracking code for [Gauges](https://get.gaug.es/).
+- **GOOGLE_ANALYTICS**: Tracking code for [Google Analytics](https://google.com/analytics).
 
 
 ## Rake
 
 Make sure the aforementioned environment variables are available before generating the website.
 
-- Launch the preview server: `rake preview`
-- Build the website: `rake build`
-- Deploy the website: `rake deploy`
+- Build website: `rake build`
+- Deploy website to AWS: `rake deploy`
+- Watch website for changes: `rake guard`
+- Launch preview server: `rake preview`
 
 
 # Message
