@@ -39,9 +39,7 @@
 - Ruby
 	- [OpenSSL](/openssl/)
 	- [Ruby](/ruby/)
-- Gems
-	- [RubyGems](/rubygems/)
-	- [Bundler](/bundler/)
+- [RubyGems](/rubygems/)
 - [Puma-dev](/puma-dev/)
 
 ### Node.js

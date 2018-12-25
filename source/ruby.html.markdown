@@ -4,7 +4,7 @@ title: Ruby
 
 > **Links:** [Homepage](http://www.ruby-lang.org/) | [Downloads](http://www.ruby-lang.org/en/downloads/)  
 > **Dependencies:** [OpenSSL](/openssl/)  
-> **Version:** <span data-version>2.5.3</span>
+> **Version:** <span data-version>2.6.0</span>
 
 
 ### Get the Code
@@ -12,7 +12,7 @@ title: Ruby
 Switch to `/usr/local/src` and download the source package.
 
 	cd /usr/local/src
-	curl --remote-name http://cache.ruby-lang.org/pub/ruby/2.5/ruby-VERSION.tar.gz
+	curl --remote-name http://cache.ruby-lang.org/pub/ruby/2.6/ruby-VERSION.tar.gz
 
 Extract the archive and move into the folder.
 
