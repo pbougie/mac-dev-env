@@ -11,7 +11,7 @@ end
 desc "Deploy website to AWS"
 task :deploy do
   puts '## Deploying website to AWS S3'
-  system "aws s3 sync build/ s3://macdevenv-website --delete"
+  system "aws s3 sync build/ s3://mac-dev-env.patrickbougie.com --delete --exclude '*.DS_Store*'"
   puts '## Invalidating objects from AWS CloudFront edge caches'
   system "aws cloudfront create-invalidation --distribution-id E32XIM7EFUQNFX --paths '/*'"
 end
