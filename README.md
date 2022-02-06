@@ -27,6 +27,12 @@ Environment variables required to build and deploy the website:
 - **GOOGLE_ANALYTICS**: Tracking code for [Google Analytics](https://google.com/analytics).
 
 
+## Install
+
+- Install [Ruby](https://www.ruby-lang.org/) (if missing)
+- Install gems : `bundle install`
+
+
 ## Rake
 
 Make sure the aforementioned environment variables are available before generating the website.
