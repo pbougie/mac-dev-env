@@ -8,14 +8,6 @@ task :build do
   system 'bundle exec middleman build'
 end
 
-desc "Deploy website to AWS"
-task :deploy do
-  puts '## Deploying website to AWS S3'
-  system "aws s3 sync build/ s3://mac-dev-env.patrickbougie.com --delete --exclude '*.DS_Store*'"
-  puts '## Invalidating objects from AWS CloudFront edge caches'
-  system "aws cloudfront create-invalidation --distribution-id E32XIM7EFUQNFX --paths '/*'"
-end
-
 desc "Watch website for changes"
 task :guard do
   puts '## Watching website for changes'
