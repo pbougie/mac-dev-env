@@ -1,0 +1,142 @@
+<!doctype html>
+<!--[if IE 7]><html class="ie7 lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if IE 8]><html class="ie8 lt-ie9" lang="en"><![endif]-->
+<!--[if IE 9]><html class="ie9" lang="en"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
+<head>
+
+	<meta charset="utf-8">
+  <meta name="robots" content="noindex">
+	<title>CMake — Compiling a Web Development Environment on Mac OS X</title>
+
+	<meta name="author" content="Patrick Bougie">
+	<meta name="description" content="CMake — Compiling a Web Development Environment on Mac OS X">
+	<meta name="viewport" content="initial-scale=1.0">
+
+	<link rel="shortcut icon" href="images/favicon.png">
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-57x57.png">
+
+	<!--[if gte IE 7]><!-->
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:regular,bold">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Serif">
+	<!--<![endif]-->
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<script src="js/ios-fix.js"></script>
+  <script src="js/dynamic-versioning.js"></script>
+
+</head>
+<body id="mysql-cmake">
+
+	<header role="banner">
+	<div>
+		<h1>
+			<a href="index.html" title="Patrick Bougie">Patrick Bougie</a>
+		</h1>
+		<section class="elsewhere">
+			<ul>
+				<li class="www" title="patrickbougie.com">
+					<a href="https://patrickbougie.com/">patrickbougie.com</a>
+				</li>
+				<li class="twitter" title="@pbougie">
+					<a href="https://twitter.com/pbougie">@pbougie</a>
+				</li>
+				<li class="github" title="github.com/pbougie">
+					<a href="https://github.com/pbougie">github.com/pbougie</a>
+				</li>
+			</ul>
+		</section>
+	</div>
+</header>
+
+
+	<section role="main">
+		<header>
+			<hgroup>
+				<h1>Compiling a Web Development Environment on Mac OS X</h1>
+				<h2>CMake</h2>
+			</hgroup>
+		</header>
+		<article>
+			<blockquote><p><strong>Links:</strong> <a href="http://www.cmake.org/">Homepage</a> | <a href="http://www.cmake.org/cmake/resources/software.html">Downloads</a><br/>
+<strong>Dependencies:</strong> None<br/>
+<strong>Version:</strong> <span id="version">2.8.7</span></p></blockquote>
+
+<p><strong>CMake</strong> is a cross-platform, open-source build system designed to build, test and package software. <strong>CMake</strong> is used to control the software compilation process using platform and compiler independent configuration files. <strong>MySQL</strong> replaced the <em>GNU autotools</em> with <strong>CMake</strong> on all platforms beginning with version 5.5.</p>
+
+<h3>Get the Code</h3>
+
+<p>Switch to <code>/usr/local/src</code> and download the source package.</p>
+
+<pre><code>cd /usr/local/src
+curl --remote-name http://www.cmake.org/files/v2.8/cmake-VERSION.tar.gz
+</code></pre>
+
+<p>Extract the archive and move into the folder.</p>
+
+<pre><code>tar -xzvf cmake-VERSION.tar.gz
+cd cmake-VERSION
+</code></pre>
+
+<h3>Compile and Install</h3>
+
+<p>Configure, compile and install into <code>/usr/local/cmake-VERSION</code>.</p>
+
+<pre><code>./bootstrap --prefix=/usr/local/cmake-VERSION
+make
+make install
+</code></pre>
+
+<p>Create a symbolic link that points <code>/usr/local/cmake</code> to <code>/usr/local/cmake-VERSION</code>.</p>
+
+<pre><code>ln -s cmake-VERSION /usr/local/cmake
+</code></pre>
+
+<h3>Shell</h3>
+
+<p>Add the following lines to your <a href="http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29">Bash</a> startup script to put CMake and its Man Pages into your path.</p>
+
+<pre><code>echo 'export PATH=/usr/local/cmake/bin:$PATH' &gt;&gt; ~/.bash_profile
+echo 'export MANPATH=/usr/local/cmake/man:$MANPATH' &gt;&gt; ~/.bash_profile
+</code></pre>
+
+<p>Load the new shell configurations.</p>
+
+<pre><code>source ~/.bash_profile
+</code></pre>
+
+<h3>Verify the Installation</h3>
+
+<p>To verify that you have correctly installed CMake, execute the following command. It should display <strong>cmake version VERSION</strong>.</p>
+
+<pre><code>cmake --version
+</code></pre>
+
+		</article>
+
+			<footer>
+				<p>
+					<a href="index.html">« Return to the Table of Contents</a>
+				</p>
+			</footer>
+
+	</section>
+
+	<footer role="contentinfo">
+	<p>© 2012 Patrick Bougie. All rights reserved.</p>
+	<p>Please do not reproduce without written consent.</p>
+  <p>OS X version: 10.7 Lion</p>
+	<p>Last revised: 14 March 2012</p>
+</footer>
+
+
+</body>
+</html>

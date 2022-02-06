@@ -1,0 +1,232 @@
+<!doctype html>
+<!--[if IE 8]><html class="ie8" lang="en"><![endif]-->
+<!--[if IE 9]><html class="ie9" lang="en"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
+<head>
+
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex">
+  <base href="/archives/10.8-mountain-lion/">
+  <title>
+    Compiling a Web Development Environment on Mac OS X
+  </title>
+
+  <meta name="author" content="Patrick Bougie">
+  <meta name="description" content="Guide for compiling a Web Development Environment on Mac OS X.">
+  <meta name="apple-mobile-web-app-title" content="Mac Dev Env">
+  <meta name="viewport" content="initial-scale=1.0">
+
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon.png">
+
+  <!--[if gte IE 8]><!-->
+  <link rel="stylesheet" href="stylesheets/styles.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:regular,bold">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Serif">
+  <!--<![endif]-->
+  <!--[if IE]>
+  <link href="stylesheets/gh-fork-ribbon.ie.css" rel="stylesheet" />
+  <![endif]-->
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="javascripts/versioning.js"></script>
+  <!--[if IE 8]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js" type="text/javascript"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js" type="text/javascript"></script>
+  <![endif]-->
+
+</head>
+<body id="index">
+
+  <header role="banner">
+  <h1 class="title">
+    <a href=".">
+      Compiling a Web Development Environment on Mac OS X
+    </a>
+  </h1>
+  <section class="elsewhere">
+    <ul>
+      <li class="www" title="Website">
+        <a href="https://patrickbougie.com/">
+          <span aria-hidden="true" data-icon="&#xe000;"></span>
+          <span class="text-to-speech">patrickbougie.com</span>
+        </a>
+      </li>
+      <li class="twitter" title="Twitter">
+        <a href="https://twitter.com/pbougie">
+          <span aria-hidden="true" data-icon="&#xe001;"></span>
+          <span class="text-to-speech">@pbougie</span>
+        </a>
+      </li>
+      <li class="github" title="GitHub">
+        <a href="https://github.com/pbougie/mac-dev-env">
+          <span aria-hidden="true" data-icon="&#xe002;"></span>
+          <span class="text-to-speech">github.com/pbougie</span>
+        </a>
+      </li>
+      <li class="email" title="Email">
+        <a href="mailto:hello@patrickbougie.com">
+          <span aria-hidden="true" data-icon="&#xe003;"></span>
+          <span class="text-to-speech">hello@patrickbougie.com</span>
+        </a>
+      </li>
+    </ul>
+  </section>
+</header>
+
+
+  <div class="github-fork-ribbon-wrapper right">
+      <div class="github-fork-ribbon">
+          <a href="https://github.com/pbougie/mac-dev-env">Fork me on GitHub</a>
+      </div>
+  </div>
+
+  <section role="main">
+
+    <article>
+      <p>This guide is for compiling a web development environment in OS X. There are easier methods (and faster) to set up a development environment — such as <a href="http://mxcl.github.com/homebrew/">Homebrew</a>, <a href="http://www.macports.org/">MacPorts</a>, <a href="http://www.finkproject.org/">Fink</a> — but none provide the control I was looking for. These instructions were made for <a href="http://en.wikipedia.org/wiki/OS_X_Mountain_Lion">Mountain Lion</a> but should be fairly similar for previous versions of OS X.</p>
+
+<p>Start with the <strong>Getting Started</strong> section, then proceed with installing your desired packages. Some packages need to be installed in a certain order to satisfy dependencies. Each package lists its dependencies at the beginning of the instructions.</p>
+
+<h3 id="getting-started">Getting Started</h3>
+
+<ul>
+  <li><a href="started-cli/">Command Line Tools</a></li>
+  <li><a href="started-folders/">Create the Folder Structure</a></li>
+</ul>
+
+<h3 id="source-code-management">Source Code Management</h3>
+
+<ul>
+  <li><a href="git/">Git</a></li>
+</ul>
+
+<h3 id="data-stores">Data Stores</h3>
+
+<ul>
+  <li>MySQL
+    <ul>
+      <li><a href="cmake/">CMake</a></li>
+      <li><a href="mysql/">MySQL</a></li>
+    </ul>
+  </li>
+  <li><a href="postgresql/">PostgreSQL</a></li>
+  <li><a href="mongodb/">MongoDB</a></li>
+  <li><a href="sqlite/">SQLite</a></li>
+  <li>Memcached
+    <ul>
+      <li><a href="libevent/">Libevent</a></li>
+      <li><a href="memcached/">Memcached</a></li>
+    </ul>
+  </li>
+  <li><a href="redis/">Redis</a></li>
+</ul>
+
+<h3 id="php-served-by-apache">PHP served by Apache</h3>
+<ul>
+  <li>Apache
+    <ul>
+      <li><a href="pcre/">PCRE</a></li>
+      <li><a href="apache/">Apache</a></li>
+    </ul>
+  </li>
+  <li>PHP
+    <ul>
+      <li><a href="libjpeg/">LibJPEG</a></li>
+      <li><a href="libpng/">LibPNG</a></li>
+      <li><a href="libmcrypt/">LibMCrypt</a></li>
+      <li><a href="freetype/">FreeType</a></li>
+      <li><a href="php/">PHP</a>
+        <ul>
+          <li><a href="autoconf/">Autoconf</a></li>
+          <li><a href="php-xdebug/">Xdebug</a></li>
+          <li><a href="php-mysql/">MySQL for PHP</a></li>
+          <li><a href="php-postgresql/">PostgreSQL for PHP</a></li>
+          <li><a href="php-mongodb/">MongoDB for PHP</a></li>
+          <li><a href="php-sqlite/">SQLite for PHP</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="ruby-served-by-pow">Ruby served by Pow</h3>
+
+<ul>
+  <li><a href="pow/">Pow</a></li>
+  <li>Ruby
+    <ul>
+      <li><a href="ruby-rbenv/">rbenv</a>
+        <ul>
+          <li><a href="ruby-rbenv-gem-rehash/">rbenv-gem-rehash</a></li>
+        </ul>
+      </li>
+      <li>Ruby 1.9.3
+        <ul>
+          <li><a href="libyaml/">LibYAML</a></li>
+          <li><a href="ruby-193/">Ruby</a></li>
+        </ul>
+      </li>
+      <li>Ruby 2
+        <ul>
+          <li><a href="openssl/">OpenSSL</a></li>
+          <li><a href="ruby-2/">Ruby</a></li>
+        </ul>
+      </li>
+      <li><a href="ruby/">Ruby</a> (all versions)
+        <ul>
+          <li><a href="ruby-gems/">RubyGems</a></li>
+          <li><a href="ruby-bundler/">Bundler</a></li>
+          <li><a href="ruby-rails/">Ruby on Rails</a></li>
+          <li><a href="ruby-mysql/">MySQL for Ruby</a></li>
+          <li><a href="ruby-postgresql/">PostgreSQL for Ruby</a></li>
+          <li><a href="ruby-mongodb/">MongoDB for Ruby</a></li>
+          <li><a href="ruby-sqlite/">SQLite for Ruby</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="nodejs">Node.js</h3>
+
+<ul>
+  <li><a href="nodejs/">Node.js</a>
+    <ul>
+      <li><a href="nodejs-grunt/">Grunt</a> </li>
+      <li><a href="nodejs-bower/">Bower</a> </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="image-processing">Image Processing</h3>
+
+<ul>
+  <li>GraphicsMagick
+    <ul>
+      <li><a href="libjpeg/">LibJPEG</a></li>
+      <li><a href="libpng/">LibPNG</a></li>
+      <li><a href="libtiff/">LibTIFF</a></li>
+      <li><a href="graphicsmagick/">GraphicsMagick</a></li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+<p><strong>Warning:</strong> Remember that these instructions are for creating a development environment and therefore security is not considered. For a production system, please refer to each product's respective documentation on how to properly secure each service.</p>
+
+    </article>
+
+  </section>
+
+  <footer role="contentinfo">
+  <p>© 2013 <a href="https://patrickbougie.com">Patrick Bougie</a>. All rights reserved.</p>
+  <p>Please do not reproduce without written consent.</p>
+  <p>OS X version: 10.8 Mountain Lion</p>
+  <p>Last revised: 10 September 2013</p>
+  <p>Needs updating? <a href="https://github.com/pbougie/mac-dev-env">Fork on GitHub</a></p>
+</footer>
+
+
+</body>
+</html>

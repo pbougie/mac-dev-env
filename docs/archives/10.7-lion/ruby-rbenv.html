@@ -1,0 +1,139 @@
+<!doctype html>
+<!--[if IE 7]><html class="ie7 lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if IE 8]><html class="ie8 lt-ie9" lang="en"><![endif]-->
+<!--[if IE 9]><html class="ie9" lang="en"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
+<head>
+
+	<meta charset="utf-8">
+  <meta name="robots" content="noindex">
+	<title>rbenv — Compiling a Web Development Environment on Mac OS X</title>
+
+	<meta name="author" content="Patrick Bougie">
+	<meta name="description" content="rbenv — Compiling a Web Development Environment on Mac OS X">
+	<meta name="viewport" content="initial-scale=1.0">
+
+	<link rel="shortcut icon" href="images/favicon.png">
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-57x57.png">
+
+	<!--[if gte IE 7]><!-->
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:regular,bold">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Serif">
+	<!--<![endif]-->
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<script src="js/ios-fix.js"></script>
+  <script src="js/dynamic-versioning.js"></script>
+
+</head>
+<body id="ruby-rbenv">
+
+	<header role="banner">
+	<div>
+		<h1>
+			<a href="index.html" title="Patrick Bougie">Patrick Bougie</a>
+		</h1>
+		<section class="elsewhere">
+			<ul>
+				<li class="www" title="patrickbougie.com">
+					<a href="https://patrickbougie.com/">patrickbougie.com</a>
+				</li>
+				<li class="twitter" title="@pbougie">
+					<a href="https://twitter.com/pbougie">@pbougie</a>
+				</li>
+				<li class="github" title="github.com/pbougie">
+					<a href="https://github.com/pbougie">github.com/pbougie</a>
+				</li>
+			</ul>
+		</section>
+	</div>
+</header>
+
+
+	<section role="main">
+		<header>
+			<hgroup>
+				<h1>Compiling a Web Development Environment on Mac OS X</h1>
+				<h2>rbenv</h2>
+			</hgroup>
+		</header>
+		<article>
+			<blockquote><p><strong>Links:</strong> <a href="https://github.com/sstephenson/rbenv">Homepage</a><br/>
+<strong>Dependencies:</strong> None</p></blockquote>
+
+<p>Ruby version manager that lets you easily switch between multiple versions of Ruby.</p>
+
+<h3>Install</h3>
+
+<p>Switch to the <code>/usr/local</code> folder.</p>
+
+<pre><code>cd /usr/local
+</code></pre>
+
+<p>Check out rbenv into <code>/usr/local/rbenv</code>.</p>
+
+<pre><code>git clone git://github.com/sstephenson/rbenv.git rbenv
+</code></pre>
+
+<h3>Shell</h3>
+
+<p>Add the following lines to your <a href="http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29">Bash</a> startup script to put rbenv into your path.</p>
+
+<pre><code>echo 'export PATH=/usr/local/rbenv/bin:$PATH' &gt;&gt; ~/.bash_profile
+</code></pre>
+
+<p>Add the rbenv root folder configuration to your shell.</p>
+
+<pre><code>echo 'export RBENV_ROOT=/usr/local/rbenv' &gt;&gt; ~/.bash_profile
+</code></pre>
+
+<p>Add <code>rbenv init</code> to your shell to enable shims and autocompletion.</p>
+
+<pre><code>echo 'eval "$(rbenv init -)"' &gt;&gt; ~/.bash_profile
+</code></pre>
+
+<p>Load the new shell configurations.</p>
+
+<pre><code>source ~/.bash_profile
+</code></pre>
+
+<h3>Install Ruby Versions</h3>
+
+<p>To install Ruby versions, check the section on installing <a href="ruby.html">Ruby</a>.</p>
+
+<h3>Upgrading</h3>
+
+<p>To upgrade to the latest development version of <strong>rbenv</strong>, use git pull.</p>
+
+<pre><code>cd /usr/local/rbenv
+git pull
+</code></pre>
+
+		</article>
+
+			<footer>
+				<p>
+					<a href="index.html">« Return to the Table of Contents</a>
+				</p>
+			</footer>
+
+	</section>
+
+	<footer role="contentinfo">
+	<p>© 2012 Patrick Bougie. All rights reserved.</p>
+	<p>Please do not reproduce without written consent.</p>
+  <p>OS X version: 10.7 Lion</p>
+	<p>Last revised: 14 March 2012</p>
+</footer>
+
+
+</body>
+</html>

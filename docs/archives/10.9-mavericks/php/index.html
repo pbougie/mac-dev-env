@@ -1,0 +1,225 @@
+<!doctype html>
+<!--[if IE 8]><html class="ie8" lang="en"><![endif]-->
+<!--[if IE 9]><html class="ie9" lang="en"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
+<head>
+
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex">
+  <base href="/archives/10.9-mavericks/">
+  <title>
+    PHP —
+    Compiling a Web Development Environment on Mac OS X
+  </title>
+
+  <meta name="author" content="Patrick Bougie">
+  <meta name="description" content="Guide for compiling a Web Development Environment on Mac OS X: PHP.">
+  <meta name="apple-mobile-web-app-title" content="Mac Dev Env">
+  <meta name="viewport" content="initial-scale=1">
+
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon.png">
+
+  <!--[if gte IE 8]><!-->
+  <link rel="stylesheet" href="stylesheets/styles.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:regular,bold">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Serif">
+  <!--<![endif]-->
+  <!--[if IE]>
+  <link rel="stylesheet" href="stylesheets/gh-fork-ribbon.ie.css">
+  <![endif]-->
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="javascripts/versioning.js"></script>
+  <!--[if IE 8]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+<body id="php">
+
+  <header role="banner">
+  <h1 class="title">
+    <a href=".">
+      Compiling a Web Development Environment on Mac OS X
+    </a>
+  </h1>
+  <section class="elsewhere">
+    <ul>
+      <li class="www" title="Website">
+        <a href="https://patrickbougie.com/">
+          <span aria-hidden="true" data-icon="&#xe000;"></span>
+          <span class="text-to-speech">patrickbougie.com</span>
+        </a>
+      </li>
+      <li class="twitter" title="Twitter">
+        <a href="https://twitter.com/pbougie">
+          <span aria-hidden="true" data-icon="&#xe001;"></span>
+          <span class="text-to-speech">@pbougie</span>
+        </a>
+      </li>
+      <li class="github" title="GitHub">
+        <a href="https://github.com/pbougie/mac-dev-env">
+          <span aria-hidden="true" data-icon="&#xe002;"></span>
+          <span class="text-to-speech">github.com/pbougie</span>
+        </a>
+      </li>
+      <li class="email" title="Email">
+        <a href="mailto:hello@patrickbougie.com">
+          <span aria-hidden="true" data-icon="&#xe003;"></span>
+          <span class="text-to-speech">hello@patrickbougie.com</span>
+        </a>
+      </li>
+    </ul>
+  </section>
+</header>
+
+
+  <div class="github-fork-ribbon-wrapper right">
+      <div class="github-fork-ribbon">
+          <a href="https://github.com/pbougie/mac-dev-env">Fork me on GitHub</a>
+      </div>
+  </div>
+
+  <section role="main">
+      <header>
+        <h2>PHP</h2>
+      </header>
+    <article>
+      <blockquote>
+  <p><strong>Links:</strong> <a href="http://php.net/">Homepage</a> | <a href="http://php.net/manual/en/">Documentation</a> | <a href="http://php.net/downloads.php">Downloads</a><br />
+<strong>Dependencies:</strong> <a href="apache/">Apache</a> | <a href="libjpeg/">LibJPEG</a> | <a href="libpng/">LibPNG</a> | <a href="libmcrypt/">LibMCrypt</a> | <a href="freetype/">FreeType</a><br />
+<strong>Version:</strong> <span id="version">5.5.17</span></p>
+</blockquote>
+
+<p><strong>PHP</strong> is a general-purpose server-side scripting language that is especially suited to web development.</p>
+
+<h3 id="get-the-code">Get the Code</h3>
+
+<p>Switch to <code>/usr/local/src</code> and download the source package.</p>
+
+<pre><code>cd /usr/local/src
+curl --location --output php-VERSION.tar.gz http://ca.php.net/get/php-VERSION.tar.gz/from/this/mirror
+</code></pre>
+
+<p>Extract the archive and move into the folder.</p>
+
+<pre><code>tar -xzvf php-VERSION.tar.gz
+cd php-VERSION
+</code></pre>
+
+<h3 id="compile-and-install">Compile and Install</h3>
+
+<p>Configure, compile and install into <code>/usr/local/php-VERSION</code>.</p>
+
+<pre><code>./configure \
+	--prefix=/usr/local/php-VERSION \
+	--with-config-file-path=/usr/local/php-VERSION/etc \
+	--enable-bcmath \
+	--enable-mbstring \
+	--enable-sockets \
+	--enable-zip \
+	--with-apxs2=/usr/local/apache/bin/apxs \
+	--with-bz2 \
+	--with-curl \
+	--with-freetype-dir=/usr/local/freetype \
+	--with-gd \
+	--with-imap-ssl \
+	--with-jpeg-dir=/usr/local/libjpeg \
+	--with-mcrypt=/usr/local/libmcrypt \
+	--with-mysql \
+	--with-mysqli \
+	--with-pear \
+	--with-pdo-mysql \
+	--with-pdo-pgsql=/usr/local/postgresql \
+	--with-pgsql=/usr/local/postgresql \
+	--with-png-dir=/usr/local/libpng \
+	--with-openssl \
+	--with-xmlrpc \
+	--with-xsl \
+	--with-zlib
+make
+make install
+</code></pre>
+
+<p>Create a symbolic link that points <code>/usr/local/php</code> to <code>/usr/local/php-VERSION</code>.</p>
+
+<pre><code>ln -s php-VERSION /usr/local/php
+</code></pre>
+
+<h3 id="php-configuration">PHP Configuration</h3>
+
+<p>Copy a PHP configuration template to the target folder. You can configure any of the <a href="http://www.php.net/manual/en/ini.list.php">php.ini directives</a> by editing this file.</p>
+
+<pre><code>cp php.ini-development /usr/local/php/etc/php.ini
+</code></pre>
+
+<p>Set the location of the <code>php.ini</code> configuration file for PECL and PEAR.</p>
+
+<pre><code>pecl config-set php_ini /usr/local/php/etc/php.ini
+pear config-set php_ini /usr/local/php/etc/php.ini
+</code></pre>
+
+<h3 id="apache-configuration">Apache Configuration</h3>
+
+<p>Edit Apache's configuration file.</p>
+
+<pre><code>nano /usr/local/apache/conf/httpd.conf
+</code></pre>
+
+<p>Copy and paste the following text at the end of the aforementioned file.</p>
+
+<pre><code>&lt;IfModule mime_module&gt;
+  AddType application/x-httpd-php .php
+&lt;/IfModule&gt;
+&lt;IfModule dir_module&gt;
+  DirectoryIndex index.html index.php
+&lt;/IfModule&gt;
+</code></pre>
+
+<h3 id="shell">Shell</h3>
+
+<p>Execute the following lines to update your <a href="http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29">Bash</a> startup script.</p>
+
+<pre><code>echo 'export PATH=/usr/local/php/bin:$PATH' &gt;&gt; ~/.bash_profile
+echo 'export MANPATH=/usr/local/php/man:$MANPATH' &gt;&gt; ~/.bash_profile
+</code></pre>
+
+<p>Load the new shell configurations.</p>
+
+<pre><code>source ~/.bash_profile
+</code></pre>
+
+<h3 id="restart-the-web-server">Restart the Web Server</h3>
+
+<p>The web server must be restarted for the changes to take effect.</p>
+
+<pre><code>sudo apachectl restart
+</code></pre>
+
+<h3 id="verify-the-installation">Verify the Installation</h3>
+
+<p>To verify that you have correctly installed PHP. It should display the version number along with other information.</p>
+
+<pre><code>php --version
+</code></pre>
+
+    </article>
+      <footer>
+        <p>
+          <a href=".">← Return to the Table of Contents</a>
+        </p>
+      </footer>
+  </section>
+
+  <footer role="contentinfo">
+  <p>© 2014 <a href="https://patrickbougie.com">Patrick Bougie</a>. All rights reserved.</p>
+  <p>Please do not reproduce without written consent.</p>
+  <p>OS X version: 10.9 Mavericks</p>
+  <p>Last revised: 11 October 2014</p>
+  <p>Needs updating? <a href="https://github.com/pbougie/mac-dev-env">Fork on GitHub</a></p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!doctype html>
+<!--[if IE 7]><html class="ie7 lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if IE 8]><html class="ie8 lt-ie9" lang="en"><![endif]-->
+<!--[if IE 9]><html class="ie9" lang="en"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
+<head>
+
+	<meta charset="utf-8">
+  <meta name="robots" content="noindex">
+	<title>Apache — Compiling a Web Development Environment on Mac OS X</title>
+
+	<meta name="author" content="Patrick Bougie">
+	<meta name="description" content="Apache — Compiling a Web Development Environment on Mac OS X">
+	<meta name="viewport" content="initial-scale=1.0">
+
+	<link rel="shortcut icon" href="images/favicon.png">
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-57x57.png">
+
+	<!--[if gte IE 7]><!-->
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:regular,bold">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Serif">
+	<!--<![endif]-->
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<script src="js/ios-fix.js"></script>
+  <script src="js/dynamic-versioning.js"></script>
+
+</head>
+<body id="apache">
+
+	<header role="banner">
+	<div>
+		<h1>
+			<a href="index.html" title="Patrick Bougie">Patrick Bougie</a>
+		</h1>
+		<section class="elsewhere">
+			<ul>
+				<li class="www" title="patrickbougie.com">
+					<a href="https://patrickbougie.com/">patrickbougie.com</a>
+				</li>
+				<li class="twitter" title="@pbougie">
+					<a href="https://twitter.com/pbougie">@pbougie</a>
+				</li>
+				<li class="github" title="github.com/pbougie">
+					<a href="https://github.com/pbougie">github.com/pbougie</a>
+				</li>
+			</ul>
+		</section>
+	</div>
+</header>
+
+
+	<section role="main">
+		<header>
+			<hgroup>
+				<h1>Compiling a Web Development Environment on Mac OS X</h1>
+				<h2>Apache</h2>
+			</hgroup>
+		</header>
+		<article>
+			<blockquote><p><strong>Links:</strong> <a href="http://httpd.apache.org/">Homepage</a> | <a href="http://httpd.apache.org/download.cgi">Downloads</a> | <a href="http://httpd.apache.org/docs/2.2/">Documentation</a><br/>
+<strong>Dependencies:</strong> None<br/>
+<strong>Version:</strong> <span id="version">2.2.21</span></p></blockquote>
+
+<p>The <strong>Apache HTTP Server</strong> is an open-source web server that was released in 1995. It has been the most popular web server on the Internet since April 1996. It is estimated to serve over 60% of all websites.</p>
+
+<h3>Get the Code</h3>
+
+<p>Switch to <code>/usr/local/src</code> and download the source package.</p>
+
+<pre><code>cd /usr/local/src
+curl --remote-name http://mirror.csclub.uwaterloo.ca/apache/httpd/httpd-VERSION.tar.gz
+</code></pre>
+
+<p>Extract the archive and move into the folder.</p>
+
+<pre><code>tar -xzvf httpd-VERSION.tar.gz
+cd httpd-VERSION
+</code></pre>
+
+<h3>Compile and Install</h3>
+
+<p>Configure, compile and install into <code>/usr/local/apache-VERSION</code>.</p>
+
+<pre><code>./configure \
+    --prefix=/usr/local/apache-VERSION \
+    --enable-dav \
+    --enable-info \
+    --enable-rewrite \
+    --enable-so \
+    --enable-ssl
+make
+make install
+</code></pre>
+
+<p>Create a symbolic link that points <code>/usr/local/apache</code> to <code>/usr/local/apache-VERSION</code>.</p>
+
+<pre><code>ln -s apache-VERSION /usr/local/apache
+</code></pre>
+
+<h3>Configuration File</h3>
+
+<p>Edit Apache's configuration file.</p>
+
+<pre><code>nano /usr/local/apache/conf/httpd.conf
+</code></pre>
+
+<p>Copy and paste the following text at the end of the aforementioned file. Make sure you replace the <code>&lt;username&gt;</code> string (3 times) with your Mac OS X short username. This configuration only allows access from your local computer; all outside access is blocked.</p>
+
+<pre><code>ServerName dev.local
+User &lt;username&gt;
+Group staff
+
+DocumentRoot "/Users/&lt;username&gt;/Sites"
+&lt;Directory "/Users/&lt;username&gt;/Sites"&gt;
+    Options All
+    AllowOverride All
+    IndexOptions NameWidth=*
+
+    Order deny,allow
+    Deny from all
+    Allow from localhost
+    Allow from 127.0.0.1
+&lt;/Directory&gt;
+</code></pre>
+
+<h3>Web Root</h3>
+
+<p>Create a folder that will contain your web sites and applications. My projects are located in <code>~/Sites</code> – the standard location for web files on Mac OS X. You can place your projects wherever you'd like but make sure you update the path when mentioned in this article.</p>
+
+<pre><code>mkdir -p ~/Sites
+</code></pre>
+
+<h3>Shell</h3>
+
+<p>Add the following lines to your <a href="http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29">Bash</a> startup script to put Apache and its Man Pages into your path.</p>
+
+<pre><code>echo 'export PATH=/usr/local/apache/bin:$PATH' &gt;&gt; ~/.bash_profile
+echo 'export MANPATH=/usr/local/apache/man:$MANPATH' &gt;&gt; ~/.bash_profile
+</code></pre>
+
+<p>You can also create the following shortcuts if you'd like.</p>
+
+<pre><code>echo 'alias apache-start="sudo /usr/local/apache/bin/apachectl -k start"' &gt;&gt; ~/.bash_profile
+echo 'alias apache-stop="sudo /usr/local/apache/bin/apachectl -k stop"' &gt;&gt; ~/.bash_profile
+echo 'alias apache-restart="sudo /usr/local/apache/bin/apachectl -k restart"' &gt;&gt; ~/.bash_profile
+</code></pre>
+
+<p>Load the new shell configurations.</p>
+
+<pre><code>source ~/.bash_profile
+</code></pre>
+
+<h3>Automatically Starting the Server at Boot</h3>
+
+<p>Create a configuration file for <a href="http://en.wikipedia.org/wiki/Launchd">Launchd</a>.</p>
+
+<pre><code>sudo nano /Library/LaunchDaemons/org.apache.apache2.plist
+</code></pre>
+
+<p>Do not name the file <em>org.apache.httpd.plist</em> as it collides with a similarly named file for loading the Mac OS X web server.</p>
+
+<p>Copy and paste the following text into the aforementioned file.</p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
+&lt;plist version="1.0"&gt;
+&lt;dict&gt;
+    &lt;key&gt;Label&lt;/key&gt;
+    &lt;string&gt;org.apache.apache2&lt;/string&gt;
+    &lt;key&gt;ProgramArguments&lt;/key&gt;
+    &lt;array&gt;
+        &lt;string&gt;/usr/local/apache/bin/httpd&lt;/string&gt;
+        &lt;string&gt;-D&lt;/string&gt;
+        &lt;string&gt;FOREGROUND&lt;/string&gt;
+    &lt;/array&gt;
+    &lt;key&gt;RunAtLoad&lt;/key&gt;
+    &lt;true/&gt;
+    &lt;key&gt;KeepAlive&lt;/key&gt;
+    &lt;true/&gt;
+    &lt;key&gt;WorkingDirectory&lt;/key&gt;
+    &lt;string&gt;/usr/local/apache&lt;/string&gt;
+&lt;/dict&gt;
+&lt;/plist&gt;
+</code></pre>
+
+<p>And finally, execute the following command to register the configuration file with Launchd.</p>
+
+<pre><code>sudo launchctl load -w /Library/LaunchDaemons/org.apache.apache2.plist
+</code></pre>
+
+<p>If you ever want to stop your Apache server from automatically starting at boot, issue the following command.</p>
+
+<pre><code>sudo launchctl unload -w /Library/LaunchDaemons/org.apache.apache2.plist
+</code></pre>
+
+<h3>Verify the Installation</h3>
+
+<p>To verify that you have correctly installed and started your Apache server, point your web browser to <a href="http://localhost/"><code>http://localhost/</code></a> to load a webpage.</p>
+
+		</article>
+
+			<footer>
+				<p>
+					<a href="index.html">« Return to the Table of Contents</a>
+				</p>
+			</footer>
+
+	</section>
+
+	<footer role="contentinfo">
+	<p>© 2012 Patrick Bougie. All rights reserved.</p>
+	<p>Please do not reproduce without written consent.</p>
+  <p>OS X version: 10.7 Lion</p>
+	<p>Last revised: 14 March 2012</p>
+</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!doctype html>
+<!--[if IE 8]><html class="ie8" lang="en"><![endif]-->
+<!--[if IE 9]><html class="ie9" lang="en"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
+<head>
+
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex">
+  <base href="/archives/10.8-mountain-lion/">
+  <title>
+    RubyGems —
+    Compiling a Web Development Environment on Mac OS X
+  </title>
+
+  <meta name="author" content="Patrick Bougie">
+  <meta name="description" content="Guide for compiling a Web Development Environment on Mac OS X: RubyGems.">
+  <meta name="apple-mobile-web-app-title" content="Mac Dev Env">
+  <meta name="viewport" content="initial-scale=1.0">
+
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon.png">
+
+  <!--[if gte IE 8]><!-->
+  <link rel="stylesheet" href="stylesheets/styles.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:regular,bold">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Serif">
+  <!--<![endif]-->
+  <!--[if IE]>
+  <link href="stylesheets/gh-fork-ribbon.ie.css" rel="stylesheet" />
+  <![endif]-->
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="javascripts/versioning.js"></script>
+  <!--[if IE 8]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js" type="text/javascript"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js" type="text/javascript"></script>
+  <![endif]-->
+
+</head>
+<body id="ruby-gems">
+
+  <header role="banner">
+  <h1 class="title">
+    <a href=".">
+      Compiling a Web Development Environment on Mac OS X
+    </a>
+  </h1>
+  <section class="elsewhere">
+    <ul>
+      <li class="www" title="Website">
+        <a href="https://patrickbougie.com/">
+          <span aria-hidden="true" data-icon="&#xe000;"></span>
+          <span class="text-to-speech">patrickbougie.com</span>
+        </a>
+      </li>
+      <li class="twitter" title="Twitter">
+        <a href="https://twitter.com/pbougie">
+          <span aria-hidden="true" data-icon="&#xe001;"></span>
+          <span class="text-to-speech">@pbougie</span>
+        </a>
+      </li>
+      <li class="github" title="GitHub">
+        <a href="https://github.com/pbougie/mac-dev-env">
+          <span aria-hidden="true" data-icon="&#xe002;"></span>
+          <span class="text-to-speech">github.com/pbougie</span>
+        </a>
+      </li>
+      <li class="email" title="Email">
+        <a href="mailto:hello@patrickbougie.com">
+          <span aria-hidden="true" data-icon="&#xe003;"></span>
+          <span class="text-to-speech">hello@patrickbougie.com</span>
+        </a>
+      </li>
+    </ul>
+  </section>
+</header>
+
+
+  <div class="github-fork-ribbon-wrapper right">
+      <div class="github-fork-ribbon">
+          <a href="https://github.com/pbougie/mac-dev-env">Fork me on GitHub</a>
+      </div>
+  </div>
+
+  <section role="main">
+
+      <header>
+        <h2>RubyGems</h2>
+      </header>
+
+    <article>
+      <blockquote>
+  <p><strong>Links:</strong> <a href="http://rubygems.org/">Homepage</a><br />
+<strong>Dependencies:</strong> <a href="ruby/">Ruby</a>  </p>
+</blockquote>
+
+<p><strong>RubyGems</strong> ships with Ruby 1.9+. There is nothing to install. For prior versions of Ruby, see package instructions to install RubyGems.</p>
+
+<h3 id="upgrade">Upgrade</h3>
+
+<p>To upgrade RubyGems.</p>
+
+<pre><code>gem update --system
+</code></pre>
+
+<h3 id="documentation">Documentation</h3>
+
+<p>All gems have documentation that is generated when a gem is installed. To start the documentation web server.</p>
+
+<pre><code>gem server
+</code></pre>
+
+<p>To view the documentation, point your web browser to <a href="http://localhost:8808/"><code>http://localhost:8808/</code></a>.</p>
+
+<h3 id="automatically-start-the-documentation-server-at-boot">Automatically Start the Documentation Server at Boot</h3>
+
+<p>Create a configuration file for <a href="http://en.wikipedia.org/wiki/Launchd">Launchd</a>.</p>
+
+<pre><code>sudo nano /Library/LaunchDaemons/org.rubygems.gem.plist
+</code></pre>
+
+<p>Copy and paste the following text into the aforementioned file. The path to the <code>gem</code> executable cannot use the <code>rbenv</code> shim binary because the environment in your startup script never gets set up. Pick your primary version of Ruby and use an absolute path to the <code>gem</code> executable. Make sure you update the path in the configuration below.</p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
+&lt;plist version="1.0"&gt;
+&lt;dict&gt;
+	&lt;key&gt;Label&lt;/key&gt;
+	&lt;string&gt;org.rubygems.gem&lt;/string&gt;
+
+	&lt;key&gt;ProgramArguments&lt;/key&gt;
+	&lt;array&gt;
+		&lt;string&gt;/usr/local/rbenv/versions/*RUBY-VERSION*/bin/gem&lt;/string&gt;
+		&lt;string&gt;server&lt;/string&gt;
+		&lt;string&gt;--daemon&lt;/string&gt;
+	&lt;/array&gt;
+
+	&lt;key&gt;RunAtLoad&lt;/key&gt;
+	&lt;true/&gt;
+	&lt;key&gt;KeepAlive&lt;/key&gt;
+	&lt;true/&gt;
+&lt;/dict&gt;
+&lt;/plist&gt;
+</code></pre>
+
+<p>Register with Launchd and start the server.</p>
+
+<pre><code>sudo launchctl load -w /Library/LaunchDaemons/org.rubygems.gem.plist
+</code></pre>
+
+<p>Deregister with Launchd.</p>
+
+<pre><code>sudo launchctl unload -w /Library/LaunchDaemons/org.rubygems.gem.plist
+</code></pre>
+
+
+    </article>
+
+      <footer>
+        <p>
+          <a href=".">← Return to the Table of Contents</a>
+        </p>
+      </footer>
+
+  </section>
+
+  <footer role="contentinfo">
+  <p>© 2013 <a href="https://patrickbougie.com">Patrick Bougie</a>. All rights reserved.</p>
+  <p>Please do not reproduce without written consent.</p>
+  <p>OS X version: 10.8 Mountain Lion</p>
+  <p>Last revised: 10 September 2013</p>
+  <p>Needs updating? <a href="https://github.com/pbougie/mac-dev-env">Fork on GitHub</a></p>
+</footer>
+
+
+</body>
+</html>

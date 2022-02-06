@@ -1,0 +1,143 @@
+<!doctype html>
+<!--[if IE 7]><html class="ie7 lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if IE 8]><html class="ie8 lt-ie9" lang="en"><![endif]-->
+<!--[if IE 9]><html class="ie9" lang="en"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
+<head>
+
+	<meta charset="utf-8">
+  <meta name="robots" content="noindex">
+	<title>Ruby — Compiling a Web Development Environment on Mac OS X</title>
+
+	<meta name="author" content="Patrick Bougie">
+	<meta name="description" content="Ruby — Compiling a Web Development Environment on Mac OS X">
+	<meta name="viewport" content="initial-scale=1.0">
+
+	<link rel="shortcut icon" href="images/favicon.png">
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-57x57.png">
+
+	<!--[if gte IE 7]><!-->
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:regular,bold">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Serif">
+	<!--<![endif]-->
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<script src="js/ios-fix.js"></script>
+  <script src="js/dynamic-versioning.js"></script>
+
+</head>
+<body id="ruby">
+
+	<header role="banner">
+	<div>
+		<h1>
+			<a href="index.html" title="Patrick Bougie">Patrick Bougie</a>
+		</h1>
+		<section class="elsewhere">
+			<ul>
+				<li class="www" title="patrickbougie.com">
+					<a href="https://patrickbougie.com/">patrickbougie.com</a>
+				</li>
+				<li class="twitter" title="@pbougie">
+					<a href="https://twitter.com/pbougie">@pbougie</a>
+				</li>
+				<li class="github" title="github.com/pbougie">
+					<a href="https://github.com/pbougie">github.com/pbougie</a>
+				</li>
+			</ul>
+		</section>
+	</div>
+</header>
+
+
+	<section role="main">
+		<header>
+			<hgroup>
+				<h1>Compiling a Web Development Environment on Mac OS X</h1>
+				<h2>Ruby</h2>
+			</hgroup>
+		</header>
+		<article>
+			<blockquote><p><strong>Links:</strong> <a href="http://www.ruby-lang.org/">Homepage</a> | <a href="http://www.ruby-lang.org/en/downloads/">Downloads</a><br/>
+<strong>Dependencies:</strong> <a href="ruby-rbenv.html">rbenv</a> | <a href="ruby-libyaml.html">LibYAML</a> (for Ruby 1.9.3 only)<br/>
+<strong>Version:</strong> <span id="version">1.9.3-p125</span></p></blockquote>
+
+<h3>Get the Code</h3>
+
+<p>Switch to <code>/usr/local/src</code> and download the source package.</p>
+
+<pre><code>cd /usr/local/src
+curl --remote-name http://ftp.ruby-lang.org/pub/ruby/ruby-VERSION.tar.gz
+</code></pre>
+
+<p>Extract the archive and move into the folder.</p>
+
+<pre><code>tar -xzvf ruby-VERSION.tar.gz
+cd ruby-VERSION
+</code></pre>
+
+<h3>Compile and Install</h3>
+
+<p>Configure, compile and install into <code>/usr/local/rbenv/versions/VERSION</code>. Check the configure options for other versions.</p>
+
+<pre><code>./configure \
+    --prefix=/usr/local/rbenv/versions/VERSION \
+    --with-opt-dir=/usr/local/libyaml \
+    --with-gcc=clang
+make
+make install
+</code></pre>
+
+<p>Rebuild the <code>rbenv</code> shim binaries. This needs to be done when you install new versions of Ruby or gems that provide a binary.</p>
+
+<pre><code>rbenv rehash
+</code></pre>
+
+<h3>Set Version</h3>
+
+<p>Set the global ruby version to <strong>VERSION</strong>.</p>
+
+<pre><code>rbenv global VERSION
+</code></pre>
+
+<p>To see all installed versions, use <code>rbenv versions</code>.</p>
+
+<h3>Verify the Installation</h3>
+
+<p>To verify that you have correctly installed this version of Ruby.</p>
+
+<pre><code>ruby --version
+</code></pre>
+
+<h3>Adding Other Versions</h3>
+
+<p>Change the version number in the textbox at the top and follow the instructions again. You may have to modify the path when downloading the source for certain versions. Also the <code>./configure</code> command may need to be adjusted for each version – check the installation documentation before proceeding.</p>
+
+		</article>
+
+			<footer>
+				<p>
+					<a href="index.html">« Return to the Table of Contents</a>
+				</p>
+			</footer>
+
+	</section>
+
+	<footer role="contentinfo">
+	<p>© 2012 Patrick Bougie. All rights reserved.</p>
+	<p>Please do not reproduce without written consent.</p>
+  <p>OS X version: 10.7 Lion</p>
+	<p>Last revised: 14 March 2012</p>
+</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!doctype html>
+<!--[if IE 7]><html class="ie7 lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if IE 8]><html class="ie8 lt-ie9" lang="en"><![endif]-->
+<!--[if IE 9]><html class="ie9" lang="en"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
+<head>
+
+	<meta charset="utf-8">
+  <meta name="robots" content="noindex">
+	<title>Compiling a Web Development Environment on Mac OS X</title>
+
+	<meta name="author" content="Patrick Bougie">
+	<meta name="description" content="Compiling a Web Development Environment on Mac OS X">
+	<meta name="viewport" content="initial-scale=1.0">
+
+	<link rel="shortcut icon" href="images/favicon.png">
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-57x57.png">
+
+	<!--[if gte IE 7]><!-->
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:regular,bold">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Serif">
+	<!--<![endif]-->
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<script src="js/ios-fix.js"></script>
+  <script src="js/dynamic-versioning.js"></script>
+
+</head>
+<body id="index">
+
+	<header role="banner">
+	<div>
+		<h1>
+			<a href="index.html" title="Patrick Bougie">Patrick Bougie</a>
+		</h1>
+		<section class="elsewhere">
+			<ul>
+				<li class="www" title="patrickbougie.com">
+					<a href="https://patrickbougie.com/">patrickbougie.com</a>
+				</li>
+				<li class="twitter" title="@pbougie">
+					<a href="https://twitter.com/pbougie">@pbougie</a>
+				</li>
+				<li class="github" title="github.com/pbougie">
+					<a href="https://github.com/pbougie">github.com/pbougie</a>
+				</li>
+			</ul>
+		</section>
+	</div>
+</header>
+
+
+	<section role="main">
+		<header>
+			<hgroup>
+				<h1>Compiling a Web Development Environment on Mac OS X</h1>
+
+			</hgroup>
+		</header>
+		<article>
+			<p>I've used many different methods to install the necessary software used in my web development pursuits including — but not limited to — <a href="http://mxcl.github.com/homebrew/">Homebrew</a>, <a href="http://www.macports.org/">MacPorts</a>, <a href="http://www.finkproject.org/">Fink</a> or simply enhancing the default packages that come with <a href="http://www.apple.com/macosx/">Mac OS X</a>. However, there was always something missing which is why I prefer to compile my own development environment. This method gives me <strong>complete</strong> control. The other methods will surely be enough for many people but if you want to compile your own environment then continue reading.</p>
+
+<p>This method also allows us to install any required version for a given project. Another benefit of installing custom built packages is to keep them segregated from the rest of the system which prevents future conflicts when performing a <a href="http://www.apple.com/softwareupdate/">Software Update</a> in Mac OS X. These instructions were made for <a href="http://en.wikipedia.org/wiki/Mac_OS_X_Lion">Lion</a> but should be fairly similar for previous versions of Mac OS X.</p>
+
+<p>Start with the <strong>Getting Started</strong> section, then proceed with installing your desired packages. Some packages need to be installed in a certain order to satisfy dependencies. Each package lists its dependencies at the beginning of the instructions.</p>
+
+<p><em>Good luck and happy coding!</em></p>
+
+<h3>Getting Started</h3>
+
+<ul>
+<li><a href="started-xcode.html">Xcode Developer Tools</a></li>
+<li><a href="started-folders.html">Create the Folder Structure</a></li>
+</ul>
+
+
+<h3>Source Code Management</h3>
+
+<ul>
+<li><a href="git.html">Git</a></li>
+</ul>
+
+
+<h3>Databases</h3>
+
+<ul>
+<li>MySQL
+
+<ul>
+<li><a href="mysql-cmake.html">CMake</a></li>
+<li><a href="mysql.html">MySQL</a></li>
+</ul>
+</li>
+<li><a href="mongodb.html">MongoDB</a></li>
+<li><a href="sqlite.html">SQLite</a></li>
+</ul>
+
+
+<h3>Web Servers</h3>
+
+<ul>
+<li><a href="apache.html">Apache</a></li>
+</ul>
+
+
+<h3>Languages</h3>
+
+<ul>
+<li>Ruby
+
+<ul>
+<li><a href="ruby-libyaml.html">LibYAML</a></li>
+<li><a href="ruby-rbenv.html">rbenv</a></li>
+<li><a href="ruby.html">Ruby</a></li>
+<li><a href="ruby-gems.html">RubyGems</a></li>
+<li><a href="ruby-bundler.html">Bundler</a></li>
+<li><a href="ruby-rails.html">Ruby on Rails</a></li>
+<li><a href="ruby-mysql.html">MySQL Driver for Ruby</a></li>
+<li><a href="ruby-mongodb.html">MongoDB Driver for Ruby</a></li>
+<li><a href="ruby-sqlite.html">SQLite Driver for Ruby</a></li>
+</ul>
+</li>
+<li>PHP: Hypertext Preprocessor
+
+<ul>
+<li><a href="php-libjpeg.html">LibJPEG</a></li>
+<li><a href="php-libpng.html">LibPNG</a></li>
+<li><a href="php-libmcrypt.html">LibMCrypt</a></li>
+<li><a href="php.html">PHP</a></li>
+<li><a href="php-xdebug.html">Xdebug</a> (not supported by PHP 5.4.0)</li>
+<li><a href="php-mysql.html">MySQL Driver for PHP</a></li>
+<li><a href="php-mongodb.html">MongoDB Driver for PHP</a></li>
+<li><a href="php-sqlite.html">SQLite Driver for PHP</a></li>
+</ul>
+</li>
+</ul>
+
+
+<h3>Libraries</h3>
+
+<ul>
+<li><a href="imagemagick.html">ImageMagick</a></li>
+</ul>
+
+
+<hr />
+
+<p><strong>Note:</strong> Remember these instructions are for creating a development server and therefore security is not considered. For a production system, please refer to each product's respective documentation on how to properly secure each service.</p>
+
+		</article>
+
+	</section>
+
+	<footer role="contentinfo">
+	<p>© 2012 Patrick Bougie. All rights reserved.</p>
+	<p>Please do not reproduce without written consent.</p>
+  <p>OS X version: 10.7 Lion</p>
+	<p>Last revised: 14 March 2012</p>
+</footer>
+
+
+</body>
+</html>
