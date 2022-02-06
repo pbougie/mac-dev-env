@@ -1,6 +1,7 @@
 Dotenv.load
 I18n.enforce_available_locales = false
 
+set :build_dir, 'docs'
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
