@@ -29,17 +29,21 @@ Environment variables required to build and deploy the website:
 ## Install
 
 - Install [Ruby](https://www.ruby-lang.org/) (if missing)
-- Install gems : `bundle install`
+- Install gems : `bundle install --path .bundle`
 
 
 ## Rake
 
 Make sure the aforementioned environment variables are available before generating the website.
 
-- Build website: `rake build`
-- Deploy website to AWS: `rake deploy`
-- Watch website for changes: `rake guard`
-- Launch preview server: `rake preview`
+- Build website: `bundle exec rake build`
+- Watch website for changes: `bundle exec rake guard`
+- Launch preview server: `bundle exec rake preview`
+
+
+## Deploy
+
+Push to **GitHub** to deploy to **[GitHub Pages](https://pages.github.com/)**.
 
 
 # Message
