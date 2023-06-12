@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 # https://middlemanapp.com/
 gem 'middleman', '~> 4'
+# Temporary fix for https://github.com/middleman/middleman/issues/2569
+gem 'haml', '~> 5.0'
 
 # https://github.com/jimweirich/builder
 gem 'builder'
