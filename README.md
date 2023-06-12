@@ -24,7 +24,6 @@ This website is built with [Middleman](https://middlemanapp.com/).
 Environment variables required to build and deploy the website:
 
 - **GAUGES**: Tracking code for [Gauges](https://get.gaug.es/).
-- **GOOGLE_ANALYTICS**: Tracking code for [Google Analytics](https://google.com/analytics).
 
 
 ## Install
