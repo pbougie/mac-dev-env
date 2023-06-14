@@ -45,6 +45,11 @@ Make sure the aforementioned environment variables are available before generati
 
 Push to **GitHub** to deploy to **[GitHub Pages](https://pages.github.com/)**.
 
+- Build: `GAUGES=<site-id> bundle exec rake build` (replace with Gauge’s site ID.)
+- Stage: `git add .` 
+- Commit: `git commit -m "Build website for GitHub Pages"`
+- Deploy: `git push`
+
 
 # Message
 
