@@ -19,13 +19,6 @@ Instructions for compiling/installing your own web development environment in ma
 This website is built with [Middleman](https://middlemanapp.com/).
 
 
-## Environment Variables
-
-Environment variables required to build and deploy the website:
-
-- **GAUGES**: Tracking code for [Gauges](https://get.gaug.es/).
-
-
 ## Install
 
 - Install [Ruby](https://www.ruby-lang.org/) (if missing)
@@ -33,8 +26,6 @@ Environment variables required to build and deploy the website:
 
 
 ## Rake
-
-Make sure the aforementioned environment variables are available before generating the website.
 
 - Build website: `bundle exec rake build`
 - Watch website for changes: `bundle exec rake guard`
@@ -45,7 +36,7 @@ Make sure the aforementioned environment variables are available before generati
 
 Push to **GitHub** to deploy to **[GitHub Pages](https://pages.github.com/)**.
 
-- Build: `GAUGES=<site-id> bundle exec rake build` (replace with Gauge’s site ID.)
+- Build: `bundle exec rake build`
 - Stage: `git add .` 
 - Commit: `git commit -m "Build website for GitHub Pages"`
 - Deploy: `git push`
