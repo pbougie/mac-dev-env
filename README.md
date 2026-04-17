@@ -22,7 +22,8 @@ This website is built with [Middleman](https://middlemanapp.com/).
 ## Install
 
 - Install [Ruby](https://www.ruby-lang.org/) (if missing)
-- Install gems : `bundle install --path .bundle`
+- Configure Bundler path : `bundle config set path '.bundle'`
+- Install gems : `bundle install`
 
 
 ## Rake
